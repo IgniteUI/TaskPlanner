@@ -1,0 +1,44 @@
+<p>igx-grid component with auto generated columns below and local data.</p>
+<p>You can read more about configuring the igx-grid component in the 
+<a href="https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/README.md" target="_blank">README</a> or the 
+<a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid.html" target="_blank">official documentation</a>.</p>
+
+<igx-grid #grid1
+    width="1400px" height="550px" 
+    [data]="localData"
+    [autoGenerate]="false"
+    [primaryKey]="'id'" 
+    [rowEditable]="true"
+    [allowFiltering]="true" [allowAdvancedFiltering]="true" [filterMode]="'excelStyleFilter'"
+    [paging]="true"
+    [columnPinning]="true"
+    [columnHiding]="true"
+    [cellSelection]="'multiple'"
+    [rowSelection]="'none'"
+    (onColumnInit)="onColumnInit($event)">
+        <igx-column *ngFor="let c of columns"
+            [width]="c.width"
+            [sortable]="c.sortable"
+            [movable]="c.movable"
+            [editable]="true"
+            [hasSummary]="c.hasSummary"
+            [filterable]="c.filterable"
+            [groupable]="c.groupable"
+            [field]="c.field"
+            [header]="c.header"
+            [dataType]="c.dataType"
+            [pinned]="c.pinned"
+            [hidden]="c.hidden">
+            <ng-template *ngIf="c.field === 'owner'" igxCell let-cell="cell">
+                <div class="cell__inner">
+                    <div class="cell__inner">
+                        <igx-avatar [src]="cell.value.avatar" roundShape="true" size="small"> </igx-avatar><span
+                            class="owner_name">{{ cell.value.name }}</span>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template *ngIf="c.field === 'started_on' || c.field === 'deadline'" igxCell let-value>
+                {{ value | date }}
+            </ng-template>
+        </igx-column>
+</igx-grid>
