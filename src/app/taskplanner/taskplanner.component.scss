@@ -1,0 +1,274 @@
+@import '~igniteui-angular/lib/core/styles/themes/index';
+@import "../tp-theme/index";
+
+::ng-deep {
+    .tp-app {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 0%;
+        height: 100%;
+        overflow: hidden;
+        padding: $tp-app-padding;
+        background: rgb(26, 28, 37);
+        background: $tp-grays-gradient;
+        color: #ccc;
+
+        @include igx-dark-theme($tp-palette);
+        @include igx-grid($tp-grid);
+        @include igx-grid-toolbar($tp-toolbar);
+        @include igx-paginator($tp-paginator);
+        @include igx-button($tp-button);
+        @include igx-card($tp-card);
+        @include igx-input-group($tp-input-group);
+        @include igx-list($tp-list);
+        @include igx-tabs($tp-tabs);
+
+        // TODO create issue to make the height of the list height:auto
+        igx-list {
+            height: auto !important;
+        }
+
+        &__row-details {
+            width: 100%;
+        }
+
+        &__row-details-inner {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &__row-details-col-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: rem(8px);
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__inner {
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+            padding: $tp-app-padding;
+        }
+
+        &__row-details-checkbox {
+            margin-bottom: rem(8px);
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &__row-details-title {
+            margin-bottom: rem(16px);
+            line-height: normal;
+            font-size: 14px;
+            color: igx-color($tp-palette, 'secondary');
+
+            &--comments {
+                margin-bottom: 0;
+            }
+        }
+
+        &__row-details-col {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            margin-right: rem(32px);
+            padding: rem(16px);
+            border-radius: 8px;
+            background: $row-background;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        &__config {
+            height: $config-height;
+            padding: $tp-app-padding;
+        }
+
+        &__config-buttons {
+            display: flex;
+        }
+
+        &__grid-logo {
+            height: 30px;
+            margin-right: rem(8px);
+        }
+
+        &__grid-heading {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            font-size: 18px;
+        }
+
+        &__grid {
+            flex: 1;
+
+            igx-grid {
+                border-radius: rem(16px);
+            }
+        }
+
+        &__dialog-content {
+            padding: 0 rem(24px);
+
+            > * {
+                margin-bottom: rem(8px);
+            }
+        }
+
+        &__owner-col {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+
+            > span {
+                flex: 1;
+                min-width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &__owner-col-name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__owner-col-avatar.igx-avatar--small {
+            width: rem(30px);
+            height: rem(30px);
+            min-width: rem(30px);
+            margin-right: rem(8px);
+        }
+
+        &__row-badges {
+            margin-left: rem(8px);
+
+            .igx-badge__circle-value {
+                padding: 0 rem(16px);
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+            background-color: $scrollbar-track;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: $scrollbar-thumb;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .content {
+                padding: 0;
+            }
+        }
+
+        .igx-grid__tr--edited::before {
+            background-size: 400% 400%;
+            animation: AnimationName 1s ease infinite;
+            background: linear-gradient(270deg, rgba(234,104,250,1), rgba(151,89,255,1));
+            @keyframes gradientAnimation {
+                from {background-position: center center, left center;}
+                to {background-position: center center, right center;}
+            }
+        }
+
+        .done {
+            @include igx-badge($badge-done)
+        }
+        .new {
+            @include igx-badge($badge-new)
+        }
+        .delayed {
+            @include igx-badge($badge-delayed)
+        }
+        .inprogress {
+            @include igx-badge($badge-inprogress)
+        }
+    }
+
+    .igx-button--raised {
+        transition: all 420ms ease-in-out;;
+    }
+
+    .done,
+    .new,
+    .inprogress,
+    .late,
+    .priority,
+    .delayed {
+        position: relative;
+        // Version 1
+        &:before {
+            $tp-cell-indicator-top-space: rem(6px);
+            content: '';
+            position: absolute;
+            top: $tp-cell-indicator-top-space;
+            left: rem(6px);
+            width: rem(8px);
+            border-radius: rem(4px);
+            height: calc(100% - (#{$tp-cell-indicator-top-space} * 2));
+        }
+        // Version
+    }
+
+    .igx-grid__tr {
+        .done {
+            &:before {
+                background: $state-done;
+            }
+        }
+
+        .new {
+            &:before {
+                background: $state-new;
+            }
+        }
+
+        .delayed {
+            &:before {
+                background: $state-delayed;
+            }
+        }
+
+        .inprogress {
+            &:before {
+                background: $state-inprogress;
+            }
+        }
+    }
+
+
+
+    .low {
+        color: $state-late !important;
+    }
+
+    .high {
+        color: $state-high !important;
+    }
+
+    .critical {
+        color: $state-critical !important;
+    }
+
+
+    .igx-grid-toolbar__custom-content {
+        flex: 1;
+        justify-content: space-between;
+    }
+}

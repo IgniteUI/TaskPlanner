@@ -4,18 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { DialogComponent } from './dialog/dialog.component';
-import { IgxDialogModule, IgxButtonModule, IgxGridModule, IgxAvatarModule } from 'igniteui-angular';
-import { TaskPlannerGridComponent } from './taskplannergrid/taskplannergrid.component';
-import { DataService } from './services/data.service';
+import { IgxDialogModule, IgxButtonModule, IgxGridModule, IgxAvatarModule,
+  IgxIconModule, IgxNavbarModule, IgxDividerModule, IgxTabsModule, IgxToastModule,
+  IgxMaskModule, IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule } from 'igniteui-angular';
+import { TasksDataService } from './services/tasks.service';
+import { TaskPlannerComponent } from './taskplanner/taskplanner.component';
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { BacklogComponent } from './backlog/backlog.component';
+import { GridWithTransactionsComponent } from './transaction-component/transaction-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    DialogComponent,
-    TaskPlannerGridComponent
+    TaskPlannerComponent,
+    HeaderComponent,
+    BacklogComponent,
+    GridWithTransactionsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +29,23 @@ import { DataService } from './services/data.service';
     IgxDialogModule,
     IgxButtonModule,
     IgxGridModule,
-    IgxAvatarModule
+    IgxMaskModule,
+    IgxToastModule,
+    IgxAvatarModule,
+    IgxIconModule,
+    IgxNavbarModule,
+    IgxDividerModule,
+    IgxTabsModule,
+    IgxToastModule,
+    FormsModule,
+    IgxMaskModule,
+    IgxInputGroupModule,
+    IgxButtonGroupModule,
+    IgxSwitchModule,
+    IgxCardModule,
+    IgxListModule,
   ],
-  providers: [DataService],
+  providers: [TasksDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
