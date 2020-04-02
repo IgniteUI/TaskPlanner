@@ -1,0 +1,31 @@
+::ng-deep {
+
+	.tp-app__logo-holder {
+		position: relative;
+		height: 30px;
+		width:100px;
+		margin-top: 5px;
+	}
+
+	.tp-app__logo {
+		position: absolute;
+		top:0;
+		left:0;
+		height: 30px;
+		width:100px;
+		transition: opacity 240ms ease-in-out;
+		opacity: 1;
+	}
+
+	.tp-app-light-theme {
+		.tp-app__logo--dark {
+			opacity: 0;
+		}
+	}
+
+	.tp-app-dark-theme {
+		.tp-app__logo--light {
+			opacity: 0;
+		}
+	}
+}
