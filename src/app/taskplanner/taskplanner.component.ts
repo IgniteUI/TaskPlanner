@@ -62,6 +62,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     @ViewChild('transactionsDialog', { static: true }) public transactionsDialog: IgxDialogComponent;
     @ViewChild('transactionsGrid', { static: true }) public transactionsGrid: IgxGridComponent;
 
+    public darkTheme = true;
     public localData: any[];
     public teamMembers: any[];
     public editMode = 0;
@@ -95,6 +96,10 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
      * Calculates task progress.
      */
     public calcProgress = calcProgress;
+
+    public toggleTheme() {
+      this.darkTheme = !this.darkTheme;
+    }
 
     // TODO Make Pipe from the filterTasks function
     public filterTasks(groupRowValue: string) {
