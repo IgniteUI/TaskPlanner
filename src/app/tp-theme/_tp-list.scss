@@ -9,3 +9,9 @@ $tp-list: igx-list-theme(
     $item-action-color-hover: #fff,
     $item-action-color-active: #fff,
 );
+
+$tp-light-list: igx-list-theme(
+    $item-action-color: igx-color($tp-light-palette, 'grays' 200),
+    $item-action-color-hover: igx-color($tp-light-palette, 'grays' 400),
+    $item-action-color-active: igx-color($tp-light-palette, 'grays' 400),
+);
