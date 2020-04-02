@@ -74,19 +74,7 @@
         &__config-buttons {
             display: flex;
         }
-
-        &__grid-logo {
-            height: 30px;
-            margin-right: rem(8px);
-        }
-
-        &__grid-heading {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            font-size: 18px;
-        }
-
+        
         &__grid {
             flex: 1;
         }
