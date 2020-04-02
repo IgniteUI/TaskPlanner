@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit, HostBinding} from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import {
     DefaultSortingStrategy,
@@ -52,6 +52,7 @@ export interface ITask {
     styleUrls: ['./taskplanner.component.scss'],
 })
 export class TaskPlannerComponent implements OnInit, AfterViewInit {
+    @HostBinding('class.tp-app')
 
     @ViewChild('tasksGrid', { read: IgxGridComponent, static: true }) public grid: IgxGridComponent;
     @ViewChild('editModeDropdown', { read: IgxDropDownComponent, static: true }) public editModeDropdown: IgxDropDownComponent;

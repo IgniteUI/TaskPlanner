@@ -85,20 +85,28 @@
                     <span>Task Planner</span>
                 </div>
 
-                <button igxButton="outlined" class="button" [igxToggleAction]="editModeDropdown" [igxDropDownItemNavigation]="editModeDropdown">
-                    {{ selectedEditMode }}
-                    <igx-icon>arrow_drop_down</igx-icon>
+
+                <button igxButton="icon" class="button" [disabled]="!hasTransactions">
+                  <igx-icon>check</igx-icon>
+                </button>
+                <button igxButton="icon" class="button" [disabled]="!undoEnabled" (click)="undo()">
+                  <igx-icon>undo</igx-icon>
+                </button>
+                <button igxButton="icon" class="button" [disabled]="!redoEnabled" (click)="redo()">
+                  <igx-icon>redo</igx-icon>
                 </button>
 
-                <igx-drop-down #editModeDropdown [width]="'100px'" (onSelection)='onEditingModeChanged($event)'>
-                    <igx-drop-down-item *ngFor="let item of editModes; let i = index" [selected]="isEditModeSelected(i)">
-                        {{ item }}
-                    </igx-drop-down-item>
-                </igx-drop-down>
+                <button igxButton="outlined" class="button" [igxToggleAction]="editModeDropdown" [igxDropDownItemNavigation]="editModeDropdown">
+                  {{ selectedEditMode }}
+                  <igx-icon>arrow_drop_down</igx-icon>
+                </button>
 
-                <button igxButton="raised" class="button" [disabled]="!hasTransactions">Commit</button>
-                <button igxButton="raised" class="button" [disabled]="!undoEnabled" (click)="undo()">Undo</button>
-                <button igxButton="raised" class="button" [disabled]="!redoEnabled" (click)="redo()">Redo</button>
+
+                <igx-drop-down #editModeDropdown [width]="'100px'" (onSelection)='onEditingModeChanged($event)'>
+                  <igx-drop-down-item *ngFor="let item of editModes; let i = index" [selected]="isEditModeSelected(i)">
+                    {{ item }}
+                  </igx-drop-down-item>
+                </igx-drop-down>
                 <!-- <igx-drop-down #editActionsDropDown [width]="'100px'" (onSelection)='onEditingModeChanged($event)'>
                     <igx-drop-down-item [disabled]="!undoEnabled" (click)="undo()">Undo</igx-drop-down-item>
                     <igx-drop-down-item [disabled]="!redoEnabled" (click)="redo()">Redo</igx-drop-down-item>
