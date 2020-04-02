@@ -81,6 +81,11 @@
 
         <!-- Toolbar Template -->
         <ng-template class="tp-app__grid-toolbar" igxToolbarCustomContent let-grid="grid">
+          <div class="tp-app__grid-heading">
+            <span>Project issues</span>
+          </div>
+
+
           <button igxButton="icon" class="button" [disabled]="!hasTransactions">
             <igx-icon>check</igx-icon>
           </button>
