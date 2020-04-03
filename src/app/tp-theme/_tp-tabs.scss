@@ -7,3 +7,12 @@ $tp-tabs: igx-tabs-theme(
     $item-active-icon-color: igx-color($tp-palette, 'secondary'),
     $button-background: transparent
 );
+
+$tp-light-tabs: igx-tabs-theme(
+    $palette: $tp-light-palette,
+    $disable-shadow: true,
+    $item-background: igx-color($tp-light-palette, 'grays', 100),
+    $indicator-color: igx-color($tp-light-palette, 'secondary'),
+    $item-active-color: igx-color($tp-light-palette, 'grays', 800),
+    $item-text-color: igx-color($tp-light-palette, 'grays', 700)
+);

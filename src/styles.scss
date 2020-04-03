@@ -10,9 +10,6 @@ html, body {
 @import '~igniteui-angular/lib/core/styles/themes/index';
 @import "app/tp-theme/index";
 @include igx-core();
-@include igx-theme($palette: $default-palette, $legacy-support:false);
-
-
 
 .done {
   @include igx-badge($badge-done)
@@ -28,44 +25,6 @@ html, body {
 
 .inprogress {
   @include igx-badge($badge-inprogress)
-}
-
-.tp-app-dark-theme {
-  background: $tp-grays-gradient;
-  color: #ccc;
-}
-
-.tp-app-light-theme {
-  @include igx-css-vars($tp-card);
-  background: #f9f9f9;
-  color: #666;
-
-  igx-grid {
-    border-radius: rem(4px);
-  }
-
-  ::-webkit-scrollbar {
-    width: 16px;
-    height: 16px;
-    background-color: igx-color($default-palette, 'grays', 100);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: igx-color($default-palette, 'grays', 200);
-  }
-}
-
-.tp-app-light-theme,
-.tp-app-dark-theme {
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 0%;
-  height: 100%;
-  overflow: hidden;
-
-  .igx-card-content {
-    padding: 0 !important;
-  }
 }
 
 .igx-button--raised {
@@ -136,7 +95,61 @@ html, body {
   justify-content: space-between;
 }
 
+.tp-app-light-theme {
+  @include igx-theme($palette: $tp-light-palette, $legacy-support:false);
+  @include igx-css-vars($tp-light-icon);
+  @include igx-css-vars($tp-light-card);
+  @include igx-css-vars($tp-light-button);
+  @include igx-css-vars($tp-light-grid);
+  @include igx-css-vars($tp-light-tabs);
+
+  .igx-navbar {
+    @include igx-css-vars($tp-light-button-header);
+  }
+
+  background: $light-bg;
+  color: $dark-text;
+
+  igx-grid {
+    border-radius: rem(4px);
+  }
+
+
+  .tp-app__row-details-col {
+    background: igx-color($tp-light-palette, 'grays', 100);
+  }
+
+  .tp-app__row-details-title {
+    color: igx-color($tp-light-palette, 'secondary');
+  }
+
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background-color: igx-color($tp-light-palette, 'grays', 100);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: igx-color($tp-light-palette, 'grays', 200);
+  }
+}
+
+.tp-app-light-theme,
 .tp-app-dark-theme {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0%;
+  height: 100%;
+  overflow: hidden;
+
+  .igx-card-content {
+    padding: 0 !important;
+  }
+}
+
+.tp-app-dark-theme {
+  background: $tp-grays-gradient;
+  color: #ccc;
   @include igx-theme($palette: $tp-palette, $legacy-support:false);
 
   @include igx-css-vars($tp-palette);
@@ -148,6 +161,7 @@ html, body {
   @include igx-css-vars($tp-input-group);
   @include igx-css-vars($tp-list);
   @include igx-css-vars($tp-tabs);
+  @include igx-css-vars($tp-icon);
 
   ::-webkit-scrollbar {
     width: 16px;
@@ -160,7 +174,12 @@ html, body {
   }
 
   .tp-app__row-details-col {
+    background: $row-background;
     border-radius: 8px;
+  }
+
+  .tp-app__row-details-title {
+    color: igx-color($tp-palette, 'secondary');
   }
 
   igx-grid {

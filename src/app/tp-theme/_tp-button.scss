@@ -8,3 +8,15 @@ $tp-button: igx-button-theme(
     $icon-background: transparent,
     $icon-hover-color: igx-color($tp-palette, 'secondary')
 );
+
+$tp-light-button: igx-button-theme(
+    $raised-resting-shadow: (5px 5px 10px #cccec8, -5px -5px 10px #fff),
+    $raised-hover-shadow: (5px 5px 10px #cccec8, -5px -5px 10px #fff),
+    $raised-focus-shadow: (5px 5px 10px #cccec8, -5px -5px 10px #fff),
+);
+
+$tp-light-button-header: igx-button-theme(
+    $raised-resting-shadow: (4px 4px 9px #0082d9, -4px -4px 9px #00b0ff),
+    $raised-hover-shadow: (4px 4px 9px #0082d9, -4px -4px 9px #00b0ff),
+    $raised-focus-shadow: (4px 4px 9px #0082d9, -4px -4px 9px #00b0ff),
+);

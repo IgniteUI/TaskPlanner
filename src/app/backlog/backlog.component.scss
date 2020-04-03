@@ -11,7 +11,7 @@
         &__backlog {
             min-width: 100px;
             width: $backlog-width;
-            margin-right: rem(16px);
+            margin-right: $tp-app-padding;
 
             .igx-card-header {
                 min-height: $backlog-card-header-height;
