@@ -61,6 +61,8 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     @ViewChild('addTaskDialog', { static: true }) public addTaskDialog: IgxDialogComponent;
     @ViewChild('transactionsDialog', { static: true }) public transactionsDialog: IgxDialogComponent;
     @ViewChild('transactionsGrid', { static: true }) public transactionsGrid: IgxGridComponent;
+    @ViewChild('batchEditingGrid', { static: true }) public batchEditingGrid: IgxGridComponent;
+    @ViewChild('batchEditDialog', { static: true }) public batchEditDialog: IgxDialogComponent;
 
     public darkTheme = true;
     public localData: any[];
@@ -70,6 +72,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public addTaskForm: ITask = { };
     public transactionsData: Transaction[] = [];
     public allTasks = TASKS_DATA;
+    public batchEditingData: any[];
 
     public statuses = [
         {
@@ -92,6 +95,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         { value: 'High' },
         { value: 'Critical' }
     ];
+
     /**
      * Calculates task progress.
      */
@@ -123,7 +127,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
             return acc;
         }, []);
     }
-
 
     public isDone = (rowData: any, columnKey: any): boolean => {
         return rowData[columnKey] === 'Done';
@@ -271,6 +274,16 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.transactionsDialog.close();
     }
 
+    public commitBatchEdits() {
+        const editedData = this.batchEditingGrid.data;
+        // transfer edited data to this.grid
+        for (let i = 0; i < editedData.length; i++) {
+            const id = editedData[i].id;
+            this.grid.updateRow(editedData[i], id);
+        }
+        this.batchEditDialog.close();
+    }
+
     public cancel() {
         this.transactionsDialog.close();
     }
@@ -290,6 +303,10 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
 
     public get hasTransactions(): boolean {
         return this.grid.transactions.getAggregatedChanges(false).length > 0;
+    }
+
+    public get hasSelection(): boolean {
+        return this.grid.selectedRows().length > 0;
     }
 
     public stateFormatter(value) {
@@ -435,6 +452,13 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         }
     }
 
+    public openBatchEditDialog() {
+        const selectedRows = this.grid.selectedRows();
+        const selectedData = this.localData.filter(rec => selectedRows.indexOf(rec.id) > -1);
+        this.batchEditingData = selectedData;
+        this.batchEditDialog.open();
+    }
+
     get isRowEditingEnabled() {
         return this.editMode === editMode.rowEditing;
     }
@@ -455,6 +479,9 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 }
 
+/**
+ * Sorting strategy for year quarters.
+ */
 export class MilestoneSortingStrategy extends DefaultSortingStrategy {
     protected compareObjects(obj1: object,
                              obj2: object,
@@ -479,6 +506,9 @@ export class MilestoneSortingStrategy extends DefaultSortingStrategy {
     }
 }
 
+/**
+ * Sorting strategy for prorgess columns.
+ */
 export class ProgressSortingStrategy extends DefaultSortingStrategy {
     protected compareObjects(obj1: object,
                              obj2: object,
