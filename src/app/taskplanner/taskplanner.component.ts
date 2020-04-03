@@ -9,7 +9,11 @@ import {
     IgxToastComponent,
     ISelectionEventArgs,
     SortingDirection,
-    Transaction
+    Transaction,
+    OverlaySettings,
+    GlobalPositionStrategy,
+    NoOpScrollStrategy,
+    IgxOverlayOutletDirective
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { TASKS_DATA, MEMBERS } from '../services/tasksData';
@@ -64,6 +68,9 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     @ViewChild('batchEditingGrid', { static: true }) public batchEditingGrid: IgxGridComponent;
     @ViewChild('batchEditDialog', { static: true }) public batchEditDialog: IgxDialogComponent;
 
+    @ViewChild(IgxOverlayOutletDirective, { static: true })
+    public outlet: IgxOverlayOutletDirective;
+
     public darkTheme = true;
     public localData: any[];
     public teamMembers: any[];
@@ -95,6 +102,11 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         { value: 'High' },
         { value: 'Critical' }
     ];
+
+    public overlaySettings: OverlaySettings = {
+        modal: true,
+        closeOnOutsideClick: true
+    };
 
     /**
      * Calculates task progress.
@@ -265,7 +277,8 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public openCommitDialog() {
-        this.transactionsDialog.open();
+        this.overlaySettings.outlet = this.outlet;
+        this.transactionsDialog.open(this.overlaySettings);
         this.transactionsGrid.reflow();
     }
 
@@ -334,7 +347,8 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public openAddTaskDialog() {
-        this.addTaskDialog.open();
+        this.overlaySettings.outlet = this.outlet;
+        this.addTaskDialog.open(this.overlaySettings);
     }
 
     /**
@@ -456,7 +470,8 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         const selectedRows = this.grid.selectedRows();
         const selectedData = this.localData.filter(rec => selectedRows.indexOf(rec.id) > -1);
         this.batchEditingData = selectedData;
-        this.batchEditDialog.open();
+        this.overlaySettings.outlet = this.outlet;
+        this.batchEditDialog.open(this.overlaySettings);
     }
 
     get isRowEditingEnabled() {
