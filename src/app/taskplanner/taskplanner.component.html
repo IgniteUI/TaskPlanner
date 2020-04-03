@@ -18,8 +18,8 @@
                 [paging]="true"
                 [columnPinning]="true"
                 [columnHiding]="true"
-                [cellSelection]="'multiple'"
-                [rowSelection]="'none'"
+                [cellSelection]="'none'"
+                [rowSelection]="'multiple'"
                 (onCellEditEnter)="editStart($event)"
                 (onCellEdit)="onCellEdit($event)">
 
@@ -86,8 +86,18 @@
             <span>Task Planner</span>
           </div>
 
+          <button igxButton="outlined" class="button" [igxToggleAction]="editModeDropdown" [igxDropDownItemNavigation]="editModeDropdown">
+            {{ selectedEditMode }}
+            <igx-icon>arrow_drop_down</igx-icon>
+          </button>
 
-          <button igxButton="icon" class="button" [disabled]="!hasTransactions">
+        <igx-drop-down #editModeDropdown [width]="'100px'" (onSelection)='onEditingModeChanged($event)'>
+            <igx-drop-down-item *ngFor="let item of editModes; let i = index" [selected]="isEditModeSelected(i)">
+            {{ item }}
+            </igx-drop-down-item>
+        </igx-drop-down>
+
+          <button igxButton="icon" class="button" [disabled]="!hasTransactions" (click)="openCommitDialog()">
             <igx-icon>check</igx-icon>
           </button>
           <button igxButton="icon" class="button" [disabled]="!undoEnabled" (click)="undo()">
@@ -96,18 +106,8 @@
           <button igxButton="icon" class="button" [disabled]="!redoEnabled" (click)="redo()">
             <igx-icon>redo</igx-icon>
           </button>
+          <button igxButton="raised" class="button" [disabled]="!hasSelection" (click)="openBatchEditDialog()">Batch Edit</button>
 
-          <button igxButton="outlined" class="button" [igxToggleAction]="editModeDropdown" [igxDropDownItemNavigation]="editModeDropdown">
-            {{ selectedEditMode }}
-            <igx-icon>arrow_drop_down</igx-icon>
-          </button>
-
-
-          <igx-drop-down #editModeDropdown [width]="'100px'" (onSelection)='onEditingModeChanged($event)'>
-            <igx-drop-down-item *ngFor="let item of editModes; let i = index" [selected]="isEditModeSelected(i)">
-              {{ item }}
-            </igx-drop-down-item>
-          </igx-drop-down>
           <!-- <igx-drop-down #editActionsDropDown [width]="'100px'" (onSelection)='onEditingModeChanged($event)'>
               <igx-drop-down-item [disabled]="!undoEnabled" (click)="undo()">Undo</igx-drop-down-item>
               <igx-drop-down-item [disabled]="!redoEnabled" (click)="redo()">Redo</igx-drop-down-item>
@@ -185,13 +185,13 @@
   <!-- Toast to show validation errors  -->
   <!-- <igx-toast></igx-toast> -->
 
-  <!-- Add record dialog  -->
-  <igx-dialog #addTaskDialog title="Create Issue"
-              leftButtonLabel="Cancel"
-              (onLeftButtonSelect)="addTaskDialog.close()"
-              (onRightButtonSelect)="addTask($event)"
-              rightButtonLabel="OK"
-              [closeOnOutsideSelect]="true">
+<!-- Add Record Dialog  -->
+<igx-dialog #addTaskDialog title="Create Issue"
+            leftButtonLabel="Cancel"
+            (onLeftButtonSelect)="addTaskDialog.close()"
+            (onRightButtonSelect)="addTask($event)"
+            rightButtonLabel="OK"
+            [closeOnOutsideSelect]="true">
     <div class="tp-app__dialog-content">
       <igx-input-group type="box" #MyInputGroup>
         <label igxLabel for="issue">Issue Title</label>
@@ -258,6 +258,91 @@
       <button igxButton (click)="cancel()">Cancel</button>
     </div>
   </igx-dialog>
+
+<!-- Batch Editing Dialog  -->
+<igx-dialog #batchEditDialog title="Batch Row Editing"
+            leftButtonLabel="Cancel"
+            (onLeftButtonSelect)="batchEditDialog.close()"
+            (onRightButtonSelect)="commitBatchEdits()"
+            rightButtonLabel="Commit"
+            [closeOnOutsideSelect]="false">
+    <div class="tp-app__dialog-content">
+        <igx-grid #batchEditingGrid
+            [height]="'100%'"
+            id="tasksGrid"
+            [data]="batchEditingData "
+            [autoGenerate]="false"
+            [primaryKey]="'id'"
+            [rowEditable]="true">
+
+            <!-- Grid Columns -->
+            <igx-column *ngFor="let c of columns"
+                        [width]="c.width"
+                        [sortable]="c.sortable"
+                        [resizable]="c.resizable"
+                        [movable]="c.movable"
+                        [editable]="c.editable && isEditingEnabled"
+                        [hasSummary]="c.hasSummary"
+                        [filterable]="c.filterable"
+                        [formatter]="c.formatter"
+                        [groupable]="c.groupable"
+                        [sortStrategy]="c.sortStrategy"
+                        [cellClasses]="c.cellClasses"
+                        [field]="c.field"
+                        [header]="c.header"
+                        [dataType]="c.dataType"
+                        [pinned]="c.pinned"
+                        [hidden]="c.hidden">
+
+                <!-- Status Column -->
+                <ng-template *ngIf="c.field === 'status'" igxCellEditor let-cell="cell" let-value>
+                    <igx-select [placeholder]="value" [(ngModel)]="cell.editValue">
+                        <igx-select-item *ngFor="let s of statuses" [value]="s.value">{{ s.value }}</igx-select-item>
+                    </igx-select>
+                </ng-template>
+
+                <!-- Owner Column -->
+                <!-- owner !== {} TODO -->
+                <ng-template *ngIf="c.field === 'owner'" igxCell let-cell="cell" let-value>
+                    <div class="tp-app__owner-col">
+                        <igx-avatar class="tp-app__owner-col-avatar" [src]="cell.value.avatar" roundShape="true" size="small"></igx-avatar>
+                        <span>
+                        <span class="tp-app__owner-col-name">{{ value.name }}</span>
+                    </span>
+                    </div>
+                </ng-template>
+
+                <ng-template *ngIf="c.field === 'owner'" igxCellEditor let-cell="cell" let-value>
+                    <igx-select [placeholder]="value.name" [(ngModel)]="cell.editValue">
+                        <igx-select-item *ngFor="let m of teamMembers" [value]="m">
+                            <div class="item">
+
+                            </div>
+                        </igx-select-item>
+                    </igx-select>
+                </ng-template>
+
+                <!-- Started On, Deadline Columns -->
+                <ng-template *ngIf="c.field === 'started_on' || c.field === 'deadline'" igxCell let-value>
+                    {{ value | date }}
+                </ng-template>
+
+                <!-- Progress Column -->
+                <ng-template *ngIf="c.field === 'progress'" igxCell let-value let-cell="cell">
+                    {{ calcProgress(cell.row.rowData) / 100 | percent }}
+                </ng-template>
+
+                <!-- Priority Column -->
+                <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
+                    <igx-select [placeholder]="value" [(ngModel)]="cell.editValue">
+                        <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
+                    </igx-select>
+                </ng-template>
+            </igx-column>
+        </igx-grid>
+    </div>
+
+</igx-dialog>
 
   <!-- Templates for Charts, showcasing the asignee and team workloads that may be used for other views in the app -->
   <!-- <igx-pie-chart [dataSource]="getAsigneeWorkload(dataItem.oer.id)" [formatLabel]="formatPieLabel"
