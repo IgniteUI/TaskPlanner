@@ -5,3 +5,8 @@ $tp-palette: igx-palette(
     $surface: #282A37,
     $grays: #fff
 );
+
+$tp-light-palette: igx-palette(
+    $primary: #09f,
+    $secondary: #dd328e,
+) !default;

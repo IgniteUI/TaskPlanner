@@ -47,7 +47,6 @@
             margin-bottom: rem(16px);
             line-height: normal;
             font-size: 14px;
-            color: igx-color($tp-palette, 'secondary');
 
             &--comments {
                 margin-bottom: 0;
@@ -61,7 +60,6 @@
             margin-right: rem(32px);
             padding: rem(16px);
             border-radius: 8px;
-            background: $row-background;
 
             &:last-of-type {
                 margin-right: 0;
@@ -75,11 +73,6 @@
 
         &__config-buttons {
             display: flex;
-        }
-
-        &__grid-logo {
-            height: 30px;
-            margin-right: rem(8px);
         }
 
         &__grid-heading {

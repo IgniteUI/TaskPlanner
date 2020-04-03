@@ -13,7 +13,12 @@ $tp-grid: igx-grid-theme(
     $row-selected-text-color: $light-text,
 
     $group-row-background: $row-background,
-    $group-row-selected-background: igx-color($tp-palette, 'primary', 600),
+    $group-row-selected-background: igx-color($tp-palette, 'primary'),
+
+    $expand-all-icon-color: igx-color($tp-palette, 'secondary'),
+    $expand-all-icon-hover-color: igx-color($tp-palette, 'secondary', 600),
+    $expand-icon-color: igx-color($tp-palette, 'secondary'),
+    $expand-icon-hover-color: igx-color($tp-palette, 'secondary', 600),
 
     $cell-selected-background: $row-col-background,
     $cell-editing-background: $row-col-background,
@@ -33,3 +38,7 @@ $tp-grid: igx-grid-theme(
     $pinned-border-color: transparentize(igx-color($tp-palette, 'secondary'), .95),
     $edited-row-indicator: igx-color($tp-palette, 'secondary')
 );
+
+$tp-light-grid: igx-grid-theme(
+    $grid-shadow: (5px 5px 10px #cccec8, -5px -5px 10px #fff)
+)
