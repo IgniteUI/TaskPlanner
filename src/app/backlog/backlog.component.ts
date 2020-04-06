@@ -1,6 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
-import { IgxInputDirective } from 'igniteui-angular';
+import { Component, ViewChild, EventEmitter, Output } from '@angular/core';
+import { IgxInputDirective, IgxListComponent, IgxListItemComponent } from 'igniteui-angular';
 import { TASKS_DATA } from '../services/tasksData';
+import { ITask } from '../taskplanner/taskplanner.component';
 
 @Component({
     selector: 'app-backlog',
@@ -8,13 +9,32 @@ import { TASKS_DATA } from '../services/tasksData';
     styleUrls: ['./backlog.component.scss'],
 })
 export class BacklogComponent  {
-    public issues = TASKS_DATA;
+    public issues = TASKS_DATA.filter(rec => !rec.owner.id)
+    public dropTileId: number;
 
     @ViewChild('taskSearch', { read: IgxInputDirective, static: true }) public searchInput: IgxInputDirective;
+    @ViewChild(IgxListComponent, { read: IgxListComponent, static: true }) public tasksList: IgxListComponent;
+
+    @Output() taskEditAction = new EventEmitter<any>();
 
     constructor() {}
 
     public clearSearchInput() {
         this.searchInput.value = '';
+    }
+
+    public onEditIconClicked(action: string, i: number, issue: ITask) {
+        this.taskEditAction.emit({ action, issue, index: i });
+    }
+
+    public dragEndHandler(dragRef: IgxListItemComponent) {
+        const listElement = dragRef.element;
+        listElement.style.visibility = "visible";
+    }
+
+    public ghostCreateHandler(dragRef: IgxListItemComponent, issue: ITask, i: number) {
+        this.taskEditAction.emit({ action: "drag", issue, index: i });
+        const listElement = dragRef.element;
+        listElement.style.visibility = "hidden";
     }
 }
