@@ -7,7 +7,7 @@ $config-height: rem(68px);
 $search-height: rem(50px);
 $search-margin: rem(16px);
 $tp-app-padding: rem(24px);
-$scroll-subtract: $backlog-tab-header-height + $search-height + ($tp-app-padding * 2);
+$scroll-subtract: $backlog-tab-header-height + $search-height + ($tp-app-padding * 1.3);
 $backlog-width : rem(300px);
 $offset-top: $header-height;
 $state-done: #52e282;
@@ -27,4 +27,5 @@ $scrollbar-track: $row-background;
 $scrollbar-thumb: rgba(65,70,92,1);
 $light-text: #fff;
 $dark-text: #333;
-$light-bg: #e4e6df
+$light-bg: #efefef;
+$tp-radius: rem(8px);

@@ -8,6 +8,10 @@
             height: $search-height;
         }
 
+        .igx-list__item-thumbnail {
+            align-self: center;
+        }
+
         &__backlog {
             min-width: 100px;
             width: $backlog-width;
