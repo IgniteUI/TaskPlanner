@@ -8,8 +8,8 @@ $tp-grid: igx-grid-theme(
     $row-border-color: igx-color($tp-palette, 'surface'),
     $row-odd-background: $row-background,
     $row-even-background: $row-background,
-    $row-selected-background: rgba(igx-color($tp-palette, 'primary', 600), .1),
-    $row-selected-hover-background: rgba(igx-color($tp-palette, 'primary', 600), .2),
+    $row-selected-background: #423A43,
+    $row-selected-hover-background: #5E4C4F,
     $row-selected-text-color: $light-text,
 
     $group-row-background: $row-background,
@@ -40,5 +40,5 @@ $tp-grid: igx-grid-theme(
 );
 
 $tp-light-grid: igx-grid-theme(
-    $grid-shadow: (5px 5px 10px #cccec8, -5px -5px 10px #fff)
+    $grid-shadow: none
 )

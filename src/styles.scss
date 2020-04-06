@@ -99,13 +99,8 @@ html, body {
   @include igx-theme($palette: $tp-light-palette, $legacy-support:false);
   @include igx-css-vars($tp-light-icon);
   @include igx-css-vars($tp-light-card);
-  @include igx-css-vars($tp-light-button);
   @include igx-css-vars($tp-light-grid);
   @include igx-css-vars($tp-light-tabs);
-
-  .igx-navbar {
-    @include igx-css-vars($tp-light-button-header);
-  }
 
   background: $light-bg;
   color: $dark-text;
@@ -162,6 +157,9 @@ html, body {
   @include igx-css-vars($tp-list);
   @include igx-css-vars($tp-tabs);
   @include igx-css-vars($tp-icon);
+  @include igx-checkbox($tp-checkbox);
+  @include igx-navbar($tp-navbar);
+  @include igx-dialog($tp-dialog);
 
   ::-webkit-scrollbar {
     width: 16px;
@@ -175,7 +173,7 @@ html, body {
 
   .tp-app__row-details-col {
     background: $row-background;
-    border-radius: 8px;
+    border-radius: $tp-radius;
   }
 
   .tp-app__row-details-title {

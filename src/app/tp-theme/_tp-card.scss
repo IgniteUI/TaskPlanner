@@ -5,6 +5,6 @@ $tp-card: igx-card-theme(
 );
 
 $tp-light-card: igx-card-theme(
-    $resting-shadow: (5px 5px 10px #cccec8, -5px -5px 10px #fff),
-    $hover-shadow: (5px 5px 10px #cccec8, -5px -5px 10px #fff),
+    $resting-shadow: none,
+    $hover-shadow: none,
 );
