@@ -145,8 +145,8 @@
             <div class="tp-app__owner-col">
               <igx-avatar class="tp-app__owner-col-avatar" [src]="cell.value.avatar" roundShape="true" size="small"></igx-avatar>
               <span>
-                        <span class="tp-app__owner-col-name">{{ value.name }}</span>
-                    </span>
+                  <span class="tp-app__owner-col-name">{{ value.name }}</span>
+              </span>
             </div>
           </ng-template>
 
@@ -154,7 +154,10 @@
             <igx-select [placeholder]="value.name" [(ngModel)]="cell.editValue">
               <igx-select-item *ngFor="let m of teamMembers" [value]="m">
                 <div class="item">
-
+                  <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatar" roundShape="true" size="small"></igx-avatar>
+                  <span>
+                      <span class="tp-app__owner-col-name">{{ m.name }}</span>
+                  </span>
                 </div>
               </igx-select-item>
             </igx-select>

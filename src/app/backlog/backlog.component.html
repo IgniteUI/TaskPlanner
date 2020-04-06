@@ -27,10 +27,10 @@
                             <h2 [class]="issue.priority.toLowerCase()" igxListLineSubTitle>
                                 {{issue.priority}}
                             </h2>
-                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onEditIconClicked('edit', i, issue)">
+                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" igxDragHandle (click)="onEditIconClicked('edit', i, issue)">
                                 <igx-icon>edit</igx-icon>
                             </button>
-                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (onmousedown)="onEditIconClicked('delete', i, issue)">
+                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" igxDragHandle (click)="onEditIconClicked('delete', i, issue)">
                                 <igx-icon>delete</igx-icon>
                             </button>
                         </igx-list-item>
