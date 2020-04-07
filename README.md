@@ -1,5 +1,7 @@
 # TaskPlanner
 
+Live version of the app - https://igniteui.github.io/TaskPlanner/
+
 This project was generated with [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) version 5.0.0-beta.3.
 
 ## Development server
