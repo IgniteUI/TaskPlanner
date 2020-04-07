@@ -17,20 +17,18 @@
                 </igx-input-group>
                 <div class="tp-app__list-scroll">
                     <igx-list>
-                        <igx-list-item *ngFor="let issue of issues; let i = index" igxDrag
-                            #dragRef
-                            (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
-                            (dragEnd)="dragEndHandler(dragRef)"
-                            [ghostClass]="'drag_ghost_class'"> 
-                            <igx-icon class="tp-app__card-thumb-position" igxListThumbnail>drag_indicator</igx-icon>
+                        <igx-list-item *ngFor="let issue of issues; let i = index" #dragRef igxDrag
+                        (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
+                            (dragEnd)="dragEndHandler(dragRef)"> 
+                            <igx-icon class="tp-app__card-thumb-position" igxListThumbnail igxDragHandle>drag_indicator</igx-icon>
                             <h1 igxListLineTitle>{{ (issue.issue.length > 19) ? (issue.issue | slice:0:16) + '...': issue.issue }}</h1>
                             <h2 [class]="issue.priority.toLowerCase()" igxListLineSubTitle>
                                 {{issue.priority}}
                             </h2>
-                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" igxDragHandle (click)="onEditIconClicked('edit', i, issue)">
+                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onEditIconClicked('edit', i, issue)">
                                 <igx-icon>edit</igx-icon>
                             </button>
-                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" igxDragHandle (click)="onEditIconClicked('delete', i, issue)">
+                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onEditIconClicked('delete', i, issue)">
                                 <igx-icon>delete</igx-icon>
                             </button>
                         </igx-list-item>
