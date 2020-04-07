@@ -11,13 +11,12 @@ import {
     SortingDirection,
     Transaction,
     OverlaySettings,
-    GlobalPositionStrategy,
-    NoOpScrollStrategy,
     IgxOverlayOutletDirective
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { TASKS_DATA, MEMBERS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
+import { BacklogComponent } from '../backlog/backlog.component';
 
 export enum editMode {
     cellEditing = 0,
@@ -63,13 +62,14 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     @ViewChild('legend', { static: true }) public legend: IgxLegendComponent;
     @ViewChild(IgxToastComponent, { read: IgxToastComponent, static: true }) public toast: IgxToastComponent;
     @ViewChild('addTaskDialog', { static: true }) public addTaskDialog: IgxDialogComponent;
+    @ViewChild('editTaskDialog', { static: true }) public editTaskDialog: IgxDialogComponent;
     @ViewChild('transactionsDialog', { static: true }) public transactionsDialog: IgxDialogComponent;
     @ViewChild('transactionsGrid', { static: true }) public transactionsGrid: IgxGridComponent;
     @ViewChild('batchEditingGrid', { static: true }) public batchEditingGrid: IgxGridComponent;
     @ViewChild('batchEditDialog', { static: true }) public batchEditDialog: IgxDialogComponent;
 
-    @ViewChild(IgxOverlayOutletDirective, { static: true })
-    public outlet: IgxOverlayOutletDirective;
+    @ViewChild(IgxOverlayOutletDirective, { static: true }) public outlet: IgxOverlayOutletDirective;
+    @ViewChild(BacklogComponent, { read: BacklogComponent, static: true }) public backlog: BacklogComponent;
 
     public darkTheme = true;
     public localData: any[];
@@ -77,6 +77,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public editMode = 0;
     public editModes = ['Cell Editing', 'Row Editing', 'No Editing'];
     public addTaskForm: ITask = { };
+    public editTaskForm: ITask = { };
     public transactionsData: Transaction[] = [];
     public allTasks = TASKS_DATA;
     public batchEditingData: any[];
@@ -256,6 +257,13 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.addTaskDialog.close();
     }
 
+    public editTask(event: any) {
+        this.grid.addRow(this.editTaskForm);
+        const index = this.backlog.issues.findIndex(rec => rec.id === this.editTaskForm.id);
+        this.backlog.issues.splice(index, 1);
+        this.editTaskDialog.close();
+    }
+
     public getStartedOn(dataItem: ITask): boolean {
         return !!dataItem.started_on;
     }
@@ -349,6 +357,20 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public openAddTaskDialog() {
         this.overlaySettings.outlet = this.outlet;
         this.addTaskDialog.open(this.overlaySettings);
+    }
+
+    public onTaskEditAction(event: any) {
+        if (event.action === 'edit') {
+            this.editTaskForm = event.issue;
+            this.overlaySettings.outlet = this.outlet;
+            this.editTaskDialog.open(this.overlaySettings);
+        } else if (event.action === 'drag') {
+            this.editTaskForm = event.issue;
+        } else {
+            setTimeout(() => {
+                this.backlog.issues.splice(event.index, 1);
+            }, 500);
+        }
     }
 
     /**
@@ -472,6 +494,13 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.batchEditingData = selectedData;
         this.overlaySettings.outlet = this.outlet;
         this.batchEditDialog.open(this.overlaySettings);
+    }
+
+    public onItemDropped(ev) {
+        this.grid.addRow(this.editTaskForm);
+        const index = this.backlog.issues.findIndex(rec => rec.id === this.editTaskForm.id);
+        this.backlog.issues.splice(index, 1);
+        // this.grid.onRowDragEnd.emit(args);
     }
 
     get isRowEditingEnabled() {

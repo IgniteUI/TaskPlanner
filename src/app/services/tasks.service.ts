@@ -15,7 +15,7 @@ export class TasksDataService {
     }
 
     public getData(): Observable<any[]> {
-        return of(TASKS_DATA.map(rec => this.parseDate(rec)));
+        return of(TASKS_DATA.filter(rec => rec.owner.id).map(rec => this.parseDate(rec)));
     }
 
     private parseDate(obj) {
