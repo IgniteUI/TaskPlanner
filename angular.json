@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/taskplanner",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-			  "node_modules/igniteui-angular/styles/igniteui-angular.css"
+              "src/styles.scss"
             ],
             "scripts": ["./node_modules/hammerjs/hammer.min.js"],
             "es5BrowserSupport": true
