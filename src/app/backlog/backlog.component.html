@@ -17,14 +17,16 @@
                 </igx-input-group>
                 <div class="tp-app__list-scroll">
                     <igx-list>
-                        <igx-list-item *ngFor="let issue of issues; let i = index" #dragRef igxDrag
-                        (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
-                            (dragEnd)="dragEndHandler(dragRef)"> 
-                            <igx-icon class="tp-app__card-thumb-position" igxListThumbnail igxDragHandle>drag_indicator</igx-icon>
-                            <h1 igxListLineTitle>{{ (issue.issue.length > 19) ? (issue.issue | slice:0:16) + '...': issue.issue }}</h1>
-                            <h2 [class]="issue.priority.toLowerCase()" igxListLineSubTitle>
-                                {{issue.priority}}
-                            </h2>
+                        <igx-list-item *ngFor="let issue of issues; let i = index">
+                            <div class="tp-app__list-draghandler" #dragRef igxDrag
+                                (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
+                                (dragEnd)="dragEndHandler(dragRef)">
+                                <igx-icon class="tp-app__card-thumb-position" igxListThumbnail igxDragHandle>drag_indicator</igx-icon>
+                                <h1 igxListLineTitle>{{ (issue.issue.length > 19) ? (issue.issue | slice:0:16) + '...': issue.issue }}</h1>
+                                <h2 [class]="issue.priority.toLowerCase()" igxListLineSubTitle>
+                                    {{issue.priority}}
+                                </h2>
+                            </div>
                             <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onEditIconClicked('edit', i, issue)">
                                 <igx-icon>edit</igx-icon>
                             </button>
