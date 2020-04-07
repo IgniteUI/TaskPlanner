@@ -1,0 +1,5 @@
+$tp-navbar: igx-navbar-theme(
+	$palette: $tp-palette,
+	$schema: $dark-schema,
+	$background: igx-color($tp-palette, 'surface')
+)

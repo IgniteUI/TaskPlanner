@@ -22,7 +22,7 @@
                             (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
                             (dragEnd)="dragEndHandler(dragRef)"
                             [ghostClass]="'drag_ghost_class'"> 
-                            <igx-icon igxListThumbnail>drag_indicator</igx-icon>
+                            <igx-icon class="tp-app__card-thumb-position" igxListThumbnail>drag_indicator</igx-icon>
                             <h1 igxListLineTitle>{{ (issue.issue.length > 19) ? (issue.issue | slice:0:16) + '...': issue.issue }}</h1>
                             <h2 [class]="issue.priority.toLowerCase()" igxListLineSubTitle>
                                 {{issue.priority}}

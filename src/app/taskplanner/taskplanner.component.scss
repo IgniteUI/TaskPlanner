@@ -90,8 +90,16 @@
             padding: 0 rem(24px);
 
             > * {
-                margin-bottom: rem(8px);
+                margin-bottom: rem(16px);
             }
+        }
+
+        .igx-dialog__window-actions {
+            padding: rem(8px) rem(24px) rem(24px) rem(24px);
+        }
+
+        .igx-grid-toolbar__actions {
+            display: none;
         }
 
         &__owner-col {
