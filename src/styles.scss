@@ -140,6 +140,25 @@ html, body {
   .igx-card-content {
     padding: 0 !important;
   }
+
+  .tp-app__backlog-list-action {
+    color: igx-color($tp-palette, 'grays', 500) !important;
+
+    igx-icon {
+      color: igx-color($tp-palette, 'grays', 500);
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: igx-color($tp-palette, 'secondary') !important;
+
+      igx-icon {
+        cursor: pointer;
+        color: igx-color($tp-palette, 'secondary');
+      }
+    }
+  }
 }
 
 .tp-app-dark-theme {
