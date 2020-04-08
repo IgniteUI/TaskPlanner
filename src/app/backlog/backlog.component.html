@@ -19,6 +19,7 @@
                     <igx-list>
                         <igx-list-item *ngFor="let issue of issues; let i = index">
                             <div class="tp-app__list-draghandler" #dragRef igxDrag
+                                [ghostHost]="backlogElement"
                                 (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
                                 (dragEnd)="dragEndHandler(dragRef)">
                                 <igx-icon class="tp-app__card-thumb-position" igxListThumbnail igxDragHandle>drag_indicator</igx-icon>
