@@ -1,4 +1,4 @@
-import { Component, ViewChild, EventEmitter, Output } from '@angular/core';
+import {Component, ViewChild, EventEmitter, Output, ElementRef} from '@angular/core';
 import { IgxInputDirective, IgxListComponent, IgxListItemComponent } from 'igniteui-angular';
 import { TASKS_DATA } from '../services/tasksData';
 import { ITask } from '../taskplanner/taskplanner.component';
@@ -9,7 +9,7 @@ import { ITask } from '../taskplanner/taskplanner.component';
     styleUrls: ['./backlog.component.scss'],
 })
 export class BacklogComponent  {
-    public issues = TASKS_DATA.filter(rec => !rec.owner.id)
+    public issues = TASKS_DATA.filter(rec => !rec.owner.id);
     public dropTileId: number;
 
     @ViewChild('taskSearch', { read: IgxInputDirective, static: true }) public searchInput: IgxInputDirective;
@@ -17,7 +17,11 @@ export class BacklogComponent  {
 
     @Output() taskEditAction = new EventEmitter<any>();
 
-    constructor() {}
+    constructor(private elRef: ElementRef) {}
+
+    get hostElement() {
+        return this.elRef.nativeElement;
+    }
 
     public clearSearchInput() {
         this.searchInput.value = '';
