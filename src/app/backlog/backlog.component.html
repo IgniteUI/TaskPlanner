@@ -21,7 +21,7 @@
                             <div class="tp-app__backlog-list-template">
                                 <div class="tp-app__backlog-list-template-row" #dragRef igxDrag
                                 [ghostHost]="backlogElement"
-                                     [ghostClass]="'drag_ghost_class'"
+                                     [ghostClass]="'tp-app__backlog-dragged-item'"
                                      (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
                                      (dragEnd)="dragEndHandler(dragRef)"
                                      class="tp-app__backlog-list-template-row tp-app__backlog-dragged-item"
@@ -54,3 +54,4 @@
         </igx-tabs>
     </igx-card-content>
 </igx-card>
+
