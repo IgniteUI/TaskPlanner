@@ -8,6 +8,23 @@
             height: $search-height;
         }
 
+        &__backlog-list-template {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            &-row {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                igx-icon {
+                    margin-right: rem(16px);
+                }
+            }
+            &-text {
+
+            }
+        }
+
         .igx-list__item-thumbnail {
             align-self: center;
         }

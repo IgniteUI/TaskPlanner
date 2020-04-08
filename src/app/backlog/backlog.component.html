@@ -18,22 +18,26 @@
                 <div class="tp-app__list-scroll">
                     <igx-list>
                         <igx-list-item *ngFor="let issue of issues; let i = index">
-                            <div class="tp-app__list-draghandler" #dragRef igxDrag
+                            <div class="tp-app__backlog-list-template">
+                                <div class="tp-app__backlog-list-template-row" #dragRef igxDrag
                                 [ghostHost]="backlogElement"
-                                (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
-                                (dragEnd)="dragEndHandler(dragRef)">
-                                <igx-icon class="tp-app__card-thumb-position" igxListThumbnail igxDragHandle>drag_indicator</igx-icon>
-                                <h1 igxListLineTitle>{{ (issue.issue.length > 19) ? (issue.issue | slice:0:16) + '...': issue.issue }}</h1>
-                                <h2 [class]="issue.priority.toLowerCase()" igxListLineSubTitle>
-                                    {{issue.priority}}
-                                </h2>
+                                     (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
+                                     (dragEnd)="dragEndHandler(dragRef)">
+                                    <igx-icon class="tp-app__backlog-list-action" igxDragHandle>drag_indicator</igx-icon>
+                                    <div class="tp-app__backlog-list-template-text">
+                                        <h1 igxListLineTitle>{{ (issue.issue.length > 19) ? (issue.issue | slice:0:16) + '...': issue.issue }}</h1>
+                                        <h2 [class]="issue.priority.toLowerCase()" igxListLineSubTitle>
+                                            {{issue.priority}}
+                                        </h2>
+                                    </div>
+                                </div>
+                                <button class="tp-app__backlog-list-action" igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onEditIconClicked('edit', i, issue)">
+                                    <igx-icon>edit</igx-icon>
+                                </button>
+                                <button class="tp-app__backlog-list-action" igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onEditIconClicked('delete', i, issue)">
+                                    <igx-icon>delete</igx-icon>
+                                </button>
                             </div>
-                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onEditIconClicked('edit', i, issue)">
-                                <igx-icon>edit</igx-icon>
-                            </button>
-                            <button igxListAction igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onEditIconClicked('delete', i, issue)">
-                                <igx-icon>delete</igx-icon>
-                            </button>
                         </igx-list-item>
                         <ng-template igxDataLoading>
 

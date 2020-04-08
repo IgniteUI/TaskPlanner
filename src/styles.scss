@@ -183,4 +183,44 @@ html, body {
   igx-grid {
     border-radius: rem(16px);
   }
+
+  .tp-app__backlog-list-action {
+    color: igx-color($tp-palette, 'grays', 500) !important;
+
+    igx-icon {
+      color: igx-color($tp-palette, 'grays', 500);
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: igx-color($tp-palette, 'secondary') !important;
+
+      igx-icon {
+        cursor: pointer;
+        color: igx-color($tp-palette, 'secondary');
+      }
+    }
+  }
+}
+
+.tp-app-light-theme {
+  .tp-app__backlog-list-action {
+    color: igx-color($tp-light-palette, 'grays', 500) !important;
+
+    igx-icon {
+      color: igx-color($tp-light-palette, 'grays', 500);
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: igx-color($tp-light-palette, 'secondary') !important;
+
+      igx-icon {
+        cursor: pointer;
+        color: igx-color($tp-light-palette, 'secondary');
+      }
+    }
+  }
 }
