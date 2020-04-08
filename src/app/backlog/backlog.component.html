@@ -17,11 +17,11 @@
                 </igx-input-group>
                 <div class="tp-app__list-scroll">
                     <igx-list>
-                        <igx-list-item *ngFor="let issue of issues; let i = index" #dragRef>
+                        <igx-list-item *ngFor="let issue of issues; let i = index">
                             <div class="tp-app__backlog-list-template">
-                                <div igxDrag
+                                <div class="tp-app__backlog-list-template-row" #dragRef igxDrag
+                                [ghostHost]="backlogElement"
                                      [ghostClass]="'drag_ghost_class'"
-                                     [ghostHost]="hostElement"
                                      (ghostCreate)="ghostCreateHandler(dragRef, issue, i)"
                                      (dragEnd)="dragEndHandler(dragRef)"
                                      class="tp-app__backlog-list-template-row tp-app__backlog-dragged-item"
