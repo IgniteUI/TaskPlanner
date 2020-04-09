@@ -28,14 +28,12 @@ export class BacklogComponent  {
         this.taskEditAction.emit({ action, issue, index: i });
     }
 
-    public dragEndHandler(dragRef: IgxListItemComponent) {
-        const listElement = dragRef.element;
-        listElement.style.visibility = 'visible';
+    public dragEndHandler(dragRef: HTMLElement) {
+        dragRef.style.visibility = 'visible';
     }
 
-    public ghostCreateHandler(dragRef: IgxListItemComponent, issue: ITask, i: number) {
+    public ghostCreateHandler(dragRef: HTMLElement, issue: ITask, i: number) {
         this.taskEditAction.emit({ action: 'drag', issue, index: i });
-        const listElement = dragRef.element;
-        listElement.style.visibility = 'hidden';
+        dragRef.style.visibility = 'hidden';
     }
 }

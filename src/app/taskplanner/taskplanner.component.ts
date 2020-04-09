@@ -11,7 +11,8 @@ import {
     SortingDirection,
     Transaction,
     OverlaySettings,
-    IgxOverlayOutletDirective
+    IgxOverlayOutletDirective,
+    IDropDroppedEventArgs
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { TASKS_DATA, MEMBERS } from '../services/tasksData';
@@ -491,6 +492,28 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         const selectedData = this.localData.filter(rec => selectedRows.indexOf(rec.id) > -1);
         this.batchEditingData = selectedData;
         this.batchEditDialog.open(this.overlaySettings);
+    }
+
+    public onDropContainerEnter(event: IDropDroppedEventArgs) {
+        this.grid.tbody.nativeElement.classList.add('dropAreaEntered');
+        const groupRows = event.owner.element.nativeElement.querySelectorAll('igx-grid-groupby-row');
+        (groupRows as HTMLElement[]).forEach(element => {
+            const childEl = element.children[1].children[0].children[0] as HTMLElement;
+            if (childEl.innerText === this.editTaskForm.milestone) {
+                element.classList.add('groupRowHighlight');
+            }
+        });
+    }
+
+    public onDropContainerLeave(event: IDropDroppedEventArgs) {
+        this.grid.tbody.nativeElement.classList.remove('dropAreaEntered');
+        const groupRows = event.owner.element.nativeElement.querySelectorAll('igx-grid-groupby-row');
+        (groupRows as HTMLElement[]).forEach(element => {
+            const childEl = element.children[1].children[0].children[0] as HTMLElement;
+            if (childEl.innerText === this.editTaskForm.milestone) {
+                element.classList.remove('groupRowHighlight');
+            }
+        });
     }
 
     public onItemDropped(ev) {

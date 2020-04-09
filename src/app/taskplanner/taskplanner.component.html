@@ -22,7 +22,9 @@
                       [rowSelection]="'multiple'"
                       (onCellEditEnter)="editStart($event)"
                       (onCellEdit)="onCellEdit($event)"
-                      (dropped)="onItemDropped($event)" >
+                      (dropped)="onItemDropped($event)"
+                      (enter)="onDropContainerEnter($event)"
+                      (leave)="onDropContainerLeave($event)">
 
                 <!-- Grid Detail View Template -->
                 <ng-template igxGridDetail let-dataItem>

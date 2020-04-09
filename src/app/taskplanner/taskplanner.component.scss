@@ -4,6 +4,14 @@
         height: 100%;
         overflow: hidden;
 
+        .dropAreaEntered {
+            opacity: 0.2;
+        }
+
+        .groupRowHighlight {
+            background-color: pink;
+        }
+
         // TODO create issue to make the height of the list height:auto
         igx-list {
             height: auto !important;
