@@ -8,12 +8,12 @@ $tp-grid: igx-grid-theme(
     $row-border-color: igx-color($tp-palette, 'surface'),
     $row-odd-background: $row-background,
     $row-even-background: $row-background,
-    $row-selected-background: #423A43,
-    $row-selected-hover-background: #5E4C4F,
+    $row-selected-background: $row-selected-background,
+    $row-selected-hover-background: $row-selected-background--hover,
     $row-selected-text-color: $light-text,
 
     $group-row-background: $row-background,
-    $group-row-selected-background: igx-color($tp-palette, 'primary'),
+    $group-row-selected-background: $row-selected-background,
 
     $expand-all-icon-color: igx-color($tp-palette, 'secondary'),
     $expand-all-icon-hover-color: igx-color($tp-palette, 'secondary', 600),

@@ -94,8 +94,18 @@
             }
         }
 
-        .igx-dialog__window-actions {
+        .igx-dialog__window {
+            max-width: 90vw;
+        }
+
+        .igx-dialog__window-actions,
+        &__dialog-buttons-wrapper {
             padding: rem(8px) rem(24px) rem(24px) rem(24px);
+        }
+
+        &__dialog-buttons-wrapper {
+            display: flex;
+            justify-content: flex-end;
         }
 
         .igx-grid-toolbar__actions {
