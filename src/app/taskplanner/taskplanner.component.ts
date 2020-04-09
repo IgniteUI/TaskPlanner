@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, AfterViewInit, HostBinding} from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, HostBinding, ElementRef } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import {
     DefaultSortingStrategy,
@@ -71,6 +71,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     @ViewChild(IgxOverlayOutletDirective, { static: true }) public outlet: IgxOverlayOutletDirective;
     @ViewChild(BacklogComponent, { read: BacklogComponent, static: true }) public backlog: BacklogComponent;
 
+    public hostElement = this.elementRef.nativeElement;
     public darkTheme = true;
     public localData: any[];
     public teamMembers: any[];
@@ -212,10 +213,10 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses }
     ];
 
-    constructor(private dataService: TasksDataService) {  }
+    constructor(private dataService: TasksDataService, private elementRef: ElementRef) {  }
 
     public ngOnInit() {
-
+        this.overlaySettings.outlet = this.outlet;
         this.dataService.getData().subscribe(data => this.localData = data);
         this.teamMembers = MEMBERS;
 
@@ -285,7 +286,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public openCommitDialog() {
-        this.overlaySettings.outlet = this.outlet;
         this.transactionsDialog.open(this.overlaySettings);
         this.transactionsGrid.reflow();
     }
@@ -355,14 +355,12 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public openAddTaskDialog() {
-        this.overlaySettings.outlet = this.outlet;
         this.addTaskDialog.open(this.overlaySettings);
     }
 
     public onTaskEditAction(event: any) {
         if (event.action === 'edit') {
             this.editTaskForm = event.issue;
-            this.overlaySettings.outlet = this.outlet;
             this.editTaskDialog.open(this.overlaySettings);
         } else if (event.action === 'drag') {
             this.editTaskForm = event.issue;
@@ -492,7 +490,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         const selectedRows = this.grid.selectedRows();
         const selectedData = this.localData.filter(rec => selectedRows.indexOf(rec.id) > -1);
         this.batchEditingData = selectedData;
-        this.overlaySettings.outlet = this.outlet;
         this.batchEditDialog.open(this.overlaySettings);
     }
 
