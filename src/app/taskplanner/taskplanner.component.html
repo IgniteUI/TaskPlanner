@@ -8,7 +8,7 @@
         <app-grid-transactions class="tp-app__grid">
             <igx-grid #tasksGrid id="tasksGrid" igxDrop
                 [height]="'100%'"
-                [data]="localData "
+                [data]="tasks "
                 [autoGenerate]="false"
                 [showToolbar]="true"
                 [primaryKey]="'id'"
@@ -211,7 +211,7 @@
                     <input igxInput id="issue" type="text" [(ngModel)]="addTaskForm.milestone" name="newTask" [igxMask]="'L#?####'"/>
                 </igx-input-group>
 
-                <igx-date-picker name="deadline" [(ngModel)]="addTaskForm.deadline" [outlet]="outlet">
+                <igx-date-picker name="deadline" [(ngModel)]="addTaskForm.deadline" [outlet]="outlet" [formatter]="formatDate">
                     <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
                         <igx-input-group [type]="inputType" type="border" (click)="openDialog()">
                             <label igxLabel>Deadline</label>
@@ -264,7 +264,7 @@
                   <input igxInput id="issue" type="text" [(ngModel)]="editTaskForm.milestone" name="newTask" [igxMask]="'L#?####'"/>
               </igx-input-group>
         
-              <igx-date-picker name="deadline" [(ngModel)]="editTaskForm.deadline" [outlet]="outlet">
+              <igx-date-picker name="deadline" [(ngModel)]="editTaskForm.deadline" [outlet]="outlet" [formatter]="formatDate">
                   <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
                       <igx-input-group [type]="inputType" type="border" (click)="openDialog()">
                           <label igxLabel>Deadline</label>

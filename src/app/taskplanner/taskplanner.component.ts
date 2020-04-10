@@ -26,7 +26,7 @@ export enum editMode {
 }
 
 export interface ITask {
-    id?: number;
+    id: number;
     issue?: string;
     isActive?: boolean;
     priority?: string;
@@ -73,12 +73,12 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     @ViewChild(BacklogComponent, { read: BacklogComponent, static: true }) public backlog: BacklogComponent;
 
     public darkTheme = true;
-    public localData: any[];
+    public tasks: ITask[];
     public teamMembers: any[];
     public editMode = 0;
     public editModes = ['Cell Editing', 'Row Editing', 'No Editing'];
-    public addTaskForm: ITask = { };
-    public editTaskForm: ITask = { };
+    public addTaskForm = {} as ITask;
+    public editTaskForm = {} as ITask;
     public transactionsData: Transaction[] = [];
     public allTasks = TASKS_DATA;
     public batchEditingData: any[];
@@ -120,6 +120,9 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
      * Calculates task progress.
      */
     public calcProgress = calcProgress;
+
+    private dayFormatter = new Intl.DateTimeFormat('en', { weekday: 'long' });
+    private monthFormatter = new Intl.DateTimeFormat('en', { month: 'long' });
 
     public toggleTheme() {
       this.darkTheme = !this.darkTheme;
@@ -221,7 +224,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
         this.dialogOverlaySettings.outlet = this.outlet;
-        this.dataService.getData().subscribe(data => this.localData = data);
+        this.dataService.getAssignedTasks().subscribe(data => this.tasks = data);
         this.teamMembers = MEMBERS;
 
         this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
@@ -275,6 +278,10 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.grid.deleteRow(rowID);
     }
 
+    public formatDate = (date: Date) => {
+        return `${this.dayFormatter.format(date)}, ${date.getDate()} ${this.monthFormatter.format(date)}, ${date.getFullYear()}`;
+      }
+
     public formatID(value: number): string {
         return '#' + value;
     }
@@ -293,7 +300,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public commit() {
-        this.grid.transactions.commit(this.localData);
+        this.grid.transactions.commit(this.tasks);
         this.transactionsDialog.close();
     }
 
@@ -364,7 +371,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
      * Returns workload for corresponding team member.
      */
     public getAssigneeWorkload(ownerID: number) {
-        const workloadData = this.localData.filter(rec => rec.owner.id === ownerID);
+        const workloadData = this.tasks.filter(rec => rec.owner.id === ownerID);
         const newTasks = workloadData.filter(rec => rec.status === 'New').length;
         const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
         const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
@@ -379,7 +386,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
      * Returns workload for the corrssponding team.
      */
     public getTeamWorkload(team: string) {
-        const workloadData = this.localData.filter(rec => rec.owner.team === team);
+        const workloadData = this.tasks.filter(rec => rec.owner.team === team);
         const newTasks = workloadData.filter(rec => rec.status === 'New').length;
         const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
         const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
@@ -441,7 +448,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
 
     public openBatchEditDialog() {
         const selectedRows = this.grid.selectedRows();
-        const selectedData = this.localData.filter(rec => selectedRows.indexOf(rec.id) > -1);
+        const selectedData = this.tasks.filter(rec => selectedRows.indexOf(rec.id) > -1);
         this.batchEditingData = selectedData;
         this.batchEditDialog.open(this.dialogOverlaySettings);
     }
