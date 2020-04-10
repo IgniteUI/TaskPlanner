@@ -1,0 +1,8 @@
+$tp-drop-down: igx-drop-down-theme(
+	$palette: $tp-palette,
+	$schema: $dark-schema,
+	$hover-item-background: $row-selected-background--hover,
+	$focused-item-background: $row-selected-background--hover,
+	$selected-item-background: $row-selected-background,
+	$selected-focus-item-background: $row-selected-background
+);

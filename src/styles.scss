@@ -96,7 +96,7 @@ html, body {
 }
 
 .tp-app-light-theme {
-  @include igx-theme($palette: $tp-light-palette, $legacy-support:false);
+  @include igx-fluent-theme($palette: $tp-light-palette, $legacy-support:false);
   @include igx-css-vars($tp-light-icon);
   @include igx-css-vars($tp-light-card);
   @include igx-css-vars($tp-light-grid);
@@ -105,10 +105,32 @@ html, body {
   background: $light-bg;
   color: $dark-text;
 
+  .tp-app__drop-area-entered {
+    opacity: 0.5;
+  }
+
+  @keyframes drop-background2 {
+    0% {
+      background: #ffeef6;
+    }
+
+    50% {
+      background: #ffdbea;
+    }
+
+    0% {
+      background: #ffeef6;
+    }
+  }
+
+  .tp-app__groupby-row-highlight {
+    background: #ffeef6;
+    animation: drop-background2 1s ease-in-out infinite;
+  }
+
   igx-grid {
     border-radius: rem(4px);
   }
-
 
   .tp-app__row-details-col {
     background: igx-color($tp-light-palette, 'grays', 100);
@@ -117,6 +139,8 @@ html, body {
   .tp-app__row-details-title {
     color: igx-color($tp-light-palette, 'secondary');
   }
+
+  scrollbar-color: igx-color($tp-light-palette, 'grays', 200) igx-color($tp-light-palette, 'grays', 100);
 
   ::-webkit-scrollbar {
     width: 16px;
@@ -157,9 +181,35 @@ html, body {
   @include igx-css-vars($tp-list);
   @include igx-css-vars($tp-tabs);
   @include igx-css-vars($tp-icon);
-  @include igx-checkbox($tp-checkbox);
-  @include igx-navbar($tp-navbar);
-  @include igx-dialog($tp-dialog);
+  @include igx-css-vars($tp-checkbox);
+  @include igx-css-vars($tp-navbar);
+  @include igx-css-vars($tp-dialog);
+  @include igx-css-vars($tp-drop-down);
+
+  .tp-app__drop-area-entered {
+    opacity: 0.3;
+  }
+
+  @keyframes drop-background {
+    0% {
+      background: $row-selected-background;
+    }
+
+    50% {
+      background: $row-selected-background--hover;
+    }
+
+    0% {
+      background: $row-selected-background;
+    }
+  }
+
+  .tp-app__groupby-row-highlight {
+    background: $row-selected-background;
+    animation: drop-background 1s ease-in-out infinite;
+  }
+
+  scrollbar-color: $scrollbar-thumb $scrollbar-track;
 
   ::-webkit-scrollbar {
     width: 16px;

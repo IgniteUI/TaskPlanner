@@ -23,7 +23,7 @@ $row-background: #343745;
 $row-col-background: #2e313c;
 $btn-icon-background: #262933;
 $header-background: $row-background;
-$scrollbar-track: $row-background;
+$scrollbar-track: darken($row-background, 3%);
 $row-selected-background: #423A43;
 $row-selected-background--hover: #5E4C4F;
 $scrollbar-thumb: rgba(65,70,92,1);
