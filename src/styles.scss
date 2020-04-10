@@ -96,7 +96,7 @@ html, body {
 }
 
 .tp-app-light-theme {
-  @include igx-theme($palette: $tp-light-palette, $legacy-support:false);
+  @include igx-fluent-theme($palette: $tp-light-palette, $legacy-support:false);
   @include igx-css-vars($tp-light-icon);
   @include igx-css-vars($tp-light-card);
   @include igx-css-vars($tp-light-grid);
@@ -140,6 +140,8 @@ html, body {
     color: igx-color($tp-light-palette, 'secondary');
   }
 
+  scrollbar-color: igx-color($tp-light-palette, 'grays', 200) igx-color($tp-light-palette, 'grays', 100);
+
   ::-webkit-scrollbar {
     width: 16px;
     height: 16px;
@@ -179,9 +181,10 @@ html, body {
   @include igx-css-vars($tp-list);
   @include igx-css-vars($tp-tabs);
   @include igx-css-vars($tp-icon);
-  @include igx-checkbox($tp-checkbox);
-  @include igx-navbar($tp-navbar);
-  @include igx-dialog($tp-dialog);
+  @include igx-css-vars($tp-checkbox);
+  @include igx-css-vars($tp-navbar);
+  @include igx-css-vars($tp-dialog);
+  @include igx-css-vars($tp-drop-down);
 
   .dropAreaEntered {
     opacity: 0.3;
@@ -205,6 +208,8 @@ html, body {
     background: $row-selected-background;
     animation: drop-background 1s ease-in-out infinite;
   }
+
+  scrollbar-color: $scrollbar-thumb $scrollbar-track;
 
   ::-webkit-scrollbar {
     width: 16px;
