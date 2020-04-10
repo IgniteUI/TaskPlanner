@@ -105,10 +105,28 @@ html, body {
   background: $light-bg;
   color: $dark-text;
 
+  @keyframes drop-background2 {
+    0% {
+      background: $row-selected-background;
+    }
+
+    50% {
+      background: $row-selected-background--hover;
+    }
+
+    0% {
+      background: $row-selected-background;
+    }
+  }
+
+  .groupRowHighlight2 {
+    background: $row-selected-background;
+    animation: drop-background2 1s ease-in-out infinite;
+  }
+
   igx-grid {
     border-radius: rem(4px);
   }
-
 
   .tp-app__row-details-col {
     background: igx-color($tp-light-palette, 'grays', 100);
@@ -160,6 +178,25 @@ html, body {
   @include igx-checkbox($tp-checkbox);
   @include igx-navbar($tp-navbar);
   @include igx-dialog($tp-dialog);
+
+  @keyframes drop-background {
+    0% {
+      background: $row-selected-background;
+    }
+
+    50% {
+      background: $row-selected-background--hover;
+    }
+
+    0% {
+      background: $row-selected-background;
+    }
+  }
+
+  .groupRowHighlight {
+    background: $row-selected-background;
+    animation: drop-background 1s ease-in-out infinite;
+  }
 
   ::-webkit-scrollbar {
     width: 16px;
