@@ -4,10 +4,6 @@
         height: 100%;
         overflow: hidden;
 
-        .dropAreaEntered {
-            opacity: 0.3;
-        }
-
         // TODO create issue to make the height of the list height:auto
         igx-list {
             height: auto !important;

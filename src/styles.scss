@@ -105,22 +105,26 @@ html, body {
   background: $light-bg;
   color: $dark-text;
 
+  .dropAreaEntered {
+    opacity: 0.5;
+  }
+
   @keyframes drop-background2 {
     0% {
-      background: #f8b5d4;
+      background: #ffeef6;
     }
 
     50% {
-      background: #fa91c1;
+      background: #ffdbea;
     }
 
     0% {
-      background: #f8b5d4;
+      background: #ffeef6;
     }
   }
 
   .groupRowHighlight {
-    background: #f8b5d4;
+    background: #ffeef6;
     animation: drop-background2 1s ease-in-out infinite;
   }
 
@@ -178,6 +182,10 @@ html, body {
   @include igx-checkbox($tp-checkbox);
   @include igx-navbar($tp-navbar);
   @include igx-dialog($tp-dialog);
+
+  .dropAreaEntered {
+    opacity: 0.3;
+  }
 
   @keyframes drop-background {
     0% {
