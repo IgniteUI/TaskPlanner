@@ -105,7 +105,7 @@ html, body {
   background: $light-bg;
   color: $dark-text;
 
-  .dropAreaEntered {
+  .tp-app__drop-area-entered {
     opacity: 0.5;
   }
 
@@ -123,7 +123,7 @@ html, body {
     }
   }
 
-  .groupRowHighlight {
+  .tp-app__groupby-row-highlight {
     background: #ffeef6;
     animation: drop-background2 1s ease-in-out infinite;
   }
@@ -186,7 +186,7 @@ html, body {
   @include igx-css-vars($tp-dialog);
   @include igx-css-vars($tp-drop-down);
 
-  .dropAreaEntered {
+  .tp-app__drop-area-entered {
     opacity: 0.3;
   }
 
@@ -204,7 +204,7 @@ html, body {
     }
   }
 
-  .groupRowHighlight {
+  .tp-app__groupby-row-highlight {
     background: $row-selected-background;
     animation: drop-background 1s ease-in-out infinite;
   }

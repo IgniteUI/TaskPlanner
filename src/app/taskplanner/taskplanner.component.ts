@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, HostBinding, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, HostBinding } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import {
     DefaultSortingStrategy,
@@ -17,7 +17,7 @@ import {
 import { TasksDataService } from '../services/tasks.service';
 import { TASKS_DATA, MEMBERS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
-import { BacklogComponent } from '../backlog/backlog.component';
+import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
 
 export enum editMode {
     cellEditing = 0,
@@ -72,7 +72,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     @ViewChild(IgxOverlayOutletDirective, { static: true }) public outlet: IgxOverlayOutletDirective;
     @ViewChild(BacklogComponent, { read: BacklogComponent, static: true }) public backlog: BacklogComponent;
 
-    public hostElement = this.elementRef.nativeElement;
     public darkTheme = true;
     public localData: any[];
     public teamMembers: any[];
@@ -83,6 +82,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public transactionsData: Transaction[] = [];
     public allTasks = TASKS_DATA;
     public batchEditingData: any[];
+    public inputType = 'material';
 
     public statuses = [
         {
@@ -106,8 +106,13 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         { value: 'Critical' }
     ];
 
-    public overlaySettings: OverlaySettings = {
+    public dialogOverlaySettings: OverlaySettings = {
         modal: true,
+        closeOnOutsideClick: true
+    };
+
+    public overlaySettings: OverlaySettings = {
+        modal: false,
         closeOnOutsideClick: true
     };
 
@@ -118,6 +123,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
 
     public toggleTheme() {
       this.darkTheme = !this.darkTheme;
+      this.inputType = this.darkTheme ? 'material' : 'fluent';
     }
 
     // TODO Make Pipe from the filterTasks function
@@ -175,10 +181,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         return rowData.hours_spent > rowData.estimation;
     }
 
-    public isDelayed2 = (rowData: ITask, columnKey: string): boolean => {
-        return rowData.hours_spent > rowData.estimation;
-    }
-
     public statusClasses = {
         done: this.isDone,
         new: this.isNew,
@@ -214,10 +216,11 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses }
     ];
 
-    constructor(private dataService: TasksDataService, private elementRef: ElementRef) {  }
+    constructor(private dataService: TasksDataService) {  }
 
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
+        this.dialogOverlaySettings.outlet = this.outlet;
         this.dataService.getData().subscribe(data => this.localData = data);
         this.teamMembers = MEMBERS;
 
@@ -260,9 +263,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public editTask(event: any) {
-        this.grid.addRow(this.editTaskForm);
-        const index = this.backlog.issues.findIndex(rec => rec.id === this.editTaskForm.id);
-        this.backlog.issues.splice(index, 1);
+        this.addBacklogItem(this.editTaskForm);
         this.editTaskDialog.close();
     }
 
@@ -287,7 +288,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public openCommitDialog() {
-        this.transactionsDialog.open(this.overlaySettings);
+        this.transactionsDialog.open(this.dialogOverlaySettings);
         this.transactionsGrid.reflow();
     }
 
@@ -315,22 +316,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.transactionsDialog.close();
     }
 
-    public get undoEnabled(): boolean {
-        return this.grid.transactions.canUndo;
-    }
-
-    public get redoEnabled(): boolean {
-        return this.grid.transactions.canRedo;
-    }
-
-    public get hasTransactions(): boolean {
-        return this.grid.transactions.getAggregatedChanges(false).length > 0;
-    }
-
-    public get hasSelection(): boolean {
-        return this.grid.selectedRows().length > 0;
-    }
-
     public stateFormatter(value) {
         return JSON.stringify(value);
     }
@@ -356,26 +341,29 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public openAddTaskDialog() {
-        this.addTaskDialog.open(this.overlaySettings);
+        this.addTaskDialog.open(this.dialogOverlaySettings);
     }
 
-    public onTaskEditAction(event: any) {
-        if (event.action === 'edit') {
-            this.editTaskForm = event.issue;
-            this.editTaskDialog.open(this.overlaySettings);
-        } else if (event.action === 'drag') {
-            this.editTaskForm = event.issue;
-        } else {
-            setTimeout(() => {
-                this.backlog.issues.splice(event.index, 1);
-            }, 500);
-        }
+    public onBacklogItemAction(event: IListItemAction) {
+        switch (event.action) {
+            case 'edit': {
+                this.editTaskForm = event.issue;
+                this.editTaskDialog.open(this.dialogOverlaySettings);
+                break;
+            }
+             case 'drag':
+             case 'release': {
+                this.editTaskForm = event.issue;
+                this.toggleGridBodyHighlight();
+                break;
+             }
+         }
     }
 
     /**
      * Returns workload for corresponding team member.
      */
-    public getAsigneeWorkload(ownerID: number) {
+    public getAssigneeWorkload(ownerID: number) {
         const workloadData = this.localData.filter(rec => rec.owner.id === ownerID);
         const newTasks = workloadData.filter(rec => rec.status === 'New').length;
         const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
@@ -400,42 +388,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
             { Label: 'In Progress', Value: inprogressTasks },
             { Label: 'Done', Value: doneTasks },
             { Label: 'New', Value: newTasks }];
-    }
-
-    /**
-     * Returns data representing perfect progress and actual progress for the task.
-     */
-    public getChartData(task: ITask) {
-        const progress: any[] = [];
-        const monthsUntilDeadline = this.monthsLength(task.started_on, task.deadline);
-        const expectedProgress = task.estimation / monthsUntilDeadline;
-
-        if (task.status === 'In Progress') {
-            const monthsPassed = this.monthsLength(task.started_on, new Date());
-            const monthsUntilNow = monthsPassed ? monthsPassed : 1;
-            const actualProgress = task.hours_spent / monthsUntilNow;
-
-            for (let i = 0; i <= monthsUntilDeadline; i++) {
-                const datee = new Date(task.started_on);
-                datee.setMonth(task.started_on.getMonth() + i);
-                progress.push({
-                    estimated: i * expectedProgress,
-                    progress: i * actualProgress,
-                    date: datee
-                });
-            }
-        } else {
-            for (let i = 0; i <= monthsUntilDeadline; i++) {
-                const datee = new Date(task.started_on);
-                datee.setMonth(task.started_on.getMonth() + i);
-                progress.push({
-                    progress: i * expectedProgress,
-                    date: datee
-                });
-            }
-        }
-
-        return progress;
     }
 
     public formatPieLabel(args): string {
@@ -491,47 +443,62 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         const selectedRows = this.grid.selectedRows();
         const selectedData = this.localData.filter(rec => selectedRows.indexOf(rec.id) > -1);
         this.batchEditingData = selectedData;
-        this.batchEditDialog.open(this.overlaySettings);
+        this.batchEditDialog.open(this.dialogOverlaySettings);
     }
 
-    public onDropContainerEnter(event: IDropDroppedEventArgs) {
-        this.grid.tbody.nativeElement.classList.add('dropAreaEntered');
-        const groupRows = event.owner.element.nativeElement.querySelectorAll('igx-grid-groupby-row');
+    public onDropContainerEnterLeave(event: IDropDroppedEventArgs) {
+        this.toggleGroupRowHighlight();
+    }
+
+    public toggleGroupRowHighlight() {
+        const groupRows = this.grid.tbody.nativeElement.querySelectorAll('igx-grid-groupby-row');
         (groupRows as HTMLElement[]).forEach(element => {
             const childEl = element.children[1].children[0].children[0] as HTMLElement;
             if (childEl.innerText === this.editTaskForm.milestone) {
-                element.classList.add('groupRowHighlight');
+                element.classList.toggle('tp-app__groupby-row-highlight');
             }
         });
     }
 
-    public onDropContainerLeave(event: IDropDroppedEventArgs) {
-        this.grid.tbody.nativeElement.classList.remove('dropAreaEntered');
-        const groupRows = event.owner.element.nativeElement.querySelectorAll('igx-grid-groupby-row');
-        (groupRows as HTMLElement[]).forEach(element => {
-            const childEl = element.children[1].children[0].children[0] as HTMLElement;
-            if (childEl.innerText === this.editTaskForm.milestone) {
-                element.classList.remove('groupRowHighlight');
-            }
-        });
+    public toggleGridBodyHighlight() {
+        this.grid.tbody.nativeElement.classList.toggle('tp-app__drop-area-entered');
     }
 
     public onItemDropped(ev) {
-        this.grid.addRow(this.editTaskForm);
-        const index = this.backlog.issues.findIndex(rec => rec.id === this.editTaskForm.id);
-        this.backlog.issues.splice(index, 1);
-        // this.grid.onRowDragEnd.emit(args);
+        this.toggleGridBodyHighlight();
+        this.addBacklogItem(this.editTaskForm);
     }
 
-    get isRowEditingEnabled() {
+    public addBacklogItem(item: ITask) {
+        this.grid.addRow(item);
+        this.backlog.deleteItem(item);
+    }
+
+    public get undoEnabled(): boolean {
+        return this.grid.transactions.canUndo;
+    }
+
+    public get redoEnabled(): boolean {
+        return this.grid.transactions.canRedo;
+    }
+
+    public get hasTransactions(): boolean {
+        return this.grid.transactions.getAggregatedChanges(false).length > 0;
+    }
+
+    public get hasSelection(): boolean {
+        return this.grid.selectedRows().length > 0;
+    }
+
+    public get isRowEditingEnabled() {
         return this.editMode === editMode.rowEditing;
     }
 
-    get isEditingEnabled() {
+    public get isEditingEnabled() {
         return this.editMode !== editMode.none;
     }
 
-    get selectedEditMode() {
+    public get selectedEditMode() {
         return this.editModes[this.editMode];
     }
 
