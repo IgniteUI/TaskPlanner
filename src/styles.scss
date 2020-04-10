@@ -107,20 +107,20 @@ html, body {
 
   @keyframes drop-background2 {
     0% {
-      background: $row-selected-background;
+      background: #f8b5d4;
     }
 
     50% {
-      background: $row-selected-background--hover;
+      background: #fa91c1;
     }
 
     0% {
-      background: $row-selected-background;
+      background: #f8b5d4;
     }
   }
 
-  .groupRowHighlight2 {
-    background: $row-selected-background;
+  .groupRowHighlight {
+    background: #f8b5d4;
     animation: drop-background2 1s ease-in-out infinite;
   }
 
