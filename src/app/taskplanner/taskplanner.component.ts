@@ -190,15 +190,15 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public progressSort = ProgressSortingStrategy.instance();
 
     public columns: any[] = [
-        { field: 'id', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID },
+        { field: 'id', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: true },
         { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', resizable: true, groupable: false, editable: true, sortable: true, sortStrategy: this.milestoneSort},
-        { field: 'issue', header: 'Issue', width: '380px', dataType: 'string', resizable: true, filterable: false, editable: true},
-        { field: 'status', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: false, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
+        { field: 'issue', header: 'Issue', width: '380px', dataType: 'string', resizable: true, filterable: true, sortable: true, editable: true},
+        { field: 'status', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
         { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', resizable: true, sortable: false },
         { field: 'owner', header: 'Owner', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: false, filterable: false },
         { field: 'created_by', header: 'Created By', width: '180px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: false, hidden: true },
-        { field: 'started_on', header: 'Started on', width: '130px', dataType: 'date', resizable: true, sortable: true, filterable: true, editable: true },
-        { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', resizable: true, sortable: false, filterable: true, editable: true },
+        { field: 'started_on', header: 'Started on', width: '130px', dataType: 'date', resizable: true, sortable: true, editable: true },
+        { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', resizable: true, sortable: false, editable: true },
         { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
         { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
         { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses }
@@ -216,6 +216,16 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.grid.transactions.onStateUpdate.subscribe(() => {
             this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
         });
+
+        this.grid.sortingExpressions = [{
+            fieldName: 'id',
+            dir: SortingDirection.Desc },
+        {
+            dir: SortingDirection.Asc,
+            fieldName: 'milestone',
+            ignoreCase: false,
+            strategy: this.milestoneSort
+        }];
 
         this.grid.groupingExpressions = [{
             dir: SortingDirection.Asc,
@@ -557,8 +567,8 @@ export class ProgressSortingStrategy extends DefaultSortingStrategy {
                              key: string,
                              reverse: number) {
 
-        const progressA = calcProgress(obj1);
-        const progressB = calcProgress(obj2);
+        const progressA = `${obj1.status}${calcProgress(obj1)}`;
+        const progressB = `${obj2.status}${calcProgress(obj2)}`;
 
         return reverse * this.compareValues(progressA, progressB);
     }

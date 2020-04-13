@@ -26,6 +26,11 @@
                 (enter)="onDropContainerEnterLeave($event)"
                 (leave)="onDropContainerEnterLeave($event)">
 
+                <ng-template igxExcelStyleSorting></ng-template>
+                <ng-template igxExcelStyleMoving></ng-template>
+                <ng-template igxExcelStyleHiding></ng-template>
+                <ng-template igxExcelStylePinning></ng-template>
+
                 <!-- Grid Detail View Template -->
                 <ng-template igxGridDetail let-dataItem>
                   <div class="tp-app__row-details">
