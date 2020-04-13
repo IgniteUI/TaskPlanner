@@ -15,6 +15,7 @@
                 [rowEditable]="isRowEditingEnabled"
                 [allowFiltering]="true" [allowAdvancedFiltering]="true" [filterMode]="'excelStyleFilter'"
                 [paging]="true"
+                [paginationTemplate]="pager"
                 [columnPinning]="true"
                 [columnHiding]="true"
                 [cellSelection]="'none'"
@@ -94,7 +95,7 @@
                         </igx-drop-down-item>
                     </igx-drop-down>
 
-                    <button igxButton="outlined" class="button" [disabled]="!hasSelection" (click)="openBatchEditDialog()">Batch Edit</button>
+                    <button igxButton="outlined" class="button" [disabled]="!hasSelection || editMode===2" (click)="openBatchEditDialog()">Batch Edit</button>
                 </ng-template>
 
                 <!-- Grid Columns -->
@@ -172,7 +173,7 @@
 
     <!-- Dialogs overlay  -->
     <div igxOverlayOutlet #outlet="overlay-outlet">
-        <!-- Transactions dialog -->
+        <!-- Add task dialog -->
         <igx-dialog #addTaskDialog title="Create Issue"
             leftButtonLabel="Cancel"
             (onLeftButtonSelect)="addTaskDialog.close()"
@@ -183,7 +184,7 @@
             <div class="tp-app__dialog-content">
                 <igx-input-group [type]="inputType" type="border" #MyInputGroup>
                     <label igxLabel for="issue">Issue Title</label>
-                    <input igxInput id="issue" type="text" [(ngModel)]="addTaskForm.issue" name="newTask" required/>
+                    <input igxInput id="issue" type="text" [(ngModel)]="addTaskForm.issue" required/>
                 </igx-input-group>
 
                 <igx-select type="border" placeholder="Owner" [(ngModel)]="addTaskForm.owner" [overlaySettings]="overlaySettings">
@@ -206,12 +207,14 @@
                     <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                 </igx-select>
 
-                <igx-input-group [type]="inputType" type="border">
-                    <label igxLabel for="issue">Milestone</label>
-                    <input igxInput id="issue" type="text" [(ngModel)]="addTaskForm.milestone" name="newTask" [igxMask]="'L#?####'"/>
+                <igx-input-group [type]="inputType" type="border" [disabled]="true">
+                    <label igxLabel for="milestone">Milestone</label>
+                    <input igxInput id="milestone" type="text" [(ngModel)]="addTaskForm.milestone" [igxMask]="'L#?####'"/>
                 </igx-input-group>
 
-                <igx-date-picker name="deadline" [(ngModel)]="addTaskForm.deadline" [outlet]="outlet" [formatter]="formatDate">
+                <igx-date-picker name="deadline" [(ngModel)]="addTaskForm.deadline" [outlet]="outlet"
+                    [formatter]="formatDate" aria-required="required" required
+                    [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, addTaskForm)">
                     <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
                         <igx-input-group [type]="inputType" type="border" (click)="openDialog()">
                             <label igxLabel>Deadline</label>
@@ -230,16 +233,16 @@
             leftButtonLabel="Cancel"
             (onLeftButtonSelect)="editTaskDialog.close()"
             (onRightButtonSelect)="editTask($event)"
-            rightButtonLabel="Add to milestone"
+            rightButtonLabel="Add"
             [closeOnOutsideSelect]="true">
 
             <div class="tp-app__dialog-content">
               <igx-input-group [type]="inputType" type="border" #MyInputGroup>
-                  <label igxLabel for="issue">Issue Title</label>
-                  <input igxInput id="issue" type="text" [(ngModel)]="editTaskForm.issue" name="newTask" required/>
+                  <label igxLabel for="newIssue">Issue Title</label>
+                  <input igxInput id="newIssue" type="text" [(ngModel)]="editTaskForm.issue" required/>
               </igx-input-group>
               
-              <igx-select type="border" placeholder="Owner" [(ngModel)]="editTaskForm.owner" [overlaySettings]="overlaySettings">
+              <igx-select type="border" placeholder="Owner" [(ngModel)]="editTaskForm.owner" [overlaySettings]="overlaySettings" required>
                 <igx-select-item *ngFor="let m of teamMembers" [value]="m">
                   <div class="item">
                     <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatar" roundShape="true" size="small"></igx-avatar>
@@ -259,12 +262,14 @@
                   <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
               </igx-select>
         
-              <igx-input-group [type]="inputType" type="border">
-                  <label igxLabel for="issue">Milestone</label>
-                  <input igxInput id="issue" type="text" [(ngModel)]="editTaskForm.milestone" name="newTask" [igxMask]="'L#?####'"/>
+              <igx-input-group [type]="inputType" type="border" [disabled]="true">
+                  <label igxLabel for="newMilestone">Milestone</label>
+                  <input igxInput id="newMilestone" type="text" [(ngModel)]="editTaskForm.milestone" [igxMask]="'L#?####'"/>
               </igx-input-group>
         
-              <igx-date-picker name="deadline" [(ngModel)]="editTaskForm.deadline" [outlet]="outlet" [formatter]="formatDate">
+              <igx-date-picker name="deadline" [(ngModel)]="editTaskForm.deadline" [outlet]="outlet"
+                [formatter]="formatDate" aria-required="required" required
+                [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, editTaskForm)">
                   <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
                       <igx-input-group [type]="inputType" type="border" (click)="openDialog()">
                           <label igxLabel>Deadline</label>
@@ -397,4 +402,12 @@
         </igx-dialog>
     </div>
 </div>
+
+<ng-template #pager>
+    <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage" [dropdownHidden]="true"
+             [selectLabel]="'Records per page:'" [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
+    </igx-paginator>
+</ng-template>
+
+
 

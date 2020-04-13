@@ -12,7 +12,8 @@ import {
     Transaction,
     OverlaySettings,
     IgxOverlayOutletDirective,
-    IDropDroppedEventArgs
+    IDropDroppedEventArgs,
+    DateRangeType
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { TASKS_DATA, MEMBERS } from '../services/tasksData';
@@ -62,6 +63,11 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public allTasks = TASKS_DATA;
     public batchEditingData: ITask[];
     public inputType = 'material';
+    public selectOptions = [5, 15, 20, 50];
+    public disabledDates =  [{
+        dateRange: [new Date()],
+        type: DateRangeType.Before
+    }];
 
     public statuses = [
         {
@@ -189,7 +195,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         { field: 'issue', header: 'Issue', width: '380px', dataType: 'string', resizable: true, filterable: false, editable: true},
         { field: 'status', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: false, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
         { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', resizable: true, sortable: false },
-        { field: 'owner', header: 'Owner', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: true, filterable: true },
+        { field: 'owner', header: 'Owner', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: false, filterable: false },
         { field: 'created_by', header: 'Created By', width: '180px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: false, hidden: true },
         { field: 'started_on', header: 'Started on', width: '130px', dataType: 'date', resizable: true, sortable: true, filterable: true, editable: true },
         { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', resizable: true, sortable: false, filterable: true, editable: true },
@@ -236,17 +242,34 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public addTask(event) {
-        this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
-        this.addTaskForm.status = 'New';
-        this.addTaskForm.estimation = null;
-        this.addTaskForm.hours_spent = null;
-        this.grid.addRow(this.addTaskForm);
-        this.addTaskDialog.close();
+        if (this.addTaskForm.issue && this.addTaskForm.issue !== undefined
+            && this.addTaskForm.deadline) {
+            this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
+            this.addTaskForm.status = 'New';
+            this.addTaskForm.estimation = null;
+            this.addTaskForm.hours_spent = null;
+            this.grid.addRow(this.addTaskForm);
+            this.addTaskForm = {} as ITask;
+            this.addTaskDialog.close();
+        } else {
+            this.emptyFieldMessage();
+        }
+
     }
 
     public editTask(event) {
-        this.addBacklogItem(this.editTaskForm);
-        this.editTaskDialog.close();
+        if (this.editTaskForm.issue !== '' && this.editTaskForm.deadline) {
+            this.addBacklogItem(this.editTaskForm);
+            this.editTaskDialog.close();
+        } else {
+            this.emptyFieldMessage();
+        }
+
+    }
+
+    public emptyFieldMessage() {
+        this.toast.message = 'Please fill out all required fields (Issue and Deadline).';
+        this.toast.show();
     }
 
     public getStartedOn(dataItem: ITask): boolean {
@@ -334,6 +357,8 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         switch (event.action) {
             case 'edit': {
                 this.editTaskForm = event.issue;
+                this.editTaskForm.deadline = null;
+                this.editTaskForm.milestone = null;
                 this.editTaskDialog.open(this.dialogOverlaySettings);
                 break;
             }
@@ -458,6 +483,13 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public addBacklogItem(item: ITask) {
         this.grid.addRow(item);
         this.backlog.deleteItem(item);
+    }
+
+    public deadlineChanged(event: Date, form: ITask) {
+        const year = event.getFullYear();
+        const quarter = Math.ceil((event.getMonth() + 1) / 3);
+        const milestone = `Q${quarter} ${year}`;
+        form.milestone = milestone;
     }
 
     public get undoEnabled(): boolean {
