@@ -6,8 +6,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-    @Output() themeChanged = new EventEmitter<any>();
-    @Output() createIssueClicked = new EventEmitter<any>();
+    @Output() themeChanged = new EventEmitter();
+    @Output() createIssueClicked = new EventEmitter();
 
     public icon = 'palette';
 

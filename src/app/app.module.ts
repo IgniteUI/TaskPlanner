@@ -1,11 +1,10 @@
 import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDialogModule, IgxButtonModule, IgxGridModule, IgxAvatarModule, IgxIconModule,
   IgxNavbarModule, IgxDividerModule, IgxTabsModule, IgxToastModule, IgxMaskModule,
-  IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule } from 'igniteui-angular';
+  IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule, IgxFilterModule } from 'igniteui-angular';
 import { TasksDataService } from './services/tasks.service';
 import { TaskPlannerComponent } from './taskplanner/taskplanner.component';
 import { FormsModule } from '@angular/forms';
@@ -31,6 +30,7 @@ import { GridWithTransactionsComponent } from './transaction-component/transacti
     IgxToastModule,
     IgxAvatarModule,
     IgxIconModule,
+    IgxFilterModule,
     IgxNavbarModule,
     IgxDividerModule,
     IgxTabsModule,

@@ -1,12 +1,11 @@
-import {Component, ViewChild, EventEmitter, Output, OnInit } from '@angular/core';
-import { IgxInputDirective, IgxListComponent, IgxOverlayOutletDirective, OverlaySettings } from 'igniteui-angular';
-import { TASKS_DATA } from '../services/tasksData';
-import { ITask } from '../taskplanner/taskplanner.component';
+import { Component, ViewChild, EventEmitter, Output, OnInit } from '@angular/core';
+import { IgxInputDirective, IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions } from 'igniteui-angular';
+import { TasksDataService } from '../services/tasks.service';
+import { ITask } from '../interfaces';
 
 export interface IListItemAction {
     action: string;
     issue: ITask;
-    index?: number;
 }
 
 @Component({
@@ -15,8 +14,9 @@ export interface IListItemAction {
     styleUrls: ['./backlog.component.scss'],
 })
 export class BacklogComponent implements OnInit  {
-    public issues = TASKS_DATA.filter(rec => !rec.owner.id);
+    public tasks: ITask[];
     public dropTileId: number;
+    public taskSearchString: string;
     public overlaySettings: OverlaySettings = {
         modal: false,
         closeOnOutsideClick: true
@@ -28,9 +28,10 @@ export class BacklogComponent implements OnInit  {
 
     @Output() listItemAction = new EventEmitter<IListItemAction>();
 
-    constructor() {}
+    constructor(private dataService: TasksDataService) {}
 
     public ngOnInit() {
+        this.dataService.getUnassignedTasks().subscribe(data => this.tasks = data);
         this.overlaySettings.outlet = this.outlet;
     }
 
@@ -44,7 +45,14 @@ export class BacklogComponent implements OnInit  {
     }
 
     public deleteItem(issue: ITask, index?: number) {
-        index = index ? index : this.issues.findIndex(rec => rec.id === issue.id);
-        this.issues.splice(index, 1);
+        index = index ? index : this.tasks.findIndex(rec => rec.id === issue.id);
+        this.tasks.splice(index, 1);
+    }
+
+    public get filterTasks() {
+        const fo = new IgxFilterOptions();
+        fo.key = 'issue';
+        fo.inputValue = this.taskSearchString;
+        return fo;
     }
 }
