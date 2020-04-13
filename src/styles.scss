@@ -112,14 +112,10 @@ html, body {
   .tp-app__drop-area-entered {
     opacity: 0.5;
   }
-  
+
   // Eliminate jumping in fluent theme
   .igx-list__item-base {
     min-height: 52px;
-  }
-
-  .tp-app__drop-area-entered {
-    opacity: 0.5;
   }
 
   @keyframes drop-background2 {
