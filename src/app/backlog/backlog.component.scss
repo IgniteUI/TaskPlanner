@@ -3,6 +3,13 @@
 
 ::ng-deep {
     .tp-app {
+
+        // TODO fix default style for empty template in the product
+        .igx-list-empty {
+            display: block;
+            text-align: center;
+        }
+
         &__task-search {
             margin: $search-margin !important;
             height: $search-height;

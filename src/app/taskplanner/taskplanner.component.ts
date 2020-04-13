@@ -12,7 +12,8 @@ import {
     Transaction,
     OverlaySettings,
     IgxOverlayOutletDirective,
-    IDropDroppedEventArgs
+    IDropDroppedEventArgs,
+    DateRangeType
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { TASKS_DATA, MEMBERS } from '../services/tasksData';
@@ -62,6 +63,11 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public allTasks = TASKS_DATA;
     public batchEditingData: ITask[];
     public inputType = 'material';
+    public selectOptions = [5, 15, 20, 50];
+    public disabledDates =  [{
+        dateRange: [new Date()],
+        type: DateRangeType.Before
+    }];
 
     public statuses = [
         {
@@ -184,15 +190,15 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public progressSort = ProgressSortingStrategy.instance();
 
     public columns: any[] = [
-        { field: 'id', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID },
+        { field: 'id', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: true },
         { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', resizable: true, groupable: false, editable: true, sortable: true, sortStrategy: this.milestoneSort},
-        { field: 'issue', header: 'Issue', width: '380px', dataType: 'string', resizable: true, filterable: false, editable: true},
-        { field: 'status', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: false, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
+        { field: 'issue', header: 'Issue', width: '380px', dataType: 'string', resizable: true, filterable: true, sortable: true, editable: true},
+        { field: 'status', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
         { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', resizable: true, sortable: false },
-        { field: 'owner', header: 'Owner', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: true, filterable: true },
+        { field: 'owner', header: 'Owner', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: false, filterable: false },
         { field: 'created_by', header: 'Created By', width: '180px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: false, hidden: true },
-        { field: 'started_on', header: 'Started on', width: '130px', dataType: 'date', resizable: true, sortable: true, filterable: true, editable: true },
-        { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', resizable: true, sortable: false, filterable: true, editable: true },
+        { field: 'started_on', header: 'Started on', width: '130px', dataType: 'date', resizable: true, sortable: true, editable: true },
+        { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', resizable: true, sortable: false, editable: true },
         { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
         { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
         { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses }
@@ -210,6 +216,16 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.grid.transactions.onStateUpdate.subscribe(() => {
             this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
         });
+
+        this.grid.sortingExpressions = [{
+            fieldName: 'id',
+            dir: SortingDirection.Desc },
+        {
+            dir: SortingDirection.Asc,
+            fieldName: 'milestone',
+            ignoreCase: false,
+            strategy: this.milestoneSort
+        }];
 
         this.grid.groupingExpressions = [{
             dir: SortingDirection.Asc,
@@ -236,17 +252,34 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public addTask(event) {
-        this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
-        this.addTaskForm.status = 'New';
-        this.addTaskForm.estimation = null;
-        this.addTaskForm.hours_spent = null;
-        this.grid.addRow(this.addTaskForm);
-        this.addTaskDialog.close();
+        if (this.addTaskForm.issue && this.addTaskForm.issue !== undefined
+            && this.addTaskForm.deadline) {
+            this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
+            this.addTaskForm.status = 'New';
+            this.addTaskForm.estimation = null;
+            this.addTaskForm.hours_spent = null;
+            this.grid.addRow(this.addTaskForm);
+            this.addTaskForm = {} as ITask;
+            this.addTaskDialog.close();
+        } else {
+            this.emptyFieldMessage();
+        }
+
     }
 
     public editTask(event) {
-        this.addBacklogItem(this.editTaskForm);
-        this.editTaskDialog.close();
+        if (this.editTaskForm.issue !== '' && this.editTaskForm.deadline) {
+            this.addBacklogItem(this.editTaskForm);
+            this.editTaskDialog.close();
+        } else {
+            this.emptyFieldMessage();
+        }
+
+    }
+
+    public emptyFieldMessage() {
+        this.toast.message = 'Please fill out all required fields (Issue and Deadline).';
+        this.toast.show();
     }
 
     public getStartedOn(dataItem: ITask): boolean {
@@ -334,6 +367,8 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         switch (event.action) {
             case 'edit': {
                 this.editTaskForm = event.issue;
+                this.editTaskForm.deadline = null;
+                this.editTaskForm.milestone = null;
                 this.editTaskDialog.open(this.dialogOverlaySettings);
                 break;
             }
@@ -460,6 +495,13 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.backlog.deleteItem(item);
     }
 
+    public deadlineChanged(event: Date, form: ITask) {
+        const year = event.getFullYear();
+        const quarter = Math.ceil((event.getMonth() + 1) / 3);
+        const milestone = `Q${quarter} ${year}`;
+        form.milestone = milestone;
+    }
+
     public get undoEnabled(): boolean {
         return this.grid.transactions.canUndo;
     }
@@ -525,8 +567,8 @@ export class ProgressSortingStrategy extends DefaultSortingStrategy {
                              key: string,
                              reverse: number) {
 
-        const progressA = calcProgress(obj1);
-        const progressB = calcProgress(obj2);
+        const progressA = `${obj1.status}${calcProgress(obj1)}`;
+        const progressB = `${obj2.status}${calcProgress(obj2)}`;
 
         return reverse * this.compareValues(progressA, progressB);
     }
