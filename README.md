@@ -1,8 +1,32 @@
 # TaskPlanner
+This project was generated with [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) version 5.0.0-beta.3.
 
 Live version of the app - https://igniteui.github.io/TaskPlanner/
 
-This project was generated with [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) version 5.0.0-beta.3.
+The TaskPlanner application demonstrates how to build a task manager application with Ignite UI For Angular. It includes most common features like create, add, edit and delete tasks, assign, move from and to backlog, change priority, monitor progress.
+
+## Components list
+
+- [IgxGrid](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid.html)
+- [IgxList](https://www.infragistics.com/products/ignite-ui-angular/angular/components/list.html)
+- [IgxDatePicker](https://www.infragistics.com/products/ignite-ui-angular/angular/components/date_picker.html)
+- [IgxDropDown](https://www.infragistics.com/products/ignite-ui-angular/angular/components/drop_down.html)
+- [IgxSelect](https://www.infragistics.com/products/ignite-ui-angular/angular/components/select.html)
+- [IgxDialog](https://www.infragistics.com/products/ignite-ui-angular/angular/components/dialog.html)
+- [IgxInputGroup](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input_group.html)
+- [IgxMask](https://www.infragistics.com/products/ignite-ui-angular/angular/components/mask.html)
+- [IgxCard](https://www.infragistics.com/products/ignite-ui-angular/angular/components/card.html)
+- [IgxFilterOptions](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxfilteroptions.html)
+- [IgxAvatar](https://www.infragistics.com/products/ignite-ui-angular/angular/components/avatar.html)
+- [IgxButton](https://www.infragistics.com/products/ignite-ui-angular/angular/components/button.html)
+- [IgxButtonGroup](https://www.infragistics.com/products/ignite-ui-angular/angular/components/buttongroup.html)
+- [IgxToast](https://www.infragistics.com/products/ignite-ui-angular/angular/components/toast.html)
+- [IgxNavBar](https://www.infragistics.com/products/ignite-ui-angular/angular/components/navbar.html)
+- [IgxSwitch](https://www.infragistics.com/products/ignite-ui-angular/angular/components/switch.html) 
+- [IgxDivider](https://www.infragistics.com/products/ignite-ui-angular/angular/components/divider.html)
+- [IgxToggle](https://www.infragistics.com/products/ignite-ui-angular/angular/components/toggle.html)
+- [IgxRipple](https://www.infragistics.com/products/ignite-ui-angular/angular/components/ripple.html)
+- [IgxIcon](https://www.infragistics.com/products/ignite-ui-angular/angular/components/icon.html)
 
 ## Development server
 
