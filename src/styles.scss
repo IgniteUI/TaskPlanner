@@ -102,11 +102,20 @@ html, body {
   @include igx-css-vars($tp-light-grid);
   @include igx-css-vars($tp-light-tabs);
 
+  igx-navbar {
+    @include igx-css-vars($tp-light-header-button);
+  }
+
   background: $light-bg;
   color: $dark-text;
 
   .tp-app__drop-area-entered {
     opacity: 0.5;
+  }
+
+  // Eliminate jumping in fluent theme
+  .igx-list__item-base {
+    min-height: 52px;
   }
 
   @keyframes drop-background2 {
@@ -188,6 +197,10 @@ html, body {
 
   .tp-app__drop-area-entered {
     opacity: 0.3;
+  }
+
+  .tp-app-row-details-title--comments {
+    margin-bottom: 0;
   }
 
   @keyframes drop-background {
