@@ -9,3 +9,7 @@ $tp-button: igx-button-theme(
     $icon-hover-color: igx-color($tp-palette, 'secondary')
 );
 
+$tp-light-header-button: igx-button-theme(
+    $palette: $tp-light-palette,
+    $raised-background: igx-color($tp-light-palette, 'secondary')
+);
