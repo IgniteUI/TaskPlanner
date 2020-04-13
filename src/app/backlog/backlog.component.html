@@ -7,7 +7,7 @@
         <igx-tabs>
             <igx-tabs-group label="unassigned">
                 <igx-input-group type="search" class="tp-app__task-search">
-                    <input #taskSearch igxInput placeholder="Search" />
+                    <input #taskSearch igxInput placeholder="Search" [(ngModel)]="taskSearchString"/>
                     <igx-prefix>
                         <igx-icon>search</igx-icon>
                     </igx-prefix>
@@ -17,7 +17,7 @@
                 </igx-input-group>
                 <div class="tp-app__list-scroll">
                     <igx-list>
-                        <igx-list-item *ngFor="let task of tasks; let i = index">
+                        <igx-list-item *ngFor="let task of tasks | igxFilter: filterTasks; let i = index">
                             <div class="tp-app__backlog-list-template">
                                 <div class="tp-app__backlog-list-template-row" #dragRef igxDrag
                                     [ghostHost]="outlet.nativeElement"

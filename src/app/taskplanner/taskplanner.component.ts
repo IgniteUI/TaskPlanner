@@ -18,33 +18,12 @@ import { TasksDataService } from '../services/tasks.service';
 import { TASKS_DATA, MEMBERS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
+import { ITask, ITeamMember } from '../interfaces';
 
 export enum editMode {
     cellEditing = 0,
     rowEditing = 1,
     none = 2
-}
-
-export interface ITask {
-    id: number;
-    issue?: string;
-    isActive?: boolean;
-    priority?: string;
-    milestone?: string;
-    description?: string;
-    status?: string;
-    owner?: {
-      id: number;
-      name: string;
-      sex: string;
-      team: string;
-      avatar: string;
-    };
-    created_by?: string;
-    started_on?: Date;
-    deadline?: Date;
-    estimation?: number;
-    hours_spent?: number;
 }
 
 // tslint:disable:max-line-length
@@ -74,14 +53,14 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
 
     public darkTheme = true;
     public tasks: ITask[];
-    public teamMembers: any[];
+    public teamMembers: ITeamMember[];
     public editMode = 0;
     public editModes = ['Cell Editing', 'Row Editing', 'No Editing'];
     public addTaskForm = {} as ITask;
     public editTaskForm = {} as ITask;
     public transactionsData: Transaction[] = [];
     public allTasks = TASKS_DATA;
-    public batchEditingData: any[];
+    public batchEditingData: ITask[];
     public inputType = 'material';
 
     public statuses = [
@@ -152,31 +131,31 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         }, []);
     }
 
-    public isDone = (rowData: any, columnKey: any): boolean => {
+    public isDone = (rowData: ITask, columnKey: string): boolean => {
         return rowData[columnKey] === 'Done';
     }
 
-    public isNew = (rowData: any, columnKey: any): boolean => {
+    public isNew = (rowData: ITask, columnKey: string): boolean => {
         return rowData[columnKey] === 'New';
     }
 
-    public isInProgress = (rowData: any, columnKey: any): boolean => {
+    public isInProgress = (rowData: ITask, columnKey: string): boolean => {
         return rowData[columnKey] === 'In Progress';
     }
 
-    public isLate = (rowData: any, columnKey: any): boolean => {
+    public isLate = (rowData: ITask, columnKey: string): boolean => {
         return rowData[columnKey] === 'Delayed';
     }
 
-    public isCritical = (rowData: any, columnKey: any): boolean => {
+    public isCritical = (rowData: ITask, columnKey: string): boolean => {
         return rowData[columnKey] === 'Critical';
     }
 
-    public isLow = (rowData: any, columnKey: any): boolean => {
+    public isLow = (rowData: ITask, columnKey: string): boolean => {
         return rowData[columnKey] === 'Low';
     }
 
-    public isHigh = (rowData: any, columnKey: any): boolean => {
+    public isHigh = (rowData: ITask, columnKey: string): boolean => {
         return rowData[columnKey] === 'High';
     }
 
@@ -256,7 +235,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.editMode = 0;
     }
 
-    public addTask(event: any) {
+    public addTask(event) {
         this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
         this.addTaskForm.status = 'New';
         this.addTaskForm.estimation = null;
@@ -265,7 +244,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.addTaskDialog.close();
     }
 
-    public editTask(event: any) {
+    public editTask(event) {
         this.addBacklogItem(this.editTaskForm);
         this.editTaskDialog.close();
     }
@@ -401,7 +380,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         return args.item.Value + ' ' + args.item.Label;
     }
 
-    public formatDateLabel(item: any): string {
+    public formatDateLabel(item): string {
         return item.date.toLocaleDateString(undefined, { month: 'short' });
     }
 
@@ -508,13 +487,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public get selectedEditMode() {
         return this.editModes[this.editMode];
     }
-
-    private monthsLength(startDate, endDate): number {
-        const monthsDelta = (endDate.getFullYear()
-            - startDate.getFullYear()) * 12
-            + (endDate.getMonth() - startDate.getMonth());
-        return monthsDelta;
-    }
 }
 
 /**
@@ -526,7 +498,7 @@ export class MilestoneSortingStrategy extends DefaultSortingStrategy {
                              key: string,
                              reverse: number,
                              ignoreCase: boolean,
-                             valueResolver: (obj: any, key: string) => any) {
+                             valueResolver: (obj: ITask, key: string) => string) {
 
         const objA = valueResolver(obj1, key).split(' ');
         const objB = valueResolver(obj2, key).split(' ');
@@ -548,12 +520,10 @@ export class MilestoneSortingStrategy extends DefaultSortingStrategy {
  * Sorting strategy for prorgess columns.
  */
 export class ProgressSortingStrategy extends DefaultSortingStrategy {
-    protected compareObjects(obj1: object,
-                             obj2: object,
+    protected compareObjects(obj1: ITask,
+                             obj2: ITask,
                              key: string,
-                             reverse: number,
-                             ignoreCase: boolean,
-                             valueResolver: (obj: any, key: string) => any) {
+                             reverse: number) {
 
         const progressA = calcProgress(obj1);
         const progressB = calcProgress(obj2);

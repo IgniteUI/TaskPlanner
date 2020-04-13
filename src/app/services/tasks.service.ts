@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { TASKS_DATA } from './tasksData';
-import { ITask } from '../taskplanner/taskplanner.component';
+import { ITask } from '../interfaces';
 
 @Injectable()
 export class TasksDataService {
