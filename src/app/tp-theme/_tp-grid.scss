@@ -22,7 +22,7 @@ $tp-grid: igx-grid-theme(
 
     $cell-selected-background: $row-col-background,
     $cell-editing-background: $row-col-background,
-    $cell-edited-value-color: igx-color($tp-palette, 'secondary', 200),
+    $cell-edited-value-color: igx-color($tp-palette, 'secondary', 400),
 
     $drop-area-background: $row-background,
     $drop-area-on-drop-background: lighten($row-background, 10%),
@@ -36,9 +36,12 @@ $tp-grid: igx-grid-theme(
     $row-ghost-background: #4A4F64,
 
     $pinned-border-color: transparentize(igx-color($tp-palette, 'secondary'), .95),
-    $edited-row-indicator: igx-color($tp-palette, 'secondary')
+    $edited-row-indicator: igx-color($tp-palette, 'secondary'),
+
 );
 
 $tp-light-grid: igx-grid-theme(
-    $grid-shadow: none
+    $grid-shadow: none,
+    $cell-edited-value-color: igx-color($tp-light-palette, 'secondary'),
+    $edited-row-indicator: igx-color($tp-light-palette, 'secondary'),
 )
