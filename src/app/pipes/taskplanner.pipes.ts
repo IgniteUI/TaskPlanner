@@ -28,7 +28,7 @@ export class PriorityLabelPipe implements PipeTransform {
 export class PlaceholderPipe implements PipeTransform {
   transform(value: any): string {
     if (value) {
-        return value;
+        return value + 'h';
     } else {
      return 'Enter value...';
     }

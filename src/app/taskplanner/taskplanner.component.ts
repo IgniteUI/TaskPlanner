@@ -488,7 +488,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public openBatchEditDialog() {
-        const selectedRows = this.grid.selectedRows();
+        const selectedRows = this.grid.selectedRows;
         const selectedData = this.tasks.filter(rec => selectedRows.indexOf(rec.id) > -1);
         this.batchEditingData = selectedData;
         this.batchEditDialog.open(this.dialogOverlaySettings);
@@ -542,7 +542,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public get hasSelection(): boolean {
-        return this.grid.selectedRows().length > 0;
+        return this.grid.selectedRows.length > 0;
     }
 
     public get isRowEditingEnabled() {

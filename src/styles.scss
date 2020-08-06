@@ -96,7 +96,7 @@ html, body {
 }
 
 .tp-app-light-theme {
-  @include igx-fluent-theme($palette: $tp-light-palette, $legacy-support:false);
+  // @include igx-fluent-theme($palette: $tp-light-palette, $legacy-support:false);
   @include igx-css-vars($tp-light-icon);
   @include igx-css-vars($tp-light-card);
   @include igx-css-vars($tp-light-grid);
