@@ -4,8 +4,6 @@
     </igx-card-header>
     <igx-divider></igx-divider>
     <igx-card-content>
-        <igx-tabs>
-            <igx-tabs-group label="unassigned">
                 <igx-input-group type="search" class="tp-app__task-search">
                     <input #taskSearch igxInput placeholder="Search" [(ngModel)]="taskSearchString"/>
                     <igx-prefix>
@@ -27,10 +25,10 @@
                                     <igx-icon class="tp-app__backlog-list-button tp-app__backlog-list-button--drag" igxDragHandle>drag_indicator</igx-icon>
                                     <div class="tp-app__backlog-list-template-text">
                                         <h1 [title]="task.issue" igxListLineTitle>
-                                            {{ task.issue }}
+                                            {{ task.title }}
                                         </h1>
-                                        <h2 [class]="task.priority.toLowerCase()" igxListLineSubTitle>
-                                            {{task.priority}}
+                                        <h2 [class]="getPriority(task)" igxListLineSubTitle>
+                                            {{ getPriority(task) }}
                                         </h2>
                                     </div>
                                     <button class="tp-app__backlog-list-button tp-app__backlog-list-button--action" igxButton="icon" igxRipple igxRippleCentered="true" draggable="false" (click)="onActionTriggered('edit', task)">
@@ -48,8 +46,6 @@
                         </ng-template>
                     </igx-list>
                 </div>
-            </igx-tabs-group>
-        </igx-tabs>
     </igx-card-content>
 </igx-card>
 

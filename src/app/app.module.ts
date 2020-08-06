@@ -11,11 +11,18 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { GridWithTransactionsComponent } from './transaction-component/transaction-grid.component';
+import { HttpClientModule } from '@angular/common/http';
+import { StatusLabelPipe, PriorityLabelPipe, PlaceholderPipe, DeadlinePipe, ProgressPipe } from './pipes/taskplanner.pipes';
 
 @NgModule({
   declarations: [
     TaskPlannerComponent,
     HeaderComponent,
+    StatusLabelPipe,
+    PriorityLabelPipe,
+    ProgressPipe,
+    PlaceholderPipe,
+    DeadlinePipe,
     BacklogComponent,
     GridWithTransactionsComponent
   ],
@@ -26,6 +33,7 @@ import { GridWithTransactionsComponent } from './transaction-component/transacti
     IgxDialogModule,
     IgxButtonModule,
     IgxGridModule,
+    HttpClientModule,
     IgxMaskModule,
     IgxToastModule,
     IgxAvatarModule,
