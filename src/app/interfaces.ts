@@ -1,29 +1,34 @@
 export interface ITask {
-    id?: number;
-    issue?: string;
-    isActive?: boolean;
     priority?: string;
     milestone?: string;
-    description?: string;
     status?: string;
-    owner?: {
-      id: number;
-      name: string;
-      sex: string;
-      team: string;
-      avatar: string;
-    };
-    created_by?: string;
-    started_on?: Date;
     deadline?: Date;
     estimation?: number;
     hours_spent?: number;
+    createdAt?: Date | string;
+    assignee?: ITeamMember;
+    labels?: ILabel[];
+    body?: string;
+    title?: string;
+    number?: number;
+    url?: string;
+    id?: number;
+    pullRequest?: string;
 }
 
 export interface ITeamMember {
     id: number;
-    name: string;
-    sex: string;
-    team: string;
-    avatar: string;
+    email?: string;
+    login: string;
+    url?: string;
+    avatarUrl: string;
+}
+
+export interface ILabel {
+  id: number;
+  url: string;
+  name: string;
+  color: string;
+  description: string;
+  default: boolean;
 }

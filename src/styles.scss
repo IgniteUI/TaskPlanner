@@ -11,29 +11,29 @@ html, body {
 @import "app/tp-theme/index";
 @include igx-core();
 
-.done {
-  @include igx-badge($badge-done)
+.resolved {
+  @include igx-badge($badge-resolved)
 }
 
-.new {
-  @include igx-badge($badge-new)
+.inreview {
+  @include igx-badge($badge-inreview)
 }
 
 .delayed {
   @include igx-badge($badge-delayed)
 }
 
-.inprogress {
-  @include igx-badge($badge-inprogress)
+.indevelopment {
+  @include igx-badge($badge-indevelopment)
 }
 
 .igx-button--raised {
   transition: all 420ms ease-in-out;;
 }
 
-.done,
-.new,
-.inprogress,
+.resolved,
+.inreview,
+.indevelopment,
 .late,
 .priority,
 .delayed {
@@ -53,15 +53,15 @@ html, body {
 }
 
 .igx-grid__tr {
-  .done {
+  .resolved {
     &:before {
-      background: $state-done;
+      background: $state-resolved;
     }
   }
 
-  .new {
+  .inreview {
     &:before {
-      background: $state-new;
+      background: $state-inreview;
     }
   }
 
@@ -71,9 +71,9 @@ html, body {
     }
   }
 
-  .inprogress {
+  .indevelopment {
     &:before {
-      background: $state-inprogress;
+      background: $state-indevelopment;
     }
   }
 }
@@ -96,7 +96,7 @@ html, body {
 }
 
 .tp-app-light-theme {
-  @include igx-fluent-theme($palette: $tp-light-palette, $legacy-support:false);
+  // @include igx-fluent-theme($palette: $tp-light-palette, $legacy-support:false);
   @include igx-css-vars($tp-light-icon);
   @include igx-css-vars($tp-light-card);
   @include igx-css-vars($tp-light-grid);

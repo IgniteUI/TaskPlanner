@@ -8,7 +8,6 @@ import {
     IgxGridComponent,
     IgxToastComponent,
     ISelectionEventArgs,
-    SortingDirection,
     Transaction,
     OverlaySettings,
     IgxOverlayOutletDirective,
@@ -16,7 +15,7 @@ import {
     DateRangeType
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
-import { TASKS_DATA, MEMBERS } from '../services/tasksData';
+import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
 import { ITask, ITeamMember } from '../interfaces';
@@ -54,13 +53,13 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
 
     public darkTheme = true;
     public tasks: ITask[];
+    public unassignedTasks: ITask[];
     public teamMembers: ITeamMember[];
     public editMode = 0;
     public editModes = ['Cell Editing', 'Row Editing', 'No Editing'];
     public addTaskForm = {} as ITask;
     public editTaskForm = {} as ITask;
     public transactionsData: Transaction[] = [];
-    public allTasks = TASKS_DATA;
     public batchEditingData: ITask[];
     public inputType = 'material';
     public selectOptions = [5, 15, 20, 50];
@@ -68,27 +67,28 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         dateRange: [new Date()],
         type: DateRangeType.Before
     }];
+    public gridIsLoading = true;
 
     public statuses = [
         {
-            value: 'New'
+            value: 'in-review'
         },
         {
-            value: 'In Progress'
+            value: 'in-development'
         },
         {
-            value: 'Done'
+            value: 'resolved'
         },
         {
-            value: 'Delayed'
+            value: 'not-a-bug'
         }
     ];
 
     public priority = [
-        { value: 'Low' },
-        { value: 'Normal' },
-        { value: 'High' },
-        { value: 'Critical' }
+        { value: 'low' },
+        { value: 'medium' },
+        { value: 'high' },
+        { value: 'critical' }
     ];
 
     public dialogOverlaySettings: OverlaySettings = {
@@ -137,43 +137,50 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         }, []);
     }
 
-    public isDone = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'Done';
+    public isResolved = (rowData: ITask, columnKey: string): boolean => {
+        return this.getStatus(rowData) === 'resolved';
     }
 
     public isNew = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'New';
+        return this.getStatus(rowData) === 'in-review';
     }
 
-    public isInProgress = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'In Progress';
+    public isInDevelopment = (rowData: ITask, columnKey: string): boolean => {
+        return this.getStatus(rowData) === 'in-development';
     }
 
-    public isLate = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'Delayed';
+    public notABug = (rowData: ITask, columnKey: string): boolean => {
+        return this.getStatus(rowData) === 'not-a-bug';
     }
 
     public isCritical = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'Critical';
+        return rowData[columnKey] === 'critical';
     }
 
     public isLow = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'Low';
+        return rowData[columnKey] === 'low';
     }
 
     public isHigh = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'High';
+        return rowData[columnKey] === 'high';
     }
 
     public isDelayed = (rowData: ITask, columnKey: string): boolean => {
         return rowData.hours_spent > rowData.estimation;
     }
 
+    public getStatus(value: ITask) {
+        const label = value.labels.filter(l => l.name.indexOf('status:') === 0);
+        if (label.length) {
+            return label[0].name.substring(8).toLowerCase();
+        }
+    }
+
     public statusClasses = {
-        done: this.isDone,
-        new: this.isNew,
-        inprogress: this.isInProgress,
-        delayed: this.isLate
+        resolved: this.isResolved,
+        inreview: this.isNew,
+        indevelopment: this.isInDevelopment,
+        notabug: this.notABug
     };
 
     public priorityClasses = {
@@ -190,18 +197,18 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public progressSort = ProgressSortingStrategy.instance();
 
     public columns: any[] = [
-        { field: 'id', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: true },
-        { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', resizable: true, groupable: false, editable: true, sortable: true, sortStrategy: this.milestoneSort},
-        { field: 'issue', header: 'Issue', width: '380px', dataType: 'string', resizable: true, filterable: true, sortable: true, editable: true},
-        { field: 'status', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
-        { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', resizable: true, sortable: false },
-        { field: 'owner', header: 'Owner', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: false, filterable: false },
-        { field: 'created_by', header: 'Created By', width: '180px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: false, hidden: true },
-        { field: 'started_on', header: 'Started on', width: '130px', dataType: 'date', resizable: true, sortable: true, editable: true },
+        { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true },
+        { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: true },
+        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true },
+        { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', resizable: true, groupable: false, editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true},
+        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
+        { field: 'assignee', header: 'Assignee', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: false, filterable: true },
+        { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false, hidden: false },
         { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', resizable: true, sortable: false, editable: true },
         { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
         { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
-        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses }
+        { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', resizable: true, sortable: false },
+        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: false, cellClasses: this.priorityClasses }
     ];
 
     constructor(private dataService: TasksDataService) {  }
@@ -209,7 +216,21 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
         this.dialogOverlaySettings.outlet = this.outlet;
-        this.dataService.getAssignedTasks().subscribe(data => this.tasks = data);
+        this.dataService.getAllIssues().subscribe({
+            next: (data: ITask[]) => {
+                // cache data
+                window.localStorage.setItem('tp_issues_cache', JSON.stringify(data));
+                const currentTime = new Date().getTime();
+                window.localStorage.setItem(`lastUpdate`,  currentTime as any);
+                this.populateDataComponents(data);
+            },
+            error: err => {
+                console.log(err);
+                // load local dummy data
+                const data = GITHUB_TASKS;
+                this.populateDataComponents(data);
+            }
+        });
         this.teamMembers = MEMBERS;
 
         this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
@@ -217,33 +238,33 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
             this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
         });
 
-        this.grid.sortingExpressions = [{
-            fieldName: 'id',
-            dir: SortingDirection.Desc },
-        {
-            dir: SortingDirection.Asc,
-            fieldName: 'milestone',
-            ignoreCase: false,
-            strategy: this.milestoneSort
-        }];
+        // this.grid.sortingExpressions = [{
+        //     fieldName: 'id',
+        //     dir: SortingDirection.Desc },
+        // {
+        //     dir: SortingDirection.Asc,
+        //     fieldName: 'milestone',
+        //     ignoreCase: false,
+        //     strategy: this.milestoneSort
+        // }];
 
-        this.grid.groupingExpressions = [{
-            dir: SortingDirection.Asc,
-            fieldName: 'milestone',
-            ignoreCase: false,
-            strategy: this.milestoneSort
-        }];
+        // this.grid.groupingExpressions = [{
+        //     dir: SortingDirection.Asc,
+        //     fieldName: 'milestone',
+        //     ignoreCase: false,
+        //     strategy: this.milestoneSort
+        // }];
 
-        this.grid.groupingExpansionState = [{
-            expanded: false,
-            hierarchy: [{ fieldName: 'milestone', value: 'Q2 2020'}]
-        }, {
-            expanded: true,
-            hierarchy: [{ fieldName: 'milestone', value: 'Q1 2020'}]
-        }, {
-            expanded: false,
-            hierarchy: [{ fieldName: 'milestone', value: 'Q4 2019'}]
-        }];
+        // this.grid.groupingExpansionState = [{
+        //     expanded: false,
+        //     hierarchy: [{ fieldName: 'milestone', value: 'Q2 2020'}]
+        // }, {
+        //     expanded: true,
+        //     hierarchy: [{ fieldName: 'milestone', value: 'Q1 2020'}]
+        // }, {
+        //     expanded: false,
+        //     hierarchy: [{ fieldName: 'milestone', value: 'Q4 2019'}]
+        // }];
     }
 
     public ngAfterViewInit() {
@@ -251,8 +272,15 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.editMode = 0;
     }
 
+    public populateDataComponents(data: ITask[]) {
+        const issues = data.filter(task => task.pullRequest === null).map(rec => this.parseDate(rec));
+        this.tasks = issues.filter(t => t.labels.filter(l => l.name.indexOf('status') === 0).length > 0);
+        this.gridIsLoading = false;
+        this.unassignedTasks = issues.filter(t => t.labels.filter(l => l.name.indexOf('status') === 0 ).length === 0);
+    }
+
     public addTask(event) {
-        if (this.addTaskForm.issue && this.addTaskForm.issue !== undefined
+        if (this.addTaskForm.title && this.addTaskForm.title !== undefined
             && this.addTaskForm.deadline) {
             this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
             this.addTaskForm.status = 'New';
@@ -268,8 +296,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public editTask(event) {
-        if (this.editTaskForm.issue !== '' && this.editTaskForm.deadline) {
-            this.addBacklogItem(this.editTaskForm);
+        if (this.editTaskForm.title !== '' && this.editTaskForm.deadline) {
             this.editTaskDialog.close();
         } else {
             this.emptyFieldMessage();
@@ -283,7 +310,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public getStartedOn(dataItem: ITask): boolean {
-        return !!dataItem.started_on;
+        return !!dataItem.createdAt;
     }
 
     public deleteTask(rowID) {
@@ -384,32 +411,32 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     /**
      * Returns workload for corresponding team member.
      */
-    public getAssigneeWorkload(ownerID: number) {
-        const workloadData = this.tasks.filter(rec => rec.owner.id === ownerID);
-        const newTasks = workloadData.filter(rec => rec.status === 'New').length;
-        const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
-        const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
+    // public getAssigneeWorkload(ownerID: number) {
+    //     const workloadData = this.tasks.filter(rec => rec.owner.id === ownerID);
+    //     const newTasks = workloadData.filter(rec => rec.status === 'New').length;
+    //     const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
+    //     const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
 
-        return [
-            { Label: 'In Progress', Value: inprogressTasks },
-            { Label: 'Done', Value: doneTasks },
-            { Label: 'New', Value: newTasks }];
-    }
+    //     return [
+    //         { Label: 'In Progress', Value: inprogressTasks },
+    //         { Label: 'Done', Value: doneTasks },
+    //         { Label: 'New', Value: newTasks }];
+    // }
 
     /**
      * Returns workload for the corrssponding team.
      */
-    public getTeamWorkload(team: string) {
-        const workloadData = this.tasks.filter(rec => rec.owner.team === team);
-        const newTasks = workloadData.filter(rec => rec.status === 'New').length;
-        const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
-        const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
+    // public getTeamWorkload(team: string) {
+    //     const workloadData = this.tasks.filter(rec => rec.owner.team === team);
+    //     const newTasks = workloadData.filter(rec => rec.status === 'New').length;
+    //     const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
+    //     const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
 
-        return [
-            { Label: 'In Progress', Value: inprogressTasks },
-            { Label: 'Done', Value: doneTasks },
-            { Label: 'New', Value: newTasks }];
-    }
+    //     return [
+    //         { Label: 'In Progress', Value: inprogressTasks },
+    //         { Label: 'Done', Value: doneTasks },
+    //         { Label: 'New', Value: newTasks }];
+    // }
 
     public formatPieLabel(args): string {
         return args.item.Value + ' ' + args.item.Label;
@@ -461,7 +488,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public openBatchEditDialog() {
-        const selectedRows = this.grid.selectedRows();
+        const selectedRows = this.grid.selectedRows;
         const selectedData = this.tasks.filter(rec => selectedRows.indexOf(rec.id) > -1);
         this.batchEditingData = selectedData;
         this.batchEditDialog.open(this.dialogOverlaySettings);
@@ -515,7 +542,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public get hasSelection(): boolean {
-        return this.grid.selectedRows().length > 0;
+        return this.grid.selectedRows.length > 0;
     }
 
     public get isRowEditingEnabled() {
@@ -529,6 +556,11 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public get selectedEditMode() {
         return this.editModes[this.editMode];
     }
+
+    private parseDate(obj) {
+        obj.createdAt = obj.createdAt ? new Date(obj.createdAt) : null;
+        return obj;
+    }
 }
 
 /**
@@ -540,7 +572,7 @@ export class MilestoneSortingStrategy extends DefaultSortingStrategy {
                              key: string,
                              reverse: number,
                              ignoreCase: boolean,
-                             valueResolver: (obj: ITask, key: string) => string) {
+                             valueResolver: (obj: any, key: string) => string) {
 
         const objA = valueResolver(obj1, key).split(' ');
         const objB = valueResolver(obj2, key).split(' ');
@@ -578,7 +610,9 @@ export class ProgressSortingStrategy extends DefaultSortingStrategy {
  * Calculates task progress.
  */
 export function calcProgress(task: ITask) {
-    const progress = (task.hours_spent / task.estimation) * 100;
+    const hoursSpent = task.hours_spent ? task.hours_spent : 0;
+    const estimation = task.estimation ? task.estimation : 0;
+    const progress = (hoursSpent / estimation) * 100;
     return progress;
 }
 // tslint:enable:max-line-length

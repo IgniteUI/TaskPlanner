@@ -2,13 +2,13 @@
     <app-header (themeChanged)="toggleTheme()" (createIssueClicked)="openAddTaskDialog()"></app-header>
     <div class="tp-app__inner">
         <!--  Master Backlog -->
-        <app-backlog class="tp-app__backlog" (listItemAction)="onBacklogItemAction($event)"></app-backlog>
+        <app-backlog class="tp-app__backlog" (listItemAction)="onBacklogItemAction($event)" [data]="unassignedTasks"></app-backlog>
 
         <!-- Tasks Planner Grid  -->
         <app-grid-transactions class="tp-app__grid">
-            <igx-grid #tasksGrid id="tasksGrid" igxDrop
+            <igx-grid #tasksGrid id="tasksGrid" igxDrop [isLoading]="gridIsLoading"
                 [height]="'100%'"
-                [data]="tasks "
+                [data]="tasks"
                 [autoGenerate]="false"
                 [showToolbar]="true"
                 [primaryKey]="'id'"
@@ -39,22 +39,16 @@
                         <div class="tp-app__row-details-col-item">
                           <span class="tp-app__row-details-title tp-app__row-details-title--comments">Task Comments</span>
                           <igx-input-group [type]="inputType">
-                            <textarea name="description" igxInput rows="4" cols="50" [(ngModel)]="dataItem.details" placeholder="Enter any details here."></textarea>
+                            <textarea readonly name="description" igxInput rows="8" cols="50" [(ngModel)]="dataItem.body" placeholder="Enter any details here."></textarea>
                           </igx-input-group>
                         </div>
                       </div>
                       <div class="tp-app__row-details-col">
                         <div class="tp-app__row-details-col-item">
                           <span class="tp-app__row-details-title">Acceptance criteria</span>
-                          <igx-checkbox class="tp-app__row-details-checkbox" [(ngModel)]="dataItem.acceptance_criteria.hasAPI" [checked]="dataItem.acceptance_criteria.hasAPI">Includes API & Docs</igx-checkbox>
-                          <igx-checkbox class="tp-app__row-details-checkbox" [(ngModel)]="dataItem.acceptance_criteria.hasTests" [checked]="dataItem.acceptance_criteria.hasTests">Includes unit tests</igx-checkbox>
-                          <igx-checkbox class="tp-app__row-details-checkbox" [(ngModel)]="dataItem.acceptance_criteria.builds" [checked]="dataItem.acceptance_criteria.builds">All checks passed</igx-checkbox>
-                        </div>
-                      </div>
-                      <div class="tp-app__row-details-col">
-                        <div class="tp-app__row-details-col-item">
-                          <span class="tp-app__row-details-title">Task Progress</span>
-                          <igx-linear-bar type="default" [max]="100" [value]="calcProgress(dataItem)" [animate]="false"></igx-linear-bar>
+                          <igx-checkbox class="tp-app__row-details-checkbox">Includes API & Docs</igx-checkbox>
+                          <igx-checkbox class="tp-app__row-details-checkbox">Includes unit tests</igx-checkbox>
+                          <igx-checkbox class="tp-app__row-details-checkbox">All checks passed</igx-checkbox>
                         </div>
                       </div>
                     </div>
@@ -123,29 +117,32 @@
                     [hidden]="c.hidden">
 
                     <!-- Status Column -->
-                    <ng-template *ngIf="c.field === 'status'" igxCellEditor let-cell="cell" let-value>
-                      <igx-select [placeholder]="value" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                    <ng-template *ngIf="c.field === 'labels'" igxCell let-cell="cell" let-value>
+                      {{ value | statusLabel }}
+                    </ng-template>
+                    <ng-template *ngIf="c.field === 'labels'" igxCellEditor let-cell="cell" let-value>
+                      <igx-select [placeholder]="value | statusLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                         <igx-select-item *ngFor="let s of statuses" [value]="s.value">{{ s.value }}</igx-select-item>
                       </igx-select>
                     </ng-template>
 
-                    <!-- owner !== {} TODO -->
-                    <ng-template *ngIf="c.field === 'owner'" igxCell let-cell="cell" let-value>
+                    <!-- Assignee -->
+                    <ng-template *ngIf="c.field === 'assignee'" igxCell let-cell="cell" let-value>
                       <div class="tp-app__owner-col">
-                        <igx-avatar class="tp-app__owner-col-avatar" [src]="cell.value.avatar" roundShape="true" size="small"></igx-avatar>
+                        <igx-avatar class="tp-app__owner-col-avatar" [src]="cell.value.avatarUrl" roundShape="true" size="small"></igx-avatar>
                         <span>
-                            <span class="tp-app__owner-col-name">{{ value.name }}</span>
+                            <span class="tp-app__owner-col-name">{{ value.login }}</span>
                         </span>
                       </div>
                     </ng-template>
 
-                    <ng-template *ngIf="c.field === 'owner'" igxCellEditor let-cell="cell" let-value>
-                      <igx-select [placeholder]="value.name" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
-                        <igx-select-item *ngFor="let m of teamMembers" [value]="m">
+                    <ng-template *ngIf="c.field === 'assignee'" igxCellEditor let-cell="cell" let-value>
+                      <igx-select [placeholder]="value.login" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                        <igx-select-item *ngFor="let m of teamMembers" [value]="m.login">
                           <div class="item">
-                            <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatar" roundShape="true" size="small"></igx-avatar>
+                            <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" roundShape="true" size="small"></igx-avatar>
                             <span>
-                                <span class="tp-app__owner-col-name">{{ m.name }}</span>
+                                <span class="tp-app__owner-col-name">{{ m.login }}</span>
                             </span>
                           </div>
                         </igx-select-item>
@@ -153,20 +150,63 @@
                     </ng-template>
 
                     <!-- Started On, Deadline Columns -->
-                    <ng-template *ngIf="c.field === 'started_on' || c.field === 'deadline'" igxCell let-value>
+                    <ng-template *ngIf="c.field === 'createdAt'" igxCell let-value>
                       {{ value | date }}
+                    </ng-template>
+
+                    <!-- Started On, Deadline Columns -->
+                    <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell" let-value>
+                      {{ cell.rowData | deadline | date }}
                     </ng-template>
 
                     <!-- Progress Column -->
                     <ng-template *ngIf="c.field === 'progress'" igxCell let-value let-cell="cell">
-                      {{ calcProgress(cell.row.rowData) / 100 | percent }}
+                      <igx-linear-bar type="default" [max]="100" [value]="calcProgress(cell.row.rowData)" [animate]="false"></igx-linear-bar>
                     </ng-template>
 
                     <!-- Priority Column -->
-                    <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
-                      <igx-select [placeholder]="value" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                    <ng-template *ngIf="c.field === 'priority'" igxCell let-value let-cell="cell">
+                      {{ cell.rowData | priorityLabel }}
+                    </ng-template>
+                    <!-- <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
+                      <igx-select [placeholder]="cell.rowData | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                         <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                       </igx-select>
+                    </ng-template> -->
+
+                    <!-- Deadline -->
+                    <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell" let-value>
+                        {{ value | placeholder }}
+                    </ng-template>
+
+                    <!-- Estimatiomn -->
+                    <ng-template *ngIf="c.field === 'estimation'" igxCell let-cell="cell" let-value>
+                      <span *ngIf="!value" class="tp-app__estimation-col">
+                        {{ value | placeholder }}
+                      </span>
+                      <ng-container *ngIf="value">
+                        {{ value | placeholder }}
+                      </ng-container>
+                    </ng-template>
+
+                    <!-- Hours Spent -->
+                    <ng-template *ngIf="c.field === 'hours_spent'" igxCell let-cell="cell" let-value>
+                      <span *ngIf="!value" class="tp-app__estimation-col">
+                        {{ value | placeholder }}
+                      </span>
+                      <ng-container *ngIf="value">
+                        {{ value | placeholder }}
+                      </ng-container>
+                    </ng-template>
+
+                    <!-- progress -->
+                    <ng-template *ngIf="c.field === 'progress'" igxCell let-cell="cell" let-value>
+                      <span *ngIf="!value" class="tp-app__estimation-col">
+                        {{ value | placeholder }}
+                      </span>
+                      <ng-container *ngIf="value">
+                        {{ value }}
+                      </ng-container>
                     </ng-template>
                 </igx-column>
           </igx-grid>
@@ -184,20 +224,20 @@
             (onLeftButtonSelect)="addTaskDialog.close()"
             (onRightButtonSelect)="addTask($event)"
             rightButtonLabel="Add task"
-            [closeOnOutsideSelect]="true">
+            [closeOnOutsideSelect]="false">
 
             <div class="tp-app__dialog-content">
                 <igx-input-group [type]="inputType" type="border" #MyInputGroup>
                     <label igxLabel for="issue">Issue Title</label>
-                    <input igxInput id="issue" type="text" [(ngModel)]="addTaskForm.issue" required/>
+                    <input igxInput id="issue" type="text" [(ngModel)]="addTaskForm.title" required/>
                 </igx-input-group>
 
-                <igx-select type="border" placeholder="Owner" [(ngModel)]="addTaskForm.owner" [overlaySettings]="overlaySettings">
-                    <igx-select-item *ngFor="let m of teamMembers" [value]="m.name">
+                <igx-select type="border" placeholder="Owner" [(ngModel)]="addTaskForm.assignee" [overlaySettings]="overlaySettings">
+                    <igx-select-item *ngFor="let m of teamMembers" [value]="m.login">
                         <div class="item">
-                          <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatar" roundShape="true" size="small"></igx-avatar>
+                          <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" roundShape="true" size="small"></igx-avatar>
                           <span>
-                              <span class="tp-app__owner-col-name">{{ m.name }}</span>
+                              <span class="tp-app__owner-col-name">{{ m.login }}</span>
                           </span>
                         </div>
                       </igx-select-item>
@@ -205,7 +245,7 @@
 
                 <igx-input-group [type]="inputType" type="border">
                     <label igxLabel for="description">Description</label>
-                    <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="addTaskForm.description"></textarea>
+                    <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="addTaskForm.title"></textarea>
                 </igx-input-group>
 
                 <igx-select type="border" placeholder="Priority" [(ngModel)]="addTaskForm.priority" [overlaySettings]="overlaySettings">
@@ -238,21 +278,21 @@
             leftButtonLabel="Cancel"
             (onLeftButtonSelect)="editTaskDialog.close()"
             (onRightButtonSelect)="editTask($event)"
-            rightButtonLabel="Add"
-            [closeOnOutsideSelect]="true">
+            rightButtonLabel="Edit"
+            [closeOnOutsideSelect]="false">
 
             <div class="tp-app__dialog-content">
               <igx-input-group [type]="inputType" type="border" #MyInputGroup>
                   <label igxLabel for="newIssue">Issue Title</label>
-                  <input igxInput id="newIssue" type="text" [(ngModel)]="editTaskForm.issue" required/>
+                  <input igxInput id="newIssue" type="text" [(ngModel)]="editTaskForm.title" required/>
               </igx-input-group>
               
-              <igx-select type="border" placeholder="Owner" [(ngModel)]="editTaskForm.owner" [overlaySettings]="overlaySettings" required>
+              <igx-select type="border" placeholder="Owner" [(ngModel)]="editTaskForm.assignee" [overlaySettings]="overlaySettings" required>
                 <igx-select-item *ngFor="let m of teamMembers" [value]="m">
                   <div class="item">
-                    <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatar" roundShape="true" size="small"></igx-avatar>
+                    <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" roundShape="true" size="small"></igx-avatar>
                     <span>
-                        <span class="tp-app__owner-col-name">{{ m.name }}</span>
+                        <span class="tp-app__owner-col-name">{{ m.login }}</span>
                     </span>
                   </div>
                 </igx-select-item>
@@ -260,7 +300,7 @@
 
               <igx-input-group [type]="inputType" type="border">
                   <label igxLabel for="description">Description</label>
-                  <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="editTaskForm.description"></textarea>
+                  <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="editTaskForm.body"></textarea>
               </igx-input-group>
         
               <igx-select type="border" placeholder="Priority" [(ngModel)]="editTaskForm.priority" [overlaySettings]="overlaySettings">
@@ -356,38 +396,41 @@
                         [hidden]="c.hidden">
 
                         <!-- Status Column -->
-                        <ng-template *ngIf="c.field === 'status'" igxCellEditor let-cell="cell" let-value>
-                            <igx-select [placeholder]="value" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
-                                <igx-select-item *ngFor="let s of statuses" [value]="s.value">{{ s.value }}</igx-select-item>
-                            </igx-select>
+                        <ng-template *ngIf="c.field === 'labels'" igxCell let-cell="cell" let-value>
+                          {{ value | statusLabel }}
+                        </ng-template>
+                        <ng-template *ngIf="c.field === 'labels'" igxCellEditor let-cell="cell" let-value>
+                          <igx-select [placeholder]="value | statusLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                            <igx-select-item *ngFor="let s of statuses" [value]="s.value">{{ s.value }}</igx-select-item>
+                          </igx-select>
                         </ng-template>
 
-                        <!-- owner !== {} TODO -->
-                        <ng-template *ngIf="c.field === 'owner'" igxCell let-cell="cell" let-value>
-                            <div class="tp-app__owner-col">
-                                <igx-avatar class="tp-app__owner-col-avatar" [src]="cell.value.avatar" roundShape="true" size="small"></igx-avatar>
+                        <!-- Assignee -->
+                        <ng-template *ngIf="c.field === 'assignee'" igxCell let-cell="cell" let-value>
+                          <div class="tp-app__owner-col">
+                            <igx-avatar class="tp-app__owner-col-avatar" [src]="cell.value.avatarUrl" roundShape="true" size="small"></igx-avatar>
+                            <span>
+                                <span class="tp-app__owner-col-name">{{ value.login }}</span>
+                            </span>
+                          </div>
+                        </ng-template>
+
+                        <ng-template *ngIf="c.field === 'assignee'" igxCellEditor let-cell="cell" let-value>
+                          <igx-select [placeholder]="value.login" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                            <igx-select-item *ngFor="let m of teamMembers" [value]="m.login">
+                              <div class="item">
+                                <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" roundShape="true" size="small"></igx-avatar>
                                 <span>
-                                    <span class="tp-app__owner-col-name">{{ value.name }}</span>
+                                    <span class="tp-app__owner-col-name">{{ m.login }}</span>
                                 </span>
-                            </div>
-                        </ng-template>
-
-                        <ng-template *ngIf="c.field === 'owner'" igxCellEditor let-cell="cell" let-value>
-                            <igx-select [placeholder]="value.name" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
-                                <igx-select-item *ngFor="let m of teamMembers" [value]="m">
-                                    <div class="item">
-                                        <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatar" roundShape="true" size="small"></igx-avatar>
-                                        <span>
-                                            <span class="tp-app__owner-col-name">{{ m.name }}</span>
-                                        </span>
-                                    </div>
-                                </igx-select-item>
-                            </igx-select>
+                              </div>
+                            </igx-select-item>
+                          </igx-select>
                         </ng-template>
 
                         <!-- Started On, Deadline Columns -->
-                        <ng-template *ngIf="c.field === 'started_on' || c.field === 'deadline'" igxCell let-value>
-                            {{ value | date }}
+                        <ng-template *ngIf="c.field === 'createdAt' || c.field === 'deadline'" igxCell let-value>
+                          {{ value | date }}
                         </ng-template>
 
                         <!-- Progress Column -->
@@ -396,11 +439,14 @@
                         </ng-template>
 
                         <!-- Priority Column -->
-                        <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
-                            <igx-select [placeholder]="value" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                        <ng-template *ngIf="c.field === 'priority'" igxCell let-value let-cell="cell">
+                          {{ cell.rowData | priorityLabel }}
+                        </ng-template>
+                        <!-- <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
+                            <igx-select [placeholder]="value | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                                 <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                             </igx-select>
-                        </ng-template>
+                        </ng-template> -->
                     </igx-column>
                 </igx-grid>
             </div>

@@ -1,4 +1,4 @@
-import { Component, ViewChild, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, ViewChild, EventEmitter, Output, OnInit, Input } from '@angular/core';
 import { IgxInputDirective, IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { ITask } from '../interfaces';
@@ -28,10 +28,14 @@ export class BacklogComponent implements OnInit  {
 
     @Output() listItemAction = new EventEmitter<IListItemAction>();
 
+    @Input()
+    public set data(data: ITask[]) {
+        this.tasks = data;
+    }
+
     constructor(private dataService: TasksDataService) {}
 
     public ngOnInit() {
-        this.dataService.getUnassignedTasks().subscribe(data => this.tasks = data);
         this.overlaySettings.outlet = this.outlet;
     }
 
@@ -51,8 +55,17 @@ export class BacklogComponent implements OnInit  {
 
     public get filterTasks() {
         const fo = new IgxFilterOptions();
-        fo.key = 'issue';
+        fo.key = 'title';
         fo.inputValue = this.taskSearchString;
         return fo;
+    }
+
+    public getPriority(value: ITask) {
+        const label = value.labels.filter(l => l.name.indexOf('severity:') === 0);
+        if (label.length) {
+            return label[0].name.substring(10).toLowerCase();
+        } else {
+            return 'low';
+        }
     }
 }
