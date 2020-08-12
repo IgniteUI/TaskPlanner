@@ -1880,12 +1880,12 @@ export const GITHUB_TASKS = [
     {
         createdAt: '2020-08-05T08:27:13+00:00',
         assignee: {
-            id: 0,
-            avatarUrl: null,
-            login: null,
+            id: 1702064,
+            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
+            login: 'StefanIvanov',
             email: null,
-            url: null
-        },
+            url: 'https://github.com/StefanIvanov'
+         },
         labels: [
             {
                 id: 531439044,
@@ -2014,12 +2014,12 @@ export const GITHUB_TASKS = [
     {
         createdAt: '2020-08-04T07:50:46+00:00',
         assignee: {
-            id: 0,
-            avatarUrl: null,
-            login: null,
+            id: 1702064,
+            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
+            login: 'StefanIvanov',
             email: null,
-            url: null
-        },
+            url: 'https://github.com/StefanIvanov'
+         },
         labels: [
             {
                 id: 386927479,
@@ -4569,12 +4569,12 @@ export const GITHUB_TASKS = [
     {
         createdAt: '2020-05-27T17:39:33+00:00',
         assignee: {
-            id: 0,
-            avatarUrl: null,
-            login: null,
+            id: 1702064,
+            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
+            login: 'StefanIvanov',
             email: null,
-            url: null
-        },
+            url: 'https://github.com/StefanIvanov'
+         },
         labels: [
             {
                 id: 2093864222,
@@ -7350,11 +7350,11 @@ export const GITHUB_TASKS = [
     {
         createdAt: '2020-02-10T13:32:42+00:00',
         assignee: {
-            id: 0,
-            avatarUrl: null,
-            login: null,
+            id: 1702064,
+            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
+            login: 'StefanIvanov',
             email: null,
-            url: null
+            url: 'https://github.com/StefanIvanov'
         },
         labels: [
             {
@@ -8979,11 +8979,11 @@ export const GITHUB_TASKS = [
     {
         createdAt: '2019-10-10T07:06:16+00:00',
         assignee: {
-            id: 0,
-            avatarUrl: null,
-            login: null,
+            id: 1702064,
+            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
+            login: 'StefanIvanov',
             email: null,
-            url: null
+            url: 'https://github.com/StefanIvanov'
         },
         labels: [
             {

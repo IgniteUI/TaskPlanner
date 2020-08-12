@@ -16,8 +16,11 @@ export class StatusLabelPipe implements PipeTransform {
 
 @Pipe({name: 'priorityLabel'})
 export class PriorityLabelPipe implements PipeTransform {
-  transform(value: ITask): string {
-    const label = value.labels.filter(l => l.name.indexOf('severity:') === 0);
+  transform(value: any): string {
+    if (typeof value === 'string') {
+      return value;
+    }
+    const label = value.filter(l => l.name.indexOf('severity:') === 0);
     if (label.length) {
         return label[0].name.substring(10);
     }

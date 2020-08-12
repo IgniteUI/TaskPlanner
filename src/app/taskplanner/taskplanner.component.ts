@@ -12,13 +12,18 @@ import {
     OverlaySettings,
     IgxOverlayOutletDirective,
     IDropDroppedEventArgs,
-    DateRangeType
+    DateRangeType,
+    FilteringStrategy,
+    IgxColumnComponent,
+    IFilteringExpressionsTree,
+    IFilteringExpression
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
 import { ITask, ITeamMember } from '../interfaces';
+import { StatusLabelPipe, PriorityLabelPipe } from '../pipes/taskplanner.pipes';
 
 export enum editMode {
     cellEditing = 0,
@@ -138,19 +143,19 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     }
 
     public isResolved = (rowData: ITask, columnKey: string): boolean => {
-        return this.getStatus(rowData) === 'resolved';
+        return this.getStatusLabel(rowData.labels) === 'resolved';
     }
 
     public isNew = (rowData: ITask, columnKey: string): boolean => {
-        return this.getStatus(rowData) === 'in-review';
+        return this.getStatusLabel(rowData.labels) === 'in-review';
     }
 
     public isInDevelopment = (rowData: ITask, columnKey: string): boolean => {
-        return this.getStatus(rowData) === 'in-development';
+        return this.getStatusLabel(rowData.labels) === 'in-development';
     }
 
     public notABug = (rowData: ITask, columnKey: string): boolean => {
-        return this.getStatus(rowData) === 'not-a-bug';
+        return this.getStatusLabel(rowData.labels) === 'not-a-bug';
     }
 
     public isCritical = (rowData: ITask, columnKey: string): boolean => {
@@ -169,11 +174,18 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         return rowData.hours_spent > rowData.estimation;
     }
 
-    public getStatus(value: ITask) {
-        const label = value.labels.filter(l => l.name.indexOf('status:') === 0);
-        if (label.length) {
-            return label[0].name.substring(8).toLowerCase();
-        }
+    public getStatusLabel(labels: any[]) {
+        const label = new StatusLabelPipe().transform(labels);
+        return label;
+    }
+
+    public getPriorityLabel(labels: any[]) {
+        const label = new PriorityLabelPipe().transform(labels);
+        return label;
+    }
+
+    public getAssignee(user: ITeamMember) {
+        return user.login;
     }
 
     public statusClasses = {
@@ -195,21 +207,23 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
 
     public milestoneSort = MilestoneSortingStrategy.instance();
     public progressSort = ProgressSortingStrategy.instance();
+    public filterStrategy = LabelsFilteringStrategy.instance();
 
     public columns: any[] = [
         { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true },
         { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: true },
         { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true },
         { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', resizable: true, groupable: false, editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true},
-        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
-        { field: 'assignee', header: 'Assignee', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: false, filterable: true },
+        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort, formatter: this.getStatusLabel },
+        { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: false, filterable: true },
         { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false, hidden: false },
         { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', resizable: true, sortable: false, editable: true },
         { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
         { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
         { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', resizable: true, sortable: false },
-        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: false, cellClasses: this.priorityClasses }
+        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: false, cellClasses: this.priorityClasses, formatter: this.getPriorityLabel }
     ];
+    private _filteringStrategy = new FilteringStrategy();
 
     constructor(private dataService: TasksDataService) {  }
 
@@ -270,6 +284,39 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public ngAfterViewInit() {
         this.grid.hideGroupedColumns = true;
         this.editMode = 0;
+    }
+
+    public columnValuesStrategy = (column: IgxColumnComponent,
+        columnExprTree: IFilteringExpressionsTree,
+        done: (uniqueValues: any[]) => void) => {
+        // Get specific column data.
+        this.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
+    }
+
+    public getColumnData(column: IgxColumnComponent,
+        columnExprTree: IFilteringExpressionsTree,
+        done: (colVals: any[]) => void) {
+        setTimeout(() => {
+            let columnValues = [];
+            if (column.field === 'labels') {
+                columnValues = this.statuses.map(rec => rec.value);
+                done(columnValues);
+                return;
+            }
+            if (column.field === 'assignee.login') {
+                columnValues = this.teamMembers.map(rec => rec.login);
+                done(columnValues);
+                return;
+            }
+            if (column.field === 'priority') {
+                columnValues = this.priority.map(rec => rec.value);
+                done(columnValues);
+                return;
+            }
+            const filteredData = this._filteringStrategy.filter(this.tasks, columnExprTree);
+            columnValues = filteredData.map(record => record[column.field]);
+            done(columnValues);
+        }, 1000);
     }
 
     public populateDataComponents(data: ITask[]) {
@@ -604,6 +651,20 @@ export class ProgressSortingStrategy extends DefaultSortingStrategy {
 
         return reverse * this.compareValues(progressA, progressB);
     }
+}
+
+export class LabelsFilteringStrategy extends FilteringStrategy {
+    public findMatchByExpression(rec: ITask, expr: IFilteringExpression): boolean {
+        const cond = expr.condition;
+        let val = this.getFieldValue(rec, expr.fieldName);
+        if (expr.fieldName === 'labels') {
+            val = new StatusLabelPipe().transform(val);
+        }
+        if (expr.fieldName === 'priority') {
+            val = new PriorityLabelPipe().transform(val);
+        }
+        return cond.logic(val, expr.searchVal, expr.ignoreCase);
+      }
 }
 
 /**
