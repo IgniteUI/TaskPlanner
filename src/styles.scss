@@ -7,7 +7,7 @@ html, body {
   overflow: hidden;
 }
 
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@import '~@infragistics/igniteui-angular/lib/core/styles/themes/index';
 @import "app/tp-theme/index";
 @include igx-core();
 
