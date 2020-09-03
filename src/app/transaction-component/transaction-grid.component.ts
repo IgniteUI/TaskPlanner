@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IgxGridTransaction, IgxTransactionService } from 'igniteui-angular';
+import { IgxGridTransaction, IgxTransactionService } from '@infragistics/igniteui-angular';
 
 @Component({
     providers: [{ provide: IgxGridTransaction, useClass: IgxTransactionService }],

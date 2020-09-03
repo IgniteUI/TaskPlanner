@@ -17,7 +17,7 @@ import {
     IgxColumnComponent,
     IFilteringExpressionsTree,
     IFilteringExpression
-} from 'igniteui-angular';
+} from '@infragistics/igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';

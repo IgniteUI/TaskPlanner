@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDialogModule, IgxButtonModule, IgxGridModule, IgxAvatarModule, IgxIconModule,
   IgxNavbarModule, IgxDividerModule, IgxTabsModule, IgxToastModule, IgxMaskModule,
-  IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule, IgxFilterModule, IgxActionStripModule } from 'igniteui-angular';
+  IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule, IgxFilterModule, IgxActionStripModule } from '@infragistics/igniteui-angular';
 import { TasksDataService } from './services/tasks.service';
 import { TaskPlannerComponent } from './taskplanner/taskplanner.component';
 import { FormsModule } from '@angular/forms';
