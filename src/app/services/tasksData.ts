@@ -156,7 +156,7 @@ export const MEMBERS = [
     }
  ];
 
-export const TASKS_DATA = [
+const TASKS_DATA = [
     {
       id: 5121,
       milestone: 'Q1 2020',

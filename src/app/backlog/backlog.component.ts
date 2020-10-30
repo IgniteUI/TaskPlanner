@@ -1,5 +1,5 @@
 import { Component, ViewChild, EventEmitter, Output, OnInit, Input } from '@angular/core';
-import { IgxInputDirective, IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions } from '@infragistics/igniteui-angular';
+import { IgxInputDirective, IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { ITask } from '../interfaces';
 

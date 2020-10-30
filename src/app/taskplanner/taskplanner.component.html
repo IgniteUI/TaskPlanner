@@ -137,7 +137,7 @@
                     </ng-template>
 
                     <ng-template *ngIf="c.field === 'assignee.login'" igxCellEditor let-cell="cell" let-value>
-                      <igx-select [placeholder]="value" [(ngModel)]="cell.edtValue" [overlaySettings]="overlaySettings">
+                      <igx-select [placeholder]="value" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                         <igx-select-item *ngFor="let m of teamMembers" [value]="m.login">
                           <div class="item">
                             <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" roundShape="true" size="small"></igx-avatar>
@@ -149,14 +149,9 @@
                       </igx-select>
                     </ng-template>
 
-                    <!-- Started On, Deadline Columns -->
-                    <ng-template *ngIf="c.field === 'createdAt'" igxCell let-value>
-                      {{ value | date }}
-                    </ng-template>
-
-                    <!-- Started On, Deadline Columns -->
-                    <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell" let-value>
-                      {{ cell.rowData | deadline | date }}
+                    <!-- Deadline -->
+                    <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell">
+                      {{ cell.rowData | deadline:cell }}
                     </ng-template>
 
                     <!-- Progress Column -->
@@ -428,9 +423,9 @@
                           </igx-select>
                         </ng-template>
 
-                        <!-- Started On, Deadline Columns -->
-                        <ng-template *ngIf="c.field === 'createdAt' || c.field === 'deadline'" igxCell let-value>
-                          {{ value | date }}
+                        <!-- Deadline -->
+                        <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell">
+                          {{ cell.rowData | deadline:cell }}
                         </ng-template>
 
                         <!-- Progress Column -->

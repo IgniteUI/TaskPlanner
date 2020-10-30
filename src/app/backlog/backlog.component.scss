@@ -1,45 +1,38 @@
-@import '~@infragistics/igniteui-angular/lib/core/styles/base/index';
+@import 'igniteui-angular/lib/core/styles/base/index';
 @import "../tp-theme/vars";
-
 ::ng-deep {
     .tp-app {
-
         // TODO fix default style for empty template in the product
         .igx-list-empty {
             display: block;
             text-align: center;
         }
-
         &__task-search {
             margin: $search-margin !important;
             height: $search-height;
         }
-
         &__backlog-dragged-item {
             padding: rem(8px) rem(16px);
-            -webkit-box-shadow: 0 4px 18px 3px rgba(0,0,0,0.078), 0 10px 14px 1px rgba(0,0,0,0.121), 0 6px 6px -3px rgba(0,0,0,0.258);
-            -moz-box-shadow: 0 4px 18px 3px rgba(0,0,0,0.078), 0 10px 14px 1px rgba(0,0,0,0.121), 0 6px 6px -3px rgba(0,0,0,0.258);
-            box-shadow: 0 4px 18px 3px rgba(0,0,0,0.078), 0 10px 14px 1px rgba(0,0,0,0.121), 0 6px 6px -3px rgba(0,0,0,0.258);
+            -webkit-box-shadow: 0 4px 18px 3px rgba(0, 0, 0, 0.078), 0 10px 14px 1px rgba(0, 0, 0, 0.121), 0 6px 6px -3px rgba(0, 0, 0, 0.258);
+            -moz-box-shadow: 0 4px 18px 3px rgba(0, 0, 0, 0.078), 0 10px 14px 1px rgba(0, 0, 0, 0.121), 0 6px 6px -3px rgba(0, 0, 0, 0.258);
+            box-shadow: 0 4px 18px 3px rgba(0, 0, 0, 0.078), 0 10px 14px 1px rgba(0, 0, 0, 0.121), 0 6px 6px -3px rgba(0, 0, 0, 0.258);
             z-index: 10;
             max-width: 250px
         }
-
         &__backlog-list-template-text {
             max-width: 252px;
             overflow: hidden;
-            h1,h2 {
+            h1,
+            h2 {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
         }
-
         &__backlog-list-template {
             display: flex;
             align-items: center;
             width: 100%;
-
-
             &-row {
                 flex: 1;
                 display: flex;
@@ -47,12 +40,8 @@
                 width: 100%;
                 overflow: hidden;
             }
-
-            &-text {
-
-            }
+            &-text {}
         }
-
         // override the native element
         .igx-list__item-thumbnail {
             align-self: center;
@@ -60,36 +49,30 @@
         .igx-list__item-content {
             width: 100%;
         }
-
         &__backlog-list-button {
             &--action {
                 display: none !important;
                 min-width: 2.25rem
             }
-
             &--drag {
                 margin-right: rem(16px);
             }
         }
-
         &__backlog {
             min-width: 100px;
             width: $backlog-width;
             margin-right: $tp-app-padding;
-
             .igx-card-header {
                 min-height: $backlog-card-header-height;
             }
-
             .igx-tabs__header-menu-item--selected,
             .igx-tabs__header-menu-item {
                 min-height: $backlog-tab-header-height;
             }
-
             // Add scroll to the list
             &-card,
             .igx-card-content,
-            .igx-tabs > div,
+            .igx-tabs>div,
             .igx-tabs,
             .igx-tabs__content-fluid,
             .igx-tabs__group {
@@ -99,14 +82,12 @@
             .igx-tabs__content-fixed {
                 height: 100%;
             }
-
             .tp-app__list-scroll {
                 height: calc(100% - #{$scroll-subtract});
                 overflow-x: auto;
             }
         }
     }
-
     .igx-list__item-base {
         &:hover,
         &:focus {
@@ -115,20 +96,16 @@
             }
         }
     }
-
     .tp-app-dark-theme {
         .tp-app__backlog-list-button {
             color: igx-color($tp-palette, 'grays', 500) !important;
-
             igx-icon {
                 color: igx-color($tp-palette, 'grays', 500);
             }
-
             &:hover,
             &:focus {
                 cursor: pointer;
                 color: igx-color($tp-palette, 'secondary') !important;
-
                 igx-icon {
                     cursor: pointer;
                     color: igx-color($tp-palette, 'secondary');
@@ -144,16 +121,13 @@
     .tp-app-light-theme {
         .tp-app__backlog-list-button {
             color: igx-color($tp-light-palette, 'grays', 500) !important;
-
             igx-icon {
                 color: igx-color($tp-light-palette, 'grays', 500);
             }
-
             &:hover,
             &:focus {
                 cursor: pointer;
                 color: igx-color($tp-light-palette, 'secondary') !important;
-
                 igx-icon {
                     cursor: pointer;
                     color: igx-color($tp-light-palette, 'secondary');
