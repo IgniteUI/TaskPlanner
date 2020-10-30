@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { ITask } from '../interfaces';
+import { IgxGridCellComponent } from 'igniteui-angular';
 
 @Pipe({name: 'statusLabel'})
 export class StatusLabelPipe implements PipeTransform {
@@ -11,6 +12,16 @@ export class StatusLabelPipe implements PipeTransform {
     if (label.length) {
         return label[0].name.substring(8);
     }
+  }
+}
+
+@Pipe({name: 'loginLabel'})
+export class LoginLabelPipe implements PipeTransform {
+  transform(value: any): string {
+    if (typeof value === 'string') {
+      return value;
+    }
+    return value.login;
   }
 }
 
@@ -51,10 +62,10 @@ export class ProgressPipe implements PipeTransform {
 
 @Pipe({name: 'deadline'})
 export class DeadlinePipe implements PipeTransform {
-  transform(value: ITask): Date {
-    const started = new Date(value.createdAt);
-    const deadlineMonth = started.getMonth() + 3;
-    const deadline = new Date(started).setMonth(deadlineMonth);
-    return new Date(deadline);
+  transform(value: ITask, cell: IgxGridCellComponent): string {
+    const pipeArgs = cell.column.pipeArgs;
+    const deadline = new Date(value.createdAt);
+    deadline.setMonth(deadline.getMonth() + 3);
+    return cell.grid.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
   }
 }

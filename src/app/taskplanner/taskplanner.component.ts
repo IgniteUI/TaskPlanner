@@ -16,8 +16,9 @@ import {
     FilteringStrategy,
     IgxColumnComponent,
     IFilteringExpressionsTree,
-    IFilteringExpression
-} from '@infragistics/igniteui-angular';
+    IFilteringExpression,
+    IgxGridCellComponent
+} from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
@@ -212,16 +213,16 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public columns: any[] = [
         { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true },
         { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: true },
-        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true },
-        { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', resizable: true, groupable: false, editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true},
-        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort, formatter: this.getStatusLabel },
-        { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', resizable: true, editable: true, sortable: false, filterable: true },
-        { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false, hidden: false },
-        { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', resizable: true, sortable: false, editable: true },
-        { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
-        { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', resizable: true, sortable: false, filterable: false, editable: true, columnGroup: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
-        { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', resizable: true, sortable: false },
-        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', resizable: true, sortable: true, filterable: true, editable: false, cellClasses: this.priorityClasses, formatter: this.getPriorityLabel }
+        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true },
+        { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true},
+        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort, formatter: this.getStatusLabel },
+        { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', editable: true, filterable: true },
+        { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false },
+        { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', sortable: true, filterable: true, editable: true },
+        { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', editable: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
+        { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', editable: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
+        { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', sortable: false },
+        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', sortable: true, filterable: true, editable: false, cellClasses: this.priorityClasses, formatter: this.getPriorityLabel }
     ];
     private _filteringStrategy = new FilteringStrategy();
 
@@ -230,21 +231,23 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
         this.dialogOverlaySettings.outlet = this.outlet;
-        this.dataService.getAllIssues().subscribe({
-            next: (data: ITask[]) => {
-                // cache data
-                window.localStorage.setItem('tp_issues_cache', JSON.stringify(data));
-                const currentTime = new Date().getTime();
-                window.localStorage.setItem(`lastUpdate`,  currentTime as any);
-                this.populateDataComponents(data);
-            },
-            error: err => {
-                console.log(err);
-                // load local dummy data
-                const data = GITHUB_TASKS;
-                this.populateDataComponents(data);
-            }
-        });
+        // this.dataService.getAllIssues().subscribe({
+        //     next: (data: ITask[]) => {
+        //         // cache data
+        //         window.localStorage.setItem('tp_issues_cache', JSON.stringify(data));
+        //         const currentTime = new Date().getTime();
+        //         window.localStorage.setItem(`lastUpdate`,  currentTime as any);
+        //         this.populateDataComponents(data);
+        //     },
+        //     error: err => {
+        //         console.log(err);
+        //         // load local dummy data
+        //         const data = GITHUB_TASKS;
+        //         this.populateDataComponents(data);
+        //     }
+        // });
+        const data = GITHUB_TASKS;
+        this.populateDataComponents(data);
         this.teamMembers = MEMBERS;
 
         this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
@@ -574,6 +577,15 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         const quarter = Math.ceil((event.getMonth() + 1) / 3);
         const milestone = `Q${quarter} ${year}`;
         form.milestone = milestone;
+    }
+
+    public getDeadlineValue(cell: IgxGridCellComponent): string {
+        const pipeArgs = cell.column.pipeArgs;
+        const deadline = new Date(cell.rowData.createdAt);
+        deadline.setMonth(deadline.getMonth() + 3);
+        const val = cell.grid.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
+        console.log(val);
+        return val;
     }
 
     public get undoEnabled(): boolean {

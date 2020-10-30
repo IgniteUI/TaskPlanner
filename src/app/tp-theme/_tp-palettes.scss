@@ -1,12 +1,3 @@
-@import '~@infragistics/igniteui-angular/lib/core/styles/base/index';
-$tp-palette: igx-palette(
-    $primary: #7d70f6,
-    $secondary: #ffb79a,
-    $surface: #212533,
-    $grays: #fff
-);
-
-$tp-light-palette: igx-palette(
-    $primary: #09f,
-    $secondary: #e41c77,
-) !default;
+@import 'igniteui-angular/lib/core/styles/base/index';
+$tp-palette: igx-palette( $primary: #7d70f6, $secondary: #ffb79a, $surface: #212533, $grays: #fff);
+$tp-light-palette: igx-palette( $primary: #09f, $secondary: #e41c77, ) !default;

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
 
 // base URL for the API Server
@@ -12,7 +11,7 @@ export class TasksDataService {
   constructor(private _http: HttpClient) {
   }
 
-    public getAllIssues(): any {
+    public getAllIssues(): Observable<any> {
       let loadDataFromCache = false;
       const lastUpdate = parseInt(window.localStorage.getItem('lastUpdate'), 10);
       const now = new Date().getTime();
@@ -38,24 +37,11 @@ export class TasksDataService {
     }
 
     public getAllPrs(): any {
-      // return of(GITHUB_TASKS.filter(task => task.pullRequest !== null));
-      // // return this._http.get(`${BASE_URL}getAllIssues`)
-      //   .pipe(
-      //   //   map(data => data.map(rec => this.parseDates(rec))),
-      //   map(data => {
-      //     (data as any[]).filter(task => (task as any).pullRequest !== null);
-      //   }));
-    }
-
-    private parseDate(obj) {
-        obj.createdAt = obj.createdAt ? new Date(obj.createdAt) : null;
-        return obj;
-    }
-
-    private parseObj(rec) {
-      const obj = { number: rec.id };
-      Object.assign(rec, obj);
-      this.parseDate(rec);
-      return rec;
+    //   return of(GITHUB_TASKS.filter(task => task.pullRequest !== null));
+    //   // return this._http.get(`${BASE_URL}getAllIssues`)
+    //     .pipe(
+    //     map(data => {
+    //       (data as any[]).filter(task => (task as any).pullRequest !== null);
+    //     }));
     }
 }
