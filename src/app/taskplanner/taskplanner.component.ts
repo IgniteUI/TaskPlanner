@@ -316,7 +316,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
                 done(columnValues);
                 return;
             }
-            const filteredData = this._filteringStrategy.filter(this.tasks, columnExprTree);
+            const filteredData = this._filteringStrategy.filter(this.tasks, columnExprTree, null, null);
             columnValues = filteredData.map(record => record[column.field]);
             done(columnValues);
         }, 1000);
