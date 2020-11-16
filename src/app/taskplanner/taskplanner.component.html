@@ -10,7 +10,6 @@
                 [height]="'100%'"
                 [data]="tasks"
                 [autoGenerate]="false"
-                [showToolbar]="true"
                 [primaryKey]="'id'"
                 [rowEditable]="isRowEditingEnabled"
                 [allowFiltering]="true" [allowAdvancedFiltering]="true" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy" [filterStrategy]="filterStrategy"
@@ -25,6 +24,41 @@
                 (dropped)="onItemDropped($event)"
                 (enter)="onDropContainerEnterLeave($event)"
                 (leave)="onDropContainerEnterLeave($event)">
+<igx-grid-toolbar>
+<!-- Auto migrated template content. Please, check your bindings! -->
+
+
+                    <div class="tp-app__grid-heading">
+                        <span>Project issues</span>
+                    </div>
+
+                    <div>
+                        <button igxButton="icon" class="button" [disabled]="!hasTransactions" (click)="openCommitDialog()">
+                            <igx-icon>check</igx-icon>
+                        </button>
+                        <button igxButton="icon" class="button" [disabled]="!undoEnabled" (click)="undo()">
+                            <igx-icon>undo</igx-icon>
+                        </button>
+                        <button igxButton="icon" class="button" [disabled]="!redoEnabled" (click)="redo()">
+                            <igx-icon>redo</igx-icon>
+                        </button>
+                    </div>
+
+                    <button igxButton="flat" class="button" [igxToggleAction]="editModeDropdown" [igxToggleOutlet]="outlet" [igxDropDownItemNavigation]="editModeDropdown">
+                        {{ selectedEditMode }}
+                        <igx-icon>arrow_drop_down</igx-icon>
+                    </button>
+
+                    <igx-drop-down #editModeDropdown [width]="'100px'" (onSelection)="onEditingModeChanged($event)">
+                        <igx-drop-down-item *ngFor="let item of editModes; let i = index" [selected]="isEditModeSelected(i)">
+                        {{ item }}
+                        </igx-drop-down-item>
+                    </igx-drop-down>
+
+                    <button igxButton="outlined" class="button" [disabled]="!hasSelection || editMode===2" (click)="openBatchEditDialog()">Batch Edit</button>
+                
+</igx-grid-toolbar>
+
 
                 <ng-template igxExcelStyleSorting></ng-template>
                 <ng-template igxExcelStyleMoving></ng-template>
@@ -66,36 +100,7 @@
                 </ng-template>
 
                 <!-- Toolbar Template -->
-                <ng-template class="tp-app__grid-toolbar" igxToolbarCustomContent let-grid="grid">
-                    <div class="tp-app__grid-heading">
-                        <span>Project issues</span>
-                    </div>
-
-                    <div>
-                        <button igxButton="icon" class="button" [disabled]="!hasTransactions" (click)="openCommitDialog()">
-                            <igx-icon>check</igx-icon>
-                        </button>
-                        <button igxButton="icon" class="button" [disabled]="!undoEnabled" (click)="undo()">
-                            <igx-icon>undo</igx-icon>
-                        </button>
-                        <button igxButton="icon" class="button" [disabled]="!redoEnabled" (click)="redo()">
-                            <igx-icon>redo</igx-icon>
-                        </button>
-                    </div>
-
-                    <button igxButton="flat" class="button" [igxToggleAction]="editModeDropdown" [igxToggleOutlet]="outlet" [igxDropDownItemNavigation]="editModeDropdown">
-                        {{ selectedEditMode }}
-                        <igx-icon>arrow_drop_down</igx-icon>
-                    </button>
-
-                    <igx-drop-down #editModeDropdown [width]="'100px'" (onSelection)='onEditingModeChanged($event)'>
-                        <igx-drop-down-item *ngFor="let item of editModes; let i = index" [selected]="isEditModeSelected(i)">
-                        {{ item }}
-                        </igx-drop-down-item>
-                    </igx-drop-down>
-
-                    <button igxButton="outlined" class="button" [disabled]="!hasSelection || editMode===2" (click)="openBatchEditDialog()">Batch Edit</button>
-                </ng-template>
+                
 
                 <!-- Grid Columns -->
                 <igx-column *ngFor="let c of columns"
@@ -160,7 +165,7 @@
                     </ng-template>
 
                     <!-- Priority Column -->
-                    <ng-template *ngIf="c.field === 'priority'" igxCell let-value let-cell="cell">
+                    <ng-template *ngIf="c.field === 'priority.labels'" igxCell let-value let-cell="cell">
                       {{ cell.rowData.labels | priorityLabel }}
                     </ng-template>
                     <!-- <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>

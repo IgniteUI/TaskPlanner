@@ -31,7 +31,7 @@ export class PriorityLabelPipe implements PipeTransform {
     if (typeof value === 'string') {
       return value;
     }
-    const label = value.filter(l => l.name.indexOf('severity:') === 0);
+    const label = value.labels.filter(l => l.name.indexOf('severity:') === 0);
     if (label.length) {
         return label[0].name.substring(10);
     }
