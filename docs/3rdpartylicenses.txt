@@ -771,7 +771,7 @@ copy of the Program in return for a fee.
                      END OF TERMS AND CONDITIONS
 
 
-lodash.merge
+lodash.mergewith
 MIT
 Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
 

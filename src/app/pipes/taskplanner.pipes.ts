@@ -27,11 +27,12 @@ export class LoginLabelPipe implements PipeTransform {
 
 @Pipe({name: 'priorityLabel'})
 export class PriorityLabelPipe implements PipeTransform {
-  transform(value: any): string {
-    if (typeof value === 'string') {
-      return value;
+  transform(cell: any): string {
+    if (cell.value) {
+      return cell.value;
     }
-    const label = value.labels.filter(l => l.name.indexOf('severity:') === 0);
+    const rowData = cell.rowData ? cell.rowData : cell;
+    const label = rowData.labels.filter(l => l.name.indexOf('severity:') === 0);
     if (label.length) {
         return label[0].name.substring(10);
     }

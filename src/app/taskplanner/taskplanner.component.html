@@ -24,10 +24,8 @@
                 (dropped)="onItemDropped($event)"
                 (enter)="onDropContainerEnterLeave($event)"
                 (leave)="onDropContainerEnterLeave($event)">
-<igx-grid-toolbar>
-<!-- Auto migrated template content. Please, check your bindings! -->
-
-
+                <igx-grid-toolbar>
+                <!-- Auto migrated template content. Please, check your bindings! -->
                     <div class="tp-app__grid-heading">
                         <span>Project issues</span>
                     </div>
@@ -56,14 +54,12 @@
                     </igx-drop-down>
 
                     <button igxButton="outlined" class="button" [disabled]="!hasSelection || editMode===2" (click)="openBatchEditDialog()">Batch Edit</button>
-                
-</igx-grid-toolbar>
+                </igx-grid-toolbar>
 
-
-                <ng-template igxExcelStyleSorting></ng-template>
+                <!-- <ng-template igxExcelStyleSorting></ng-template>
                 <ng-template igxExcelStyleMoving></ng-template>
                 <ng-template igxExcelStyleHiding></ng-template>
-                <ng-template igxExcelStylePinning></ng-template>
+                <ng-template igxExcelStylePinning></ng-template> -->
 
                 <!-- Grid Detail View Template -->
                 <ng-template igxGridDetail let-dataItem>
@@ -98,9 +94,6 @@
                     </div>
                   </div>
                 </ng-template>
-
-                <!-- Toolbar Template -->
-                
 
                 <!-- Grid Columns -->
                 <igx-column *ngFor="let c of columns"
@@ -165,14 +158,14 @@
                     </ng-template>
 
                     <!-- Priority Column -->
-                    <ng-template *ngIf="c.field === 'priority.labels'" igxCell let-value let-cell="cell">
-                      {{ cell.rowData.labels | priorityLabel }}
+                    <ng-template *ngIf="c.field === 'priority'" igxCell let-value let-cell="cell">
+                        {{ cell | priorityLabel }}
                     </ng-template>
-                    <!-- <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
-                      <igx-select [placeholder]="getPriorityLabel(cell.rowData.labels)" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
-                        <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
-                      </igx-select>
-                    </ng-template> -->
+                    <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
+                        <igx-select [placeholder]="cell | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                          <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
+                        </igx-select>
+                    </ng-template>
 
                     <!-- Deadline -->
                     <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell" let-value>
@@ -440,13 +433,13 @@
 
                         <!-- Priority Column -->
                         <ng-template *ngIf="c.field === 'priority'" igxCell let-value let-cell="cell">
-                          {{ cell.rowData | priorityLabel }}
+                            {{ cell | priorityLabel }}
                         </ng-template>
-                        <!-- <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
-                            <igx-select [placeholder]="value | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
-                                <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
+                        <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
+                            <igx-select [placeholder]="cell | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                              <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                             </igx-select>
-                        </ng-template> -->
+                        </ng-template>
                     </igx-column>
                 </igx-grid>
             </div>
