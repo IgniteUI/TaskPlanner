@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, HostBinding } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, HostBinding, ChangeDetectorRef } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import {
     DefaultSortingStrategy,
@@ -180,10 +180,10 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         return label;
     }
 
-    public getPriorityLabel(labels: any[]) {
-        const label = new PriorityLabelPipe().transform(labels);
-        return label;
-    }
+    // public getPriorityLabel(cell: IgxGridCellComponent) {
+    //     const label = new PriorityLabelPipe().transform(cell);
+    //     return label;
+    // }
 
     public getAssignee(user: ITeamMember) {
         return user.login;
@@ -215,18 +215,18 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: true },
         { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true },
         { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true},
-        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort, formatter: this.getStatusLabel },
+        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
         { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', editable: true, filterable: true },
         { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false },
         { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', sortable: true, filterable: true, editable: true },
-        { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', editable: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
-        { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', editable: true, formatter: this.formatHours, cellClasses: this.delayedClasses },
+        { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses },
+        { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses },
         { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', sortable: false },
-        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', sortable: true, filterable: true, editable: false, cellClasses: this.priorityClasses, formatter: this.getPriorityLabel }
+        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses }
     ];
     private _filteringStrategy = new FilteringStrategy();
 
-    constructor(private dataService: TasksDataService) {  }
+    constructor(private dataService: TasksDataService, private cdr: ChangeDetectorRef) {  }
 
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
@@ -287,6 +287,7 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public ngAfterViewInit() {
         this.grid.hideGroupedColumns = true;
         this.editMode = 0;
+        this.cdr.detectChanges();
     }
 
     public columnValuesStrategy = (column: IgxColumnComponent,
@@ -672,8 +673,8 @@ export class LabelsFilteringStrategy extends FilteringStrategy {
         if (expr.fieldName === 'labels') {
             val = new StatusLabelPipe().transform(val);
         }
-        if (expr.fieldName === 'priority') {
-            val = new PriorityLabelPipe().transform(val);
+        if (!val && expr.fieldName === 'priority') {
+            val = new PriorityLabelPipe().transform(rec);
         }
         return cond.logic(val, expr.searchVal, expr.ignoreCase);
       }
