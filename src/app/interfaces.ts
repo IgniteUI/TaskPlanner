@@ -1,10 +1,4 @@
 export interface ITask {
-    priority?: string;
-    milestone?: string;
-    status?: string;
-    deadline?: Date;
-    estimation?: number;
-    hours_spent?: number;
     createdAt?: Date | string;
     assignee?: ITeamMember;
     labels?: ILabel[];
@@ -14,13 +8,19 @@ export interface ITask {
     url?: string;
     id?: number;
     pullRequest?: string;
+    priority?: string;
+    milestone?: string;
+    status?: string;
+    deadline?: Date;
+    estimation?: number;
+    hours_spent?: number;
 }
 
 export interface ITeamMember {
     id: number;
-    email?: string;
+    email: string;
     login: string;
-    url?: string;
+    url: string;
     avatarUrl: string;
 }
 

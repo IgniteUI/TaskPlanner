@@ -12,7 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { GridWithTransactionsComponent } from './transaction-component/transaction-grid.component';
 import { HttpClientModule } from '@angular/common/http';
-import { StatusLabelPipe, PriorityLabelPipe, PlaceholderPipe, DeadlinePipe, ProgressPipe, LoginLabelPipe } from './pipes/taskplanner.pipes';
+import { StatusLabelPipe, PriorityLabelPipe, PlaceholderPipe, DeadlinePipe, ProgressPipe,
+  LoginLabelPipe, MilestonePipe, FilterTasksPipe } from './pipes/taskplanner.pipes';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { StatusLabelPipe, PriorityLabelPipe, PlaceholderPipe, DeadlinePipe, Prog
     ProgressPipe,
     PlaceholderPipe,
     DeadlinePipe,
+    MilestonePipe,
     LoginLabelPipe,
+    FilterTasksPipe,
     BacklogComponent,
     GridWithTransactionsComponent
   ],
