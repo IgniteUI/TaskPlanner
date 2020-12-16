@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, HostBinding, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ViewChild, HostBinding } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
 import {
     DefaultSortingStrategy,
@@ -17,14 +17,15 @@ import {
     IgxColumnComponent,
     IFilteringExpressionsTree,
     IFilteringExpression,
-    IgxGridCellComponent
+    IgxGridCellComponent,
+    SortingDirection
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
 import { ITask, ITeamMember } from '../interfaces';
-import { StatusLabelPipe, PriorityLabelPipe } from '../pipes/taskplanner.pipes';
+import { StatusLabelPipe, PriorityLabelPipe, MilestonePipe } from '../pipes/taskplanner.pipes';
 
 export enum editMode {
     cellEditing = 0,
@@ -40,7 +41,7 @@ export enum editMode {
     templateUrl: './taskplanner.component.html',
     styleUrls: ['./taskplanner.component.scss'],
 })
-export class TaskPlannerComponent implements OnInit, AfterViewInit {
+export class TaskPlannerComponent implements OnInit {
     @HostBinding('class.tp-app')
 
     @ViewChild('tasksGrid', { read: IgxGridComponent, static: true }) public grid: IgxGridComponent;
@@ -107,42 +108,11 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         closeOnOutsideClick: true
     };
 
-    /**
-     * Calculates task progress.
-     */
     public calcProgress = calcProgress;
-
     private dayFormatter = new Intl.DateTimeFormat('en', { weekday: 'long' });
     private monthFormatter = new Intl.DateTimeFormat('en', { month: 'long' });
 
-    public toggleTheme() {
-      this.darkTheme = !this.darkTheme;
-      this.inputType = this.darkTheme ? 'material' : 'fluent';
-    }
-
-    // TODO Make Pipe from the filterTasks function
-    public filterTasks(groupRowValue: string) {
-        const groupedData = this.grid.data.filter(rec => rec.milestone === groupRowValue);
-        return groupedData.reduce((acc, val) => {
-            // Return task status without whitespace in order to be used for class name
-            const cssClass = val.status.replace(/\s/g, '').toLowerCase();
-            const itemIndex = acc.findIndex(item => item.name === val.status);
-
-            if (itemIndex === -1) {
-                acc.push({
-                    name: val.status,
-                    items: 1,
-                    cssClass
-                });
-
-                return acc;
-            }
-
-            acc[itemIndex].items = acc[itemIndex].items + 1;
-            return acc;
-        }, []);
-    }
-
+    /** IgxGrid cellClasses / cellStyles. */
     public isResolved = (rowData: ITask, columnKey: string): boolean => {
         return this.getStatusLabel(rowData.labels) === 'resolved';
     }
@@ -175,20 +145,6 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         return rowData.hours_spent > rowData.estimation;
     }
 
-    public getStatusLabel(labels: any[]) {
-        const label = new StatusLabelPipe().transform(labels);
-        return label;
-    }
-
-    // public getPriorityLabel(cell: IgxGridCellComponent) {
-    //     const label = new PriorityLabelPipe().transform(cell);
-    //     return label;
-    // }
-
-    public getAssignee(user: ITeamMember) {
-        return user.login;
-    }
-
     public statusClasses = {
         resolved: this.isResolved,
         inreview: this.isNew,
@@ -209,24 +165,25 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public milestoneSort = MilestoneSortingStrategy.instance();
     public progressSort = ProgressSortingStrategy.instance();
     public filterStrategy = LabelsFilteringStrategy.instance();
+    public statusSort = StatusSortingStrategy.instance();
 
     public columns: any[] = [
         { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true },
-        { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: true },
+        { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: false },
         { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true },
         { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true},
-        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.progressSort },
-        { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', editable: true, filterable: true },
+        { field: 'labels', header: 'Status', width: '130px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.statusSort },
+        { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', editable: true, filterable: true, sortable: true },
         { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false },
         { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', sortable: true, filterable: true, editable: true },
         { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses },
         { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses },
-        { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', sortable: false },
+        { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', sortable: true, sortStrategy: this.progressSort },
         { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses }
     ];
     private _filteringStrategy = new FilteringStrategy();
 
-    constructor(private dataService: TasksDataService, private cdr: ChangeDetectorRef) {  }
+    constructor() {  }
 
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
@@ -246,7 +203,11 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         //         this.populateDataComponents(data);
         //     }
         // });
-        const data = GITHUB_TASKS;
+        const data = (GITHUB_TASKS as ITask[]).map(rec => {
+            const milestone = new MilestonePipe().transform(rec);
+            rec.milestone = milestone;
+            return rec;
+        })
         this.populateDataComponents(data);
         this.teamMembers = MEMBERS;
 
@@ -255,119 +216,23 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
             this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
         });
 
-        // this.grid.sortingExpressions = [{
-        //     fieldName: 'id',
-        //     dir: SortingDirection.Desc },
-        // {
-        //     dir: SortingDirection.Asc,
-        //     fieldName: 'milestone',
-        //     ignoreCase: false,
-        //     strategy: this.milestoneSort
-        // }];
+        this.grid.groupingExpressions = [{
+            dir: SortingDirection.Desc,
+            fieldName: 'milestone',
+            ignoreCase: false,
+            strategy: this.milestoneSort
+        }];
 
-        // this.grid.groupingExpressions = [{
-        //     dir: SortingDirection.Asc,
-        //     fieldName: 'milestone',
-        //     ignoreCase: false,
-        //     strategy: this.milestoneSort
-        // }];
-
-        // this.grid.groupingExpansionState = [{
-        //     expanded: false,
-        //     hierarchy: [{ fieldName: 'milestone', value: 'Q2 2020'}]
-        // }, {
-        //     expanded: true,
-        //     hierarchy: [{ fieldName: 'milestone', value: 'Q1 2020'}]
-        // }, {
-        //     expanded: false,
-        //     hierarchy: [{ fieldName: 'milestone', value: 'Q4 2019'}]
-        // }];
+        const today = new Date();
+        const ms = Math.floor(today.getMonth() / 3) + 1;
+        const currentMilestone = `Q${ms} ${today.getFullYear()}`;
+        this.grid.groupingExpansionState = [{
+            expanded: true,
+            hierarchy: [{ fieldName: 'milestone', value: currentMilestone}]
+        }];
     }
 
-    public ngAfterViewInit() {
-        this.grid.hideGroupedColumns = true;
-        this.editMode = 0;
-        this.cdr.detectChanges();
-    }
-
-    public columnValuesStrategy = (column: IgxColumnComponent,
-        columnExprTree: IFilteringExpressionsTree,
-        done: (uniqueValues: any[]) => void) => {
-        // Get specific column data.
-        this.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
-    }
-
-    public getColumnData(column: IgxColumnComponent,
-        columnExprTree: IFilteringExpressionsTree,
-        done: (colVals: any[]) => void) {
-        setTimeout(() => {
-            let columnValues = [];
-            if (column.field === 'labels') {
-                columnValues = this.statuses.map(rec => rec.value);
-                done(columnValues);
-                return;
-            }
-            if (column.field === 'assignee.login') {
-                columnValues = this.teamMembers.map(rec => rec.login);
-                done(columnValues);
-                return;
-            }
-            if (column.field === 'priority') {
-                columnValues = this.priority.map(rec => rec.value);
-                done(columnValues);
-                return;
-            }
-            const filteredData = this._filteringStrategy.filter(this.tasks, columnExprTree, null, null);
-            columnValues = filteredData.map(record => record[column.field]);
-            done(columnValues);
-        }, 1000);
-    }
-
-    public populateDataComponents(data: ITask[]) {
-        const issues = data.filter(task => task.pullRequest === null).map(rec => this.parseDate(rec));
-        this.tasks = issues.filter(t => t.labels.filter(l => l.name.indexOf('status') === 0).length > 0);
-        this.gridIsLoading = false;
-        this.unassignedTasks = issues.filter(t => t.labels.filter(l => l.name.indexOf('status') === 0 ).length === 0);
-    }
-
-    public addTask(event) {
-        if (this.addTaskForm.title && this.addTaskForm.title !== undefined
-            && this.addTaskForm.deadline) {
-            this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
-            this.addTaskForm.status = 'New';
-            this.addTaskForm.estimation = null;
-            this.addTaskForm.hours_spent = null;
-            this.grid.addRow(this.addTaskForm);
-            this.addTaskForm = {} as ITask;
-            this.addTaskDialog.close();
-        } else {
-            this.emptyFieldMessage();
-        }
-
-    }
-
-    public editTask(event) {
-        if (this.editTaskForm.title !== '' && this.editTaskForm.deadline) {
-            this.editTaskDialog.close();
-        } else {
-            this.emptyFieldMessage();
-        }
-
-    }
-
-    public emptyFieldMessage() {
-        this.toast.message = 'Please fill out all required fields (Issue and Deadline).';
-        this.toast.show();
-    }
-
-    public getStartedOn(dataItem: ITask): boolean {
-        return !!dataItem.createdAt;
-    }
-
-    public deleteTask(rowID) {
-        this.grid.deleteRow(rowID);
-    }
-
+    /** Formatters */
     public formatDate = (date: Date) => {
         return `${this.dayFormatter.format(date)}, ${date.getDate()} ${this.monthFormatter.format(date)}, ${date.getFullYear()}`;
       }
@@ -376,17 +241,36 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         return '#' + value;
     }
 
+    public stateFormatter(value) {
+        return JSON.stringify(value);
+    }
+
+    public typeFormatter(value) {
+        return value.toUpperCase();
+    }
+
+    public classFromType(type: string): string {
+        return `transaction--${type.toLowerCase()}`;
+    }
+    public formatHours(value: number): string {
+        return value ? value + 'h' : '';
+    }
+
+    public formatPieLabel(args): string {
+        return args.item.Value + ' ' + args.item.Label;
+    }
+
+    public formatDateLabel(item): string {
+        return item.date.toLocaleDateString(undefined, { month: 'short' });
+    }
+
+    /** CRUD actions */
     public undo() {
         this.grid.transactions.undo();
     }
 
     public redo() {
         this.grid.transactions.redo();
-    }
-
-    public openCommitDialog() {
-        this.transactionsDialog.open(this.dialogOverlaySettings);
-        this.transactionsGrid.reflow();
     }
 
     public commit() {
@@ -413,88 +297,12 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         this.transactionsDialog.close();
     }
 
-    public stateFormatter(value) {
-        return JSON.stringify(value);
-    }
-
-    public typeFormatter(value) {
-        return value.toUpperCase();
-    }
-
-    public classFromType(type: string): string {
-        return `transaction--${type.toLowerCase()}`;
-    }
-
-    public formatHours(value: number): string {
-        return value ? value + 'h' : '';
-    }
-
     public onEditingModeChanged(event: ISelectionEventArgs) {
        this.editMode = event.newSelection.index;
     }
 
     public isEditModeSelected(i: number): boolean {
         return i === this.editMode;
-    }
-
-    public openAddTaskDialog() {
-        this.addTaskDialog.open(this.dialogOverlaySettings);
-    }
-
-    public onBacklogItemAction(event: IListItemAction) {
-        switch (event.action) {
-            case 'edit': {
-                this.editTaskForm = event.issue;
-                this.editTaskForm.deadline = null;
-                this.editTaskForm.milestone = null;
-                this.editTaskDialog.open(this.dialogOverlaySettings);
-                break;
-            }
-             case 'drag':
-             case 'release': {
-                this.editTaskForm = event.issue;
-                this.toggleGridBodyHighlight();
-                break;
-             }
-         }
-    }
-
-    /**
-     * Returns workload for corresponding team member.
-     */
-    // public getAssigneeWorkload(ownerID: number) {
-    //     const workloadData = this.tasks.filter(rec => rec.owner.id === ownerID);
-    //     const newTasks = workloadData.filter(rec => rec.status === 'New').length;
-    //     const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
-    //     const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
-
-    //     return [
-    //         { Label: 'In Progress', Value: inprogressTasks },
-    //         { Label: 'Done', Value: doneTasks },
-    //         { Label: 'New', Value: newTasks }];
-    // }
-
-    /**
-     * Returns workload for the corrssponding team.
-     */
-    // public getTeamWorkload(team: string) {
-    //     const workloadData = this.tasks.filter(rec => rec.owner.team === team);
-    //     const newTasks = workloadData.filter(rec => rec.status === 'New').length;
-    //     const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
-    //     const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
-
-    //     return [
-    //         { Label: 'In Progress', Value: inprogressTasks },
-    //         { Label: 'Done', Value: doneTasks },
-    //         { Label: 'New', Value: newTasks }];
-    // }
-
-    public formatPieLabel(args): string {
-        return args.item.Value + ' ' + args.item.Label;
-    }
-
-    public formatDateLabel(item): string {
-        return item.date.toLocaleDateString(undefined, { month: 'short' });
     }
 
     public editStart(event: IGridEditEventArgs) {
@@ -538,11 +346,89 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         }
     }
 
+    public addTask(event) {
+        if (this.addTaskForm.title && this.addTaskForm.title !== undefined
+            && this.addTaskForm.deadline) {
+            this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
+            this.addTaskForm.status = 'New';
+            this.addTaskForm.estimation = null;
+            this.addTaskForm.hours_spent = null;
+            this.grid.addRow(this.addTaskForm);
+            this.addTaskForm = {} as ITask;
+            this.addTaskDialog.close();
+        } else {
+            this.emptyFieldMessage();
+        }
+
+    }
+
+    public editTask(event) {
+        if (this.editTaskForm.title !== '' && this.editTaskForm.deadline) {
+            this.editTaskDialog.close();
+        } else {
+            this.emptyFieldMessage();
+        }
+
+    }
+
+    public deleteTask(rowID) {
+        this.grid.deleteRow(rowID);
+    }
+
+    /** Open Dialogs */
+    public openCommitDialog() {
+        this.transactionsDialog.open(this.dialogOverlaySettings);
+        this.transactionsGrid.reflow();
+    }
+
+    public openAddTaskDialog() {
+        this.addTaskDialog.open(this.dialogOverlaySettings);
+    }
+
     public openBatchEditDialog() {
         const selectedRows = this.grid.selectedRows;
         const selectedData = this.tasks.filter(rec => selectedRows.indexOf(rec.id) > -1);
         this.batchEditingData = selectedData;
         this.batchEditDialog.open(this.dialogOverlaySettings);
+    }
+
+    /** Methods and event handlers */
+    /** Uses the fetched data to populate each component in the app
+     * The main grid binds to `tasks`
+     * Master Backlog binds to `unassignedTasks`
+     */
+    public populateDataComponents(data: ITask[]) {
+        const issues = data.filter(task => task.pullRequest === null).map(rec => this.parseDate(rec));
+        this.tasks = issues.filter(t => t.labels.filter(l => l.name.indexOf('status') === 0).length > 0);
+        this.gridIsLoading = false;
+        this.unassignedTasks = issues.filter(t => t.labels.filter(l => l.name.indexOf('status') === 0 ).length === 0);
+    }
+
+    public emptyFieldMessage() {
+        this.toast.show('Please fill out all required fields (Issue and Deadline).');
+    }
+
+    public toggleTheme() {
+        this.darkTheme = !this.darkTheme;
+        this.inputType = this.darkTheme ? 'material' : 'fluent';
+    }
+
+    public onBacklogItemAction(event: IListItemAction) {
+        switch (event.action) {
+            case 'edit': {
+                this.editTaskForm = event.issue;
+                this.editTaskForm.deadline = null;
+                this.editTaskForm.milestone = null;
+                this.editTaskDialog.open(this.dialogOverlaySettings);
+                break;
+            }
+             case 'drag':
+             case 'release': {
+                this.editTaskForm = event.issue;
+                this.toggleGridBodyHighlight();
+                break;
+             }
+         }
     }
 
     public onDropContainerEnterLeave(event: IDropDroppedEventArgs) {
@@ -552,8 +438,8 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
     public toggleGroupRowHighlight() {
         const groupRows = this.grid.tbody.nativeElement.querySelectorAll('igx-grid-groupby-row');
         (groupRows as HTMLElement[]).forEach(element => {
-            const childEl = element.children[1].children[0].children[0] as HTMLElement;
-            if (childEl.innerText === this.editTaskForm.milestone) {
+            const labelElement = element.querySelector('.igx-group-label').firstElementChild as HTMLElement;
+            if (labelElement.innerText === this.editTaskForm.milestone) {
                 element.classList.toggle('tp-app__groupby-row-highlight');
             }
         });
@@ -589,6 +475,16 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         return val;
     }
 
+    public getStatusLabel(labels: any[]) {
+        const label = new StatusLabelPipe().transform(labels);
+        return label;
+    }
+
+    public getAssignee(user: ITeamMember) {
+        return user.login;
+    }
+
+    /** Getters */
     public get undoEnabled(): boolean {
         return this.grid.transactions.canUndo;
     }
@@ -617,26 +513,87 @@ export class TaskPlannerComponent implements OnInit, AfterViewInit {
         return this.editModes[this.editMode];
     }
 
+    /** Unique column values strategy for Excel Style Filtering */
+    public columnValuesStrategy = (column: IgxColumnComponent,
+        columnExprTree: IFilteringExpressionsTree,
+        done: (uniqueValues: any[]) => void) => {
+        // Get specific column data.
+        this.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
+    }
+
+    public getColumnData(column: IgxColumnComponent,
+        columnExprTree: IFilteringExpressionsTree,
+        done: (colVals: any[]) => void) {
+        setTimeout(() => {
+            let columnValues = [];
+            if (column.field === 'labels') {
+                columnValues = this.statuses.map(rec => rec.value);
+                done(columnValues);
+                return;
+            }
+            if (column.field === 'assignee.login') {
+                columnValues = this.teamMembers.map(rec => rec.login);
+                done(columnValues);
+                return;
+            }
+            if (column.field === 'priority') {
+                columnValues = this.priority.map(rec => rec.value);
+                done(columnValues);
+                return;
+            }
+            const filteredData = this._filteringStrategy.filter(this.tasks, columnExprTree, null, null);
+            columnValues = filteredData.map(record => record[column.field]);
+            done(columnValues);
+        }, 1000);
+    }
+
+    /** Help utils */
     private parseDate(obj) {
         obj.createdAt = obj.createdAt ? new Date(obj.createdAt) : null;
         return obj;
     }
+
+    /**
+     * Returns workload for corresponding team member.
+     */
+    // public getAssigneeWorkload(ownerID: number) {
+    //     const workloadData = this.tasks.filter(rec => rec.owner.id === ownerID);
+    //     const newTasks = workloadData.filter(rec => rec.status === 'New').length;
+    //     const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
+    //     const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
+
+    //     return [
+    //         { Label: 'In Progress', Value: inprogressTasks },
+    //         { Label: 'Done', Value: doneTasks },
+    //         { Label: 'New', Value: newTasks }];
+    // }
+
+    /**
+     * Returns workload for the corrssponding team.
+     */
+    // public getTeamWorkload(team: string) {
+    //     const workloadData = this.tasks.filter(rec => rec.owner.team === team);
+    //     const newTasks = workloadData.filter(rec => rec.status === 'New').length;
+    //     const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
+    //     const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
+
+    //     return [
+    //         { Label: 'In Progress', Value: inprogressTasks },
+    //         { Label: 'Done', Value: doneTasks },
+    //         { Label: 'New', Value: newTasks }];
+    // }
 }
 
-/**
- * Sorting strategy for year quarters.
- */
+/** Sorting strategy for year quarters. */
 export class MilestoneSortingStrategy extends DefaultSortingStrategy {
-    protected compareObjects(obj1: object,
-                             obj2: object,
+    protected compareObjects(obj1: ITask,
+                             obj2: ITask,
                              key: string,
                              reverse: number,
                              ignoreCase: boolean,
                              valueResolver: (obj: any, key: string) => string) {
-
-        const objA = valueResolver(obj1, key).split(' ');
-        const objB = valueResolver(obj2, key).split(' ');
-
+        const objA = obj1[key].split(' ');
+        const objB = obj2[key].split(' ');
         const yearA = objA[1];
         const yearB = objB[1];
 
@@ -650,22 +607,34 @@ export class MilestoneSortingStrategy extends DefaultSortingStrategy {
     }
 }
 
-/**
- * Sorting strategy for prorgess columns.
- */
+/** Sorting strategy for progress column. */
 export class ProgressSortingStrategy extends DefaultSortingStrategy {
     protected compareObjects(obj1: ITask,
                              obj2: ITask,
                              key: string,
                              reverse: number) {
-
-        const progressA = `${obj1.status}${calcProgress(obj1)}`;
-        const progressB = `${obj2.status}${calcProgress(obj2)}`;
+        const progressA = calcProgress(obj1);
+        const progressB = calcProgress(obj2);
 
         return reverse * this.compareValues(progressA, progressB);
     }
 }
 
+/** Sorting strategy for Status column. */
+export class StatusSortingStrategy extends DefaultSortingStrategy {
+    protected compareObjects(obj1: ITask,
+                             obj2: ITask,
+                             key: string,
+                             reverse: number) {
+        const pipe = new StatusLabelPipe();
+        const statusA = pipe.transform(obj1.labels);
+        const statusB = pipe.transform(obj2.labels);
+
+        return reverse * this.compareValues(statusA, statusB);
+    }
+}
+
+/** Filtering strategy for Priority and Status columns. */
 export class LabelsFilteringStrategy extends FilteringStrategy {
     public findMatchByExpression(rec: ITask, expr: IFilteringExpression): boolean {
         const cond = expr.condition;
@@ -680,9 +649,7 @@ export class LabelsFilteringStrategy extends FilteringStrategy {
       }
 }
 
-/**
- * Calculates task progress.
- */
+/** Calculates task progress. */
 export function calcProgress(task: ITask) {
     const hoursSpent = task.hours_spent ? task.hours_spent : 0;
     const estimation = task.estimation ? task.estimation : 0;
