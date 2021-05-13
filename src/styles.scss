@@ -1,35 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
 // Standard CSS normalize, comment out if not required or using a different module
-@import "~minireset.css/minireset";
+@import '~minireset.css/minireset';
+
 html,
 body {
-    height: 100%;
-    overflow: hidden;
+	height: 100%;
+	overflow: hidden;
 }
 
 @import 'igniteui-angular/lib/core/styles/themes/index';
-@import "app/tp-theme/index";
+@import 'app/tp-theme/index';
+
 @include igx-core();
+@include igx-typography();
+
+
 .resolved {
-    @include igx-badge($badge-resolved)
+	@include igx-badge($badge-resolved)
 }
 
 .inreview {
-    @include igx-badge($badge-inreview)
+	@include igx-badge($badge-inreview)
 }
 
 .delayed {
-    @include igx-badge($badge-delayed)
+	@include igx-badge($badge-delayed)
 }
 
 .indevelopment {
-    @include igx-badge($badge-indevelopment)
+	@include igx-badge($badge-indevelopment)
 }
 
 .igx-button--raised {
-    transition: all 420ms ease-in-out;
-    ;
+	transition: all 420ms ease-in-out;;
 }
 
 .resolved,
@@ -38,186 +42,213 @@ body {
 .late,
 .priority,
 .delayed {
-    position: relative;
-    // Version 1
-    &:before {
-        $tp-cell-indicator-top-space: rem(6px);
-        content: '';
-        position: absolute;
-        top: $tp-cell-indicator-top-space;
-        left: rem(6px);
-        width: rem(8px);
-        border-radius: rem(4px);
-        height: calc(100% - (#{$tp-cell-indicator-top-space} * 2));
-    }
-    // Version
+	position: relative;
+	// Version 1
+	&:before {
+		$tp-cell-indicator-top-space: rem(6px);
+		content: '';
+		position: absolute;
+		top: $tp-cell-indicator-top-space;
+		left: rem(6px);
+		width: rem(8px);
+		border-radius: rem(4px);
+		height: calc(100% - (#{$tp-cell-indicator-top-space} * 2));
+	}
+
+	// Version
 }
 
 .igx-grid__tr {
-    .resolved {
-        &:before {
-            background: $state-resolved;
-        }
-    }
-    .inreview {
-        &:before {
-            background: $state-inreview;
-        }
-    }
-    .delayed {
-        &:before {
-            background: $state-delayed;
-        }
-    }
-    .indevelopment {
-        &:before {
-            background: $state-indevelopment;
-        }
-    }
+	.resolved {
+		&:before {
+			background: $state-resolved;
+		}
+	}
+
+	.inreview {
+		&:before {
+			background: $state-inreview;
+		}
+	}
+
+	.delayed {
+		&:before {
+			background: $state-delayed;
+		}
+	}
+
+	.indevelopment {
+		&:before {
+			background: $state-indevelopment;
+		}
+	}
 }
 
 .low {
-    color: $state-late !important;
+	color: $state-late !important;
 }
 
 .high {
-    color: $state-high !important;
+	color: $state-high !important;
 }
 
 .critical {
-    color: $state-critical !important;
+	color: $state-critical !important;
 }
 
 .igx-grid-toolbar__custom-content {
-    flex: 1;
-    justify-content: space-between;
+	flex: 1;
+	justify-content: space-between;
 }
 
 .tp-app-light-theme {
-    @include igx-fluent-light-theme($palette: $tp-light-palette, $legacy-support: false);
-    @include igx-css-vars($tp-light-icon);
-    @include igx-css-vars($tp-light-card);
-    @include igx-css-vars($tp-light-grid);
-    @include igx-css-vars($tp-light-tabs);
-    igx-navbar {
-        @include igx-css-vars($tp-light-header-button);
-    }
-    [type="search"] {
-        // TODO remove this code
-        margin: 0!important;
-    }
-    background: $light-bg;
-    color: $dark-text;
-    .tp-app__drop-area-entered {
-        opacity: 0.5;
-    }
-    // Eliminate jumping in fluent theme
-    .igx-list__item-base {
-        min-height: 52px;
-    }
-    @keyframes drop-background2 {
-        0% {
-            background: #ffeef6;
-        }
-        50% {
-            background: #ffdbea;
-        }
-        0% {
-            background: #ffeef6;
-        }
-    }
-    .tp-app__groupby-row-highlight {
-        background: #ffeef6;
-        animation: drop-background2 1s ease-in-out infinite;
-    }
-    igx-grid {
-        border-radius: rem(4px);
-    }
-    .tp-app__row-details-col {
-        background: igx-color($tp-light-palette, 'grays', 100);
-    }
-    .tp-app__row-details-title {
-        color: igx-color($tp-light-palette, 'secondary');
-    }
-    scrollbar-color: igx-color($tp-light-palette, 'grays', 200) igx-color($tp-light-palette, 'grays', 100);
-     ::-webkit-scrollbar {
-        width: 16px;
-        height: 16px;
-        background-color: igx-color($tp-light-palette, 'grays', 100);
-    }
-     ::-webkit-scrollbar-thumb {
-        background-color: igx-color($tp-light-palette, 'grays', 200);
-    }
+	@include igx-fluent-light-theme($palette: $tp-light-palette);
+	@include igx-css-vars($tp-light-icon);
+	@include igx-css-vars($tp-light-card);
+	@include igx-css-vars($tp-light-grid);
+	@include igx-css-vars($tp-light-tabs);
+
+	igx-navbar {
+		@include igx-css-vars($tp-light-header-button);
+	}
+
+	[type='search'] {
+		// TODO remove this code
+		margin: 0 !important;
+	}
+
+	background: $light-bg;
+	color: $dark-text;
+
+	.tp-app__drop-area-entered {
+		opacity: 0.5;
+	}
+
+	// Eliminate jumping in fluent theme
+	.igx-list__item-base {
+		min-height: 52px;
+	}
+
+	@keyframes drop-background2 {
+		0% {
+			background: #ffeef6;
+		}
+		50% {
+			background: #ffdbea;
+		}
+		0% {
+			background: #ffeef6;
+		}
+	}
+
+	.tp-app__groupby-row-highlight {
+		background: #ffeef6;
+		animation: drop-background2 1s ease-in-out infinite;
+	}
+
+	igx-grid {
+		border-radius: rem(4px);
+	}
+
+	.tp-app__row-details-col {
+		background: igx-color($tp-light-palette, 'grays', 100);
+	}
+
+	.tp-app__row-details-title {
+		color: igx-color($tp-light-palette, 'secondary');
+	}
+
+	scrollbar-color: igx-color($tp-light-palette, 'grays', 200) igx-color($tp-light-palette, 'grays', 100);
+
+	::-webkit-scrollbar {
+		width: 16px;
+		height: 16px;
+		background-color: igx-color($tp-light-palette, 'grays', 100);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: igx-color($tp-light-palette, 'grays', 200);
+	}
 }
 
 .tp-app-light-theme,
 .tp-app-dark-theme {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 0%;
-    height: 100%;
-    overflow: hidden;
-    .igx-card-content {
-        padding: 0 !important;
-    }
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 0%;
+	height: 100%;
+	overflow: hidden;
+
+	.igx-card-content {
+		padding: 0 !important;
+	}
 }
 
 .tp-app-dark-theme {
-    background: $tp-grays-gradient;
-    color: #ccc;
-    @include igx-theme($palette: $tp-palette, $legacy-support: false);
-    @include igx-css-vars($tp-palette);
-    @include igx-css-vars($tp-grid);
-    @include igx-css-vars($tp-toolbar);
-    @include igx-css-vars($tp-paginator);
-    @include igx-css-vars($tp-button);
-    @include igx-css-vars($tp-card);
-    @include igx-css-vars($tp-input-group);
-    @include igx-css-vars($tp-list);
-    @include igx-css-vars($tp-tabs);
-    @include igx-css-vars($tp-icon);
-    @include igx-css-vars($tp-checkbox);
-    @include igx-css-vars($tp-navbar);
-    @include igx-css-vars($tp-dialog);
-    @include igx-css-vars($tp-drop-down);
-    .tp-app__drop-area-entered {
-        opacity: 0.3;
-    }
-    .tp-app-row-details-title--comments {
-        margin-bottom: 0;
-    }
-    @keyframes drop-background {
-        0% {
-            background: $row-selected-background;
-        }
-        50% {
-            background: $row-selected-background--hover;
-        }
-        0% {
-            background: $row-selected-background;
-        }
-    }
-    .tp-app__groupby-row-highlight {
-        background: $row-selected-background;
-        animation: drop-background 1s ease-in-out infinite;
-    }
-    scrollbar-color: $scrollbar-thumb $scrollbar-track;
-     ::-webkit-scrollbar {
-        width: 16px;
-        height: 16px;
-        background-color: $scrollbar-track;
-    }
-     ::-webkit-scrollbar-thumb {
-        background-color: $scrollbar-thumb;
-    }
-    .tp-app__row-details-col {
-        background: $row-background;
-        border-radius: $tp-radius;
-    }
-    .tp-app__row-details-title {
-        color: igx-color($tp-palette, 'secondary');
-    }
-    igx-grid {
-        border-radius: rem(16px);
-    }
+	background: $tp-grays-gradient;
+	color: #ccc;
+	@include igx-theme($palette: $tp-palette);
+	@include igx-css-vars($tp-grid);
+	@include igx-css-vars($tp-toolbar);
+	@include igx-css-vars($tp-paginator);
+	@include igx-css-vars($tp-button);
+	@include igx-css-vars($tp-card);
+	@include igx-css-vars($tp-input-group);
+	@include igx-css-vars($tp-list);
+	@include igx-css-vars($tp-tabs);
+	@include igx-css-vars($tp-icon);
+	@include igx-css-vars($tp-checkbox);
+	@include igx-css-vars($tp-navbar);
+	@include igx-css-vars($tp-dialog);
+	@include igx-css-vars($tp-drop-down);
+
+	.tp-app__drop-area-entered {
+		opacity: 0.3;
+	}
+
+	.tp-app-row-details-title--comments {
+		margin-bottom: 0;
+	}
+
+	@keyframes drop-background {
+		0% {
+			background: $row-selected-background;
+		}
+		50% {
+			background: $row-selected-background--hover;
+		}
+		0% {
+			background: $row-selected-background;
+		}
+	}
+
+	.tp-app__groupby-row-highlight {
+		background: $row-selected-background;
+		animation: drop-background 1s ease-in-out infinite;
+	}
+
+	scrollbar-color: $scrollbar-thumb $scrollbar-track;
+
+	::-webkit-scrollbar {
+		width: 16px;
+		height: 16px;
+		background-color: $scrollbar-track;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: $scrollbar-thumb;
+	}
+
+	.tp-app__row-details-col {
+		background: $row-background;
+		border-radius: $tp-radius;
+	}
+
+	.tp-app__row-details-title {
+		color: igx-color($tp-palette, 'secondary');
+	}
+
+	igx-grid {
+		border-radius: rem(16px);
+	}
 }
