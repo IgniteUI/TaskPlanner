@@ -320,7 +320,7 @@ export class TaskPlannerComponent implements OnInit {
                 if (event.newValue > deadlineDate) {
                     event.cancel = true;
                     this.toast.message = 'Started date cannot exceed Deadline date !';
-                    this.toast.show();
+                    this.toast.open();
                 }
                 break;
             }
@@ -329,12 +329,12 @@ export class TaskPlannerComponent implements OnInit {
                 if (event.newValue < startedDate) {
                     event.cancel = true;
                     this.toast.message = 'Deadline date cannot be earlier than started date !';
-                    this.toast.show();
+                    this.toast.open();
                 }
                 if (event.newValue < startedDate) {
                     event.cancel = true;
                     this.toast.message = 'Deadline date cannot be earlier than started date !';
-                    this.toast.show();
+                    this.toast.open();
                 }
                 break;
             }
@@ -405,7 +405,7 @@ export class TaskPlannerComponent implements OnInit {
     }
 
     public emptyFieldMessage() {
-        this.toast.show('Please fill out all required fields (Issue and Deadline).');
+        this.toast.open('Please fill out all required fields (Issue and Deadline).');
     }
 
     public toggleTheme() {
