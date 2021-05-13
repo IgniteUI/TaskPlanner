@@ -166,20 +166,21 @@ export class TaskPlannerComponent implements OnInit {
     public progressSort = ProgressSortingStrategy.instance();
     public filterStrategy = LabelsFilteringStrategy.instance();
     public statusSort = StatusSortingStrategy.instance();
+    public defaultSort = DefaultSortingStrategy.instance();
 
     public columns: any[] = [
-        { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true },
-        { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: false },
-        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true },
-        { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true},
+        { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true, sortStrategy: this.defaultSort},
+        { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: false, sortStrategy: this.defaultSort },
+        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true, sortStrategy: this.defaultSort },
+        { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true, },
         { field: 'labels', header: 'Status', width: '130px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.statusSort },
-        { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', editable: true, filterable: true, sortable: true },
-        { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false },
-        { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', sortable: true, filterable: true, editable: true },
-        { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses },
-        { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses },
+        { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', editable: true, filterable: true, sortable: true, sortStrategy: this.defaultSort },
+        { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false, sortStrategy: this.defaultSort },
+        { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', sortable: true, filterable: true, editable: true, sortStrategy: this.defaultSort },
+        { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses, sortStrategy: this.defaultSort },
+        { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses, sortStrategy: this.defaultSort },
         { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', sortable: true, sortStrategy: this.progressSort },
-        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses }
+        { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses, sortStrategy: this.defaultSort }
     ];
     private _filteringStrategy = new FilteringStrategy();
 
@@ -359,7 +360,6 @@ export class TaskPlannerComponent implements OnInit {
         } else {
             this.emptyFieldMessage();
         }
-
     }
 
     public editTask(event) {

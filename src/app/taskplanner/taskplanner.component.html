@@ -259,7 +259,7 @@
                 <igx-date-picker name="deadline" [(ngModel)]="addTaskForm.deadline" [outlet]="outlet"
                     [formatter]="formatDate" aria-required="required" required
                     [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, addTaskForm)" mode="dialog">
-                    
+
 <!-- igxDatePickerTemplate has been removed.
 Label, prefix, suffix and hint can now be projected directly.
 See https://www.infragistics.com/products/ignite-ui-angular/angular/components/date-picker -->
@@ -289,7 +289,7 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                   <label igxLabel for="newIssue">Issue Title</label>
                   <input igxInput id="newIssue" type="text" [(ngModel)]="editTaskForm.title" required/>
               </igx-input-group>
-              
+
               <igx-select type="border" placeholder="Owner" [(ngModel)]="editTaskForm.assignee" [overlaySettings]="overlaySettings" required>
                     <igx-select-item *ngFor="let m of teamMembers" [value]="m">
                     <div class="item">
@@ -305,20 +305,20 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                   <label igxLabel for="description">Description</label>
                   <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="editTaskForm.body"></textarea>
               </igx-input-group>
-        
+
               <igx-select type="border" placeholder="Priority" [(ngModel)]="editTaskForm.priority" [overlaySettings]="overlaySettings">
                   <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
               </igx-select>
-        
+
               <igx-input-group [type]="inputType" type="border">
                   <label igxLabel for="newMilestone">Milestone</label>
                   <input igxInput id="newMilestone" type="text" [(ngModel)]="editTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
               </igx-input-group>
-        
+
               <igx-date-picker name="deadline" [(ngModel)]="editTaskForm.deadline" [outlet]="outlet"
                     [formatter]="formatDate" aria-required="required" required
                     [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, editTaskForm)" mode="dialog">
-                    
+
 <!-- igxDatePickerTemplate has been removed.
 Label, prefix, suffix and hint can now be projected directly.
 See https://www.infragistics.com/products/ignite-ui-angular/angular/components/date-picker -->
@@ -333,7 +333,7 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                     </ng-template>
               </igx-date-picker>
             </div>
-    
+
         </igx-dialog>
 
         <!-- Transactions dialog -->
