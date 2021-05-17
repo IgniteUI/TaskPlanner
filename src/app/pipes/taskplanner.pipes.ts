@@ -6,6 +6,7 @@ import { DatePipe } from '@angular/common';
 @Pipe({name: 'statusLabel'})
 export class StatusLabelPipe implements PipeTransform {
     transform(value: any): string {
+        if (!value) {return;}
         if (typeof value === 'string') {
             return value;
         }
