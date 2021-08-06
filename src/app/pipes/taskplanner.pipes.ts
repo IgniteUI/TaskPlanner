@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { ITask } from '../interfaces';
-import { IgxGridCellComponent } from 'igniteui-angular';
+import { CellType } from 'igniteui-angular';
 import { DatePipe } from '@angular/common';
 
 @Pipe({name: 'statusLabel'})
@@ -33,7 +33,7 @@ export class PriorityLabelPipe implements PipeTransform {
         if (cell.value) {
             return cell.value;
         }
-        const rowData = cell.rowData ? cell.rowData : cell;
+        const rowData = cell.row.data ? cell.row.data : cell;
         const label = rowData.labels.filter(l => l.name.indexOf('severity:') === 0);
         if (label.length) {
             return label[0].name.substring(10);
@@ -65,7 +65,7 @@ export class ProgressPipe implements PipeTransform {
 
 @Pipe({name: 'deadline'})
 export class DeadlinePipe implements PipeTransform {
-    transform(value: ITask, cell?: IgxGridCellComponent): string {
+    transform(value: ITask, cell?: CellType): string {
         const pipe = new DatePipe(cell?.grid.locale);
         const pipeArgs = cell?.column.pipeArgs;
         const deadline = new Date(value.createdAt);

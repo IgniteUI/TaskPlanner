@@ -14,8 +14,6 @@
                 [rowEditable]="isRowEditingEnabled"
                 [groupsExpanded]="false"
                 [allowFiltering]="true" [allowAdvancedFiltering]="true" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy" [filterStrategy]="filterStrategy"
-                [paging]="true"
-                [paginationTemplate]="pager"
                 [cellSelection]="'none'"
                 [rowSelection]="'multiple'"
                 (onCellEditEnter)="editStart($event)"
@@ -23,6 +21,7 @@
                 (dropped)="onItemDropped($event)"
                 (enter)="onDropContainerEnterLeave($event)"
                 (leave)="onDropContainerEnterLeave($event)">
+<igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage" [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity" ></igx-paginator>
 
                 <igx-grid-toolbar>
 
@@ -53,7 +52,7 @@
                           <igx-icon>arrow_drop_down</igx-icon>
                       </button>
 
-                      <igx-drop-down #editModeDropdown [width]="'100px'" (onSelection)="onEditingModeChanged($event)">
+                      <igx-drop-down #editModeDropdown [width]="'100px'" (selectionChanging)="onEditingModeChanged($event)">
                           <igx-drop-down-item *ngFor="let item of editModes; let i = index" [selected]="isEditModeSelected(i)">
                           {{ item }}
                           </igx-drop-down-item>
@@ -133,7 +132,7 @@
                     <!-- Assignee -->
                     <ng-template *ngIf="c.field === 'assignee.login'" igxCell let-cell="cell" let-value>
                         <div class="tp-app__owner-col">
-                            <igx-avatar class="tp-app__owner-col-avatar" [src]="cell.rowData.assignee.avatarUrl" roundShape="true" size="small"></igx-avatar>
+                            <igx-avatar class="tp-app__owner-col-avatar" [src]="cell.row.data.assignee.avatarUrl" roundShape="true" size="small"></igx-avatar>
                             <span>
                                 <span class="tp-app__owner-col-name">{{ value }}</span>
                             </span>
@@ -155,12 +154,12 @@
 
                     <!-- Deadline -->
                     <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell">
-                        {{ cell.rowData | deadline:cell }}
+                        {{ cell.row.data | deadline:cell }}
                     </ng-template>
 
                     <!-- Progress Column -->
                     <ng-template *ngIf="c.field === 'progress'" igxCell let-value let-cell="cell">
-                        <igx-linear-bar type="default" [max]="100" [value]="calcProgress(cell.row.rowData)" [animate]="false"></igx-linear-bar>
+                        <igx-linear-bar type="default" [max]="100" [value]="calcProgress(cell.row.data)" [animate]="false"></igx-linear-bar>
                     </ng-template>
 
                     <!-- Priority Column -->
@@ -220,8 +219,8 @@
         <!-- Add task dialog -->
         <igx-dialog #addTaskDialog title="Create Issue"
             leftButtonLabel="Cancel"
-            (onLeftButtonSelect)="addTaskDialog.close()"
-            (onRightButtonSelect)="addTask($event)"
+            (leftButtonSelect)="addTaskDialog.close()"
+            (rightButtonSelect)="addTask($event)"
             rightButtonLabel="Add task"
             [closeOnOutsideSelect]="false">
 
@@ -287,8 +286,8 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
         <!-- Edit Task dialog -->
         <igx-dialog #editTaskDialog title="Edit Issue"
             leftButtonLabel="Cancel"
-            (onLeftButtonSelect)="editTaskDialog.close()"
-            (onRightButtonSelect)="editTask($event)"
+            (leftButtonSelect)="editTaskDialog.close()"
+            (rightButtonSelect)="editTask($event)"
             rightButtonLabel="Edit"
             [closeOnOutsideSelect]="false">
 
@@ -385,8 +384,8 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
         <!-- Batch Editing Dialog  -->
         <igx-dialog #batchEditDialog title="Batch Row Editing"
             leftButtonLabel="Cancel"
-            (onLeftButtonSelect)="batchEditDialog.close()"
-            (onRightButtonSelect)="commitBatchEdits()"
+            (leftButtonSelect)="batchEditDialog.close()"
+            (rightButtonSelect)="commitBatchEdits()"
             rightButtonLabel="Commit"
             [closeOnOutsideSelect]="false">
 
@@ -453,7 +452,7 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
 
                         <!-- Deadline -->
                         <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell">
-                            {{ cell.rowData | deadline:cell }}
+                            {{ cell.row.rowData | deadline:cell }}
                         </ng-template>
 
                         <!-- Progress Column -->
@@ -477,8 +476,4 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
     </div>
 </div>
 
-<ng-template #pager>
-    <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage" [dropdownHidden]="true"
-        [selectLabel]="'Records per page:'" [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
-    </igx-paginator>
-</ng-template>
+

@@ -17,7 +17,7 @@ import {
     IgxColumnComponent,
     IFilteringExpressionsTree,
     IFilteringExpression,
-    IgxGridCellComponent,
+    CellType,
     SortingDirection
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
@@ -320,8 +320,7 @@ export class TaskPlannerComponent implements OnInit {
                 const deadlineDate = this.grid.getRowByKey(event.rowID).rowData.deadline;
                 if (event.newValue > deadlineDate) {
                     event.cancel = true;
-                    this.toast.message = 'Started date cannot exceed Deadline date !';
-                    this.toast.open();
+                    this.toast.open('Started date cannot exceed Deadline date !');
                 }
                 break;
             }
@@ -329,13 +328,11 @@ export class TaskPlannerComponent implements OnInit {
                 const startedDate = this.grid.getRowByKey(event.rowID).rowData.started_on;
                 if (event.newValue < startedDate) {
                     event.cancel = true;
-                    this.toast.message = 'Deadline date cannot be earlier than started date !';
-                    this.toast.open();
+                    this.toast.open('Deadline date cannot be earlier than started date !');
                 }
                 if (event.newValue < startedDate) {
                     event.cancel = true;
-                    this.toast.message = 'Deadline date cannot be earlier than started date !';
-                    this.toast.open();
+                    this.toast.open('Deadline date cannot be earlier than started date !');
                 }
                 break;
             }
@@ -466,9 +463,9 @@ export class TaskPlannerComponent implements OnInit {
         form.milestone = milestone;
     }
 
-    public getDeadlineValue(cell: IgxGridCellComponent): string {
+    public getDeadlineValue(cell: CellType): string {
         const pipeArgs = cell.column.pipeArgs;
-        const deadline = new Date(cell.rowData.createdAt);
+        const deadline = new Date(cell.row.data);
         deadline.setMonth(deadline.getMonth() + 3);
         const val = cell.grid.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
         console.log(val);
