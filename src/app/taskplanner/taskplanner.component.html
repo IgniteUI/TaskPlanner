@@ -5,10 +5,10 @@
         <app-backlog class="tp-app__backlog" (listItemAction)="onBacklogItemAction($event)" [data]="unassignedTasks"></app-backlog>
 
         <!-- Tasks Planner Grid  -->
-        <app-grid-transactions class="tp-app__grid">
-            <igx-grid #tasksGrid id="tasksGrid" igxDrop [isLoading]="gridIsLoading"
+            <igx-grid #tasksGrid id="tasksGrid" class="tp-app__grid" igxDrop [isLoading]="gridIsLoading"
                 [height]="'100%'"
                 [data]="tasks"
+                [batchEditing]="true"
                 [autoGenerate]="false"
                 [primaryKey]="'id'"
                 [rowEditable]="isRowEditingEnabled"
@@ -208,7 +208,6 @@
                         </ng-template>
                 </igx-column>
           </igx-grid>
-        </app-grid-transactions>
     </div>
 
     <!-- Toast to show validation errors  -->
