@@ -347,10 +347,11 @@ export class TaskPlannerComponent implements OnInit {
     public addTask(event) {
         if (this.addTaskForm.title && this.addTaskForm.title !== undefined
             && this.addTaskForm.deadline) {
-            this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
+            this.addTaskForm.number = this.grid.data[this.grid.data.length - 1].id + 1;
             this.addTaskForm.status = 'New';
             this.addTaskForm.estimation = null;
             this.addTaskForm.hours_spent = null;
+            this.addTaskForm.createdAt = new Date().toDateString();
             this.grid.addRow(this.addTaskForm);
             this.addTaskForm = {} as ITask;
             this.addTaskDialog.close();

@@ -5,10 +5,10 @@
         <app-backlog class="tp-app__backlog" (listItemAction)="onBacklogItemAction($event)" [data]="unassignedTasks"></app-backlog>
 
         <!-- Tasks Planner Grid  -->
-            <igx-grid #tasksGrid id="tasksGrid" class="tp-app__grid" igxDrop [isLoading]="gridIsLoading"
+        <app-grid-transactions class="tp-app__grid">
+            <igx-grid #tasksGrid id="tasksGrid" igxDrop [isLoading]="gridIsLoading"
                 [height]="'100%'"
                 [data]="tasks"
-                [batchEditing]="true"
                 [autoGenerate]="false"
                 [primaryKey]="'id'"
                 [rowEditable]="isRowEditingEnabled"
@@ -208,6 +208,7 @@
                         </ng-template>
                 </igx-column>
           </igx-grid>
+        </app-grid-transactions>
     </div>
 
     <!-- Toast to show validation errors  -->
@@ -242,7 +243,7 @@
 
                 <igx-input-group [type]="inputType" type="border">
                     <label igxLabel for="description">Description</label>
-                    <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="addTaskForm.title"></textarea>
+                    <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="addTaskForm.body"></textarea>
                 </igx-input-group>
 
                 <igx-select type="border" placeholder="Priority" [(ngModel)]="addTaskForm.priority" [overlaySettings]="overlaySettings">
