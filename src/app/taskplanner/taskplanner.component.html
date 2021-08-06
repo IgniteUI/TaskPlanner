@@ -451,12 +451,12 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
 
                         <!-- Deadline -->
                         <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell">
-                            {{ cell.row.rowData | deadline:cell }}
+                            {{ cell.row.data | deadline:cell }}
                         </ng-template>
 
                         <!-- Progress Column -->
                         <ng-template *ngIf="c.field === 'progress'" igxCell let-value let-cell="cell">
-                            {{ calcProgress(cell.row.rowData) / 100 | percent }}
+                            {{ calcProgress(cell.row.data) / 100 | percent }}
                         </ng-template>
 
                         <!-- Priority Column -->
