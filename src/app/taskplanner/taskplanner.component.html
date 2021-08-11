@@ -16,8 +16,8 @@
                 [allowFiltering]="true" [allowAdvancedFiltering]="true" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy" [filterStrategy]="filterStrategy"
                 [cellSelection]="'none'"
                 [rowSelection]="'multiple'"
-                (onCellEditEnter)="editStart($event)"
-                (onCellEdit)="onCellEdit($event)"
+                (cellEditEnter)="editStart($event)"
+                (cellEdit)="onCellEdit($event)"
                 (dropped)="onItemDropped($event)"
                 (enter)="onDropContainerEnterLeave($event)"
                 (leave)="onDropContainerEnterLeave($event)">

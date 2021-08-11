@@ -313,11 +313,11 @@ export class TaskPlannerComponent implements OnInit {
         }
     }
 
-    public onCellEdit(event: IGridEditEventArgs) {
+    public onCellEdit(event: IGridEditEventArgs) {    
         const field = this.grid.columnList.find(c => c.index === event.cellID.columnID).field;
         switch (field) {
             case 'started_on': {
-                const deadlineDate = this.grid.getRowByKey(event.rowID).rowData.deadline;
+                const deadlineDate = this.grid.getRowByIndex(event.cellID.rowIndex).data.deadline;
                 if (event.newValue > deadlineDate) {
                     event.cancel = true;
                     this.toast.open('Started date cannot exceed Deadline date !');
@@ -325,7 +325,7 @@ export class TaskPlannerComponent implements OnInit {
                 break;
             }
             case 'deadline': {
-                const startedDate = this.grid.getRowByKey(event.rowID).rowData.started_on;
+                const startedDate = this.grid.getRowByIndex(event.cellID.rowIndex).data.createdAt;
                 if (event.newValue < startedDate) {
                     event.cancel = true;
                     this.toast.open('Deadline date cannot be earlier than started date !');

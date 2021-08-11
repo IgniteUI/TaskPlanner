@@ -34,9 +34,15 @@ export class PriorityLabelPipe implements PipeTransform {
             return cell.value;
         }
         const rowData = cell.row.data ? cell.row.data : cell;
-        const label = rowData.labels.filter(l => l.name.indexOf('severity:') === 0);
-        if (label.length) {
-            return label[0].name.substring(10);
+        let label;
+        if (typeof(rowData.labels.filter) === 'function'){
+            label = rowData.labels.filter(l => l.name.indexOf('severity:') === 0);
+        }
+        
+        if (label) {
+            if (label.length > 0){
+                return label[0].name.substring(10);
+            }
         }
     }
 }
