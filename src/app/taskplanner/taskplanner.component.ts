@@ -373,6 +373,10 @@ export class TaskPlannerComponent implements OnInit {
         this.grid.deleteRow(rowID);
     }
 
+    public setAvatarTitle (assignee) {
+        return MEMBERS.find(m => m.login === assignee.login).avatarUrl;
+    }
+
     /** Open Dialogs */
     public openCommitDialog() {
         this.transactionsDialog.open(this.dialogOverlaySettings);
@@ -646,6 +650,7 @@ export class LabelsFilteringStrategy extends FilteringStrategy {
         return cond.logic(val, expr.searchVal, expr.ignoreCase);
       }
 }
+
 
 /** Calculates task progress. */
 export function calcProgress(task: ITask) {
