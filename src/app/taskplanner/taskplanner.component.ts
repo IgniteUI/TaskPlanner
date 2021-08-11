@@ -373,8 +373,25 @@ export class TaskPlannerComponent implements OnInit {
         this.grid.deleteRow(rowID);
     }
 
-    public setAvatarTitle (assignee) {
-        return MEMBERS.find(m => m.login === assignee.login).avatarUrl;
+    public setAvatarUrl (assignee) {
+        let avatar;
+        if (assignee.login) {
+            avatar = MEMBERS.find(m => m.login === assignee.login).avatarUrl;
+        }else {
+            avatar = MEMBERS.find(m => m.login === assignee).avatarUrl;
+        }
+        
+        return avatar;
+    }
+
+    public getValue(value){
+        let assigneeName;
+        if (value.login){
+            assigneeName = value.login;
+        }else {
+            assigneeName = value;
+        }
+        return assigneeName;
     }
 
     /** Open Dialogs */

@@ -132,9 +132,9 @@
                     <!-- Assignee -->
                     <ng-template *ngIf="c.field === 'assignee.login'" igxCell let-cell="cell" let-value>
                         <div class="tp-app__owner-col">
-                            <igx-avatar class="tp-app__owner-col-avatar" [src]="setAvatarTitle(cell.row.data.assignee)" roundShape="true" size="small"></igx-avatar>
+                            <igx-avatar class="tp-app__owner-col-avatar" [src]="setAvatarUrl(cell.row.data.assignee)" roundShape="true" size="small"></igx-avatar>
                             <span>
-                                <span class="tp-app__owner-col-name">{{ value }}</span>
+                                <span class="tp-app__owner-col-name">{{ getValue(cell.row.data.assignee) }}</span>
                             </span>
                         </div>
                     </ng-template>
