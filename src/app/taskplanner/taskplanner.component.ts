@@ -378,7 +378,7 @@ export class TaskPlannerComponent implements OnInit {
         let avatar;
         if (assignee.login) {
             avatar = MEMBERS.find(m => m.login === assignee.login).avatarUrl;
-        }else {
+        } else {
             avatar = MEMBERS.find(m => m.login === assignee).avatarUrl;
         }
         
