@@ -376,6 +376,9 @@ export class TaskPlannerComponent implements OnInit {
 
     public setAvatarUrl (assignee) {
         let avatar;
+        if (!assignee) {
+            return;
+        }
         if (assignee.login) {
             avatar = MEMBERS.find(m => m.login === assignee.login).avatarUrl;
         } else {
@@ -387,6 +390,9 @@ export class TaskPlannerComponent implements OnInit {
 
     public getValue(value){
         let assigneeName;
+        if (!value) {
+            return;
+        }
         if (value.login){
             assigneeName = value.login;
         }else {
