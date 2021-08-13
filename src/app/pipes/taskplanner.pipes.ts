@@ -39,7 +39,7 @@ export class PriorityLabelPipe implements PipeTransform {
             label = rowData.labels.filter(l => l.name.indexOf('severity:') === 0);
         }
         
-        if (label) {
+        if (label && label.length > 0) {
             if (label.length > 0){
                 return label[0].name.substring(10);
             }
