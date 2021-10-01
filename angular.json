@@ -35,7 +35,13 @@
                         "styles": [
                             "src/styles.scss"
                         ],
-                        "scripts": ["./node_modules/hammerjs/hammer.min.js"]
+                        "scripts": ["./node_modules/hammerjs/hammer.min.js"],
+                        "buildOptimizer": false,
+                        "optimization": false,
+                        "vendorChunk": true,
+                        "extractLicenses": false,
+                        "sourceMap": true,
+                        "namedChunks": true
                     },
                     "configurations": {
                         "es5": {

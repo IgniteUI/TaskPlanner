@@ -17,7 +17,7 @@ import {
     IgxColumnComponent,
     IFilteringExpressionsTree,
     IFilteringExpression,
-    IgxGridCellComponent,
+    CellType,
     SortingDirection
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
@@ -313,29 +313,26 @@ export class TaskPlannerComponent implements OnInit {
         }
     }
 
-    public onCellEdit(event: IGridEditEventArgs) {
+    public onCellEdit(event: IGridEditEventArgs) {    
         const field = this.grid.columnList.find(c => c.index === event.cellID.columnID).field;
         switch (field) {
             case 'started_on': {
-                const deadlineDate = this.grid.getRowByKey(event.rowID).rowData.deadline;
+                const deadlineDate = this.grid.getRowByIndex(event.cellID.rowIndex).data.deadline;
                 if (event.newValue > deadlineDate) {
                     event.cancel = true;
-                    this.toast.message = 'Started date cannot exceed Deadline date !';
-                    this.toast.open();
+                    this.toast.open('Started date cannot exceed Deadline date !');
                 }
                 break;
             }
             case 'deadline': {
-                const startedDate = this.grid.getRowByKey(event.rowID).rowData.started_on;
+                const startedDate = this.grid.getRowByIndex(event.cellID.rowIndex).data.createdAt;
                 if (event.newValue < startedDate) {
                     event.cancel = true;
-                    this.toast.message = 'Deadline date cannot be earlier than started date !';
-                    this.toast.open();
+                    this.toast.open('Deadline date cannot be earlier than started date !');
                 }
                 if (event.newValue < startedDate) {
                     event.cancel = true;
-                    this.toast.message = 'Deadline date cannot be earlier than started date !';
-                    this.toast.open();
+                    this.toast.open('Deadline date cannot be earlier than started date !');
                 }
                 break;
             }
@@ -351,9 +348,11 @@ export class TaskPlannerComponent implements OnInit {
         if (this.addTaskForm.title && this.addTaskForm.title !== undefined
             && this.addTaskForm.deadline) {
             this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
+            this.addTaskForm.number = this.grid.data[this.grid.data.length - 1].id + 1;
             this.addTaskForm.status = 'New';
             this.addTaskForm.estimation = null;
             this.addTaskForm.hours_spent = null;
+            this.addTaskForm.createdAt = new Date().toDateString();
             this.grid.addRow(this.addTaskForm);
             this.addTaskForm = {} as ITask;
             this.addTaskDialog.close();
@@ -373,6 +372,33 @@ export class TaskPlannerComponent implements OnInit {
 
     public deleteTask(rowID) {
         this.grid.deleteRow(rowID);
+    }
+
+    public setAvatarUrl (assignee) {
+        let avatar;
+        if (!assignee) {
+            return;
+        }
+        if (assignee.login) {
+            avatar = MEMBERS.find(m => m.login === assignee.login).avatarUrl;
+        } else {
+            avatar = MEMBERS.find(m => m.login === assignee).avatarUrl;
+        }
+        
+        return avatar;
+    }
+
+    public getValue(value){
+        let assigneeName;
+        if (!value) {
+            return;
+        }
+        if (value.login){
+            assigneeName = value.login;
+        }else {
+            assigneeName = value;
+        }
+        return assigneeName;
     }
 
     /** Open Dialogs */
@@ -466,9 +492,9 @@ export class TaskPlannerComponent implements OnInit {
         form.milestone = milestone;
     }
 
-    public getDeadlineValue(cell: IgxGridCellComponent): string {
+    public getDeadlineValue(cell: CellType): string {
         const pipeArgs = cell.column.pipeArgs;
-        const deadline = new Date(cell.rowData.createdAt);
+        const deadline = new Date(cell.row.data);
         deadline.setMonth(deadline.getMonth() + 3);
         const val = cell.grid.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
         console.log(val);
@@ -648,6 +674,7 @@ export class LabelsFilteringStrategy extends FilteringStrategy {
         return cond.logic(val, expr.searchVal, expr.ignoreCase);
       }
 }
+
 
 /** Calculates task progress. */
 export function calcProgress(task: ITask) {
