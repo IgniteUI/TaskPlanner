@@ -1,6 +1,5 @@
 import { Component, ViewChild, EventEmitter, Output, OnInit, Input } from '@angular/core';
-import { IgxInputDirective, IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions } from 'igniteui-angular';
-import { TasksDataService } from '../services/tasks.service';
+import { IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions } from 'igniteui-angular';
 import { ITask } from '../interfaces';
 
 export interface IListItemAction {
@@ -32,7 +31,7 @@ export class BacklogComponent implements OnInit  {
         this.tasks = data;
     }
 
-    constructor(private dataService: TasksDataService) {}
+    constructor() {}
 
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
