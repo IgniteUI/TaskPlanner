@@ -9,7 +9,7 @@
                     <igx-prefix>
                         <igx-icon>search</igx-icon>
                     </igx-prefix>
-                    <igx-suffix *ngIf="taskSearch.value.length > 0" (click)="clearSearchInput()">
+                    <igx-suffix *ngIf="taskSearch.value.length > 0" (click)="taskSearchString = ''">
                         <igx-icon>clear</igx-icon>
                     </igx-suffix>
                 </igx-input-group>

@@ -22,7 +22,6 @@ export class BacklogComponent implements OnInit  {
         closeOnOutsideClick: true
     };
 
-    @ViewChild('taskSearch', { read: IgxInputDirective, static: true }) public searchInput: IgxInputDirective;
     @ViewChild(IgxListComponent, { read: IgxListComponent, static: true }) public tasksList: IgxListComponent;
     @ViewChild(IgxOverlayOutletDirective, { static: true }) public outlet: IgxOverlayOutletDirective;
 
@@ -37,10 +36,6 @@ export class BacklogComponent implements OnInit  {
 
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
-    }
-
-    public clearSearchInput() {
-        this.searchInput.value = '';
     }
 
     public onActionTriggered(action: string, issue: ITask) {
