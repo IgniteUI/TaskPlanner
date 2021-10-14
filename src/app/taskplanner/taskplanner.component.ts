@@ -354,6 +354,7 @@ export class TaskPlannerComponent implements OnInit {
             this.addTaskForm.hours_spent = null;
             this.addTaskForm.createdAt = new Date().toDateString();
             this.grid.addRow(this.addTaskForm);
+            this.grid.transactions.commit(this.grid.data);
             this.addTaskForm = {} as ITask;
             this.addTaskDialog.close();
         } else {
