@@ -35,10 +35,10 @@ export class PriorityLabelPipe implements PipeTransform {
         }
         const rowData = cell.row.data ? cell.row.data : cell;
         let label;
-        if (typeof(rowData.labels.filter) === 'function'){
+        if (typeof(rowData.labels?.filter) === 'function'){
             label = rowData.labels.filter(l => l.name.indexOf('severity:') === 0);
         }
-        
+
         if (label && label.length > 0) {
             if (label.length > 0){
                 return label[0].name.substring(10);
@@ -98,7 +98,7 @@ export class FilterTasksPipe implements PipeTransform {
         return groupedData.reduce((acc, val) => {
             // Return task status without whitespace in order to be used for class name
             const status = new StatusLabelPipe().transform(val.labels);
-            const cssClass = status.replace(/\s/g, '').toLowerCase();
+            const cssClass = status?.replace(/\s/g, '').toLowerCase();
             const itemIndex = acc.findIndex(item => item.name === status);
 
             if (itemIndex === -1) {
