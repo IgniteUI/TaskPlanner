@@ -338,7 +338,7 @@ export class TaskPlannerComponent implements OnInit {
             }
             case 'status': {
                 if (event.newValue === 'Completed') {
-                    this.grid.getRowByKey(event.rowID).rowData.isActive = false;
+                    this.grid.getRowByKey(event.rowID).data.isActive = false;
                 }
             }
         }
