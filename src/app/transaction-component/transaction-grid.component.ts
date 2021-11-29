@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { IgxGridTransaction, IgxTransactionService } from 'igniteui-angular';
+import { IgxTransactionService } from 'igniteui-angular';
 
 @Component({
-    providers: [/* Injection token 'IgxGridTransaction' has been deprecated. Please refer to the update guide for more details. */
-/* Injection token 'IgxGridTransaction' has been deprecated. Please refer to the update guide for more details. */
-{ provide: IgxGridTransaction, useClass: IgxTransactionService }],    selector: 'app-grid-transactions',
-    template: '<ng-content></ng-content>'
+selector: 'app-grid-transactions',
+template: `<igx-grid [data]="data" [batchEditing]="true">
+</igx-grid>`
 })
-export class GridWithTransactionsComponent { }
+export class GridWithTransactionsComponent { data = []}

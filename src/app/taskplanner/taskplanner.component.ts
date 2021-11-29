@@ -26,6 +26,7 @@ import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
 import { ITask, ITeamMember } from '../interfaces';
 import { StatusLabelPipe, PriorityLabelPipe, MilestonePipe } from '../pipes/taskplanner.pipes';
+import { DatePipe } from '@angular/common';
 
 export enum editMode {
     cellEditing = 0,
@@ -167,7 +168,8 @@ export class TaskPlannerComponent implements OnInit {
     public filterStrategy = LabelsFilteringStrategy.instance();
     public statusSort = StatusSortingStrategy.instance();
     public defaultSort = DefaultSortingStrategy.instance();
-
+    public datePipe: DatePipe;
+    
     public columns: any[] = [
         { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true, sortStrategy: this.defaultSort},
         { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: false, sortStrategy: this.defaultSort },
@@ -313,7 +315,7 @@ export class TaskPlannerComponent implements OnInit {
         }
     }
 
-    public onCellEdit(event: IGridEditEventArgs) {    
+    public onCellEdit(event: IGridEditEventArgs) {
         const field = this.grid.columnList.find(c => c.index === event.cellID.columnID).field;
         switch (field) {
             case 'started_on': {
@@ -385,7 +387,7 @@ export class TaskPlannerComponent implements OnInit {
         } else {
             avatar = MEMBERS.find(m => m.login === assignee).avatarUrl;
         }
-        
+
         return avatar;
     }
 
@@ -497,7 +499,7 @@ export class TaskPlannerComponent implements OnInit {
         const pipeArgs = cell.column.pipeArgs;
         const deadline = new Date(cell.row.data);
         deadline.setMonth(deadline.getMonth() + 3);
-        const val = cell.grid.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
+        const val = this.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
         console.log(val);
         return val;
     }
