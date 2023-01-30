@@ -1,5 +1,4 @@
-$tp-list: igx-list-theme(
-    $palette: $tp-palette,
+$tp-list: list-theme(
     $schema: $dark-schema,
     $item-background-hover: $row-background,
     $item-background-active: $row-background,
@@ -10,8 +9,8 @@ $tp-list: igx-list-theme(
     $item-action-color-active: #fff,
 );
 
-/* $tp-light-list: igx-list-theme(
-    $item-action-color: igx-color($tp-light-palette, 'grays' 200),
-    $item-action-color-hover: igx-color($tp-light-palette, 'grays' 400),
-    $item-action-color-active: igx-color($tp-light-palette, 'grays' 400),
+/* $tp-light-list: list-theme(
+    $item-action-color: color($tp-light-palette, 'grays' 200),
+    $item-action-color-hover: color($tp-light-palette, 'grays' 400),
+    $item-action-color-active: color($tp-light-palette, 'grays' 400),
 ); */

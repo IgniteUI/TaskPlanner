@@ -10,9 +10,11 @@ export class StatusLabelPipe implements PipeTransform {
         if (typeof value === 'string') {
             return value;
         }
-        const label = value.filter(l => l.name.indexOf('status:') === 0);
-        if (label.length) {
-            return label[0].name.substring(8);
+        const labels = value.filter(l => l.name.includes('status:'));
+        if (labels.length) {
+            const labelName = labels[0].name;
+            const indexOfStatus = labelName.indexOf('status:');
+            return labelName.substring(indexOfStatus + 8);
         }
     }
 }
@@ -101,7 +103,7 @@ export class FilterTasksPipe implements PipeTransform {
         return groupedData.reduce((acc, val) => {
             // Return task status without whitespace in order to be used for class name
             const status = new StatusLabelPipe().transform(val.labels);
-            const cssClass = status.replace(/\s/g, '').toLowerCase();
+            const cssClass = status?.replace(/\s/g, '').toLowerCase();
             const itemIndex = acc.findIndex(item => item.name === status);
 
             if (itemIndex === -1) {

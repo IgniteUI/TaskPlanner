@@ -5,9 +5,9 @@
         <app-backlog class="tp-app__backlog" (listItemAction)="onBacklogItemAction($event)" [data]="unassignedTasks"></app-backlog>
 
         <!-- Tasks Planner Grid  -->
-        <app-grid-transactions class="tp-app__grid">
             <igx-grid #tasksGrid id="tasksGrid" igxDrop [isLoading]="gridIsLoading"
                 [height]="'100%'"
+                [batchEditing]="true"
                 [data]="tasks"
                 [autoGenerate]="false"
                 [primaryKey]="'id'"
@@ -105,7 +105,7 @@
                     [width]="c.width"
                     [sortable]="c.sortable"
                     [resizable]="c.resizable"
-                    [movable]="c.movable"
+                    
                     [editable]="c.editable && isEditingEnabled"
                     [hasSummary]="c.hasSummary"
                     [filterable]="c.filterable"
@@ -208,7 +208,6 @@
                         </ng-template>
                 </igx-column>
           </igx-grid>
-        </app-grid-transactions>
     </div>
 
     <!-- Toast to show validation errors  -->
@@ -403,7 +402,7 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                         [width]="c.width"
                         [sortable]="c.sortable"
                         [resizable]="c.resizable"
-                        [movable]="c.movable"
+                        
                         [editable]="c.editable && isEditingEnabled"
                         [hasSummary]="c.hasSummary"
                         [filterable]="c.filterable"

@@ -1,13 +1,11 @@
-$tp-button: igx-button-theme(
+$tp-button: button-theme(
     $schema: $dark-schema,
-    $palette: $tp-palette,
     $border-radius: 1,
     $foreground: #fff,
     $background: transparent,
-    $hover-foreground: igx-color($tp-palette, 'secondary')
+    $hover-foreground: color($tp-palette, 'secondary')
 );
 
-$tp-light-header-button: igx-button-theme(
-    $palette: $tp-light-palette,
-    $background: igx-color($tp-light-palette, 'secondary')
+$tp-light-header-button: button-theme(
+    $background: color($tp-light-palette, 'secondary')
 );

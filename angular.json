@@ -25,7 +25,7 @@
                         "aot": true,
                         "stylePreprocessorOptions": {
                             "includePaths": [
-                                "node_modules/@infragistics"
+                                "node_modules"
                             ]
                         },
                         "assets": [
@@ -110,7 +110,12 @@
                         "assets": [
                             "src/favicon.ico",
                             "src/assets"
-                        ]
+                        ],
+                        "stylePreprocessorOptions": {
+                          "includePaths": [
+                            "node_modules"
+                          ]
+                        }
                     }
                 },
                 "lint": {
