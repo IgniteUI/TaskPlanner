@@ -427,7 +427,6 @@ export class TaskPlannerComponent implements OnInit {
      */
     public populateDataComponents(data: ITask[]) {
         const issues = data.filter(task => task.pullRequest === null).map(rec => this.parseDate(rec));
-        console.log(issues)
         this.tasks = issues.filter(t => t.labels.filter(l => l.name.includes('status')).length > 0);
         this.gridIsLoading = false;
         this.unassignedTasks = issues.filter(t => t.labels.filter(l => l.name.includes('status')).length === 0);
