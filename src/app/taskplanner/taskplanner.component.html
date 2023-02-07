@@ -21,6 +21,7 @@
                 (dropped)="onItemDropped($event)"
                 (enter)="onDropContainerEnterLeave($event)"
                 (leave)="onDropContainerEnterLeave($event)"
+                [moving]="true"
                 [sortingOptions]="sortingOptions"
                 [sortHeaderIconTemplate]="sortIcon"
                 [sortAscendingHeaderIconTemplate]="sortAscIcon"
@@ -122,7 +123,8 @@
                     [header]="c.header"
                     [dataType]="c.dataType"
                     [pinned]="c.pinned"
-                    [hidden]="c.hidden">
+                    [hidden]="c.hidden"
+                    [hasSummary]="c.hasSummary">
 
                     <!-- Status Column -->
                     <ng-template *ngIf="c.field === 'labels'" igxCell let-cell="cell" let-value>
@@ -180,6 +182,13 @@
                     <!-- Deadline -->
                     <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell" let-value>
                         {{ value | placeholder }}
+                    </ng-template>
+
+                    <ng-template *ngIf="c.field === 'deadline'" igxSummary let-summaryResults>
+                      <div class="summary-temp">
+                          <span><strong>{{ summaryResults[0].label }}</strong><span>{{ summaryResults[0].summaryResult }}</span></span>
+                          <span><strong>{{ summaryResults[1].label }}</strong><span>{{ summaryResults[1].summaryResult }}</span></span>
+                      </div>
                     </ng-template>
 
                     <!-- Estimatiomn -->
