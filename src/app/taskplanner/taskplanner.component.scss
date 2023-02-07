@@ -157,7 +157,6 @@
     }
 }
 
-
 .summary-temp {
 	display: flex;
 	flex-direction: column;
@@ -203,4 +202,9 @@
 		}
 	}
 
+}
+
+::-webkit-scrollbar {
+	width: 5px !important;
+	height: 5px !important;
 }

@@ -179,16 +179,17 @@
                         </igx-select>
                     </ng-template>
 
+                    <!-- Created -->
+                    <ng-template *ngIf="c.field === 'createdAt'" igxSummary let-summaryResults>
+                      <div class="summary-temp">
+                          <span><strong>{{ summaryResults[0].label }}</strong><span>{{ summaryResults[0].summaryResult }}</span></span>
+                          <span><strong>{{ summaryResults[1].label }}</strong><span>{{ summaryResults[1].summaryResult | date: 'mediumDate' }}</span></span>
+                      </div>
+                    </ng-template>
+
                     <!-- Deadline -->
                     <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell" let-value>
                         {{ value | placeholder }}
-                    </ng-template>
-
-                    <ng-template *ngIf="c.field === 'deadline'" igxSummary let-summaryResults>
-                      <div class="summary-temp">
-                          <span><strong>{{ summaryResults[0].label }}</strong><span>{{ summaryResults[0].summaryResult }}</span></span>
-                          <span><strong>{{ summaryResults[1].label }}</strong><span>{{ summaryResults[1].summaryResult }}</span></span>
-                      </div>
                     </ng-template>
 
                     <!-- Estimatiomn -->
