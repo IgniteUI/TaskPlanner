@@ -20,7 +20,11 @@
                 (cellEdit)="onCellEdit($event)"
                 (dropped)="onItemDropped($event)"
                 (enter)="onDropContainerEnterLeave($event)"
-                (leave)="onDropContainerEnterLeave($event)">
+                (leave)="onDropContainerEnterLeave($event)"
+                [sortingOptions]="sortingOptions"
+                [sortHeaderIconTemplate]="sortIcon"
+                [sortAscendingHeaderIconTemplate]="sortAscIcon"
+                [sortDescendingHeaderIconTemplate]="sortDescIcon">
 <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage" [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity" ></igx-paginator>
 
                 <igx-grid-toolbar>
@@ -104,8 +108,9 @@
                 <igx-column *ngFor="let c of columns"
                     [width]="c.width"
                     [sortable]="c.sortable"
+                    [required]="c.required"
                     [resizable]="c.resizable"
-                    
+                    [minlength]="c.minlength"
                     [editable]="c.editable && isEditingEnabled"
                     [hasSummary]="c.hasSummary"
                     [filterable]="c.filterable"
@@ -207,8 +212,23 @@
                         </ng-container>
                         </ng-template>
                 </igx-column>
+
+
           </igx-grid>
     </div>
+
+    <!-- Sorting Indicators Templates -->
+    <ng-template #sortIcon>
+      <igx-icon>unfold_more_double</igx-icon>
+    </ng-template>
+
+    <ng-template #sortAscIcon>
+      <igx-icon>keyboard_double_arrow_up</igx-icon>
+    </ng-template>
+
+    <ng-template #sortDescIcon>
+      <igx-icon>keyboard_double_arrow_down</igx-icon>
+    </ng-template>
 
     <!-- Toast to show validation errors  -->
     <igx-toast></igx-toast>
@@ -402,7 +422,6 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                         [width]="c.width"
                         [sortable]="c.sortable"
                         [resizable]="c.resizable"
-                        
                         [editable]="c.editable && isEditingEnabled"
                         [hasSummary]="c.hasSummary"
                         [filterable]="c.filterable"

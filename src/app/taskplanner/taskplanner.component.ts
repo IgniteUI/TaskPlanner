@@ -18,7 +18,8 @@ import {
     IFilteringExpressionsTree,
     IFilteringExpression,
     CellType,
-    SortingDirection
+    SortingDirection,
+    ISortingOptions
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
@@ -109,6 +110,10 @@ export class TaskPlannerComponent implements OnInit {
         closeOnOutsideClick: true
     };
 
+    public sortingOptions: ISortingOptions = {
+      mode: 'single'
+    };
+
     public calcProgress = calcProgress;
     private dayFormatter = new Intl.DateTimeFormat('en', { weekday: 'long' });
     private monthFormatter = new Intl.DateTimeFormat('en', { month: 'long' });
@@ -172,7 +177,7 @@ export class TaskPlannerComponent implements OnInit {
     public columns: any[] = [
         { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true, sortStrategy: this.defaultSort },
         { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: false, sortStrategy: this.defaultSort },
-        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true, sortStrategy: this.defaultSort },
+        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true, sortStrategy: this.defaultSort, required: true, minlength: 4 },
         { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true, },
         { field: 'labels', header: 'Status', width: '130px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.statusSort },
         { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', editable: true, filterable: true, sortable: true, sortStrategy: this.defaultSort },
