@@ -1,6 +1,6 @@
 $tp-button: button-theme(
     $schema: $dark-schema,
-    $border-radius: 1,
+    $border-radius: 20px,
     $foreground: #fff,
     $background: transparent,
     $hover-foreground: color($tp-palette, 'secondary')

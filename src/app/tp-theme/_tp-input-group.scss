@@ -1,8 +1,8 @@
 $tp-input-group: input-group-theme(
     $schema: $dark-schema,
-    $box-border-radius: 1,
-    $search-border-radius: 1,
-    $border-border-radius: 1,
+    $box-border-radius: 20px,
+    $search-border-radius: 20px,
+    $border-border-radius: 20px,
     $border-color: color($tp-palette, 'gray', 400),
     $search-background: $row-background
 );
