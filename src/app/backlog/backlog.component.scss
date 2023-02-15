@@ -1,5 +1,6 @@
-@import 'igniteui-angular/lib/core/styles/base/index';
-@import "../tp-theme/vars";
+@use "../tp-theme/vars" as *;
+@forward '@infragistics/igniteui-angular/theming';
+
 ::ng-deep {
     .tp-app {
         // TODO fix default style for empty template in the product
@@ -98,45 +99,45 @@
     }
     .tp-app-dark-theme {
         .tp-app__backlog-list-button {
-            color: igx-color($tp-palette, 'grays', 500) !important;
+            color: color($tp-palette, 'gray', 500) !important;
             igx-icon {
-                color: igx-color($tp-palette, 'grays', 500);
+                color: color($tp-palette, 'gray', 500);
             }
             &:hover,
             &:focus {
                 cursor: pointer;
-                color: igx-color($tp-palette, 'secondary') !important;
+                color: color($tp-palette, 'secondary') !important;
                 igx-icon {
                     cursor: pointer;
-                    color: igx-color($tp-palette, 'secondary');
+                    color: color($tp-palette, 'secondary');
                 }
             }
         }
         .tp-app__backlog-dragged-item {
-            background: igx-color($tp-palette, 'surface');
-            color: igx-contrast-color($tp-palette, 'surface');
+            background: color($tp-palette, 'surface');
+            color: contrast-color($tp-palette, 'surface');
             border-radius: $tp-radius;
         }
     }
     .tp-app-light-theme {
         .tp-app__backlog-list-button {
-            color: igx-color($tp-light-palette, 'grays', 500) !important;
+            color: color($tp-light-palette, 'gray', 500) !important;
             igx-icon {
-                color: igx-color($tp-light-palette, 'grays', 500);
+                color: color($tp-light-palette, 'gray', 500);
             }
             &:hover,
             &:focus {
                 cursor: pointer;
-                color: igx-color($tp-light-palette, 'secondary') !important;
+                color: color($tp-light-palette, 'secondary') !important;
                 igx-icon {
                     cursor: pointer;
-                    color: igx-color($tp-light-palette, 'secondary');
+                    color: color($tp-light-palette, 'secondary');
                 }
             }
         }
         .tp-app__backlog-dragged-item {
-            background: igx-color($tp-light-palette, 'surface');
-            color: igx-contrast-color($tp-light-palette, 'surface');
+            background: color($tp-light-palette, 'surface');
+            color: contrast-color($tp-light-palette, 'surface');
         }
     }
 }

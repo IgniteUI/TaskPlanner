@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 // Standard CSS normalize, comment out if not required or using a different module
-@import '~minireset.css/minireset';
+@use "minireset.css/minireset" as *;
+@forward "minireset.css/minireset";
+
+@use '@infragistics/igniteui-angular/theming' as *;
+@forward '@infragistics/igniteui-angular/theming';
 
 html,
 body {
@@ -9,31 +13,31 @@ body {
 	overflow: hidden;
 }
 
-@import 'igniteui-angular/lib/core/styles/themes/index';
-@import 'app/tp-theme/index';
 
-@include igx-core();
-@include igx-typography();
 
+@import "app/tp-theme/index";
+
+@include core();
+@include typography();
 
 .resolved {
-	@include igx-badge($badge-resolved)
+	@include badge($badge-resolved);
 }
 
 .inreview {
-	@include igx-badge($badge-inreview)
+	@include badge($badge-inreview);
 }
 
 .delayed {
-	@include igx-badge($badge-delayed)
+	@include badge($badge-delayed);
 }
 
 .indevelopment {
-	@include igx-badge($badge-indevelopment)
+	@include badge($badge-indevelopment);
 }
 
 .igx-button--raised {
-	transition: all 420ms ease-in-out;;
+	transition: all 420ms ease-in-out;
 }
 
 .resolved,
@@ -46,7 +50,7 @@ body {
 	// Version 1
 	&:before {
 		$tp-cell-indicator-top-space: rem(6px);
-		content: '';
+		content: "";
 		position: absolute;
 		top: $tp-cell-indicator-top-space;
 		left: rem(6px);
@@ -102,17 +106,17 @@ body {
 }
 
 .tp-app-light-theme {
-	@include igx-fluent-light-theme($palette: $tp-light-palette);
-	@include igx-css-vars($tp-light-icon);
-	@include igx-css-vars($tp-light-card);
-	@include igx-css-vars($tp-light-grid);
-	@include igx-css-vars($tp-light-tabs);
+	@include fluent-light-theme($palette: $tp-light-palette);
+	@include css-vars($tp-light-icon);
+	@include css-vars($tp-light-card);
+	@include css-vars($tp-light-grid);
+	@include css-vars($tp-light-tabs);
 
 	igx-navbar {
-		@include igx-css-vars($tp-light-header-button);
+		@include css-vars($tp-light-header-button);
 	}
 
-	[type='search'] {
+	[type="search"] {
 		// TODO remove this code
 		margin: 0 !important;
 	}
@@ -151,23 +155,23 @@ body {
 	}
 
 	.tp-app__row-details-col {
-		background: igx-color($tp-light-palette, 'grays', 100);
+		background: color($tp-light-palette, "gray", 100);
 	}
 
 	.tp-app__row-details-title {
-		color: igx-color($tp-light-palette, 'secondary');
+		color: color($tp-light-palette, "secondary");
 	}
 
-	scrollbar-color: igx-color($tp-light-palette, 'grays', 200) igx-color($tp-light-palette, 'grays', 100);
+	scrollbar-color: color($tp-light-palette, "gray", 200) color($tp-light-palette, "gray", 100);
 
 	::-webkit-scrollbar {
 		width: 16px;
 		height: 16px;
-		background-color: igx-color($tp-light-palette, 'grays', 100);
+		background-color: color($tp-light-palette, "gray", 100);
 	}
 
 	::-webkit-scrollbar-thumb {
-		background-color: igx-color($tp-light-palette, 'grays', 200);
+		background-color: color($tp-light-palette, "gray", 200);
 	}
 }
 
@@ -187,20 +191,20 @@ body {
 .tp-app-dark-theme {
 	background: $tp-grays-gradient;
 	color: #ccc;
-	@include igx-theme($palette: $tp-palette);
-	@include igx-css-vars($tp-grid);
-	@include igx-css-vars($tp-toolbar);
-	@include igx-css-vars($tp-paginator);
-	@include igx-css-vars($tp-button);
-	@include igx-css-vars($tp-card);
-	@include igx-css-vars($tp-input-group);
-	@include igx-css-vars($tp-list);
-	@include igx-css-vars($tp-tabs);
-	@include igx-css-vars($tp-icon);
-	@include igx-css-vars($tp-checkbox);
-	@include igx-css-vars($tp-navbar);
-	@include igx-css-vars($tp-dialog);
-	@include igx-css-vars($tp-drop-down);
+	@include theme($palette: $tp-palette);
+	@include css-vars($tp-grid);
+	@include css-vars($tp-toolbar);
+	@include css-vars($tp-paginator);
+	@include css-vars($tp-button);
+	@include css-vars($tp-card);
+	@include css-vars($tp-input-group);
+	@include css-vars($tp-list);
+	@include css-vars($tp-tabs);
+	@include css-vars($tp-icon);
+	@include css-vars($tp-checkbox);
+	@include css-vars($tp-navbar);
+	@include css-vars($tp-dialog);
+	@include css-vars($tp-drop-down);
 
 	.tp-app__drop-area-entered {
 		opacity: 0.3;
@@ -245,7 +249,7 @@ body {
 	}
 
 	.tp-app__row-details-title {
-		color: igx-color($tp-palette, 'secondary');
+		color: color($tp-palette, "secondary");
 	}
 
 	igx-grid {

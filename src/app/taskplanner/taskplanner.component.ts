@@ -18,7 +18,8 @@ import {
     IFilteringExpressionsTree,
     IFilteringExpression,
     CellType,
-    SortingDirection
+    SortingDirection,
+    ISortingOptions
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
@@ -26,6 +27,7 @@ import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
 import { ITask, ITeamMember } from '../interfaces';
 import { StatusLabelPipe, PriorityLabelPipe, MilestonePipe } from '../pipes/taskplanner.pipes';
+import { DatePipe } from '@angular/common';
 
 export enum editMode {
     cellEditing = 0,
@@ -36,7 +38,7 @@ export enum editMode {
 // tslint:disable:max-line-length
 // tslint:disable:member-ordering
 @Component({
-    providers: [TasksDataService, { provide: ControlContainer, useExisting: NgForm }],
+    providers: [TasksDataService, DatePipe, { provide: ControlContainer, useExisting: NgForm }],
     selector: 'app-taskplanner',
     templateUrl: './taskplanner.component.html',
     styleUrls: ['./taskplanner.component.scss'],
@@ -70,7 +72,7 @@ export class TaskPlannerComponent implements OnInit {
     public batchEditingData: ITask[];
     public inputType = 'material';
     public selectOptions = [5, 15, 20, 50];
-    public disabledDates =  [{
+    public disabledDates = [{
         dateRange: [new Date()],
         type: DateRangeType.Before
     }];
@@ -106,6 +108,10 @@ export class TaskPlannerComponent implements OnInit {
     public overlaySettings: OverlaySettings = {
         modal: false,
         closeOnOutsideClick: true
+    };
+
+    public sortingOptions: ISortingOptions = {
+      mode: 'single'
     };
 
     public calcProgress = calcProgress;
@@ -169,13 +175,13 @@ export class TaskPlannerComponent implements OnInit {
     public defaultSort = DefaultSortingStrategy.instance();
 
     public columns: any[] = [
-        { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true, sortStrategy: this.defaultSort},
+        { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true, sortStrategy: this.defaultSort },
         { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: false, sortStrategy: this.defaultSort },
-        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true, sortStrategy: this.defaultSort },
+        { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true, sortStrategy: this.defaultSort, required: true, minlength: 4 },
         { field: 'milestone', header: 'Milestone', width: '120px', dataType: 'string', editable: true, sortable: true, sortStrategy: this.milestoneSort, hidden: true, },
         { field: 'labels', header: 'Status', width: '130px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.statusClasses, sortStrategy: this.statusSort },
         { field: 'assignee.login', header: 'Assignee', width: '180px', dataType: 'string', editable: true, filterable: true, sortable: true, sortStrategy: this.defaultSort },
-        { field: 'createdAt', header: 'Created', width: '120px', dataType: 'date', sortable: true, filterable: true, editable: false, sortStrategy: this.defaultSort },
+        { field: 'createdAt', header: 'Created', width: '130px', dataType: 'date', sortable: true, filterable: true, editable: false, sortStrategy: this.defaultSort, hasSummary: true  },
         { field: 'deadline', header: 'Deadline', width: '130px', dataType: 'date', sortable: true, filterable: true, editable: true, sortStrategy: this.defaultSort },
         { field: 'estimation', header: 'Estimation', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses, sortStrategy: this.defaultSort },
         { field: 'hours_spent', header: 'Hours Spent', width: '120px', dataType: 'number', editable: true, cellClasses: this.delayedClasses, sortStrategy: this.defaultSort },
@@ -184,7 +190,7 @@ export class TaskPlannerComponent implements OnInit {
     ];
     private _filteringStrategy = new FilteringStrategy();
 
-    constructor() {  }
+    constructor(private datePipe: DatePipe) { }
 
     public ngOnInit() {
         this.overlaySettings.outlet = this.outlet;
@@ -229,14 +235,14 @@ export class TaskPlannerComponent implements OnInit {
         const currentMilestone = `Q${ms} ${today.getFullYear()}`;
         this.grid.groupingExpansionState = [{
             expanded: true,
-            hierarchy: [{ fieldName: 'milestone', value: currentMilestone}]
+            hierarchy: [{ fieldName: 'milestone', value: currentMilestone }]
         }];
     }
 
     /** Formatters */
     public formatDate = (date: Date) => {
         return `${this.dayFormatter.format(date)}, ${date.getDate()} ${this.monthFormatter.format(date)}, ${date.getFullYear()}`;
-      }
+    }
 
     public formatID(value: number): string {
         return '#' + value;
@@ -299,7 +305,7 @@ export class TaskPlannerComponent implements OnInit {
     }
 
     public onEditingModeChanged(event: ISelectionEventArgs) {
-       this.editMode = event.newSelection.index;
+        this.editMode = event.newSelection.index;
     }
 
     public isEditModeSelected(i: number): boolean {
@@ -313,7 +319,7 @@ export class TaskPlannerComponent implements OnInit {
         }
     }
 
-    public onCellEdit(event: IGridEditEventArgs) {    
+    public onCellEdit(event: IGridEditEventArgs) {
         const field = this.grid.columnList.find(c => c.index === event.cellID.columnID).field;
         switch (field) {
             case 'started_on': {
@@ -338,7 +344,7 @@ export class TaskPlannerComponent implements OnInit {
             }
             case 'status': {
                 if (event.newValue === 'Completed') {
-                    this.grid.getRowByKey(event.rowID).rowData.isActive = false;
+                    this.grid.getRowByKey(event.rowID).data.isActive = false;
                 }
             }
         }
@@ -375,7 +381,7 @@ export class TaskPlannerComponent implements OnInit {
         this.grid.deleteRow(rowID);
     }
 
-    public setAvatarUrl (assignee) {
+    public setAvatarUrl(assignee) {
         let avatar;
         if (!assignee) {
             return;
@@ -385,18 +391,18 @@ export class TaskPlannerComponent implements OnInit {
         } else {
             avatar = MEMBERS.find(m => m.login === assignee).avatarUrl;
         }
-        
+
         return avatar;
     }
 
-    public getValue(value){
+    public getValue(value) {
         let assigneeName;
         if (!value) {
             return;
         }
-        if (value.login){
+        if (value.login) {
             assigneeName = value.login;
-        }else {
+        } else {
             assigneeName = value;
         }
         return assigneeName;
@@ -426,9 +432,9 @@ export class TaskPlannerComponent implements OnInit {
      */
     public populateDataComponents(data: ITask[]) {
         const issues = data.filter(task => task.pullRequest === null).map(rec => this.parseDate(rec));
-        this.tasks = issues.filter(t => t.labels.filter(l => l.name.indexOf('status') === 0).length > 0);
+        this.tasks = issues.filter(t => t.labels.filter(l => l.name.includes('status')).length > 0);
         this.gridIsLoading = false;
-        this.unassignedTasks = issues.filter(t => t.labels.filter(l => l.name.indexOf('status') === 0 ).length === 0);
+        this.unassignedTasks = issues.filter(t => t.labels.filter(l => l.name.includes('status')).length === 0);
     }
 
     public emptyFieldMessage() {
@@ -449,13 +455,13 @@ export class TaskPlannerComponent implements OnInit {
                 this.editTaskDialog.open(this.dialogOverlaySettings);
                 break;
             }
-             case 'drag':
-             case 'release': {
+            case 'drag':
+            case 'release': {
                 this.editTaskForm = event.issue;
                 this.toggleGridBodyHighlight();
                 break;
-             }
-         }
+            }
+        }
     }
 
     public onDropContainerEnterLeave(event: IDropDroppedEventArgs) {
@@ -497,7 +503,7 @@ export class TaskPlannerComponent implements OnInit {
         const pipeArgs = cell.column.pipeArgs;
         const deadline = new Date(cell.row.data);
         deadline.setMonth(deadline.getMonth() + 3);
-        const val = cell.grid.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
+        const val = this.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
         console.log(val);
         return val;
     }
@@ -614,11 +620,11 @@ export class TaskPlannerComponent implements OnInit {
 /** Sorting strategy for year quarters. */
 export class MilestoneSortingStrategy extends DefaultSortingStrategy {
     protected compareObjects(obj1: ITask,
-                             obj2: ITask,
-                             key: string,
-                             reverse: number,
-                             ignoreCase: boolean,
-                             valueResolver: (obj: any, key: string) => string) {
+        obj2: ITask,
+        key: string,
+        reverse: number,
+        ignoreCase: boolean,
+        valueResolver: (obj: any, key: string) => string) {
         const objA = obj1[key].split(' ');
         const objB = obj2[key].split(' ');
         const yearA = objA[1];
@@ -637,9 +643,9 @@ export class MilestoneSortingStrategy extends DefaultSortingStrategy {
 /** Sorting strategy for progress column. */
 export class ProgressSortingStrategy extends DefaultSortingStrategy {
     protected compareObjects(obj1: ITask,
-                             obj2: ITask,
-                             key: string,
-                             reverse: number) {
+        obj2: ITask,
+        key: string,
+        reverse: number) {
         const progressA = calcProgress(obj1);
         const progressB = calcProgress(obj2);
 
@@ -650,9 +656,9 @@ export class ProgressSortingStrategy extends DefaultSortingStrategy {
 /** Sorting strategy for Status column. */
 export class StatusSortingStrategy extends DefaultSortingStrategy {
     protected compareObjects(obj1: ITask,
-                             obj2: ITask,
-                             key: string,
-                             reverse: number) {
+        obj2: ITask,
+        key: string,
+        reverse: number) {
         const pipe = new StatusLabelPipe();
         const statusA = pipe.transform(obj1.labels);
         const statusB = pipe.transform(obj2.labels);
@@ -673,7 +679,7 @@ export class LabelsFilteringStrategy extends FilteringStrategy {
             val = new PriorityLabelPipe().transform(rec);
         }
         return cond.logic(val, expr.searchVal, expr.ignoreCase);
-      }
+    }
 }
 
 

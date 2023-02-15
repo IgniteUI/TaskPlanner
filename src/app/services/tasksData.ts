@@ -1,10780 +1,7572 @@
 // tslint:disable:max-line-length
-export const MEMBERS = [
-    {
-       id: 1472513,
-       avatarUrl: 'https://avatars3.githubusercontent.com/u/1472513?v=4',
-       login: 'kdinev',
-       email: null,
-       url: 'https://github.com/kdinev'
-    },
-    {
-       id: 1702064,
-       avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-       login: 'StefanIvanov',
-       email: null,
-       url: 'https://github.com/StefanIvanov'
-    },
-    {
-       id: 2188411,
-       avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-       login: 'ChronosSF',
-       email: null,
-       url: 'https://github.com/ChronosSF'
-    },
-    {
-       id: 2621802,
-       avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-       login: 'Lipata',
-       email: null,
-       url: 'https://github.com/Lipata'
-    },
-    {
-       id: 2778393,
-       avatarUrl: 'https://avatars2.githubusercontent.com/u/2778393?v=4',
-       login: 'dafo',
-       email: null,
-       url: 'https://github.com/dafo'
-    },
-    {
-       id: 3198469,
-       avatarUrl: 'https://avatars1.githubusercontent.com/u/3198469?v=4',
-       login: 'damyanpetev',
-       email: null,
-       url: 'https://github.com/damyanpetev'
-    },
-    {
-       id: 3768136,
-       avatarUrl: 'https://avatars2.githubusercontent.com/u/3768136?v=4',
-       login: 'skrustev',
-       email: null,
-       url: 'https://github.com/skrustev'
-    },
-    {
-       id: 4118303,
-       avatarUrl: 'https://avatars0.githubusercontent.com/u/4118303?v=4',
-       login: 'simeonoff',
-       email: null,
-       url: 'https://github.com/simeonoff'
-    },
-    {
-       id: 4296944,
-       avatarUrl: 'https://avatars1.githubusercontent.com/u/4296944?v=4',
-       login: 'IvayloG',
-       email: null,
-       url: 'https://github.com/IvayloG'
-    },
-    {
-       id: 5990334,
-       avatarUrl: 'https://avatars3.githubusercontent.com/u/5990334?v=4',
-       login: 'wnvko',
-       email: null,
-       url: 'https://github.com/wnvko'
-    },
-    {
-       id: 7037740,
-       avatarUrl: 'https://avatars0.githubusercontent.com/u/7037740?v=4',
-       login: 'Aleksandyr',
-       email: null,
-       url: 'https://github.com/Aleksandyr'
-    },
-    {
-       id: 9549439,
-       avatarUrl: 'https://avatars1.githubusercontent.com/u/9549439?v=4',
-       login: 'valadzhov',
-       email: null,
-       url: 'https://github.com/valadzhov'
-    },
-    {
-       id: 11193764,
-       avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-       login: 'zdrawku',
-       email: null,
-       url: 'https://github.com/zdrawku'
-    },
-    {
-       id: 14248932,
-       avatarUrl: 'https://avatars0.githubusercontent.com/u/14248932?v=4',
-       login: 'hanastasov',
-       email: null,
-       url: 'https://github.com/hanastasov'
-    },
-    {
-       id: 16817847,
-       avatarUrl: 'https://avatars3.githubusercontent.com/u/16817847?v=4',
-       login: 'gedinakova',
-       email: null,
-       url: 'https://github.com/gedinakova'
-    },
-    {
-       id: 19392175,
-       avatarUrl: 'https://avatars3.githubusercontent.com/u/19392175?v=4',
-       login: 'onlyexeption',
-       email: null,
-       url: 'https://github.com/onlyexeption'
-    },
-    {
-       id: 20106115,
-       avatarUrl: 'https://avatars3.githubusercontent.com/u/20106115?v=4',
-       login: 'rkaraivanov',
-       email: null,
-       url: 'https://github.com/rkaraivanov'
-    },
-    {
-       id: 21260963,
-       avatarUrl: 'https://avatars2.githubusercontent.com/u/21260963?v=4',
-       login: 'desig9stein',
-       email: null,
-       url: 'https://github.com/desig9stein'
-    },
-    {
-       id: 25771040,
-       avatarUrl: 'https://avatars1.githubusercontent.com/u/25771040?v=4',
-       login: 'HristoP96',
-       email: null,
-       url: 'https://github.com/HristoP96'
-    },
-    {
-       id: 34240583,
-       avatarUrl: 'https://avatars1.githubusercontent.com/u/34240583?v=4',
-       login: 'ddincheva',
-       email: null,
-       url: 'https://github.com/ddincheva'
-    },
-    {
-       id: 43128948,
-       avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-       login: 'DiyanDimitrov',
-       email: null,
-       url: 'https://github.com/DiyanDimitrov'
-    },
-    {
-       id: 52001020,
-       avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-       login: 'radomirchev',
-       email: null,
-       url: 'https://github.com/radomirchev'
-    }
- ];
+export const MEMBERS = [{
+	id: 17785923,
+	avatarUrl: "https://avatars.githubusercontent.com/u/17785923?v=4",
+	login: "mddifilippo89",
+	email: null,
+	url: "https://api.github.com/users/mddifilippo89"
+}, {
+	id: 4118303,
+	avatarUrl: "https://avatars.githubusercontent.com/u/4118303?v=4",
+	login: "simeonoff",
+	email: null,
+	url: "https://api.github.com/users/simeonoff"
+}, {
+	id: 15327632,
+	avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+	login: "sdimchevski",
+	email: null,
+	url: "https://api.github.com/users/sdimchevski"
+}, {
+	id: 1182001,
+	avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+	login: "dkamburov",
+	email: null,
+	url: "https://api.github.com/users/dkamburov"
+}, {
+	id: 49060557,
+	avatarUrl: "https://avatars.githubusercontent.com/u/49060557?v=4",
+	login: "igdmdimitrov",
+	email: null,
+	url: "https://api.github.com/users/igdmdimitrov"
+}, {
+	id: 52001020,
+	avatarUrl: "https://avatars.githubusercontent.com/u/52001020?v=4",
+	login: "radomirchev",
+	email: null,
+	url: "https://api.github.com/users/radomirchev"
+}, {
+	id: 2621802,
+	avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+	login: "Lipata",
+	email: null,
+	url: "https://api.github.com/users/Lipata"
+}, {
+	id: 59446295,
+	avatarUrl: "https://avatars.githubusercontent.com/u/59446295?v=4",
+	login: "SisIvanova",
+	email: null,
+	url: "https://api.github.com/users/SisIvanova"
+}, {
+	id: 48180072,
+	avatarUrl: "https://avatars.githubusercontent.com/u/48180072?v=4",
+	login: "georgianastasov",
+	email: null,
+	url: "https://api.github.com/users/georgianastasov"
+}, {
+	id: 54146583,
+	avatarUrl: "https://avatars.githubusercontent.com/u/54146583?v=4",
+	login: "randriova",
+	email: null,
+	url: "https://api.github.com/users/randriova"
+}, {
+	id: 47036441,
+	avatarUrl: "https://avatars.githubusercontent.com/u/47036441?v=4",
+	login: "MonikaKirkova",
+	email: null,
+	url: "https://api.github.com/users/MonikaKirkova"
+}, {
+	id: 34240583,
+	avatarUrl: "https://avatars.githubusercontent.com/u/34240583?v=4",
+	login: "ddincheva",
+	email: null,
+	url: "https://api.github.com/users/ddincheva"
+}, {
+	id: 35433937,
+	avatarUrl: "https://avatars.githubusercontent.com/u/35433937?v=4",
+	login: "ddaribo",
+	email: null,
+	url: "https://api.github.com/users/ddaribo"
+}, {
+	id: 16020256,
+	avatarUrl: "https://avatars.githubusercontent.com/u/16020256?v=4",
+	login: "jackofdiamond5",
+	email: null,
+	url: "https://api.github.com/users/jackofdiamond5"
+}, {
+	id: 21260963,
+	avatarUrl: "https://avatars.githubusercontent.com/u/21260963?v=4",
+	login: "desig9stein",
+	email: null,
+	url: "https://api.github.com/users/desig9stein"
+}, {
+	id: 14248932,
+	avatarUrl: "https://avatars.githubusercontent.com/u/14248932?v=4",
+	login: "hanastasov",
+	email: null,
+	url: "https://api.github.com/users/hanastasov"
+}, {
+	id: 2188411,
+	avatarUrl: "https://avatars.githubusercontent.com/u/2188411?v=4",
+	login: "ChronosSF",
+	email: null,
+	url: "https://api.github.com/users/ChronosSF"
+}, {
+	id: 11231206,
+	avatarUrl: "https://avatars.githubusercontent.com/u/11231206?v=4",
+	login: "mtsvyatkova",
+	email: null,
+	url: "https://api.github.com/users/mtsvyatkova"
+}, {
+	id: 49126110,
+	avatarUrl: "https://avatars.githubusercontent.com/u/49126110?v=4",
+	login: "RivaIvanova",
+	email: null,
+	url: "https://api.github.com/users/RivaIvanova"
+}, {
+	id: 4264873,
+	avatarUrl: "https://avatars.githubusercontent.com/u/4264873?v=4",
+	login: "gmurray81",
+	email: null,
+	url: "https://api.github.com/users/gmurray81"
+}, {
+	id: 16817847,
+	avatarUrl: "https://avatars.githubusercontent.com/u/16817847?v=4",
+	login: "gedinakova",
+	email: null,
+	url: "https://api.github.com/users/gedinakova"
+}, {
+	id: 46093564,
+	avatarUrl: "https://avatars.githubusercontent.com/u/46093564?v=4",
+	login: "dobromirts",
+	email: null,
+	url: "https://api.github.com/users/dobromirts"
+}, {
+	id: 9549439,
+	avatarUrl: "https://avatars.githubusercontent.com/u/9549439?v=4",
+	login: "valadzhov",
+	email: null,
+	url: "https://api.github.com/users/valadzhov"
+}, {
+	id: 20106115,
+	avatarUrl: "https://avatars.githubusercontent.com/u/20106115?v=4",
+	login: "rkaraivanov",
+	email: null,
+	url: "https://api.github.com/users/rkaraivanov"
+}, {
+	id: 1472513,
+	avatarUrl: "https://avatars.githubusercontent.com/u/1472513?v=4",
+	login: "kdinev",
+	email: null,
+	url: "https://api.github.com/users/kdinev"
+}];
 
 const TASKS_DATA = [
-    {
-      id: 5121,
-      milestone: 'Q1 2020',
-      title: '[igx-combo] Expose combo overlay settings combo enhancement feature-request status: in-review version: 8.0.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {},
-      created_by: 'phoenix@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 17,
-      hours_spent: 0
-    },
-    {
-      id: 5122,
-      milestone: 'Q4 2019',
-      title: '[igxForOf] Automatically recalc chunkSize on [itemSize] change or provide method to do so enhancement feature-request status: resolved version: 7.3.x version: 8.0.x virtualization',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'Done',
-      assignee: {
-        id: 2,
-        login: 'Burgess Austin',
-        sex: 'male',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/men/1.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-09-02T15:06:23.809Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 44,
-      hours_spent: 44
-    },
-    {
-      id: 5123,
-      milestone: 'Q1 2020',
-      title: '[igxForOf] Expose `even` and `odd` local variables in `igxForOf` template enhancement feature-request severity: low status: resolved virtualization',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'New',
-      assignee: {},
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 10,
-      hours_spent: 0
-    },
-    {
-      id: 5124,
-      milestone: 'Q1 2020',
-      title: '[igx-grid] capability to prevent from moving columns to pinned area. feature-request grid pinning priority: high status: resolved version: 7.3.x version: 8.0.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 15,
-        login: 'George Parker',
-        sex: 'male',
-        team: 'Design & UX',
-        avatarUrl:  'assets/images/men/8.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 46,
-      hours_spent: 0
-    },
-    {
-      id: 5125,
-      milestone: 'Q2 2020',
-      title: '[igx-grid] expose grid.verticalScrollContainer.igxForOf as dataView property feature-request grid status: resolved version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 5,
-        login: 'Rush Christensen',
-        sex: 'male',
-        team: 'PwnJs',
-        avatarUrl:  'assets/images/men/2.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 23,
-      hours_spent: 0
-    },
-    {
-      id: 5126,
-      milestone: 'Q1 2020',
-      title: '[igx-nav-drawer][Sass] $border-radius doesnt change igxDrawerItem roundness. documentation feature-request nav-drawer sassdoc status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: true,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'In Progress',
-      assignee: {},
-      created_by: 'phoenix@infragistics.com',
-      started_on: '2020-02-07T05:57:35.669Z',
-      deadline: '2020-03-24T00:15:42.825Z',
-      estimation: 29,
-      hours_spent: 17
-    },
-    {
-      id: 5127,
-      milestone: 'Q4 2019',
-      title: ' Access all data when calculating summary per column feature-request grid status: resolved summaries',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {
-        id: 16,
-        login: 'Melanie Richmond',
-        sex: 'female',
-        team: 'Design & UX',
-        avatarUrl:  'assets/images/women/6.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-10-06T09:52:16.281Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 43,
-      hours_spent: 43
-    },
-    {
-      id: 5128,
-      milestone: 'Q1 2020',
-      title: 'Add member path to make CharSeparatedValueData more customizable. exporters feature-request status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: false,
-        builds: true
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'In Progress',
-      assignee: {
-        id: 9,
-        login: 'Juana Roth',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/4.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-11-07T09:45:26.405Z',
-      deadline: '2019-12-17T08:38:47.552Z',
-      estimation: 34,
-      hours_spent: 13
-    },
-    {
-      id: 5129,
-      milestone: 'Q1 2020',
-      title: 'Add remote data for Excel filter excel-style-filtering feature-request priority: high status: resolved version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'In Progress',
-      assignee: {},
-      created_by: 'phoenix@infragistics.com',
-      started_on: '2019-12-13T18:30:29.913Z',
-      deadline: '2020-02-16T21:38:22.970Z',
-      estimation: 7,
-      hours_spent: 0
-    },
-    {
-      id: 5130,
-      milestone: 'Q2 2020',
-      title: 'Add tics to <igx-slider> control feature-request size: L slider status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 13,
-        login: 'Cantrell Drake',
-        sex: 'male',
-        team: 'CodeX',
-        avatarUrl:  'assets/images/men/6.jpg'
-      },
-      created_by: 'phoenix@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 8,
-      hours_spent: 0
-    },
-    {
-      id: 5131,
-      milestone: 'Q1 2020',
-      title: 'Advanced filtering Styling feature-request',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 8,
-        login: 'Fischer Luna',
-        sex: 'female',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/women/3.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 57,
-      hours_spent: 0
-    },
-    {
-      id: 5132,
-      milestone: 'Q4 2019',
-      title: 'Allow to expand all rows in hierach grid feature-request hierarchical-grid status: resolved version: 8.1.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'Done',
-      assignee: {
-        id: 11,
-        login: 'Victoria Wiggins',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/5.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-09-15T01:15:55.987Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 43,
-      hours_spent: 43
-    },
-    {
-      id: 5133,
-      milestone: 'Q4 2019',
-      title: 'Be able to apply styling to a specific list item feature-request list status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'Done',
-      assignee: {
-        id: 4,
-        login: 'Cynthia Robertson',
-        sex: 'female',
-        team: 'PwnJS',
-        avatarUrl:  'assets/images/women/1.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-09-11T02:17:50.687Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 8,
-      hours_spent: 8
-    },
-    {
-      id: 5134,
-      milestone: 'Q4 2019',
-      title: 'Change CSS Style of Grid Buttons feature-request grid-toolbar status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'Done',
-      assignee: {
-        id: 14,
-        login: 'Joan Rich',
-        sex: 'male',
-        team: 'CodeX',
-        avatarUrl:  'assets/images/men/7.jpg'
-      },
-      created_by: 'phoenix@infragistics.com',
-      started_on: '2019-10-30T00:43:11.377Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 10,
-      hours_spent: 10
-    },
-    {
-      id: 5135,
-      milestone: 'Q2 2020',
-      title: 'Change date pickers mode to dropdown in all filtering UIs. feature-request filtering severity: high status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'New',
-      assignee: {
-        id: 6,
-        login: 'Lillie Moreno',
-        sex: 'female',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/women/2.jpg'
-      },
-      created_by: 'phoenix@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 21,
-      hours_spent: 0
-    },
-    {
-      id: 5136,
-      milestone: 'Q1 2020',
-      title: 'Change IgxCombo to use AutoPositioningStrategy combo enhancement feature-request version: 8.0.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 2,
-        login: 'Burgess Austin',
-        sex: 'male',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/men/1.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 21,
-      hours_spent: 0
-    },
-    {
-      id: 5137,
-      milestone: 'Q2 2020',
-      title: 'Checkbox readonly property support checkbox feature-request severity: medium status: resolved version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 5,
-        login: 'Rush Christensen',
-        sex: 'male',
-        team: 'PwnJs',
-        avatarUrl:  'assets/images/men/2.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 45,
-      hours_spent: 0
-    },
-    {
-      id: 5138,
-      milestone: 'Q4 2019',
-      title: 'Combo control missing required property combo feature-request severity: medium status: resolved version: 8.0.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {
-        id: 2,
-        login: 'Burgess Austin',
-        sex: 'male',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/men/1.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-09-19T09:18:10.369Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 21,
-      hours_spent: 21
-    },
-    {
-      id: 5139,
-      milestone: 'Q1 2020',
-      title: 'Completing filter in the filtering row enhancement feature-request filtering status: resolved version: 7.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 6,
-        login: 'Lillie Moreno',
-        sex: 'female',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/women/2.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 20,
-      hours_spent: 0
-    },
-    {
-      id: 5140,
-      milestone: 'Q2 2020',
-      title: 'Create paginator component and custom footer for grids feature-request grid status: resolved version: 8.1.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 11,
-        login: 'Victoria Wiggins',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/5.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 34,
-      hours_spent: 0
-    },
-    {
-      id: 5141,
-      milestone: 'Q4 2019',
-      title: 'Custom footer in igxgrid feature-request grid status: in-review',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'Done',
-      assignee: {
-        id: 11,
-        login: 'Victoria Wiggins',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/5.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: '2019-11-25T01:06:46.059Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 11,
-      hours_spent: 11
-    },
-    {
-      id: 5142,
-      milestone: 'Q4 2019',
-      title: 'Custom scroll container for igxGrid feature-request grid virtualization',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'Done',
-      assignee: {
-        id: 4,
-        login: 'Cynthia Robertson',
-        sex: 'female',
-        team: 'PwnJS',
-        avatarUrl:  'assets/images/women/1.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-12-06T22:24:43.181Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 19,
-      hours_spent: 19
-    },
-    {
-      id: 5143,
-      milestone: 'Q4 2019',
-      title: 'Custom template for row selection checkbox Epic feature-request grid hierarchical-grid row-selection status: resolved tree-grid version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'Done',
-      assignee: {
-        id: 14,
-        login: 'Joan Rich',
-        sex: 'male',
-        team: 'CodeX',
-        avatarUrl:  'assets/images/men/7.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-11-24T09:21:18.534Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 7,
-      hours_spent: 7
-    },
-    {
-      id: 5144,
-      milestone: 'Q2 2020',
-      title: 'Disable client side filtering when using remote filtering feature-request filtering grid',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {},
-      created_by: 'phoenix@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 42,
-      hours_spent: 0
-    },
-    {
-      id: 5145,
-      milestone: 'Q1 2020',
-      title: 'Drag and Drop the selected row in igx-grid drag-drop feature-request grid',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: true,
-        builds: false
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'In Progress',
-      assignee: {
-        id: 11,
-        login: 'Victoria Wiggins',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/5.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: '2019-12-01T13:57:10.773Z',
-      deadline: '2020-01-05T18:25:29.077Z',
-      estimation: 8,
-      hours_spent: 1
-    },
-    {
-      id: 5146,
-      milestone: 'Q4 2019',
-      title: 'Drop indicators between grid rows drag-drop feature-request version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'Done',
-      assignee: {
-        id: 8,
-        login: 'Fischer Luna',
-        sex: 'female',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/women/3.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-12-17T02:56:10.458Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 3,
-      hours_spent: 3
-    },
-    {
-      id: 5147,
-      milestone: 'Q1 2020',
-      title: 'Enhance keyboard navigations API feature-request grid keyboard-navigation status: resolved version: 7.2.x version: 7.3.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'In Progress',
-      assignee: {
-        id: 2,
-        login: 'Burgess Austin',
-        sex: 'male',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/men/1.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: '2019-11-25T15:17:37.226Z',
-      deadline: '2019-12-01T23:13:35.914Z',
-      estimation: 40,
-      hours_spent: 38
-    },
-    {
-      id: 5148,
-      milestone: 'Q2 2020',
-      title: 'Excel Style Filtering - changes in the ESF dialog when opening after previous filtering excel-style-filtering feature-request grid severity: medium version: 7.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'New',
-      assignee: {
-        id: 4,
-        login: 'Cynthia Robertson',
-        sex: 'female',
-        team: 'PwnJS',
-        avatarUrl:  'assets/images/women/1.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 17,
-      hours_spent: 0
-    },
-    {
-      id: 5149,
-      milestone: 'Q2 2020',
-      title: 'Feature Request: Improve List Item Templates feature-request list status: in-development version: 7.3.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'New',
-      assignee: {
-        id: 2,
-        login: 'Burgess Austin',
-        sex: 'male',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/men/1.jpg'
-      },
-      created_by: 'phoenix@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 24,
-      hours_spent: 0
-    },
-    {
-      id: 5150,
-      milestone: 'Q1 2020',
-      title: 'Font-sizes in ESF do not match the font-size of the respective grid excel-style-filtering feature-request grid hierarchical-grid severity: medium status: resolved styling tree-grid version: 7.2.x version: 7.3.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: true,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 6,
-        login: 'Lillie Moreno',
-        sex: 'female',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/women/2.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 12,
-      hours_spent: 0
-    },
-    {
-      id: 5151,
-      milestone: 'Q2 2020',
-      title: 'Grid Multi Row Layout feature feature-request grid multi-row-layout status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 3,
-        login: 'Alisa Aguirre',
-        sex: 'female',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/women/0.jpg'
-      },
-      created_by: 'phoenix@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 5,
-      hours_spent: 0
-    },
-    {
-      id: 5152,
-      milestone: 'Q2 2020',
-      title: 'Grid selection issues Epic feature-request grid multi-cell-selection priority: high row-selection selection status: resolved version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'New',
-      assignee: {
-        id: 4,
-        login: 'Cynthia Robertson',
-        sex: 'female',
-        team: 'PwnJS',
-        avatarUrl:  'assets/images/women/1.jpg'
-      },
-      created_by: 'phoenix@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 56,
-      hours_spent: 0
-    },
-    {
-      id: 5153,
-      milestone: 'Q1 2020',
-      title: 'Hide expansion indicator in hierarchical grid if no data found feature-request hierarchical-grid status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'In Progress',
-      assignee: {
-        id: 4,
-        login: 'Cynthia Robertson',
-        sex: 'female',
-        team: 'PwnJS',
-        avatarUrl:  'assets/images/women/1.jpg'
-      },
-      created_by: 'phoenix@infragistics.com',
-      started_on: '2019-11-19T10:33:10.405Z',
-      deadline: '2020-03-20T18:24:53.968Z',
-      estimation: 36,
-      hours_spent: 31
-    },
-    {
-      id: 5154,
-      milestone: 'Q2 2020',
-      title: 'Hierarchical Grid child (row island) events feature-request hierarchical-grid status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'New',
-      assignee: {},
-      created_by: 'powner@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 6,
-      hours_spent: 0
-    },
-    {
-      id: 5155,
-      milestone: 'Q4 2019',
-      title: 'igx-carousel animated slides carousel feature-request status: resolved version: 9.0.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {
-        id: 14,
-        login: 'Joan Rich',
-        sex: 'male',
-        team: 'CodeX',
-        avatarUrl:  'assets/images/men/7.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-11-26T22:44:22.989Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 7,
-      hours_spent: 7
-    },
-    {
-      id: 5156,
-      milestone: 'Q1 2020',
-      title: 'IgxDrop doesnt expose any coordinates drag-drop feature-request status: resolved version: 7.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'In Progress',
-      assignee: {
-        id: 6,
-        login: 'Lillie Moreno',
-        sex: 'female',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/women/2.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-12-27T16:00:01.799Z',
-      deadline: '2020-03-24T15:16:27.172Z',
-      estimation: 44,
-      hours_spent: 27
-    },
-    {
-      id: 5157,
-      milestone: 'Q1 2020',
-      title: 'IgxDrop doesnt expose any coordinates; drag - drop; feature - request; status: resolved; version: 7.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'In Progress',
-      assignee: {
-        id: 6,
-        login: 'Lillie Moreno',
-        sex: 'female',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/women/2.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-11-30T07:31:28.058Z',
-      deadline: '2020-02-24T14:14:06.620Z',
-      estimation: 24,
-      hours_spent: 12
-    },
-    {
-      id: 5158,
-      milestone: 'Q1 2020',
-      title: 'IgxGrid Advanced filtering Epic feature-request filtering grid status: resolved version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'In Progress',
-      assignee: {
-        id: 11,
-        login: 'Victoria Wiggins',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/5.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-12-27T19:17:20.020Z',
-      deadline: '2020-03-23T20:19:19.403Z',
-      estimation: 29,
-      hours_spent: 22
-    },
-    {
-      id: 5159,
-      milestone: 'Q4 2019',
-      title: 'IgxGrid isLoading needs data reset to work properly feature-request grid status: resolved version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {
-        id: 3,
-        login: 'Alisa Aguirre',
-        sex: 'female',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/women/0.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-10-02T05:15:50.862Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 40,
-      hours_spent: 40
-    },
-    {
-      id: 5160,
-      milestone: 'Q1 2020',
-      title: 'igx-grid multi-selection data should be put in the clipboard on copy feature-request grid hierarchical-grid multi-cell-selection status: resolved tree-grid version: 8.1.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: true
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'In Progress',
-      assignee: {
-        id: 7,
-        login: 'Guy Randolph',
-        sex: 'male',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/men/3.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-12-08T04:17:29.830Z',
-      deadline: '2020-02-20T14:24:12.061Z',
-      estimation: 20,
-      hours_spent: 10
-    },
-    {
-      id: 5161,
-      milestone: 'Q2 2020',
-      title: 'igx-slider update to match latest material guidelines feature-request status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 1,
-        login: 'Bass Fleming',
-        sex: 'male',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/men/0.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 21,
-      hours_spent: 0
-    },
-    {
-      id: 5162,
-      milestone: 'Q2 2020',
-      title: 'igxTabs and igxBottomNav should support router outlet bottom-nav feature-request status: resolved tabs',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 5,
-        login: 'Rush Christensen',
-        sex: 'male',
-        team: 'PwnJs',
-        avatarUrl:  'assets/images/men/2.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 47,
-      hours_spent: 0
-    },
-    {
-      id: 5163,
-      milestone: 'Q4 2019',
-      title: 'igx-tree-grid filter design customization feature-request filtering status: resolved theme tree-grid version: 7.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {
-        id: 8,
-        login: 'Fischer Luna',
-        sex: 'female',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/women/3.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: '2019-10-15T12:00:08.066Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 13,
-      hours_spent: 13
-    },
-    {
-      id: 5164,
-      milestone: 'Q1 2020',
-      title: 'Implement Display Density for the igxButton button feature-request status: resolved version: 7.3.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'In Progress',
-      assignee: {
-        id: 3,
-        login: 'Alisa Aguirre',
-        sex: 'female',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/women/0.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-12-30T14:02:03.941Z',
-      deadline: '2020-02-05T23:18:02.191Z',
-      estimation: 6,
-      hours_spent: 0
-    },
-    {
-      id: 5165,
-      milestone: 'Q4 2019',
-      title: 'Implement Display Density for the igxButtonGroup button button-group feature-request status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {
-        id: 13,
-        login: 'Cantrell Drake',
-        sex: 'male',
-        team: 'CodeX',
-        avatarUrl:  'assets/images/men/6.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-12-17T19:43:35.013Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 41,
-      hours_spent: 41
-    },
-    {
-      id: 5166,
-      milestone: 'Q1 2020',
-      title: 'Implement Display Density for the IgxDropDownComponent dropdown duplicate feature-request status: in-review',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 9,
-        login: 'Juana Roth',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/4.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 43,
-      hours_spent: 0
-    },
-    {
-      id: 5167,
-      milestone: 'Q2 2020',
-      title: 'Implement Display Density for the IgxList feature-request list status: resolved version: 7.3.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 7,
-        login: 'Guy Randolph',
-        sex: 'male',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/men/3.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 22,
-      hours_spent: 0
-    },
-    {
-      id: 5168,
-      milestone: 'Q1 2020',
-      title: 'Input content select on date selection/focus input date-picker feature-request status: resolved version: 8.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: true,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'In Progress',
-      assignee: {},
-      created_by: 'powner@infragistics.com',
-      started_on: '2020-01-25T16:26:10.049Z',
-      deadline: '2020-03-19T21:25:59.364Z',
-      estimation: 11,
-      hours_spent: 3
-    },
-    {
-      id: 5169,
-      milestone: 'Q2 2020',
-      title: 'Implementing a new theme based on Microsoft fluent design Epic Fluent-theme feature-request status: resolved theme version: 8.1.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'New',
-      assignee: {
-        id: 14,
-        login: 'Joan Rich',
-        sex: 'male',
-        team: 'CodeX',
-        avatarUrl:  'assets/images/men/7.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 58,
-      hours_spent: 0
-    },
-    {
-      id: 5170,
-      milestone: 'Q1 2020',
-      title: 'Introduce an input to set FilteringStrategy per column in IgxGrid Epic feature-request filtering grid status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'In Progress',
-      assignee: {
-        id: 2,
-        login: 'Burgess Austin',
-        sex: 'male',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/men/1.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: '2020-01-05T18:49:58.736Z',
-      deadline: '2020-02-26T11:48:01.305Z',
-      estimation: 17,
-      hours_spent: 0
-    },
-    {
-      id: 5171,
-      milestone: 'Q2 2020',
-      title: 'Multiview Calendar with Range Selection of Date Epic calendar feature-request status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'New',
-      assignee: {
-        id: 12,
-        login: 'Tami Yang',
-        sex: 'male',
-        team: 'CodeX',
-        avatarUrl:  'assets/images/men/5.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 11,
-      hours_spent: 0
-    },
-    {
-      id: 5172,
-      milestone: 'Q4 2019',
-      title: 'Narrower column width than 88px feature-request grid priority: high status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'Done',
-      assignee: {
-        id: 14,
-        login: 'Joan Rich',
-        sex: 'male',
-        team: 'CodeX',
-        avatarUrl:  'assets/images/men/7.jpg'
-      },
-      created_by: 'phoenix@infragistics.com',
-      started_on: '2019-10-07T21:10:09.659Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 6,
-      hours_spent: 6
-    },
-    {
-      id: 5173,
-      milestone: 'Q4 2019',
-      title: 'Need a scroll bar for igx-hierarchical-grid feature-request',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'Done',
-      assignee: {
-        id: 10,
-        login: 'Phill Rumsfeld',
-        sex: 'male',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/men/4.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: '2019-09-17T11:03:29.113Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 25,
-      hours_spent: 25
-    },
-    {
-      id: 5174,
-      milestone: 'Q2 2020',
-      title: 'Numeric editor mask and format feature-request mask-editor status: in-review version: 7.1.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 3,
-        login: 'Alisa Aguirre',
-        sex: 'female',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/women/0.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 13,
-      hours_spent: 0
-    },
-    {
-      id: 5175,
-      milestone: 'Q2 2020',
-      title: 'Provide a way to turn off the built-in filtering and sorting for remote scenarios feature-request filtering grid sorting status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 11,
-        login: 'Victoria Wiggins',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/5.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 43,
-      hours_spent: 0
-    },
-    {
-      id: 5176,
-      milestone: 'Q1 2020',
-      title: 'Pick up date from input - filtering row enhancement feature-request filtering status: resolved version: 7.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'New',
-      assignee: {},
-      created_by: 'phoenix@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 28,
-      hours_spent: 0
-    },
-    {
-      id: 5177,
-      milestone: 'Q1 2020',
-      title: 'Return normalize() for backwards compatibility feature-request status: resolved theme triage: blocking version: 7.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 3,
-        login: 'Alisa Aguirre',
-        sex: 'female',
-        team: 'Phoenix',
-        avatarUrl:  'assets/images/women/0.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 3,
-      hours_spent: 0
-    },
-    {
-      id: 5178,
-      milestone: 'Q2 2020',
-      title: 'Slider label is not correctly positioned in IE Epic browser: ie-11 feature-request slider status: resolved version: 8.1.4',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'High',
-      labels: 'New',
-      assignee: {
-        id: 15,
-        login: 'George Parker',
-        sex: 'male',
-        team: 'Design & UX',
-        avatarUrl:  'assets/images/men/8.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 59,
-      hours_spent: 0
-    },
-    {
-      id: 5179,
-      milestone: 'Q1 2020',
-      title: 'SummaryOperand with additional filter feature-request grid status: resolved summaries',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: true,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'New',
-      assignee: {
-        id: 9,
-        login: 'Juana Roth',
-        sex: 'female',
-        team: 'Samsara',
-        avatarUrl:  'assets/images/women/4.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: null,
-      deadline: '2020-03-30T21:00:00.000Z',
-      estimation: 60,
-      hours_spent: 0
-    },
-    {
-      id: 5180,
-      milestone: 'Q2 2020',
-      title: 'The igxChip does not have a way to disable animations on return. chip enhancement feature-request severity: medium status: resolved version: 7.3.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Normal',
-      labels: 'New',
-      assignee: {
-        id: 5,
-        login: 'Rush Christensen',
-        sex: 'male',
-        team: 'PwnJs',
-        avatarUrl:  'assets/images/men/2.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 7,
-      hours_spent: 0
-    },
-    {
-      id: 5181,
-      milestone: 'Q4 2019',
-      title: 'There is deprecation; warning for IgxDropDownItem isSelected but { no; } migration; dropdown; feature - request; migrations; triage: blocking',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {},
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-10-16T11:05:50.856Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 26,
-      hours_spent: 26
-    },
-    {
-      id: 5182,
-      milestone: 'Q4 2019',
-      title: 'Thin abstraction over grid feature-request grid status: resolved',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {
-        id: 16,
-        login: 'Melanie Richmond',
-        sex: 'female',
-        team: 'Design & UX',
-        avatarUrl:  'assets/images/women/6.jpg'
-      },
-      created_by: 'pwnjs@infragistics.com',
-      started_on: '2019-09-04T01:57:32.814Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 20,
-      hours_spent: 20
-    },
-    {
-      id: 5183,
-      milestone: 'Q2 2020',
-      title: 'TreeGrid Load On Demand feature-request status: resolved tree-grid',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'New',
-      assignee: {
-        id: 16,
-        login: 'Melanie Richmond',
-        sex: 'female',
-        team: 'Design & UX',
-        avatarUrl:  'assets/images/women/6.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 15,
-      hours_spent: 0
-    },
-    {
-      id: 5184,
-      milestone: 'Q2 2020',
-      title: 'Typedoc and Sassdoc themes separation documentation feature-request sassdoc status: resolved typedoc',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: false,
-        hasTests: false,
-        builds: false
-      },
-      isActive: true,
-      priority: 'Critical',
-      labels: 'New',
-      assignee: {
-        id: 7,
-        login: 'Guy Randolph',
-        sex: 'male',
-        team: 'Grinders',
-        avatarUrl:  'assets/images/men/3.jpg'
-      },
-      created_by: 'powner@infragistics.com',
-      started_on: null,
-      deadline: '2020-06-29T21:00:00.000Z',
-      estimation: 21,
-      hours_spent: 0
-    },
-    {
-      id: 5185,
-      milestone: 'Q4 2019',
-      title: 'Update AutoScrollStrategy to reposition elements outside NgZone browser: edge browser: ie-11 feature-request overlay severity: medium status: resolved version: 7.2.x',
-      details: '',
-      acceptance_criteria: {
-        hasAPI: true,
-        hasTests: true,
-        builds: true
-      },
-      isActive: true,
-      priority: 'Low',
-      labels: 'Done',
-      assignee: {
-        id: 15,
-        login: 'George Parker',
-        sex: 'male',
-        team: 'Design & UX',
-        avatarUrl:  'assets/images/men/8.jpg'
-      },
-      created_by: 'manager@infragistics.com',
-      started_on: '2019-09-21T04:30:41.484Z',
-      deadline: '2019-12-30T22:00:00.000Z',
-      estimation: 33,
-      hours_spent: 33
-    }
+	{
+		id: 5121,
+		milestone: 'Q1 2020',
+		title: '[igx-combo] Expose combo overlay settings combo enhancement feature-request status: in-review version: 8.0.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {},
+		created_by: 'phoenix@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 17,
+		hours_spent: 0
+	},
+	{
+		id: 5122,
+		milestone: 'Q4 2019',
+		title: '[igxForOf] Automatically recalc chunkSize on [itemSize] change or provide method to do so enhancement feature-request status: resolved version: 7.3.x version: 8.0.x virtualization',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'Done',
+		assignee: {
+			id: 2,
+			login: 'Burgess Austin',
+			sex: 'male',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/men/1.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-09-02T15:06:23.809Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 44,
+		hours_spent: 44
+	},
+	{
+		id: 5123,
+		milestone: 'Q1 2020',
+		title: '[igxForOf] Expose `even` and `odd` local variables in `igxForOf` template enhancement feature-request severity: low status: resolved virtualization',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'New',
+		assignee: {},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 10,
+		hours_spent: 0
+	},
+	{
+		id: 5124,
+		milestone: 'Q1 2020',
+		title: '[igx-grid] capability to prevent from moving columns to pinned area. feature-request grid pinning priority: high status: resolved version: 7.3.x version: 8.0.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 15,
+			login: 'George Parker',
+			sex: 'male',
+			team: 'Design & UX',
+			avatarUrl: 'assets/images/men/8.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 46,
+		hours_spent: 0
+	},
+	{
+		id: 5125,
+		milestone: 'Q2 2020',
+		title: '[igx-grid] expose grid.verticalScrollContainer.igxForOf as dataView property feature-request grid status: resolved version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 5,
+			login: 'Rush Christensen',
+			sex: 'male',
+			team: 'PwnJs',
+			avatarUrl: 'assets/images/men/2.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 23,
+		hours_spent: 0
+	},
+	{
+		id: 5126,
+		milestone: 'Q1 2020',
+		title: '[igx-nav-drawer][Sass] $border-radius doesnt change igxDrawerItem roundness. documentation feature-request nav-drawer sassdoc status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: true,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'In Progress',
+		assignee: {},
+		created_by: 'phoenix@infragistics.com',
+		started_on: '2020-02-07T05:57:35.669Z',
+		deadline: '2020-03-24T00:15:42.825Z',
+		estimation: 29,
+		hours_spent: 17
+	},
+	{
+		id: 5127,
+		milestone: 'Q4 2019',
+		title: ' Access all data when calculating summary per column feature-request grid status: resolved summaries',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {
+			id: 16,
+			login: 'Melanie Richmond',
+			sex: 'female',
+			team: 'Design & UX',
+			avatarUrl: 'assets/images/women/6.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-10-06T09:52:16.281Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 43,
+		hours_spent: 43
+	},
+	{
+		id: 5128,
+		milestone: 'Q1 2020',
+		title: 'Add member path to make CharSeparatedValueData more customizable. exporters feature-request status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: false,
+			builds: true
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'In Progress',
+		assignee: {
+			id: 9,
+			login: 'Juana Roth',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/4.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-11-07T09:45:26.405Z',
+		deadline: '2019-12-17T08:38:47.552Z',
+		estimation: 34,
+		hours_spent: 13
+	},
+	{
+		id: 5129,
+		milestone: 'Q1 2020',
+		title: 'Add remote data for Excel filter excel-style-filtering feature-request priority: high status: resolved version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'In Progress',
+		assignee: {},
+		created_by: 'phoenix@infragistics.com',
+		started_on: '2019-12-13T18:30:29.913Z',
+		deadline: '2020-02-16T21:38:22.970Z',
+		estimation: 7,
+		hours_spent: 0
+	},
+	{
+		id: 5130,
+		milestone: 'Q2 2020',
+		title: 'Add tics to <igx-slider> control feature-request size: L slider status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 13,
+			login: 'Cantrell Drake',
+			sex: 'male',
+			team: 'CodeX',
+			avatarUrl: 'assets/images/men/6.jpg'
+		},
+		created_by: 'phoenix@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 8,
+		hours_spent: 0
+	},
+	{
+		id: 5131,
+		milestone: 'Q1 2020',
+		title: 'Advanced filtering Styling feature-request',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 8,
+			login: 'Fischer Luna',
+			sex: 'female',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/women/3.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 57,
+		hours_spent: 0
+	},
+	{
+		id: 5132,
+		milestone: 'Q4 2019',
+		title: 'Allow to expand all rows in hierach grid feature-request hierarchical-grid status: resolved version: 8.1.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'Done',
+		assignee: {
+			id: 11,
+			login: 'Victoria Wiggins',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/5.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-09-15T01:15:55.987Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 43,
+		hours_spent: 43
+	},
+	{
+		id: 5133,
+		milestone: 'Q4 2019',
+		title: 'Be able to apply styling to a specific list item feature-request list status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'Done',
+		assignee: {
+			id: 4,
+			login: 'Cynthia Robertson',
+			sex: 'female',
+			team: 'PwnJS',
+			avatarUrl: 'assets/images/women/1.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-09-11T02:17:50.687Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 8,
+		hours_spent: 8
+	},
+	{
+		id: 5134,
+		milestone: 'Q4 2019',
+		title: 'Change CSS Style of Grid Buttons feature-request grid-toolbar status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'Done',
+		assignee: {
+			id: 14,
+			login: 'Joan Rich',
+			sex: 'male',
+			team: 'CodeX',
+			avatarUrl: 'assets/images/men/7.jpg'
+		},
+		created_by: 'phoenix@infragistics.com',
+		started_on: '2019-10-30T00:43:11.377Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 10,
+		hours_spent: 10
+	},
+	{
+		id: 5135,
+		milestone: 'Q2 2020',
+		title: 'Change date pickers mode to dropdown in all filtering UIs. feature-request filtering severity: high status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'New',
+		assignee: {
+			id: 6,
+			login: 'Lillie Moreno',
+			sex: 'female',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/women/2.jpg'
+		},
+		created_by: 'phoenix@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 21,
+		hours_spent: 0
+	},
+	{
+		id: 5136,
+		milestone: 'Q1 2020',
+		title: 'Change IgxCombo to use AutoPositioningStrategy combo enhancement feature-request version: 8.0.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 2,
+			login: 'Burgess Austin',
+			sex: 'male',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/men/1.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 21,
+		hours_spent: 0
+	},
+	{
+		id: 5137,
+		milestone: 'Q2 2020',
+		title: 'Checkbox readonly property support checkbox feature-request severity: medium status: resolved version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 5,
+			login: 'Rush Christensen',
+			sex: 'male',
+			team: 'PwnJs',
+			avatarUrl: 'assets/images/men/2.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 45,
+		hours_spent: 0
+	},
+	{
+		id: 5138,
+		milestone: 'Q4 2019',
+		title: 'Combo control missing required property combo feature-request severity: medium status: resolved version: 8.0.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {
+			id: 2,
+			login: 'Burgess Austin',
+			sex: 'male',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/men/1.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-09-19T09:18:10.369Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 21,
+		hours_spent: 21
+	},
+	{
+		id: 5139,
+		milestone: 'Q1 2020',
+		title: 'Completing filter in the filtering row enhancement feature-request filtering status: resolved version: 7.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 6,
+			login: 'Lillie Moreno',
+			sex: 'female',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/women/2.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 20,
+		hours_spent: 0
+	},
+	{
+		id: 5140,
+		milestone: 'Q2 2020',
+		title: 'Create paginator component and custom footer for grids feature-request grid status: resolved version: 8.1.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 11,
+			login: 'Victoria Wiggins',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/5.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 34,
+		hours_spent: 0
+	},
+	{
+		id: 5141,
+		milestone: 'Q4 2019',
+		title: 'Custom footer in igxgrid feature-request grid status: in-review',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'Done',
+		assignee: {
+			id: 11,
+			login: 'Victoria Wiggins',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/5.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: '2019-11-25T01:06:46.059Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 11,
+		hours_spent: 11
+	},
+	{
+		id: 5142,
+		milestone: 'Q4 2019',
+		title: 'Custom scroll container for igxGrid feature-request grid virtualization',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'Done',
+		assignee: {
+			id: 4,
+			login: 'Cynthia Robertson',
+			sex: 'female',
+			team: 'PwnJS',
+			avatarUrl: 'assets/images/women/1.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-12-06T22:24:43.181Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 19,
+		hours_spent: 19
+	},
+	{
+		id: 5143,
+		milestone: 'Q4 2019',
+		title: 'Custom template for row selection checkbox Epic feature-request grid hierarchical-grid row-selection status: resolved tree-grid version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'Done',
+		assignee: {
+			id: 14,
+			login: 'Joan Rich',
+			sex: 'male',
+			team: 'CodeX',
+			avatarUrl: 'assets/images/men/7.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-11-24T09:21:18.534Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 7,
+		hours_spent: 7
+	},
+	{
+		id: 5144,
+		milestone: 'Q2 2020',
+		title: 'Disable client side filtering when using remote filtering feature-request filtering grid',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {},
+		created_by: 'phoenix@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 42,
+		hours_spent: 0
+	},
+	{
+		id: 5145,
+		milestone: 'Q1 2020',
+		title: 'Drag and Drop the selected row in igx-grid drag-drop feature-request grid',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: true,
+			builds: false
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'In Progress',
+		assignee: {
+			id: 11,
+			login: 'Victoria Wiggins',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/5.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: '2019-12-01T13:57:10.773Z',
+		deadline: '2020-01-05T18:25:29.077Z',
+		estimation: 8,
+		hours_spent: 1
+	},
+	{
+		id: 5146,
+		milestone: 'Q4 2019',
+		title: 'Drop indicators between grid rows drag-drop feature-request version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'Done',
+		assignee: {
+			id: 8,
+			login: 'Fischer Luna',
+			sex: 'female',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/women/3.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-12-17T02:56:10.458Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 3,
+		hours_spent: 3
+	},
+	{
+		id: 5147,
+		milestone: 'Q1 2020',
+		title: 'Enhance keyboard navigations API feature-request grid keyboard-navigation status: resolved version: 7.2.x version: 7.3.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'In Progress',
+		assignee: {
+			id: 2,
+			login: 'Burgess Austin',
+			sex: 'male',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/men/1.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: '2019-11-25T15:17:37.226Z',
+		deadline: '2019-12-01T23:13:35.914Z',
+		estimation: 40,
+		hours_spent: 38
+	},
+	{
+		id: 5148,
+		milestone: 'Q2 2020',
+		title: 'Excel Style Filtering - changes in the ESF dialog when opening after previous filtering excel-style-filtering feature-request grid severity: medium version: 7.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'New',
+		assignee: {
+			id: 4,
+			login: 'Cynthia Robertson',
+			sex: 'female',
+			team: 'PwnJS',
+			avatarUrl: 'assets/images/women/1.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 17,
+		hours_spent: 0
+	},
+	{
+		id: 5149,
+		milestone: 'Q2 2020',
+		title: 'Feature Request: Improve List Item Templates feature-request list status: in-development version: 7.3.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'New',
+		assignee: {
+			id: 2,
+			login: 'Burgess Austin',
+			sex: 'male',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/men/1.jpg'
+		},
+		created_by: 'phoenix@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 24,
+		hours_spent: 0
+	},
+	{
+		id: 5150,
+		milestone: 'Q1 2020',
+		title: 'Font-sizes in ESF do not match the font-size of the respective grid excel-style-filtering feature-request grid hierarchical-grid severity: medium status: resolved styling tree-grid version: 7.2.x version: 7.3.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: true,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 6,
+			login: 'Lillie Moreno',
+			sex: 'female',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/women/2.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 12,
+		hours_spent: 0
+	},
+	{
+		id: 5151,
+		milestone: 'Q2 2020',
+		title: 'Grid Multi Row Layout feature feature-request grid multi-row-layout status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 3,
+			login: 'Alisa Aguirre',
+			sex: 'female',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/women/0.jpg'
+		},
+		created_by: 'phoenix@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 5,
+		hours_spent: 0
+	},
+	{
+		id: 5152,
+		milestone: 'Q2 2020',
+		title: 'Grid selection issues Epic feature-request grid multi-cell-selection priority: high row-selection selection status: resolved version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'New',
+		assignee: {
+			id: 4,
+			login: 'Cynthia Robertson',
+			sex: 'female',
+			team: 'PwnJS',
+			avatarUrl: 'assets/images/women/1.jpg'
+		},
+		created_by: 'phoenix@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 56,
+		hours_spent: 0
+	},
+	{
+		id: 5153,
+		milestone: 'Q1 2020',
+		title: 'Hide expansion indicator in hierarchical grid if no data found feature-request hierarchical-grid status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'In Progress',
+		assignee: {
+			id: 4,
+			login: 'Cynthia Robertson',
+			sex: 'female',
+			team: 'PwnJS',
+			avatarUrl: 'assets/images/women/1.jpg'
+		},
+		created_by: 'phoenix@infragistics.com',
+		started_on: '2019-11-19T10:33:10.405Z',
+		deadline: '2020-03-20T18:24:53.968Z',
+		estimation: 36,
+		hours_spent: 31
+	},
+	{
+		id: 5154,
+		milestone: 'Q2 2020',
+		title: 'Hierarchical Grid child (row island) events feature-request hierarchical-grid status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'New',
+		assignee: {},
+		created_by: 'powner@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 6,
+		hours_spent: 0
+	},
+	{
+		id: 5155,
+		milestone: 'Q4 2019',
+		title: 'igx-carousel animated slides carousel feature-request status: resolved version: 9.0.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {
+			id: 14,
+			login: 'Joan Rich',
+			sex: 'male',
+			team: 'CodeX',
+			avatarUrl: 'assets/images/men/7.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-11-26T22:44:22.989Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 7,
+		hours_spent: 7
+	},
+	{
+		id: 5156,
+		milestone: 'Q1 2020',
+		title: 'IgxDrop doesnt expose any coordinates drag-drop feature-request status: resolved version: 7.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'In Progress',
+		assignee: {
+			id: 6,
+			login: 'Lillie Moreno',
+			sex: 'female',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/women/2.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-12-27T16:00:01.799Z',
+		deadline: '2020-03-24T15:16:27.172Z',
+		estimation: 44,
+		hours_spent: 27
+	},
+	{
+		id: 5157,
+		milestone: 'Q1 2020',
+		title: 'IgxDrop doesnt expose any coordinates; drag - drop; feature - request; status: resolved; version: 7.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'In Progress',
+		assignee: {
+			id: 6,
+			login: 'Lillie Moreno',
+			sex: 'female',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/women/2.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-11-30T07:31:28.058Z',
+		deadline: '2020-02-24T14:14:06.620Z',
+		estimation: 24,
+		hours_spent: 12
+	},
+	{
+		id: 5158,
+		milestone: 'Q1 2020',
+		title: 'IgxGrid Advanced filtering Epic feature-request filtering grid status: resolved version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'In Progress',
+		assignee: {
+			id: 11,
+			login: 'Victoria Wiggins',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/5.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-12-27T19:17:20.020Z',
+		deadline: '2020-03-23T20:19:19.403Z',
+		estimation: 29,
+		hours_spent: 22
+	},
+	{
+		id: 5159,
+		milestone: 'Q4 2019',
+		title: 'IgxGrid isLoading needs data reset to work properly feature-request grid status: resolved version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {
+			id: 3,
+			login: 'Alisa Aguirre',
+			sex: 'female',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/women/0.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-10-02T05:15:50.862Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 40,
+		hours_spent: 40
+	},
+	{
+		id: 5160,
+		milestone: 'Q1 2020',
+		title: 'igx-grid multi-selection data should be put in the clipboard on copy feature-request grid hierarchical-grid multi-cell-selection status: resolved tree-grid version: 8.1.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: true
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'In Progress',
+		assignee: {
+			id: 7,
+			login: 'Guy Randolph',
+			sex: 'male',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/men/3.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-12-08T04:17:29.830Z',
+		deadline: '2020-02-20T14:24:12.061Z',
+		estimation: 20,
+		hours_spent: 10
+	},
+	{
+		id: 5161,
+		milestone: 'Q2 2020',
+		title: 'igx-slider update to match latest material guidelines feature-request status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 1,
+			login: 'Bass Fleming',
+			sex: 'male',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/men/0.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 21,
+		hours_spent: 0
+	},
+	{
+		id: 5162,
+		milestone: 'Q2 2020',
+		title: 'igxTabs and igxBottomNav should support router outlet bottom-nav feature-request status: resolved tabs',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 5,
+			login: 'Rush Christensen',
+			sex: 'male',
+			team: 'PwnJs',
+			avatarUrl: 'assets/images/men/2.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 47,
+		hours_spent: 0
+	},
+	{
+		id: 5163,
+		milestone: 'Q4 2019',
+		title: 'igx-tree-grid filter design customization feature-request filtering status: resolved theme tree-grid version: 7.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {
+			id: 8,
+			login: 'Fischer Luna',
+			sex: 'female',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/women/3.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: '2019-10-15T12:00:08.066Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 13,
+		hours_spent: 13
+	},
+	{
+		id: 5164,
+		milestone: 'Q1 2020',
+		title: 'Implement Display Density for the igxButton button feature-request status: resolved version: 7.3.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'In Progress',
+		assignee: {
+			id: 3,
+			login: 'Alisa Aguirre',
+			sex: 'female',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/women/0.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-12-30T14:02:03.941Z',
+		deadline: '2020-02-05T23:18:02.191Z',
+		estimation: 6,
+		hours_spent: 0
+	},
+	{
+		id: 5165,
+		milestone: 'Q4 2019',
+		title: 'Implement Display Density for the igxButtonGroup button button-group feature-request status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {
+			id: 13,
+			login: 'Cantrell Drake',
+			sex: 'male',
+			team: 'CodeX',
+			avatarUrl: 'assets/images/men/6.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-12-17T19:43:35.013Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 41,
+		hours_spent: 41
+	},
+	{
+		id: 5166,
+		milestone: 'Q1 2020',
+		title: 'Implement Display Density for the IgxDropDownComponent dropdown duplicate feature-request status: in-review',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 9,
+			login: 'Juana Roth',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/4.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 43,
+		hours_spent: 0
+	},
+	{
+		id: 5167,
+		milestone: 'Q2 2020',
+		title: 'Implement Display Density for the IgxList feature-request list status: resolved version: 7.3.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 7,
+			login: 'Guy Randolph',
+			sex: 'male',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/men/3.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 22,
+		hours_spent: 0
+	},
+	{
+		id: 5168,
+		milestone: 'Q1 2020',
+		title: 'Input content select on date selection/focus input date-picker feature-request status: resolved version: 8.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: true,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'In Progress',
+		assignee: {},
+		created_by: 'powner@infragistics.com',
+		started_on: '2020-01-25T16:26:10.049Z',
+		deadline: '2020-03-19T21:25:59.364Z',
+		estimation: 11,
+		hours_spent: 3
+	},
+	{
+		id: 5169,
+		milestone: 'Q2 2020',
+		title: 'Implementing a new theme based on Microsoft fluent design Epic Fluent-theme feature-request status: resolved theme version: 8.1.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'New',
+		assignee: {
+			id: 14,
+			login: 'Joan Rich',
+			sex: 'male',
+			team: 'CodeX',
+			avatarUrl: 'assets/images/men/7.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 58,
+		hours_spent: 0
+	},
+	{
+		id: 5170,
+		milestone: 'Q1 2020',
+		title: 'Introduce an input to set FilteringStrategy per column in IgxGrid Epic feature-request filtering grid status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'In Progress',
+		assignee: {
+			id: 2,
+			login: 'Burgess Austin',
+			sex: 'male',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/men/1.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: '2020-01-05T18:49:58.736Z',
+		deadline: '2020-02-26T11:48:01.305Z',
+		estimation: 17,
+		hours_spent: 0
+	},
+	{
+		id: 5171,
+		milestone: 'Q2 2020',
+		title: 'Multiview Calendar with Range Selection of Date Epic calendar feature-request status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'New',
+		assignee: {
+			id: 12,
+			login: 'Tami Yang',
+			sex: 'male',
+			team: 'CodeX',
+			avatarUrl: 'assets/images/men/5.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 11,
+		hours_spent: 0
+	},
+	{
+		id: 5172,
+		milestone: 'Q4 2019',
+		title: 'Narrower column width than 88px feature-request grid priority: high status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'Done',
+		assignee: {
+			id: 14,
+			login: 'Joan Rich',
+			sex: 'male',
+			team: 'CodeX',
+			avatarUrl: 'assets/images/men/7.jpg'
+		},
+		created_by: 'phoenix@infragistics.com',
+		started_on: '2019-10-07T21:10:09.659Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 6,
+		hours_spent: 6
+	},
+	{
+		id: 5173,
+		milestone: 'Q4 2019',
+		title: 'Need a scroll bar for igx-hierarchical-grid feature-request',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'Done',
+		assignee: {
+			id: 10,
+			login: 'Phill Rumsfeld',
+			sex: 'male',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/men/4.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: '2019-09-17T11:03:29.113Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 25,
+		hours_spent: 25
+	},
+	{
+		id: 5174,
+		milestone: 'Q2 2020',
+		title: 'Numeric editor mask and format feature-request mask-editor status: in-review version: 7.1.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 3,
+			login: 'Alisa Aguirre',
+			sex: 'female',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/women/0.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 13,
+		hours_spent: 0
+	},
+	{
+		id: 5175,
+		milestone: 'Q2 2020',
+		title: 'Provide a way to turn off the built-in filtering and sorting for remote scenarios feature-request filtering grid sorting status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 11,
+			login: 'Victoria Wiggins',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/5.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 43,
+		hours_spent: 0
+	},
+	{
+		id: 5176,
+		milestone: 'Q1 2020',
+		title: 'Pick up date from input - filtering row enhancement feature-request filtering status: resolved version: 7.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'New',
+		assignee: {},
+		created_by: 'phoenix@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 28,
+		hours_spent: 0
+	},
+	{
+		id: 5177,
+		milestone: 'Q1 2020',
+		title: 'Return normalize() for backwards compatibility feature-request status: resolved theme triage: blocking version: 7.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 3,
+			login: 'Alisa Aguirre',
+			sex: 'female',
+			team: 'Phoenix',
+			avatarUrl: 'assets/images/women/0.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 3,
+		hours_spent: 0
+	},
+	{
+		id: 5178,
+		milestone: 'Q2 2020',
+		title: 'Slider label is not correctly positioned in IE Epic browser: ie-11 feature-request slider status: resolved version: 8.1.4',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'High',
+		labels: 'New',
+		assignee: {
+			id: 15,
+			login: 'George Parker',
+			sex: 'male',
+			team: 'Design & UX',
+			avatarUrl: 'assets/images/men/8.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 59,
+		hours_spent: 0
+	},
+	{
+		id: 5179,
+		milestone: 'Q1 2020',
+		title: 'SummaryOperand with additional filter feature-request grid status: resolved summaries',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: true,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'New',
+		assignee: {
+			id: 9,
+			login: 'Juana Roth',
+			sex: 'female',
+			team: 'Samsara',
+			avatarUrl: 'assets/images/women/4.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: null,
+		deadline: '2020-03-30T21:00:00.000Z',
+		estimation: 60,
+		hours_spent: 0
+	},
+	{
+		id: 5180,
+		milestone: 'Q2 2020',
+		title: 'The igxChip does not have a way to disable animations on return. chip enhancement feature-request severity: medium status: resolved version: 7.3.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Normal',
+		labels: 'New',
+		assignee: {
+			id: 5,
+			login: 'Rush Christensen',
+			sex: 'male',
+			team: 'PwnJs',
+			avatarUrl: 'assets/images/men/2.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 7,
+		hours_spent: 0
+	},
+	{
+		id: 5181,
+		milestone: 'Q4 2019',
+		title: 'There is deprecation; warning for IgxDropDownItem isSelected but { no; } migration; dropdown; feature - request; migrations; triage: blocking',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-10-16T11:05:50.856Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 26,
+		hours_spent: 26
+	},
+	{
+		id: 5182,
+		milestone: 'Q4 2019',
+		title: 'Thin abstraction over grid feature-request grid status: resolved',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {
+			id: 16,
+			login: 'Melanie Richmond',
+			sex: 'female',
+			team: 'Design & UX',
+			avatarUrl: 'assets/images/women/6.jpg'
+		},
+		created_by: 'pwnjs@infragistics.com',
+		started_on: '2019-09-04T01:57:32.814Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 20,
+		hours_spent: 20
+	},
+	{
+		id: 5183,
+		milestone: 'Q2 2020',
+		title: 'TreeGrid Load On Demand feature-request status: resolved tree-grid',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'New',
+		assignee: {
+			id: 16,
+			login: 'Melanie Richmond',
+			sex: 'female',
+			team: 'Design & UX',
+			avatarUrl: 'assets/images/women/6.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 15,
+		hours_spent: 0
+	},
+	{
+		id: 5184,
+		milestone: 'Q2 2020',
+		title: 'Typedoc and Sassdoc themes separation documentation feature-request sassdoc status: resolved typedoc',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: false,
+			hasTests: false,
+			builds: false
+		},
+		isActive: true,
+		priority: 'Critical',
+		labels: 'New',
+		assignee: {
+			id: 7,
+			login: 'Guy Randolph',
+			sex: 'male',
+			team: 'Grinders',
+			avatarUrl: 'assets/images/men/3.jpg'
+		},
+		created_by: 'powner@infragistics.com',
+		started_on: null,
+		deadline: '2020-06-29T21:00:00.000Z',
+		estimation: 21,
+		hours_spent: 0
+	},
+	{
+		id: 5185,
+		milestone: 'Q4 2019',
+		title: 'Update AutoScrollStrategy to reposition elements outside NgZone browser: edge browser: ie-11 feature-request overlay severity: medium status: resolved version: 7.2.x',
+		details: '',
+		acceptance_criteria: {
+			hasAPI: true,
+			hasTests: true,
+			builds: true
+		},
+		isActive: true,
+		priority: 'Low',
+		labels: 'Done',
+		assignee: {
+			id: 15,
+			login: 'George Parker',
+			sex: 'male',
+			team: 'Design & UX',
+			avatarUrl: 'assets/images/men/8.jpg'
+		},
+		created_by: 'manager@infragistics.com',
+		started_on: '2019-09-21T04:30:41.484Z',
+		deadline: '2019-12-30T22:00:00.000Z',
+		estimation: 33,
+		hours_spent: 33
+	}
 ];
 
 export const GITHUB_TASKS = [
-    {
-        createdAt: '2020-08-05T13:35:49+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'I would like to be able to template the range picker\'s dialog container of the calendar, in order to provide additional actions/elements.\r\n\r\nCurrently the dialog container has only one action button, which applies the range and it will be nice if the user could add more actions (e.g. Undo, Redo, Selected Dates count, etc).\r\n\r\n',
-        title: 'Support for templating date range picker\'s calendar dialog container ',
-        number: 7939,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7939',
-        id: 673545914,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-08-05T13:01:04+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-        ],
-        body: '## Description  \r\nError is printed to the console when entering row editing mode on a newly added row.\r\n\r\n * igniteui-angular version: 10.0.x\r\n * browser: All\r\n\r\n## Steps to reproduce  \r\n\r\n1. Run the attached sample.\r\n2. Open the browser console.\r\n3. Add a row.\r\n4. Double click on the newly added row.\r\n\r\n## Result  \r\nAn error is printed to the console:\r\n\r\n![Annotation 2020-08-05 150717](https://user-images.githubusercontent.com/5458174/89413789-104c6480-d732-11ea-9f6d-75c77f491261.jpg)\r\n\r\n## Expected result  \r\nNo error is printed to the console.\r\n\r\n## Attachments  \r\n[Sample.zip](https://github.com/IgniteUI/igniteui-angular/files/5028421/Sample.zip)\r\n\r\n',
-        title: 'Error printed to the console when entering row editing mode on a newly added row.',
-        number: 7938,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7938',
-        id: 673521663,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-08-05T10:13:33+00:00',
-        assignee: {
-            id: 49060557,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/49060557?v=4',
-            login: 'igdmdimitrov',
-            email: null,
-            url: 'https://github.com/igdmdimitrov'
-        },
-        labels: [
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #7569 \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'fix(grid): Add columnHiding closing handler #7569',
-        number: 7936,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7936',
-        id: 673423091,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-05T08:27:13+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-         },
-        labels: [
-            {
-                id: 531439044,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20awaiting-test',
-                name: 'status: awaiting-test',
-                nodeId: 'MDU6TGFiZWw1MzE0MzkwNDQ=',
-                color: 'd93f0b',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #7907 \r\n\r\n### Additional information (check all that apply):\r\n - [ ] Bug fix\r\n - [ ] New functionality\r\n - [x] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'docs(sassdoc): update elevation documentation',
-        number: 7935,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7935',
-        id: 673356136,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-05T07:02:54+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 531440195,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20verified',
-                name: 'status: verified',
-                nodeId: 'MDU6TGFiZWw1MzE0NDAxOTU=',
-                color: '0e8a16',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Closes #6321   \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'fix(navDrawer): Set width on open change #6321',
-        number: 7934,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7934',
-        id: 673305622,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-05T06:19:51+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 531440195,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20verified',
-                name: 'status: verified',
-                nodeId: 'MDU6TGFiZWw1MzE0NDAxOTU=',
-                color: '0e8a16',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Closes #6321   \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'fix(navDrawer): Set width on open change #6321',
-        number: 7932,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7932',
-        id: 673284742,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-04T14:14:07+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [],
-        body: '1) Implement **cellEditExit** event end emit it when editing is completed, regardless if there are any actual data updates or not.\r\n2) Do not emit **onCellEdit** & **cellEditDone** if `isEqual(args.oldValue, args.newValue)` // Consider not emitting events for pure API updates at all',
-        title: 'Implement cellEditExit event',
-        number: 7931,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7931',
-        id: 672826411,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-08-04T14:07:22+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Expose the functionality of the private _api.service_ method **getRowData** via a public proxy method, so the users can have an access to the actual row data (transactions or not) if needed.\r\n\r\n```\r\n    /**\r\n     * @hidden\r\n     * @internal\r\n     */\r\n    public getRowData(rowID: any) {\r\n        const data = this.get_all_data(this.grid.transactions.enabled);\r\n        const index = this.get_row_index_in_data(rowID, data);\r\n        return data[index];\r\n    }\r\n```\r\n',
-        title: 'Expose the functionality of private getRowData via a public method ',
-        number: 7930,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7930',
-        id: 672821334,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-08-04T07:50:46+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-         },
-        labels: [
-            {
-                id: 386927479,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/documentation',
-                name: 'documentation',
-                nodeId: 'MDU6TGFiZWwzODY5Mjc0Nzk=',
-                color: 'e99695',
-                description: null,
-                default: true
-            },
-            {
-                id: 1062178934,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/sassdoc',
-                name: 'sassdoc',
-                nodeId: 'MDU6TGFiZWwxMDYyMTc4OTM0',
-                color: '15d891',
-                description: '',
-                default: false
-            },
-            {
-                id: 2236014987,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/themes',
-                name: 'themes',
-                nodeId: 'MDU6TGFiZWwyMjM2MDE0OTg3',
-                color: 'ceef86',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #7907 \r\n\r\n### Additional information (check all that apply):\r\n - [ ] Bug fix\r\n - [ ] New functionality\r\n - [x] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [ ] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'docs(sassdoc): document component shapes',
-        number: 7926,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7926',
-        id: 672584813,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-04T06:13:58+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654935,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/question',
-                name: 'question',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzU=',
-                color: 'cc317c',
-                description: null,
-                default: true
-            },
-            {
-                id: 1852894104,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/state-persistence',
-                name: 'state-persistence',
-                nodeId: 'MDU6TGFiZWwxODUyODk0MTA0',
-                color: '33eacf',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nOpen dev samples\r\n\r\n * igniteui-angular version: 10.1.0\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open dev samples, go to State directive samples\r\n2. Open hier grid\r\n3. Move columns in the child grid\r\n4. Save state\r\n4. Restore state\r\n\r\nNote: It seems that resetting the column list through `grid.columnList.reset(newColumns)`, leads to trigerring`onColumnsChanged`, which triggers the event for the root grid:\r\n\r\nhttps://github.com/IgniteUI/igniteui-angular/blob/d7ab1c144cfd3a45c13653d03741b5eb999f93d4/projects/igniteui-angular/src/lib/grids/hierarchical-grid/hierarchical-grid.component.ts#L420\r\n\r\n, which eventually restores the columnList back to the autogenerated columns:\r\nhttps://github.com/IgniteUI/igniteui-angular/blob/d7ab1c144cfd3a45c13653d03741b5eb999f93d4/projects/igniteui-angular/src/lib/grids/grid-base.directive.ts#L4963\r\n \r\n\r\n## Result  \r\nThe column list is resetted as initially, instead of restoring to the saved state.\r\n\r\n## Expected result  \r\nThe column list to be restoring of the saved state.\r\n\r\n',
-        title: 'IgxGridState directive not able to reset columnList for igxHierarchicalGrid.',
-        number: 7925,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7925',
-        id: 672533539,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-08-03T14:41:33+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'As we discussed with @rkaraivanov having such an event would be helpful for cases when we need to access certain viewchild elements and reduce the usage of timeouts like `requestAnimationFrame`.\r\n\r\nNote: Issue will be updated with more examples',
-        title: 'Expose an event that indicates that the Grid is fully loaded',
-        number: 7924,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7924',
-        id: 672126071,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-08-03T12:07:42+00:00',
-        assignee: {
-            id: 24314672,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/24314672?v=4',
-            login: 'ViktorSlavov',
-            email: null,
-            url: 'https://github.com/ViktorSlavov'
-        },
-        labels: [
-            {
-                id: 680707239,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/slider',
-                name: 'slider',
-                nodeId: 'MDU6TGFiZWw2ODA3MDcyMzk=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 531440195,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20verified',
-                name: 'status: verified',
-                nodeId: 'MDU6TGFiZWw1MzE0NDAxOTU=',
-                color: '0e8a16',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Closes #7683\r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'fix(slider): reqression expression change er',
-        number: 7918,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7918',
-        id: 672029725,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-03T12:07:09+00:00',
-        assignee: {
-            id: 10612538,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/10612538?v=4',
-            login: 'PlamenaMiteva',
-            email: null,
-            url: 'https://github.com/PlamenaMiteva'
-        },
-        labels: [
-            {
-                id: 900432316,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dropdown',
-                name: 'dropdown',
-                nodeId: 'MDU6TGFiZWw5MDA0MzIzMTY=',
-                color: '4c4dad',
-                description: '',
-                default: false
-            },
-            {
-                id: 531440195,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20verified',
-                name: 'status: verified',
-                nodeId: 'MDU6TGFiZWw1MzE0NDAxOTU=',
-                color: '0e8a16',
-                description: null,
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #7821 \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'fix(drop-down): Fixing missing shadow, #7821',
-        number: 7917,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7917',
-        id: 672029406,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-03T12:05:18+00:00',
-        assignee: {
-            id: 24314672,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/24314672?v=4',
-            login: 'ViktorSlavov',
-            email: null,
-            url: 'https://github.com/ViktorSlavov'
-        },
-        labels: [
-            {
-                id: 680707239,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/slider',
-                name: 'slider',
-                nodeId: 'MDU6TGFiZWw2ODA3MDcyMzk=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 531440195,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20verified',
-                name: 'status: verified',
-                nodeId: 'MDU6TGFiZWw1MzE0NDAxOTU=',
-                color: '0e8a16',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Closes #7683 \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'fix(slider): reqression expression change err',
-        number: 7916,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7916',
-        id: 672028381,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-03T11:22:07+00:00',
-        assignee: {
-            id: 44602698,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/44602698?v=4',
-            login: 'astaev',
-            email: null,
-            url: 'https://github.com/astaev'
-        },
-        labels: [
-            {
-                id: 531439044,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20awaiting-test',
-                name: 'status: awaiting-test',
-                nodeId: 'MDU6TGFiZWw1MzE0MzkwNDQ=',
-                color: 'd93f0b',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #7808 \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'Replace setImmediate and remove core-js-pure',
-        number: 7913,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7913',
-        id: 672004651,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-03T11:17:15+00:00',
-        assignee: {
-            id: 44602698,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/44602698?v=4',
-            login: 'astaev',
-            email: null,
-            url: 'https://github.com/astaev'
-        },
-        labels: [
-            {
-                id: 531439044,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20awaiting-test',
-                name: 'status: awaiting-test',
-                nodeId: 'MDU6TGFiZWw1MzE0MzkwNDQ=',
-                color: 'd93f0b',
-                description: '',
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #7808 \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'Replace setImmediate and remove core-js-pure',
-        number: 7912,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7912',
-        id: 672001972,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-03T11:08:53+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 853894873,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/browser:%20ie-11',
-                name: 'browser: ie-11',
-                nodeId: 'MDU6TGFiZWw4NTM4OTQ4NzM=',
-                color: '3ef934',
-                description: 'Issues specific to the MS IE11 browser',
-                default: false
-            },
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nThe date picker component has wrong width and looks flattened. \r\n * browser: Internet Explorer 11\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open the date picker topic in IE11 - https://www.infragistics.com/products/ignite-ui-angular/angular/components/date_picker.html\r\n2. Check out the demos\r\n\r\n## Result  \r\nThe date picker is flattened.\r\n\r\n## Expected result  \r\nIt should look similar to the other browsers.\r\n\r\n\r\n## Attachments  \r\n<img width="1438" alt="Screen Shot 2020-08-03 at 1 52 41 PM" src="https://user-images.githubusercontent.com/59446295/89176595-7b5f3500-d592-11ea-8b27-e18847fb6398.png">\r\n\r\n\r\n',
-        title: 'The IgxDatePicker is flattened in IE11',
-        number: 7911,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7911',
-        id: 671997415,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-08-03T10:52:08+00:00',
-        assignee: {
-            id: 44602698,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/44602698?v=4',
-            login: 'astaev',
-            email: null,
-            url: 'https://github.com/astaev'
-        },
-        labels: [
-            {
-                id: 531439314,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-test',
-                name: 'status: in-test',
-                nodeId: 'MDU6TGFiZWw1MzE0MzkzMTQ=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #7808 \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'Replace setImmediate and remove core-js-pure ',
-        number: 7910,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7910',
-        id: 671987965,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-08-03T09:46:27+00:00',
-        assignee: {
-            id: 4118303,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/4118303?v=4',
-            login: 'simeonoff',
-            email: null,
-            url: 'https://github.com/simeonoff'
-        },
-        labels: [
-            {
-                id: 1062178934,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/sassdoc',
-                name: 'sassdoc',
-                nodeId: 'MDU6TGFiZWwxMDYyMTc4OTM0',
-                color: '15d891',
-                description: '',
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Add Sassdoc documentation for all elevations and shapes under schema.\r\n\r\n@SisIvanova will document all elevations.\r\n@didimmova will document all shapes.',
-        title: 'Sassdoc: Add documentation for elevations and shapes',
-        number: 7907,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7907',
-        id: 671948144,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-31T04:30:40+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 926278753,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/combo',
-                name: 'combo',
-                nodeId: 'MDU6TGFiZWw5MjYyNzg3NTM=',
-                color: '152872',
-                description: '',
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\n[IgxGrid] Selecting an item from IgxDropDown embedded in the cell is not reflected immediately from the second time.\r\n\r\n * igniteui-angular version: 10.0.5\r\n * browser: Chrome\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open the Demo sample in the https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/editing.html.\r\nLink to the Stackblitz sample: https://stackblitz.com/github/IgniteUI/igniteui-live-editing-samples/tree/master/angular-demos/grid/grid-editing\r\n\r\n2. Double-click an "Available At" cell and choose one of the items.\r\n\r\n3. Click another "Available At" cell and choose one of the items.\r\n\r\n## Result  \r\nThe selected item does not look selected. The text in the cell is not updated.\r\nNote: If you move the mouse cursor to the header area, the view is updated and the selected item is selected in the view, too.\r\n\r\n## Expected result  \r\nThe selected item looks selected and the text in the cell is also updated.\r\n\r\n\r\n## Attachments  \r\n\r\n\r\n',
-        title: '[IgxGrid] Selecting an item from IgxDropDown embedded in the cell is not reflected immediately from the second time.',
-        number: 7898,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7898',
-        id: 669399488,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-30T12:03:00+00:00',
-        assignee: {
-            id: 1472513,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/1472513?v=4',
-            login: 'kdinev',
-            email: null,
-            url: 'https://github.com/kdinev'
-        },
-        labels: [],
-        body: 'Closes #  \r\n\r\n### Additional information (check all that apply):\r\n - [ ] Bug fix\r\n - [ ] New functionality\r\n - [x] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [ ] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'chore(*) S4 Update of M12 Roadmap',
-        number: 7891,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7891',
-        id: 668653947,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-07-30T07:59:48+00:00',
-        assignee: {
-            id: 1182001,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/1182001?v=4',
-            login: 'dkamburov',
-            email: null,
-            url: 'https://github.com/dkamburov'
-        },
-        labels: [
-            {
-                id: 877031119,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input-group',
-                name: 'input-group',
-                nodeId: 'MDU6TGFiZWw4NzcwMzExMTk=',
-                color: 'f79bb1',
-                description: '',
-                default: false
-            },
-            {
-                id: 531439044,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20awaiting-test',
-                name: 'status: awaiting-test',
-                nodeId: 'MDU6TGFiZWw1MzE0MzkwNDQ=',
-                color: 'd93f0b',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #7455  \r\n\r\n### Additional information (check all that apply):\r\n - [x] Bug fix\r\n - [ ] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [ ] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [ ] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'fix(input-group): allow runtime changes to type, prefix/suffix',
-        number: 7890,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7890',
-        id: 668465188,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-07-28T08:37:15+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 1221520389,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-style-filtering',
-                name: 'excel-style-filtering',
-                nodeId: 'MDU6TGFiZWwxMjIxNTIwMzg5',
-                color: 'fef2c0',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1040274972,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tree-grid',
-                name: 'tree-grid',
-                nodeId: 'MDU6TGFiZWwxMDQwMjc0OTcy',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Make the ESF header icon templatable so that a developer can pick a different one e.g. if he has templated the dialog in a certain way to show only certain grid column features to pick something that corresponds more closely to them.',
-        title: 'Make the ESF header icon templatable',
-        number: 7878,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7878',
-        id: 666884194,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-24T14:48:37+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 882395236,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/groupby',
-                name: 'groupby',
-                nodeId: 'MDU6TGFiZWw4ODIzOTUyMzY=',
-                color: 'e580c8',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'is it possible to add the remote operation "group by"?\r\nActually i can make from the remote server a facets for the specific grid column; is it possible to specify with a new grid\'s property the list of grouped value with the specific count, and when the user will expand the group an http request will fetch the data?\r\n',
-        title: 'IgxGrid grouping remote operation',
-        number: 7863,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7863',
-        id: 665219719,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-20T19:22:05+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 963536305,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/drag-drop',
-                name: 'drag-drop',
-                nodeId: 'MDU6TGFiZWw5NjM1MzYzMDU=',
-                color: 'e861f9',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654935,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/question',
-                name: 'question',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzU=',
-                color: 'cc317c',
-                description: null,
-                default: true
-            },
-            {
-                id: 1335040362,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-drag',
-                name: 'row-drag',
-                nodeId: 'MDU6TGFiZWwxMzM1MDQwMzYy',
-                color: '34d86a',
-                description: '',
-                default: false
-            },
-            {
-                id: 1040274972,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tree-grid',
-                name: 'tree-grid',
-                nodeId: 'MDU6TGFiZWwxMDQwMjc0OTcy',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Question  \r\nIs it possible to use an `IgxTreeGridRowComponent` as a drop zone (`igxDrop`)?\r\n\r\nUse case: I want to drag a row to a specific position in another grid. Ideally, I should be able to decide whether to drop the dragged row:\r\n  - Over a row (it would become a child)\r\n  - Above a row (as a sibling)\r\n  - Below a row (as a sibling)\r\n\r\nIt would be great if we could get a final effect as we get in [Angular CDK Drag and Drop](https://material.angular.io/cdk/drag-drop/overview#transferring-items-between-lists). Anyway, if I could, at least, use an `IgxTreeGridRowComponent` as a drop zone, I think I could built up an acceptable solution.\r\n\r\n * igniteui-angular version: 10.0.4\r\n * browser: Any browser',
-        title: 'Drag a `IgxRowComponent` from an `IgxGrid` to a specific position in another `IgxGrid`',
-        number: 7830,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7830',
-        id: 662173919,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-20T13:56:51+00:00',
-        assignee: {
-            id: 9549439,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/9549439?v=4',
-            login: 'valadzhov',
-            email: null,
-            url: 'https://github.com/valadzhov'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 900432316,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dropdown',
-                name: 'dropdown',
-                nodeId: 'MDU6TGFiZWw5MDA0MzIzMTY=',
-                color: '4c4dad',
-                description: '',
-                default: false
-            },
-            {
-                id: 858962961,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/regression',
-                name: 'regression',
-                nodeId: 'MDU6TGFiZWw4NTg5NjI5NjE=',
-                color: '041791',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nThe shadow of the dropdown is missing unless there\'s an `igx-drop-down-item` in it.\r\n\r\n * igniteui-angular version: 9.1.x\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open DevDemos\r\n2. See the Grid Toolbar Sample\r\n3. Click any of the buttons in the toolbar.\r\n\r\n## Result  \r\nThere\'s no shadow of the dropdown because the content isn\'t placed in an `igx-drop-down-item` and there\'s an `igx-drop-down__list--empty` class added, which removes the box-shadow of the dropdown.\r\n\r\n## Expected result  \r\nThere should be a shadow unless there\'s no content in the dropdown at all.\r\n\r\n## Attachments  \r\n<img width="710" alt="Screen Shot 2020-07-20 at 4 55 42 PM" src="https://user-images.githubusercontent.com/45598235/87945749-daf51500-caa9-11ea-97de-6e59c919434a.png">\r\n\r\n\r\n',
-        title: 'Dropdown: box-shadow is missing in some cases',
-        number: 7821,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7821',
-        id: 661855152,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-17T13:16:06+00:00',
-        assignee: {
-            id: 3198469,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/3198469?v=4',
-            login: 'damyanpetev',
-            email: null,
-            url: 'https://github.com/damyanpetev'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1221520389,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-style-filtering',
-                name: 'excel-style-filtering',
-                nodeId: 'MDU6TGFiZWwxMjIxNTIwMzg5',
-                color: 'fef2c0',
-                description: '',
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 602972382,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20resolved',
-                name: 'status: resolved',
-                nodeId: 'MDU6TGFiZWw2MDI5NzIzODI=',
-                color: '0e8a16',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nAngular 10 is complaining about igniteui-angular.js depending on core-js-pure when IgxGridModule is imported or IgxExcelExporterService is provided.\r\nPlease take a look at the attached screenshot.\r\nAttached you will find a sample project replicating the described behavior as well.\r\n\r\nI assume that the issue is related to the following [pull request](https://github.com/IgniteUI/igniteui-angular/pull/7792/files).\r\n\r\n### Attachments: \r\n![core-js-pure](https://user-images.githubusercontent.com/44684385/87788593-4474e980-c846-11ea-9ca7-04e6fc1a132d.PNG)\r\n[angular10.zip](https://github.com/IgniteUI/igniteui-angular/files/4937907/angular10.zip)\r\n',
-        title: 'Igniteui-angular depending on core-js-pure',
-        number: 7808,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7808',
-        id: 659249051,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-17T13:04:10+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 963379072,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay',
-                name: 'overlay',
-                nodeId: 'MDU6TGFiZWw5NjMzNzkwNzI=',
-                color: 'a9fcf2',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nProviding a simple change to `OverlaySettings` and merge the change to existing settings is really hard now. A flat structure will make this a lot simpler.\r\n\r\n## Describe the solution you\'d like\r\nHas all the settings `IgxOverlayService` need in its `OverlaySettings`\r\n\r\n## Describe alternatives you\'ve considered\r\n\r\n## Additional context\r\n\r\n',
-        title: 'Move PositionSettings to OverlaySettings',
-        number: 7807,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7807',
-        id: 659240293,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-15T20:05:57+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\n DisabledDates property is not used in a Reactive Form\r\n\r\n * igniteui-angular version: 10.0.3\r\n * browser:  Chrome 83.0.4103.116\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open sample [Sample StackBlitz](https://stackblitz.com/edit/github-4j77ke?file=package.jsonl)\r\n2. The button "Book" is disabled as the field "Date" is required and does not have a value.\r\n3. Click on "Change Range" button, the button "Book" is enabled.\r\n\r\n## Result  \r\nThe disabled dates property is not used to updated the state of the form input.\r\n\r\n## Expected result  \r\nThe state of the form input is invalid as the value is in the range of the disabled dates.\r\n\r\n## Attachments  \r\nhttps://stackblitz.com/edit/github-4j77ke?file=package.json\r\n\r\n',
-        title: 'igx-date-picker: DisabledDates property is not used in a Reactive Form',
-        number: 7800,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7800',
-        id: 657619282,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-13T09:45:44+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 1189411409,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/autocomplete',
-                name: 'autocomplete',
-                nodeId: 'MDU6TGFiZWwxMTg5NDExNDA5',
-                color: '03b75a',
-                description: '',
-                default: false
-            },
-            {
-                id: 2069830802,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/priority:%20medium',
-                name: 'priority: medium',
-                nodeId: 'MDU6TGFiZWwyMDY5ODMwODAy',
-                color: 'f7a585',
-                description: '',
-                default: false
-            },
-            {
-                id: 858884153,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20not-a-bug',
-                name: 'status: not-a-bug',
-                nodeId: 'MDU6TGFiZWw4NTg4ODQxNTM=',
-                color: 'ea85ce',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen autocomplete gets a value that is not in the list, when the input is blurred then the drop down flickers.\r\n\r\n * igniteui-angular version: 10.0.3\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open [this](https://stackblitz.com/edit/angular-eppddh) autocomplete demo\r\n2. Type \'ss\' in the `Cinema` input\r\n3. Press Tab\r\n\r\n## Result  \r\nAutocomplete value is cleared but drop down flickers.\r\n\r\n## Expected result  \r\nAutocomplete value is cleared but drop down is not shown.\r\n\r\n',
-        title: 'Autocomplete drop down is shown when value is cleared',
-        number: 7779,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7779',
-        id: 655709945,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-10T17:09:05+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 963379072,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay',
-                name: 'overlay',
-                nodeId: 'MDU6TGFiZWw5NjMzNzkwNzI=',
-                color: 'a9fcf2',
-                description: '',
-                default: false
-            },
-            {
-                id: 975671277,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tooltip',
-                name: 'tooltip',
-                nodeId: 'MDU6TGFiZWw5NzU2NzEyNzc=',
-                color: 'a7fc83',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nA clear and concise description of what the problem is. Ex. I\'m always frustrated when [...]\r\n\r\nI need to be able to position the tooltip in different areas around the target element besides below it, but with current documentation it doesn\'t look like there is a place to specify this setting.\r\n\r\n## Describe the solution you\'d like\r\nA clear and concise description of what you want to happen.\r\n\r\nHave an option to specify the position of the tooltip in relation to the target element, maybe add an attribute igxTooltipPosition="below | above | before | after"\r\n\r\n## Describe alternatives you\'ve considered\r\nA clear and concise description of any alternative solutions or features you\'ve considered.\r\n\r\nNone other than a different UI framework.\r\n\r\n## Additional context\r\nAdd any other context or screenshots about the feature request here.\r\n',
-        title: 'Allow tooltip positioning (ex. before, after, above, below) in relation to target element',
-        number: 7775,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7775',
-        id: 654917968,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-10T17:05:10+00:00',
-        assignee: {
-            id: 43128948,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-            login: 'DiyanDimitrov',
-            email: null,
-            url: 'https://github.com/DiyanDimitrov'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 975671277,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tooltip',
-                name: 'tooltip',
-                nodeId: 'MDU6TGFiZWw5NzU2NzEyNzc=',
-                color: 'a7fc83',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nA clear and concise description of what the problem is. Ex. I\'m always frustrated when [...]\r\n\r\nNot related to problem, but would be nice to have functionality to support this.\r\n\r\n## Describe the solution you\'d like\r\nA clear and concise description of what you want to happen.\r\n\r\nHave function to display a tooltip when an element is focused on. If there was a function to programically open a tooltip positioned on the focused element that would work too.\r\n\r\n## Describe alternatives you\'ve considered\r\nA clear and concise description of any alternative solutions or features you\'ve considered.\r\n\r\nI\'ve tried using the existing functionality to programically show the tooltip, which is easy, but positioning it is hard to find out how to do.\r\n\r\n## Additional context\r\nAdd any other context or screenshots about the feature request here.\r\n',
-        title: 'Show tooltip on focus',
-        number: 7774,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7774',
-        id: 654915953,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-06T14:36:22+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 799217988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/i18n',
-                name: 'i18n',
-                nodeId: 'MDU6TGFiZWw3OTkyMTc5ODg=',
-                color: 'fc6ce4',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 2169079162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.1.x',
-                name: 'version: 10.1.x',
-                nodeId: 'MDU6TGFiZWwyMTY5MDc5MTYy',
-                color: 'e59502',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen resource strings are added for a given component one should:\r\n- first add them to [CurrentResourceStrings](https://github.com/IgniteUI/igniteui-angular/blob/0f46840cecccde9e240fcdf2bd3932ca5e447c6f/projects/igniteui-angular/src/lib/core/i18n/resources.ts#L14).\r\n- on second place include them in [getCurrentResourceStrings](https://github.com/IgniteUI/igniteui-angular/blob/0f46840cecccde9e240fcdf2bd3932ca5e447c6f/projects/igniteui-angular/src/lib/core/i18n/resources.ts#L45) function.\r\n- and finally should extend [IResourceStrings](https://github.com/IgniteUI/igniteui-angular/blob/0f46840cecccde9e240fcdf2bd3932ca5e447c6f/projects/igniteui-angular/src/lib/core/i18n/resources.ts#L9) interface with the newly created resource string interface.\r\n\r\nThis entire process is not error-proof. Even now we have six components with resource strings generated, from which only three are included in the `IResourceStrings` interface and just two are exposed in `getCurrentResourceStrings` function.\r\n\r\nWe should automate these three steps.\r\n',
-        title: 'Automate resource strings generation',
-        number: 7747,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7747',
-        id: 651591125,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-06T05:04:17+00:00',
-        assignee: {
-            id: 43128948,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-            login: 'DiyanDimitrov',
-            email: null,
-            url: 'https://github.com/DiyanDimitrov'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1221520389,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-style-filtering',
-                name: 'excel-style-filtering',
-                nodeId: 'MDU6TGFiZWwxMjIxNTIwMzg5',
-                color: 'fef2c0',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen the scroll bar is appeared in the window and scroll down to the bottom of the page, the dialog is not appropriately shown. If the window is not scrolled, the position is adjusted automatically.\r\n\r\n * igniteui-angular version: 9.1.11\r\n * browser: chrome 83.0.4103.116\r\n\r\n## Steps to reproduce  \r\n\r\n1. See [https://stackblitz.com/edit/angular-igniteui-10-popup-position-scroll](https://stackblitz.com/edit/angular-igniteui-10-popup-position-scroll) and scroll down to the bottom of the page.\r\n2. Open the excel style filtering dialog in the 3rd grid.\r\n\r\n## Result  \r\nThe dialog is not fully shown and will be cut.\r\n![49cb9b658e5936a0d329b7d32c2537b0](https://user-images.githubusercontent.com/5829221/86557405-fc75dd00-bf90-11ea-97a8-a9b39945f5a5.gif)\r\n\r\n## Expected result  \r\nThe user can see the dialog fully and click the bottom buttons.\r\n<img width="728" alt="b9250a831f739bce9f20ff05dc1f1916" src="https://user-images.githubusercontent.com/5829221/86557418-04ce1800-bf91-11ea-86c9-4abf5741b56f.png">\r\n',
-        title: '[igx-grid][ExcelStyleFiltering]Dialog position when scrolling down to the bottom of the page and click the excel style filtering icon.',
-        number: 7742,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7742',
-        id: 651248065,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-03T08:24:53+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 853702890,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/sorting',
-                name: 'sorting',
-                nodeId: 'MDU6TGFiZWw4NTM3MDI4OTA=',
-                color: '9cf4c8',
-                description: '',
-                default: false
-            },
-            {
-                id: 1040274972,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tree-grid',
-                name: 'tree-grid',
-                nodeId: 'MDU6TGFiZWwxMDQwMjc0OTcy',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nI can\'t handle the scenario with sortingExpressionChange event, in which an expression is removed from the grid sorting expressions \r\n## Describe the solution you\'d like\r\nI would like the sortingExpressionChange event to trigger emission when the sorting direction is NONE\r\n## Describe alternatives you\'ve considered\r\nTo handle the sorting with direction None I have to add additionally a handler to the sortingDone event, which means for one feature (sorting) there are two handlers, which basically do the same with the difference that one of them cannot handle sorting direction None and the other one cannot handle sorting through the sortingExpressions setter, only through the UI sorting icon.\r\n\r\n',
-        title: 'sortingExpressionChange event to trigger emission when a sorting expression is removed ',
-        number: 7740,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7740',
-        id: 650432729,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-02T13:17:12+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 897946909,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-exporter',
-                name: 'excel-exporter',
-                nodeId: 'MDU6TGFiZWw4OTc5NDY5MDk=',
-                color: '49d156',
-                description: '',
-                default: false
-            },
-            {
-                id: 881145265,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/exporters',
-                name: 'exporters',
-                nodeId: 'MDU6TGFiZWw4ODExNDUyNjU=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 2109550709,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/specification',
-                name: 'specification',
-                nodeId: 'MDU6TGFiZWwyMTA5NTUwNzA5',
-                color: '0321c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 406864763,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/visual-design',
-                name: 'visual-design',
-                nodeId: 'MDU6TGFiZWw0MDY4NjQ3NjM=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nCurrently there is no visual indicators for grid export action.\r\n\r\n## Describe the solution you\'d like\r\nI would like to have a loading indicator that shows the progress of generating a grid export.\r\n\r\n## Describe alternatives you\'ve considered\r\n\r\n\r\n## Additional context\r\n',
-        title: 'Grid export visualization',
-        number: 7738,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7738',
-        id: 649923744,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-07-01T11:40:54+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 1148593022,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/browser:%20chrome',
-                name: 'browser: chrome',
-                nodeId: 'MDU6TGFiZWwxMTQ4NTkzMDIy',
-                color: 'e5dd6e',
-                description: 'Bug occurs under Google Chrome browser',
-                default: false
-            },
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 455636069,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dialog',
-                name: 'dialog',
-                nodeId: 'MDU6TGFiZWw0NTU2MzYwNjk=',
-                color: '2078bc',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWrong calculates width of igx-dialog in another igx-dialog\r\n\r\n * igniteui-angular version: 9.1.4\r\n * browser: Google Chrome\r\n\r\n## Steps to reproduce  \r\n\r\nI have igx-dialog in another igx-dialog. When open inner dialog first time it looks fine. But when close it and open again it\'s width calculates wrong.\r\nAfter first opening:\r\n![image](https://user-images.githubusercontent.com/61229028/86238929-15ece280-bba7-11ea-9f38-50a89ef6b8a4.png)\r\n\r\nAfter second opening:\r\n![image](https://user-images.githubusercontent.com/61229028/86239729-89dbba80-bba8-11ea-9052-30c22dcfa42d.png)\r\n\r\nAfter second opening inner dialog it\'s width calculates wrong \r\n\r\n## Expected result  \r\nAfter second opening inner dialog it\'s width should calculates correct\r\n\r\n\r\n## Attachments  \r\n\r\n\r\n',
-        title: 'Wrong calculate width of igx-dialog',
-        number: 7727,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7727',
-        id: 648914330,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-25T10:37:40+00:00',
-        assignee: {
-            id: 7037740,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/7037740?v=4',
-            login: 'Aleksandyr',
-            email: null,
-            url: 'https://github.com/Aleksandyr'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 858962961,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/regression',
-                name: 'regression',
-                nodeId: 'MDU6TGFiZWw4NTg5NjI5NjE=',
-                color: '041791',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 680707239,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/slider',
-                name: 'slider',
-                nodeId: 'MDU6TGFiZWw2ODA3MDcyMzk=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 602972382,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20resolved',
-                name: 'status: resolved',
-                nodeId: 'MDU6TGFiZWw2MDI5NzIzODI=',
-                color: '0e8a16',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nSlider throws when it has bound min/max value and `[ngModel]`.\r\nSame behavior as https://github.com/IgniteUI/igniteui-angular/issues/7336\r\n\r\n * igniteui-angular version: 10.0.x, 9.1.x\r\n * browser: N/A\r\n\r\n## Steps to reproduce  \r\n\r\n1. Download this [StackBlitz sample](https://stackblitz.com/angular/gjvgajladxaj?file=src%2Fapp%2Fgrid-finjs%2Fgrid-finjs-demo.component.html)\r\n2. `npm i igniteui-angular@[latest-rc]`\r\n3. Run the sample and observe the console\r\n\r\n## Result  \r\nAn error is thrown\r\n\r\n## Expected result  \r\nNo error is thrown\r\n\r\n## Additional Info\r\nThis appears to have been regressed with https://github.com/IgniteUI/igniteui-angular/issues/7523\r\n',
-        title: 'Slider throws `expressionChangeAfterChecked` error when bound w/ `ngModel`',
-        number: 7683,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7683',
-        id: 645456162,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-25T09:53:51+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\n\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open the following [sample](https://stackblitz.com/edit/angular-pskbsu)\r\n2. Open the browser console\r\n\r\n#### Note the error is also reproducible in [Grid Hiding samples](https://github.com/IgniteUI/igniteui-angular-samples/issues/1205) \r\n\r\n## Result  \r\n\r\n![image](https://user-images.githubusercontent.com/34240583/85696990-163a3900-b6e2-11ea-9b75-26ebcffaae32.png)\r\n\r\n\r\n## Expected result  \r\n\r\nNo errors should be thrown in the console\r\n\r\n',
-        title: 'When use grid.columns getter the error is thrown in the console',
-        number: 7681,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7681',
-        id: 645426768,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-25T07:32:27+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1221520389,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-style-filtering',
-                name: 'excel-style-filtering',
-                nodeId: 'MDU6TGFiZWwxMjIxNTIwMzg5',
-                color: 'fef2c0',
-                description: '',
-                default: false
-            },
-            {
-                id: 1112335545,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/filtering',
-                name: 'filtering',
-                nodeId: 'MDU6TGFiZWwxMTEyMzM1NTQ1',
-                color: 'daffb2',
-                description: '',
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## DESCRIPTION\r\nIt is necessary to be able to have time columns, either an independent column or integrating it with the date column.\r\n\r\nWith the current functionality, the column can be formatted, but when using excelStyleFilter in the select the time always goes to 0 and cannot be filtered taking into account the hours. A timePicker should be used.\r\n\r\n## EXAMPLE\r\n![image](https://user-images.githubusercontent.com/36885861/85676168-a5395800-b6c6-11ea-834b-a811c2c57532.png)\r\n\r\n## SOLUTION\r\nThe solution is to create a new datatype, either DateTime or Time and then use date-time-picker or time-picker.\r\n',
-        title: 'Datetime or Time in avaliable type of column',
-        number: 7678,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7678',
-        id: 645261872,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-23T13:46:57+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 354680432,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/list',
-                name: 'list',
-                nodeId: 'MDU6TGFiZWwzNTQ2ODA0MzI=',
-                color: '1d76db',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Let me tab in to the grid and use the arrows to focus previous/next list item as well as ways to scroll and focus the bottom/top item from the list at any point in time.',
-        title: 'Provide support for keyboard navigation for igx-list',
-        number: 7661,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7661',
-        id: 643856285,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-23T05:47:03+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 858884153,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20not-a-bug',
-                name: 'status: not-a-bug',
-                nodeId: 'MDU6TGFiZWw4NTg4ODQxNTM=',
-                color: 'ea85ce',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nMoving column cannot be dropped to the left side of the first column if the first column width is smaller than 30 px. In the attached sample, the width of first column is 24 px, which is the minimum column width for displayDensity.Compact.\r\n\r\n * igniteui-angular version: 9.1.3\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Run the sample [igx-grid-col-move.zip](https://github.com/IgniteUI/igniteui-angular/files/4817315/igx-grid-col-move.zip)\r\n2. Move \'Name\' column to the left side of \'ID\' column\r\n\r\n## Result  \r\n\'Name\' column cannot be dropped to the left side of \'ID\' column.\r\n\r\n## Expected result  \r\n\'Name\' column can be dropped to the left side of \'ID\' column.\r\n\r\n\r\n## Attachments  \r\n![igxGrid-column-moving](https://user-images.githubusercontent.com/14340675/85364881-19f18280-b55f-11ea-947b-879e41a80ca6.gif)\r\n\r\n\r\n',
-        title: 'Column cannot be dropped before the first column which width is smaller than 30 px',
-        number: 7653,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7653',
-        id: 643550979,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-19T11:14:22+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 324654935,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/question',
-                name: 'question',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzU=',
-                color: 'cc317c',
-                description: null,
-                default: true
-            }
-        ],
-        body: '## Question  \r\n\r\nHow to make smooth scrolling in an IgxForOf component? I used igxFor bound to remote service according to your instructions, but scrolling is not smooth. I have full chunk scrolling, instead of smooth scrolling\r\n\r\n * igniteui-angular version: 9.1\r\n * browser: Google Chrome',
-        title: 'How to make smooth scrolling in an IgxForOf component',
-        number: 7635,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7635',
-        id: 641895381,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-18T19:54:02+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'The demo apps section of the readme is outdated. We\'ve created a number of new applications that should be linked:\r\n\r\nhttps://github.com/IgniteUI/igniteui-angular#demo-apps--documentation',
-        title: 'Update demo apps section of the readme',
-        number: 7631,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7631',
-        id: 641510786,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-16T12:03:52+00:00',
-        assignee: {
-            id: 25771040,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/25771040?v=4',
-            login: 'HristoP96',
-            email: null,
-            url: 'https://github.com/HristoP96'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 1987056475,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/project:%20igniteui-angular-extras',
-                name: 'project: igniteui-angular-extras',
-                nodeId: 'MDU6TGFiZWwxOTg3MDU2NDc1',
-                color: '1d76db',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Localize all the text, that is rendered in the context menus and the chart dialog components.\r\n\r\n![MicrosoftTeams-image (4)](https://user-images.githubusercontent.com/25771040/84771577-5b73b200-afe2-11ea-8d4c-e691682ef18d.png)\r\n',
-        title: 'Add localization for the chart dialog and context menu components in extras package',
-        number: 7605,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7605',
-        id: 639610030,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-15T11:04:44+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 983537039,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/paging',
-                name: 'paging',
-                nodeId: 'MDU6TGFiZWw5ODM1MzcwMzk=',
-                color: 'f96398',
-                description: '',
-                default: false
-            },
-            {
-                id: 531440033,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20third-party-issue',
-                name: 'status: third-party-issue',
-                nodeId: 'MDU6TGFiZWw1MzE0NDAwMzM=',
-                color: 'f9d0c4',
-                description: null,
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen grid is opened in full screen mode, Grids Records per page drop down is not opening properly. Please check attached file. \r\n\r\n * igniteui-angular version: 8.2\r\n * browser: \r\n\r\n## Steps to reproduce  \r\nRun attached zip file with sample application.\r\n\r\n## Result  \r\nWhat is the actual result after following the steps to reproduce?\r\n\r\n## Expected result  \r\nIt should show dropdown list properly. \r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n[GridDemoApp.zip](https://github.com/IgniteUI/igniteui-angular/files/4779796/GridDemoApp.zip)\r\n\r\n\r\n',
-        title: 'Angular Grid Records per page drop down issue',
-        number: 7595,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7595',
-        id: 638760263,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-15T10:56:12+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 1987056475,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/project:%20igniteui-angular-extras',
-                name: 'project: igniteui-angular-extras',
-                nodeId: 'MDU6TGFiZWwxOTg3MDU2NDc1',
-                color: '1d76db',
-                description: '',
-                default: false
-            },
-            {
-                id: 1772747671,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/schematics',
-                name: 'schematics',
-                nodeId: 'MDU6TGFiZWwxNzcyNzQ3Njcx',
-                color: '854eba',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            }
-        ],
-        body: '',
-        title: 'Add ng add `igniteui-angular-extras` schematic',
-        number: 7594,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7594',
-        id: 638754871,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-12T10:11:03+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1102774151,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-editing',
-                name: 'row-editing',
-                nodeId: 'MDU6TGFiZWwxMTAyNzc0MTUx',
-                color: '77d86a',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 531439172,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20by-design',
-                name: 'status: by-design',
-                nodeId: 'MDU6TGFiZWw1MzE0MzkxNzI=',
-                color: 'bfdadc',
-                description: '',
-                default: false
-            },
-            {
-                id: 858884153,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20not-a-bug',
-                name: 'status: not-a-bug',
-                nodeId: 'MDU6TGFiZWw4NTg4ODQxNTM=',
-                color: 'ea85ce',
-                description: '',
-                default: false
-            },
-            {
-                id: 1157969302,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/transaction',
-                name: 'transaction',
-                nodeId: 'MDU6TGFiZWwxMTU3OTY5MzAy',
-                color: '006b75',
-                description: 'igxTransactionService',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nCannot add new transaction when open added row in edit mode and updo transactions\r\n\r\n * igniteui-angular version: 9.1\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n1. Open dev sample gridRowEdit\r\n2. In the second grid click on Add Row button\r\n3. Navigate to the added row and double click on a cell to enter row editing\r\n4. Click button Undo\r\n5. Try to add or delete a row\r\n\r\n### Result  \r\nIt is not possible to add or delete row\r\n\r\n### Expected result  \r\nIt should be possible to add and delete rows\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n',
-        title: 'Cannot add new transaction when open added row in edit mode and updo transactions',
-        number: 7579,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7579',
-        id: 637642916,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-10T23:54:50+00:00',
-        assignee: {
-            id: 43128948,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-            login: 'DiyanDimitrov',
-            email: null,
-            url: 'https://github.com/DiyanDimitrov'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1463233877,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/column-hiding',
-                name: 'column-hiding',
-                nodeId: 'MDU6TGFiZWwxNDYzMjMzODc3',
-                color: 'cdfcae',
-                description: '',
-                default: false
-            },
-            {
-                id: 967734429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid-toolbar',
-                name: 'grid-toolbar',
-                nodeId: 'MDU6TGFiZWw5Njc3MzQ0Mjk=',
-                color: '9cc641',
-                description: '',
-                default: false
-            },
-            {
-                id: 978830865,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hiding',
-                name: 'hiding',
-                nodeId: 'MDU6TGFiZWw5Nzg4MzA4NjU=',
-                color: 'd856d8',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '### Description  \r\nColumn Hiding dropdown closes when you hide a column and the horizontal scroll bar is at the right end of the grid. \r\n\r\n * igniteui-angular version: 9.1.0\r\n * browser: Chrome\r\n\r\n### Steps to reproduce  \r\n\r\n1. Set the horizontal scroll bar on the right end of the grid.\r\n2. Open the column hiding dropdown and hide any column.\r\n\r\n### Result  \r\nColumn Hiding dropdown closes.\r\n\r\n### Expected result  \r\nColumn Hiding dropdown stays open so the user can choose to hide any number of columns.\r\n\r\n![columnhiding](https://user-images.githubusercontent.com/26189540/84404892-05ab9e00-abcd-11ea-94ce-705010327e09.gif)\r\n',
-        title: 'Column Hiding dropdown closes unintentional',
-        number: 7569,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7569',
-        id: 636618893,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-09T13:56:42+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen there is a cell in edit mode and press PgDown or PgUp the focus is not in the grid\r\n\r\n * igniteui-angular version: 9.1\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open dev sample gridColumnMoving\r\n2. Double click on a cell to open it in edit mode\r\n3. Press PageDown key\r\n4. Press PageUp key\r\n\r\nNote1: same is valid when row is opened in edit mode(with rowEditable set to true)\r\nNote2: the issue does not appears when the cell is not in edit mode\r\n\r\n## Result  \r\nThe page is scrolled, not the grid\r\n\r\n## Expected result  \r\nThe grid should be scrolled\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n',
-        title: 'When there is a cell in edit mode and press PgDown or PgUp the focus is not in the grid',
-        number: 7533,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7533',
-        id: 635454449,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-04T19:38:44+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 839132075,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/mask-editor',
-                name: 'mask-editor',
-                nodeId: 'MDU6TGFiZWw4MzkxMzIwNzU=',
-                color: 'd13bd3',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nigxMask cannot be changed dynamically\r\n\r\n * igniteui-angular version: 9.0.1\r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Create input field with [igxMask]="mask"\r\n2. Initialize mask variable on ngOnInit() with value (for example \'000-000\') \r\n3. Assign a new value (for example \'(000)0000\') to the mask variable for any event (for example, click on a button)\r\n\r\n## Result  \r\nWhen you press the button the mask on input field does not change\r\n\r\n## Expected result  \r\nWhen you press the button the mask on input field should change\r\n\r\n\r\n',
-        title: 'igxMask cannot be changed dynamically',
-        number: 7490,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7490',
-        id: 631095836,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-04T17:46:09+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 877031119,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input-group',
-                name: 'input-group',
-                nodeId: 'MDU6TGFiZWw4NzcwMzExMTk=',
-                color: 'f79bb1',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nClicking on an igxHint text will cause the input to be focused, setting the corresponding styles as well.\r\n\r\n## Describe the solution you\'d like\r\n- Clicking on an igxHint should not focus the input, as the igxHint visually is not a part of the input area and thus it does not feel it should focus the input as other elements decoreated with directives like igxPreffix, igxSuffix and igxLabel do.\r\n- The click handler should not include the target element decorated with an igxHint directive. \r\n\r\n\r\n## Additional context\r\n- this affects all components using igxInputGroup internally\r\n\r\nThe current behaviour is:\r\n![ihxHint-focuses-input](https://user-images.githubusercontent.com/4296944/83792681-0b245800-a6a4-11ea-9c7f-d464a631a11e.gif)\r\n![ihxHint-focuses-input-borders](https://user-images.githubusercontent.com/4296944/83792684-0c558500-a6a4-11ea-9603-73cfb6c2da82.gif)\r\n',
-        title: 'Clicking [igxHint] should not focus the input element in inputGroup ',
-        number: 7489,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7489',
-        id: 631028132,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-03T11:20:27+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nInclude igTree from jQuery to Ignite UI for Angular for easy inclusion\r\n\r\n## Describe the solution you\'d like\r\nAbility to add IgxTreeModule similar to IgxGridModule\r\n\r\n## Describe alternatives you\'ve considered\r\nTried including IgTreeComponent, but that causes failures with other Modules\r\n\r\n## Additional context\r\n',
-        title: 'Include igTree from jQuery to Ignite UI for Angular',
-        number: 7475,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7475',
-        id: 629912410,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-01T16:05:43+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1269314671,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/month-picker',
-                name: 'month-picker',
-                nodeId: 'MDU6TGFiZWwxMjY5MzE0Njcx',
-                color: '3e8aa5',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen changing the year on the igx-month-picker, it\'s triggering the onSelection event.  That should not happen as I have not actually selected a month yet.  I\'m just changing years to get to the month I want selected.  This behavior is really bad when selecting the month is then tied to a network query as it causes unnecessary calls.\r\n\r\n * igniteui-angular version: 9.0.13\r\n * browser: any\r\n\r\n## Steps to reproduce  \r\n\r\n<igx-month-picker (onSelection)="onSelection($event)")>\r\n\r\n## Result  \r\nClick forward/back a year calls onSelection\r\n\r\n## Expected result  \r\nShould only call that when a month is actually picked.\r\n\r\n\r\n',
-        title: 'igx-month-picker bad selection',
-        number: 7456,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7456',
-        id: 628554056,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-06-01T11:23:17+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '\r\n[custom-grid.zip](https://github.com/IgniteUI/igniteui-angular/files/4710976/custom-grid.zip)\r\n\r\n## Description  \r\nWhen trying to apply remote sorting it only works for the first time on each column and the remote filtering and the advance filtering does not work.\r\n\r\n * igniteui-angular version:  v9.1.0-alpha.12 and worked on 9.0.0-beta3\r\n * browser: Chrome\r\n\r\n## Result  \r\ndoes not work correctly\r\n\r\n## Expected result  \r\nsort or filter\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n',
-        title: 'igx-grid remote sorting and filtering not working with angular 9',
-        number: 7450,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7450',
-        id: 628362677,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-27T17:39:33+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-         },
-        labels: [
-            {
-                id: 2093864222,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/licensing',
-                name: 'licensing',
-                nodeId: 'MDU6TGFiZWwyMDkzODY0MjIy',
-                color: 'efea56',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654935,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/question',
-                name: 'question',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzU=',
-                color: 'cc317c',
-                description: null,
-                default: true
-            },
-            {
-                id: 2043077405,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive',
-                name: 'status: inactive',
-                nodeId: 'MDU6TGFiZWwyMDQzMDc3NDA1',
-                color: 'bdc442',
-                description: 'Used to stale issues and pull requests',
-                default: false
-            }
-        ],
-        body: '## Question  \r\nHi all,\r\n\r\nI\'m a bit confused about the licensing of this library.\r\nBoth the README and the LICENSE file cite the Apache 2.0 license but later both say _This is a commercial product, requiring a valid paid-for license for commercial use. This product is free to use for non-commercial applications, like non-profits and educational usage._\r\nThis seems at odds with the Apache 2.0 license, unless the intent was to offer dual licensing.\r\nI would like to better understand the conditions under which users or companies can use this library, specifically in commercial applications.\r\nI have installed igniteui-angular through npm and there have been no trial watermarks. Can a commercial application use this library in the manner I just described, since such usage would be compliant with the Apache 2.0 license?\r\n\r\nThanks,\r\nNick Angelastro\r\n\r\n * igniteui-angular version: 9.0.15\r\n * browser: NA',
-        title: 'Ignite UI for Angular Licensing Clarification',
-        number: 7420,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7420',
-        id: 625894173,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-26T09:38:05+00:00',
-        assignee: {
-            id: 43128948,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-            login: 'DiyanDimitrov',
-            email: null,
-            url: 'https://github.com/DiyanDimitrov'
-        },
-        labels: [
-            {
-                id: 897946909,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-exporter',
-                name: 'excel-exporter',
-                nodeId: 'MDU6TGFiZWw4OTc5NDY5MDk=',
-                color: '49d156',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 324654935,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/question',
-                name: 'question',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzU=',
-                color: 'cc317c',
-                description: null,
-                default: true
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Question  \r\nIs there anyway to set or change the worksheet name when we export grid to excel. I am able to set only the filename and not able to configure worksheet name.\r\n\r\nKindly help me with demo or any document to solve the above issue.\r\n\r\n * igniteui-angular version: 8.2.9\r\n * browser: Chrome',
-        title: 'Allow setting of the name of the worksheet in exported workbook in IgxExcelExporter',
-        number: 7396,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7396',
-        id: 624744894,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-21T08:50:18+00:00',
-        assignee: {
-            id: 34240583,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/34240583?v=4',
-            login: 'ddincheva',
-            email: null,
-            url: 'https://github.com/ddincheva'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 853702890,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/sorting',
-                name: 'sorting',
-                nodeId: 'MDU6TGFiZWw4NTM3MDI4OTA=',
-                color: '9cf4c8',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nDatasource changes of igx-grid sort number columns but does not sort columns for types string and date\r\n\r\n * igniteui-angular version: 9.0\r\n * browser: any supported\r\n\r\n## Steps to reproduce  \r\n1. open [https://stackblitz.com/edit/angular-live-update-number-string-date-sort](url)\r\n2. Click on "LIVE ALL PRICES"\r\n3. sort column "Country" or "Last Update"\r\n\r\n## Result  \r\nThe column does not respect defined sorting.\r\n\r\n## Expected result  \r\nThe column should be sorted without calling sort function on the grid object the same way as it works with column "Price"\r\n\r\n',
-        title: 'Date and string columns are not sorted when datasource is updated',
-        number: 7383,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7383',
-        id: 622351487,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-15T17:35:32+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 882395236,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/groupby',
-                name: 'groupby',
-                nodeId: 'MDU6TGFiZWw4ODIzOTUyMzY=',
-                color: 'e580c8',
-                description: '',
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 906940495,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-selection',
-                name: 'row-selection',
-                nodeId: 'MDU6TGFiZWw5MDY5NDA0OTU=',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1040274972,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tree-grid',
-                name: 'tree-grid',
-                nodeId: 'MDU6TGFiZWwxMDQwMjc0OTcy',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'When I have row selection enabled and have grouped my grid by a certain column e.g. Country, it will be very useful to select all records where Bulgaria is part of the data source with a single click e.g. via a checkbox in the group by row that will select all elements within the group.',
-        title: 'Add selection in group by rows',
-        number: 7349,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7349',
-        id: 619133424,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-15T16:36:54+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 1938403931,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/action-strip',
-                name: 'action-strip',
-                nodeId: 'MDU6TGFiZWwxOTM4NDAzOTMx',
-                color: 'be37d6',
-                description: '',
-                default: false
-            },
-            {
-                id: 2069640788,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/cell-interaction',
-                name: 'cell-interaction',
-                nodeId: 'MDU6TGFiZWwyMDY5NjQwNzg4',
-                color: 'd6a04a',
-                description: '',
-                default: false
-            },
-            {
-                id: 1159160231,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/do%20not%20merge',
-                name: 'do not merge',
-                nodeId: 'MDU6TGFiZWwxMTU5MTYwMjMx',
-                color: 'b60205',
-                description: '',
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 2069640112,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-interaction',
-                name: 'row-interaction',
-                nodeId: 'MDU6TGFiZWwyMDY5NjQwMTEy',
-                color: 'f94a8e',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Closes #  \r\n\r\n### Additional information (check all that apply):\r\n - [ ] Bug fix\r\n - [x] New functionality\r\n - [ ] Documentation\r\n - [ ] Demos\r\n - [ ] CI/CD\r\n\r\n### Checklist:\r\n - [x] All relevant tags have been applied to this PR\r\n - [x] This PR includes unit tests covering all the new code ([test guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular))\r\n - [x] This PR includes API docs for newly added methods/properties ([api docs guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Documentation-Guidelines))\r\n - [ ] This PR includes `feature/README.MD` updates for the feature docs\r\n - [ ] This PR includes general feature table updates in the root `README.MD`\r\n - [ ] This PR includes `CHANGELOG.MD` updates for newly added functionality\r\n - [ ] This PR contains breaking changes\r\n - [ ] This PR includes `ng update` migrations for the breaking changes ([migrations guidelines](https://github.com/IgniteUI/igniteui-angular/wiki/Update-Migrations))\r\n - [ ] This PR includes behavioral changes and the feature specification has been updated with them\r\n ',
-        title: 'Grid Interaction Directives implementation',
-        number: 7348,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7348',
-        id: 619101718,
-        pullRequest: 'Octokit.PullRequest'
-    },
-    {
-        createdAt: '2020-05-15T11:05:56+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 882395236,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/groupby',
-                name: 'groupby',
-                nodeId: 'MDU6TGFiZWw4ODIzOTUyMzY=',
-                color: 'e580c8',
-                description: '',
-                default: false
-            },
-            {
-                id: 906940495,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-selection',
-                name: 'row-selection',
-                nodeId: 'MDU6TGFiZWw5MDY5NDA0OTU=',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            },
-            {
-                id: 1629395829,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20M',
-                name: 'size: M',
-                nodeId: 'MDU6TGFiZWwxNjI5Mzk1ODI5',
-                color: 'abc9f2',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Describe the solution you\'d like\r\nIt would be nice to quickly be able to select all rows in a group, by having select checkboxes for the group headers\r\n![image](https://user-images.githubusercontent.com/12936286/82043904-aaa98880-96ac-11ea-8400-9ecf6ef7ca49.png)\r\n\r\n\r\n\r\n\r\n\r\n',
-        title: 'Igx-grid: Select all rows in a group',
-        number: 7344,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7344',
-        id: 618886664,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-14T10:25:41+00:00',
-        assignee: {
-            id: 34240583,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/34240583?v=4',
-            login: 'ddincheva',
-            email: null,
-            url: 'https://github.com/ddincheva'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nShould we persist two active cells at the same time?\r\n\r\n * igniteui-angular version: all\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open any dev demo samples\r\n2. Select/click a cell in both parent and child grid\r\n\r\n## Result  \r\nTwo cells remain active\r\n\r\n## Expected result  \r\nIMO it is confusing to hold two active nodes at the same time\r\n\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/7037740/81923457-5f2ca700-95e6-11ea-85f2-cc8f01b2a795.png)\r\n\r\n![image](https://user-images.githubusercontent.com/7037740/81923520-7bc8df00-95e6-11ea-860d-f1a35b937ea1.png)\r\n\r\n\r\n\r\n',
-        title: 'Should we persist two active nodes at the same time',
-        number: 7337,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7337',
-        id: 618112085,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-13T12:23:04+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 881209850,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/summaries',
-                name: 'summaries',
-                nodeId: 'MDU6TGFiZWw4ODEyMDk4NTA=',
-                color: '25569e',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen summary position is top  Ctrl+Home or Ctrl+Arrow up selects the summary cell\r\n\r\n * igniteui-angular version: 9.1\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Edit dev sample gridGroupBy and add [summaryPosition]="\'top\'" to the grid\r\n2. Open the sample\r\n3. Click root and child button\r\n4. Group by a column\r\n5. Click on cell\r\n6. Press Ctrl+Home or Ctrl+Arrow up\r\n\r\n## Result  \r\nSummary cell is selected\r\n\r\n## Expected result  \r\nFirs grid cell should be selected\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n',
-        title: 'When summary position is top  Ctrl+Home or Ctrl+Arrow up selects the summary cell',
-        number: 7330,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7330',
-        id: 617402875,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-12T09:42:31+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 983537039,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/paging',
-                name: 'paging',
-                nodeId: 'MDU6TGFiZWw5ODM1MzcwMzk=',
-                color: 'f96398',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen change page the active cell should be cleared\r\n\r\n * igniteui-angular version: 9.1\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open dev sample treeGridFlatData\r\n2. Enable paging\r\n3. Click on a cell\r\n4. Change page\r\n\r\n## Result  \r\nA cell in same row and column is activated\r\n\r\n## Expected result  \r\nThere should be no active cell\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n',
-        title: 'When change page the active cell should be cleared',
-        number: 7314,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7314',
-        id: 616514006,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-12T07:45:57+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 977884245,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/multi-column-headers',
-                name: 'multi-column-headers',
-                nodeId: 'MDU6TGFiZWw5Nzc4ODQyNDU=',
-                color: '7c56dd',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen grid has no data navigation in header column groups is not correct\r\n\r\n * igniteui-angular version: 9.1\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open dev sample gridColumnGroups\r\n2. Unpin all columns\r\n3. Filter with no data found\r\n4. Click on a first header cell\r\n5. Press Ctrl+arrow left\r\n\r\n## Result  \r\nThe last header cell is not selected\r\n\r\n## Expected result  \r\nThe last header cell should be selected\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n',
-        title: 'When grid has no data navigation in header column groups is not correct',
-        number: 7310,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7310',
-        id: 616437205,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-05-07T13:17:21+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nAlt + L does not open advanced filtering under MAC\r\n\r\n * igniteui-angular version: all\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open any advanced filtering sample\r\n2. Press alt + L\r\n\r\n## Result  \r\nNothing happens\r\n\r\n## Expected result  \r\nShould open the advanced filtering window\r\n\r\n',
-        title: 'Alt + L does not open advanced filtering dialog under MAC',
-        number: 7287,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7287',
-        id: 614050399,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-30T13:58:45+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 970303223,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/chip',
-                name: 'chip',
-                nodeId: 'MDU6TGFiZWw5NzAzMDMyMjM=',
-                color: 'bd4ee5',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\n\r\nCurrently the main `igx-chip`\'s focusable element is an internal div.\r\nHence if the user sets some  application context specific aria attributes on the main <igx-chip> element they will never be read by a screen reader since the root element is not focusable.\r\n\r\n\r\n## Describe the solution you\'d like\r\n\r\nThe igx-chip element itself should be focusable. \r\nTabIndex and keyboard interactions should be moved on the Host element from the internal div.\r\n\r\n## Additional context\r\nIf the user wants to set some aria attributes like: title, aria-label, aria-describedby etc. he should be able to set them on the igx-chip and then have the screen reader read them.\r\n',
-        title: 'igxChip - improve focusable elements to allow the user to set context specific aria attributes.',
-        number: 7248,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7248',
-        id: 610028179,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-29T08:25:13+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 674809506,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/calendar',
-                name: 'calendar',
-                nodeId: 'MDU6TGFiZWw2NzQ4MDk1MDY=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nThe dates of the calendar are not visible.\r\n\r\n * igniteui-angular version: 9.0.1\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. In `IgxDatePicker` set `vertical` to `true` and `monthsViewNumber` to 3 or more.\r\n2. Show calendar.\r\n\r\n## Result  \r\nNot all days are visible in calendar\r\n\r\n## Expected result  \r\nCalendar should expand and display all days\r\n\r\n## Attachments  \r\n[Here](https://stackblitz.com/edit/angular-psabci?file=src%2Fapp%2Fdatepicker-sample-1%2Fdatepicker-sample-1.component.html) is a Stackblitz sample demonstrating this issue.\r\n\r\n',
-        title: 'IgxDatePicker in vertical view with several months has broken layout',
-        number: 7233,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7233',
-        id: 608870711,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-29T08:13:27+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 1659256343,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker',
-                name: 'date-range-picker',
-                nodeId: 'MDU6TGFiZWwxNjU5MjU2MzQz',
-                color: '3ec9c4',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\n`IgxDatePicker` allows developer to set `vertical` mode. `IgxDateRangePicker` should has same option\r\n\r\n## Describe the solution you\'d like\r\nAdd `vertical` mode to `IgxDateRangePicker`.\r\n\r\n## Describe alternatives you\'ve considered\r\nThere is no way to achieve this in `IgxDateRangePicker` now.\r\n',
-        title: 'IgxDateRangePicker should allow vertical mode',
-        number: 7231,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7231',
-        id: 608863706,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-29T05:56:25+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nI want to quickly be able to see all available grid shortcuts without going to the official documentation.\r\n\r\n## Describe the solution you\'d like\r\nMicrosoft Teams uses <kbd>Ctrl + .</kbd> combination to show a window with all available Keyboard shortcuts. My suggestions would be either to provide similar build-in functionality to the igxGrid OR create an `Extras Directive` (like the Data Analysis directives) that will be applicable on an application level.\r\n\r\n## Additional context\r\n![image](https://user-images.githubusercontent.com/11193764/80564043-6c963e80-89f5-11ea-812e-f5c6d56b9a7a.png)\r\n',
-        title: 'Keyboard shortcuts window',
-        number: 7228,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7228',
-        id: 608798672,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-27T10:49:05+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 356187977,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/styling',
-                name: 'styling',
-                nodeId: 'MDU6TGFiZWwzNTYxODc5Nzc=',
-                color: 'fbca04',
-                description: null,
-                default: false
-            },
-            {
-                id: 1040274972,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tree-grid',
-                name: 'tree-grid',
-                nodeId: 'MDU6TGFiZWwxMDQwMjc0OTcy',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nCurrently, we do not have a unified style when tabbing between logical areas in the igx-grid component. The current _default style_ is shown below. The containers are overlapping and the outline styles vary from browser to browser:\r\n- Body container (Chrome) _Only one right border, the rest are overlapped_ (thin blue line)\r\n![image](https://user-images.githubusercontent.com/11193764/80193461-83b5e480-8621-11ea-8f5b-249992cb7f76.png)\r\n\r\n- Body container (Firefox) _Only one right border_ (black dots)\r\n![image](https://user-images.githubusercontent.com/11193764/80193810-21111880-8622-11ea-8abc-e835d55822da.png)\r\n\r\n- Header container (Chrome) _Two borders - bottom and right, the rest are overlapped_ (thin blue line)\r\n![image](https://user-images.githubusercontent.com/11193764/80193585-c11a7200-8621-11ea-9954-da6394b8ae3c.png)\r\n\r\n- Header container (Firefox) _One right border_ (black dots)\r\n![image](https://user-images.githubusercontent.com/11193764/80193656-ed35f300-8621-11ea-8c05-848a87fe8830.png)\r\n\r\nInitially discussed here https://github.com/igniteui/igniteui-angular/issues/7142',
-        title: 'Unify the outline style when tabbing between logical grid areas',
-        number: 7211,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7211',
-        id: 607443687,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-24T14:06:52+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nIn grids with rows that are bigger than the available space in the tbody, trying to navigate to such rows produces a bizzare effect.\r\n\r\n * igniteui-angular version: 9.1.x\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open https://stackblitz.com/edit/angular-fqwutj?file=src/app/grid/grid-editing-sample/grid-editing-sample.component.html\r\n2. Try to keyboard navigate\r\n\r\n## Result  \r\n![issue11](https://user-images.githubusercontent.com/2188411/80221568-25ebc180-864e-11ea-901c-2ffcbed2f2db.gif)\r\n\r\n\r\n',
-        title: 'Navigating to a row that cannot fit in the tbody produces a never-ending flicker cycle',
-        number: 7204,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7204',
-        id: 606340239,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-23T20:54:20+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 1659256343,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker',
-                name: 'date-range-picker',
-                nodeId: 'MDU6TGFiZWwxNjU5MjU2MzQz',
-                color: '3ec9c4',
-                description: '',
-                default: false
-            },
-            {
-                id: 1775129274,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-time-editor',
-                name: 'date-time-editor',
-                nodeId: 'MDU6TGFiZWwxNzc1MTI5Mjc0',
-                color: '47a31a',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'igxDatePicker implements the following [interface](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/date-picker.common.ts#L5) and igxTimePikcer implements [this](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/time-picker/time-picker.common.ts#L8) one. After the igDateEditor directive is created, those interfaces should be revised. There are properties/methods/events (mode, calendar events) that are common for both, as well for the igxRangeDatePicker, so those should be extracted to a separate interface. Implements IToggleInterface (the latter should be extended and synced within the product)',
-        title: 'Refactor igxDatePicker, igxTimePicker interfaces and define a common one',
-        number: 7199,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7199',
-        id: 605864759,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-23T14:56:26+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 1659256343,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker',
-                name: 'date-range-picker',
-                nodeId: 'MDU6TGFiZWwxNjU5MjU2MzQz',
-                color: '3ec9c4',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nigxDatePicker, igxTimePicker, and igxDateRangePicker are missing `type` property. Even #6751 is implemented, there is still a high possibility that in addition the `type` property is needed in order to have different types for individual components.',
-        title: 'Add type property for igxDatePicker, igxTimePicker and igxDateRangePicker',
-        number: 7196,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7196',
-        id: 605608119,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-22T13:35:09+00:00',
-        assignee: {
-            id: 19392175,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/19392175?v=4',
-            login: 'onlyexeption',
-            email: null,
-            url: 'https://github.com/onlyexeption'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1112335545,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/filtering',
-                name: 'filtering',
-                nodeId: 'MDU6TGFiZWwxMTEyMzM1NTQ1',
-                color: 'daffb2',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nwhen adding faster filtering conditions, chips disappear from the view\r\n\r\n * igniteui-angular version:\r\n * browser: 9.0.x +\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open filtering sample\r\n2. Open any filtering row\r\n3. Start typing and pressing enter faster till chips disappear\r\n\r\n## Result  \r\nAll chips go strongly left\r\n\r\n## Expected result  \r\nChips should stay and keep their order.\r\n\r\n\r\n## Attachments  \r\n![chips-desappear](https://user-images.githubusercontent.com/7037740/79988296-269e1f80-84b7-11ea-986b-742e138fd12b.gif)\r\n\r\n\r\n',
-        title: '[filtering row] when adding faster filtering conditions, chips disappear from the view',
-        number: 7175,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7175',
-        id: 604763018,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-22T08:43:19+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Describe the solution you\'d like\r\nIf igxTimePicker has min and max values, when scrolling into the dialog/dropdown and reaching a max or min value, the disabled hours/minutes/AM or PM should be skipped, and the active time period should become the opposite - min or max value.\r\n\r\n## Additional context\r\nRelated to #3978\r\n',
-        title: 'Define mechanism to skip not active hours/minutes in igxTimePicker dialog',
-        number: 7173,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7173',
-        id: 604571271,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-22T06:24:22+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 1775129274,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-time-editor',
-                name: 'date-time-editor',
-                nodeId: 'MDU6TGFiZWwxNzc1MTI5Mjc0',
-                color: '47a31a',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nAt the moment, the editor will only spin by `1` which may not cover some user scenarios.\r\n\r\n## Describe the solution you\'d like\r\nI should be able to provide a number that will determine how the editor will increment or decrement its date parts.\r\n\r\n## Describe alternatives you\'ve considered\r\nn/a\r\n\r\n## Additional context\r\nn/a\r\n',
-        title: 'IgxDateTimeEditor should support spin delta',
-        number: 7169,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7169',
-        id: 604489940,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-21T08:32:25+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 1991025907,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/aria-support',
-                name: 'aria-support',
-                nodeId: 'MDU6TGFiZWwxOTkxMDI1OTA3',
-                color: '61e2ad',
-                description: '',
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1040274972,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tree-grid',
-                name: 'tree-grid',
-                nodeId: 'MDU6TGFiZWwxMDQwMjc0OTcy',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\n`FastPass` with "Accessibility Insights for Web" tool reports issues related to igx-grid color contrast in headers:\r\n\r\n * igniteui-angular version: 9.0.x\r\n * browser: any\r\n\r\n## Steps to reproduce  \r\n\r\n1. Enable [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni?hl=en) in Chrome\r\n2. Run any angular sample in Chrome.\r\n3. Click this button \r\n![Capturhhhe](https://user-images.githubusercontent.com/13034836/78155818-9c7a1280-7446-11ea-899e-e272d05dbb95.PNG)\r\n and select "FastPass" in order to run a scan.\r\n4. Observe the results and more especially the color-contrast error\r\n\r\n## Result  \r\n![image](https://user-images.githubusercontent.com/11193764/79843677-3d634a00-83c3-11ea-9601-6cb8f0be353e.png)\r\n\r\n## Expected result  \r\nNo color-contrast errors:\r\n![image](https://user-images.githubusercontent.com/11193764/79476436-a63c7200-8011-11ea-915b-062374aaf8e6.png) \r\n\r\n\r\n',
-        title: 'Color-contrast error: Contrast between foreground and background colors ingrid headers',
-        number: 7160,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7160',
-        id: 603812507,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-17T17:30:47+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 354680490,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/nav-drawer',
-                name: 'nav-drawer',
-                nodeId: 'MDU6TGFiZWwzNTQ2ODA0OTA=',
-                color: '64c599',
-                description: null,
-                default: false
-            },
-            {
-                id: 1628740321,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20S',
-                name: 'size: S',
-                nodeId: 'MDU6TGFiZWwxNjI4NzQwMzIx',
-                color: 'aefca9',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 868440495,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tabs',
-                name: 'tabs',
-                nodeId: 'MDU6TGFiZWw4Njg0NDA0OTU=',
-                color: 'efc377',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nI\'d like to have the option to choose whether I want animations on the components `igx-tab` and `igx-nav-drawer`. It\'d be something similar to `mat-tab-group` from Angular Material.\r\n\r\nI do know their `mat-sidenav-container` does not provide animation options, but if you guys could make it on your `igx-nav-drawer` it would be very nice.\r\n\r\n## Describe the solution you\'d like\r\nI believe a property similar to Angular Material (`animationDuration="0ms"`) would be nice.\r\n\r\n## Describe alternatives you\'ve considered\r\nWe can override some styles using CSS, but this alternative looks like an "ugly" workaround.\r\n\r\n## Additional context\r\nAdd any other context or screenshots about the feature request here.\r\nn/a.',
-        title: '[igx-tab] [igx-nav-drawer] Add animations option',
-        number: 7157,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7157',
-        id: 602127745,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-13T06:47:56+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 749009988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring',
-                name: 'refactoring',
-                nodeId: 'MDU6TGFiZWw3NDkwMDk5ODg=',
-                color: 'bcd8f4',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 356193990,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tests',
-                name: 'tests',
-                nodeId: 'MDU6TGFiZWwzNTYxOTM5OTA=',
-                color: 'eeffc0',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Guidelines for test refactoring: https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular\r\n\r\nRelated to #6438',
-        title: 'Tests Refactoring: IgxGrid - GroupBy',
-        number: 7111,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7111',
-        id: 598709983,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-13T06:46:25+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 749009988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring',
-                name: 'refactoring',
-                nodeId: 'MDU6TGFiZWw3NDkwMDk5ODg=',
-                color: 'bcd8f4',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            },
-            {
-                id: 356193990,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tests',
-                name: 'tests',
-                nodeId: 'MDU6TGFiZWwzNTYxOTM5OTA=',
-                color: 'eeffc0',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Guidelines for test refactoring: https://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular\r\n\r\nRelated to #6438',
-        title: 'Tests Refactoring: IgxGrid - CRUD operations',
-        number: 7110,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7110',
-        id: 598709443,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-09T11:32:55+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 988212900,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/display-density',
-                name: 'display-density',
-                nodeId: 'MDU6TGFiZWw5ODgyMTI5MDA=',
-                color: '0986a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 850290880,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/filter-ui',
-                name: 'filter-ui',
-                nodeId: 'MDU6TGFiZWw4NTAyOTA4ODA=',
-                color: 'f484f1',
-                description: '',
-                default: false
-            },
-            {
-                id: 1112335545,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/filtering',
-                name: 'filtering',
-                nodeId: 'MDU6TGFiZWwxMTEyMzM1NTQ1',
-                color: 'daffb2',
-                description: '',
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Description  \r\nOpen any sample from the [grid row filter topic](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering.html) in Stackblitz and change the display density to cosy/compact the grid respects the new density, but the row filter remains in comfortable density irrelevant of the grid.\r\n\r\n## Attachments  \r\n<img width="796" alt="Screenshot 2020-04-09 at 14 32 18" src="https://user-images.githubusercontent.com/1702064/78890801-f1cda980-7a6e-11ea-9650-5fa71077ae0b.png">\r\n\r\n',
-        title: 'Grid filter row does not respect display density',
-        number: 7090,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7090',
-        id: 597218713,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-09T09:18:49+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 839132075,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/mask-editor',
-                name: 'mask-editor',
-                nodeId: 'MDU6TGFiZWw4MzkxMzIwNzU=',
-                color: 'd13bd3',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nIf the mask is set to "\'(966) #### ####\'" when you enter into edit mode the symbol \'9\' is always treated as a fillable spot.\r\n\r\n * igniteui-angular version: 9.0.1 \r\n\r\n## Steps to reproduce  \r\n\r\n1. Run the sample\r\n2. Click on the input\r\n\r\n## Result  \r\nThe digit 9 is replaced as fillable spot.\r\n\r\n## Expected result  \r\nTo be able to set some indication in case you want the symbol \'9\' to be treated as a digit, not special symbol and after the input is clicked to looks like (966) _ _ _ _  _ _ _ _.\r\n\r\n\r\n## Attachments  \r\nhttps://stackblitz.com/edit/angular-9kocto\r\n\r\n',
-        title: 'igxMask always set the symbol \'9\' as a fillable spot ',
-        number: 7089,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7089',
-        id: 597143445,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-09T08:15:41+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 963379072,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay',
-                name: 'overlay',
-                nodeId: 'MDU6TGFiZWw5NjMzNzkwNzI=',
-                color: 'a9fcf2',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nClicking really fast over the row editable rows by constantly exiting and entering in edit mode, leads to confusion in overlay id\'s. \r\n\r\nAfter some investigation, it was determined that the **attach** method gets triggered before the animation has ended. So the callback in **onDone** of the **animationPlayer** lags.\r\n\r\n * igniteui-angular version: \r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Open grid edit row samples\r\n2. Hit a breakpoint in base-grid.directive.ts in the subscription of **onOpened** of the overlay\r\n3. Compare the emitted **ids** and the ones registered in the overlay.\r\n\r\n## Result  \r\nThere is no consistency in the registration and emit process of the overlay id\'s.\r\n\r\n## Expected result  \r\nNeeds consistency in the cycle of registering and emitting correct overlay id\'s\r\n\r\n',
-        title: 'Overlay in edit row template',
-        number: 7088,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7088',
-        id: 597105574,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-06T09:09:54+00:00',
-        assignee: {
-            id: 7037740,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/7037740?v=4',
-            login: 'Aleksandyr',
-            email: null,
-            url: 'https://github.com/Aleksandyr'
-        },
-        labels: [
-            {
-                id: 438360283,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/checkbox',
-                name: 'checkbox',
-                nodeId: 'MDU6TGFiZWw0MzgzNjAyODM=',
-                color: 'fef200',
-                description: null,
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 438361871,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/icon',
-                name: 'icon',
-                nodeId: 'MDU6TGFiZWw0MzgzNjE4NzE=',
-                color: 'bfd4aa',
-                description: null,
-                default: false
-            },
-            {
-                id: 438338013,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/radio-button',
-                name: 'radio-button',
-                nodeId: 'MDU6TGFiZWw0MzgzMzgwMTM=',
-                color: '0052cc',
-                description: null,
-                default: false
-            },
-            {
-                id: 438360184,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/switch',
-                name: 'switch',
-                nodeId: 'MDU6TGFiZWw0MzgzNjAxODQ=',
-                color: '006b75',
-                description: null,
-                default: false
-            },
-            {
-                id: 1031711990,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/typedoc',
-                name: 'typedoc',
-                nodeId: 'MDU6TGFiZWwxMDMxNzExOTkw',
-                color: 'f2b99b',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nSome inputs\' name in the product has different name for their corresponding property in the component\'s class:\r\n\r\n![image](https://user-images.githubusercontent.com/2621802/78541709-bcbb2000-77fe-11ea-90b7-bb64cd654816.png)\r\n\r\nIn order to describe that properly, for applications like AppBuilder and CodeGen, new metadata tag is needed. In addition, the parser should recognize the tag.\r\n\r\nMore similar options:\r\n\r\n![image](https://user-images.githubusercontent.com/2621802/78541953-1facb700-77ff-11ea-87ad-cc044c7a48b7.png)\r\n\r\nWe should also define, somewhere, if a new component is added with such inputs that it should contain that metadata tag.\r\n',
-        title: 'Define new metadata descriptor for inputs that have different property name',
-        number: 7060,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7060',
-        id: 594937808,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-04-03T10:11:40+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1102774151,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-editing',
-                name: 'row-editing',
-                nodeId: 'MDU6TGFiZWwxMTAyNzc0MTUx',
-                color: '77d86a',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\ncustom template tabs are recognized when implementing  IgxRowEditTabStop directive\r\n\r\n * igniteui-angular version: 9.1.x \r\n * browser: All \r\n\r\n## Steps to reproduce  \r\n\r\n1. Open Grid Row Editing sample\r\n2. Enable row edit custom template\r\n3. Enter in edit mode and start navigating with tab thorough the cells.\r\n\r\n## Result  \r\nThe buttons in the template are never selected.\r\n\r\n## Expected result  \r\nOnce we reach the last/first cell of the row the selection should be moved on the buttons.\r\n',
-        title: '[Row editing] custom template tabs are not recognized when implementing  IgxRowEditTabStop directive',
-        number: 7049,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7049',
-        id: 593271970,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-03-27T18:41:38+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 674809506,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/calendar',
-                name: 'calendar',
-                nodeId: 'MDU6TGFiZWw2NzQ4MDk1MDY=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 1659256343,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker',
-                name: 'date-range-picker',
-                nodeId: 'MDU6TGFiZWwxNjU5MjU2MzQz',
-                color: '3ec9c4',
-                description: '',
-                default: false
-            },
-            {
-                id: 1775129274,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-time-editor',
-                name: 'date-time-editor',
-                nodeId: 'MDU6TGFiZWwxNzc1MTI5Mjc0',
-                color: '47a31a',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Problem\r\nCalendar and DatePicker use Date class. Date class represents a timestamp which is often troublesome to handle date-only values.\r\nOpenAPI (swagger) defines [format date](https://swagger.io/docs/specification/data-models/data-types/) to be a date-only string (e.g. 2017-07-21).\r\nCurrently the Calendar doesn\'t allow to use information from a Rest endpoint, conforming to the Swagger date format, to display a birthday calendar, or and date picker like `<input type="date" />` allows.\r\nI need to first create Date instances time-shifted to my local time so Calendar is able to display them correctly. The same will happen for other concepts as Holidays, target release date, etc.\r\ne.g. `new Date(\'2020-03-27\')` -> 2020-03-26 21:00:00 GMT-0300 (this makes the Calendar display the wrong date).\r\n\r\n## Describe the solution you\'d like\r\nCalendar and DatePicker could accept ISO 8601 dates. To internally convert those strings to Date objects or not is an implementation decision, if it\'s converted it should parse it in a way that it\'s interpreted as local time, but this should be transparent to the user.\r\nIt should also be possible to subscribe to changes using ISO 8601 Date strings, e.g. currently calendar onSelection emits Date objects.\r\n\r\n## Describe alternatives you\'ve considered\r\nCreate a pipe to transform the date-only strings to local Dates\r\n```\r\nreturn new Date(\'2020-03-27\' + \'T00:00:00\'); // adding time with no timezone makes it parse it as local time.\r\n```\r\nWhen subscribing to changes I would need to do a conversion to serialize back to date-only strings.\r\nThe pipe (input) could be provided by igniteui to use optionally, but this wouldn\'t solve the subscribe (output) issue.\r\n\r\n## Additional context\r\nHTML `<input type="date" />` accepts and emits ISO Date-only strings, just like the swagger format.\r\nBy implementing this feature, it allows to switch between `<input type="date">` and `igx-datepicker`, while using the same standard format for values.',
-        title: 'Accept ISO 8601 Date-only string as input for igx-calendar and igx-datepicker',
-        number: 6994,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6994',
-        id: 589331146,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-03-18T12:37:35+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description\r\n![captured](https://user-images.githubusercontent.com/16020256/76960469-3361ad80-6924-11ea-85ee-a1ee863c2e61.gif)\r\n\r\n * igniteui-angular version: 8.x, 9.x\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Go to [this sample](https://stackblitz.com/angular/bxoqgbqkpax) or any sample with editable input.\r\n2. Delete part of the year\r\n3. Spin down\r\n,\r\n## Result  \r\nThe spinning goes below zero. Additionally, if you try to spin down the month part, you will eventually reach a state where it will keep appending `NaN`.\r\n\r\n## Expected result  \r\nI should not be able to spin below zero and there should be no `NaN` values once I spin the month part.  \r\n\r\n',
-        title: 'IgxDatePicker allows spinning to negative dates',
-        number: 6925,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6925',
-        id: 583698086,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-03-12T14:18:50+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nThe default Timepicker tag (without Template) has all that functionality but no way to change the lable. And if I use Templates there is no way to get the same functionality the default Timepicker has.\r\n\r\n## Describe the solution you\'d like\r\nEnable to choose the Labletext on TimePicker (like on DatePicker)\r\nOr provide Timepicker -Template setup with the same Funktionality as the default TimePicker.\r\n\r\n\r\n## Additional context\r\nAdd any other context or screenshots about the feature request here.\r\n![image](https://user-images.githubusercontent.com/30624341/76530956-c27a4b80-6474-11ea-95f3-a74fd2a10fb5.png)\r\n',
-        title: 'Choose label -text for igxTimePicker',
-        number: 6905,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6905',
-        id: 579972751,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-03-11T19:56:44+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1187937187,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/select',
-                name: 'select',
-                nodeId: 'MDU6TGFiZWwxMTg3OTM3MTg3',
-                color: 'bf1cce',
-                description: 'Select component',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen setting form validations dynamically, the component `igx-select` doesn\'t update the UI correctly when switching between \'required\' and \'clearValidators\'.\r\n\r\n * igniteui-angular version: 9.0.1\r\n * browser: Chrome Version 80.0.3987.132 (Official Build) (64-bit)\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open the example at https://stackblitz.com/edit/angular-lbjvac\r\n1.1. In this example, telephone type is only required when a telephone is typed\r\n2. Type anything on the telephone text field and hit "tab" to the next focus. You\'ll see that the select component became required.\r\n3. Focus back on the telephone text field and clear the value in it, and hit "tab" again to the next focus. This time the select component kept the required UI appearance, even though it\'s not required anymore.\r\n\r\n## Result  \r\nWhat is the actual result after following the steps to reproduce?\r\nThe select component still appears as required, though the form is marked as valid.\r\n\r\n## Expected result  \r\nWhat is the expected result after following the steps to reproduce?\r\nThe select component should not appear as required.\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\nn/a\r\n\r\n',
-        title: '[igx-select] Dinamic validation on react form doesn\'t update UI correctly ',
-        number: 6896,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6896',
-        id: 579511393,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-03-03T17:13:54+00:00',
-        assignee: {
-            id: 43128948,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-            login: 'DiyanDimitrov',
-            email: null,
-            url: 'https://github.com/DiyanDimitrov'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'To allow a user to control what columns appear in the igx-grid, the _columnHiding_ property must be set to true which presents the default IgxColumnHidingComponent.  Our Engineering team is receiving multiple reports that requiring to check which columns to hide is the complete opposite of the Excel Style Filtering dialog which requires the user to check which data they want to see (attached screenshots).\r\n\r\nI have reported the above confusing (and contradicting) UX in Support Ticket [CAS-206171-T2N7N1](https://www.infragistics.com/my-account/support-case/CAS-206171-T2N7N1).\r\n\r\nWe would like to see the option of reversing the current UX to select which columns to display; not hide.  In the response to the above support ticket, a workaround was provided that does work but solely relies on overriding the default behavior by pulling elements by class names.  This type of implementation has proven to be highly brittle and prone to breaking in subsequent releases as the IGX developers don\'t have an expectation that custom logic has been implemented using CSS class names.\r\n\r\n![image](https://user-images.githubusercontent.com/56270402/75801002-49ba1780-5d2f-11ea-8374-55ed0fd6f200.png)',
-        title: 'Option to select columns instead of hide columns',
-        number: 6858,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6858',
-        id: 574817100,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-03-02T12:56:14+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 354680490,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/nav-drawer',
-                name: 'nav-drawer',
-                nodeId: 'MDU6TGFiZWwzNTQ2ODA0OTA=',
-                color: '64c599',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nThe nav drawer applies flex basis on its host element to flow properly with flex content, however it doesn\'t restrict grow or shrink properties. In cases where the content next to the drawer grows, the flex container may shrink the drawer to size under the defined width.\r\n\r\n * igniteui-angular version: 9.0.3\r\n * browser: N/A\r\n\r\n## Result  \r\nHere the `igx-nav-drawer` host element is smaller than its base and the actual content inside it (darker box) and thus other content may overlap the nav items:\r\n![image](https://user-images.githubusercontent.com/3198469/75678107-85080800-5c95-11ea-96f8-cbbd568eda70.png)\r\n\r\n\r\n## Expected result  \r\nThe drawer should define shrink (probably grow too to be on the safe side)\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable so other content doesn\'t interfere with the drawer items:\r\n![image](https://user-images.githubusercontent.com/3198469/75678243-ddd7a080-5c95-11ea-8c26-976d39ea8329.png)\r\n.  \r\n\r\n',
-        title: 'Nav drawer flex shrink is not restricted',
-        number: 6856,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6856',
-        id: 573955923,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-27T13:56:17+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 926278753,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/combo',
-                name: 'combo',
-                nodeId: 'MDU6TGFiZWw5MjYyNzg3NTM=',
-                color: '152872',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nSometimes Combobox incorrect calculates position for dropdown with items.\r\nMostly it happens when selected values (multiple select is on) located at the beginning of the list and end of the list.  After press 2-3 times on up/down arrow buttons, it refreshes it correctly and everything works fine. Is it anyway how to call this recalculation as a workaround for this?\r\n\r\n * igniteui-angular version: 9.0.1\r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Create igxCombo with components (We have nearly 100 components)\r\nE.g. we have such combo: \r\n```\r\n<igx-combo #comboComponent #comboComponentModel="ngModel" \r\n                 [data]="states$ | async" valueKey="id" displayKey="name"\r\n                 [(ngModel)]="providerProfile.state" name="history" required>\r\n</igx-combo>\r\n```\r\n2. Pick first two and last two checkboxes\r\n3. Save data to a database on your back-end\r\n4. Reload page\r\n5. Checkboxes have to be set with saved data\r\n\r\n## Result  \r\n![Снимок экрана 2020-02-27 в 16 34 30](https://user-images.githubusercontent.com/22504733/75451563-d22c6700-5981-11ea-84ac-1e9e85ad01ad.jpeg)\r\n\r\n\r\n## Expected result  \r\n![Снимок экрана 2020-02-27 в 16 43 31](https://user-images.githubusercontent.com/22504733/75451542-c771d200-5981-11ea-9d9a-2ec3fe8800f6.jpeg)\r\n\r\n\r\n',
-        title: 'Sometimes combobox incorrect calculates position for dropdown with items',
-        number: 6842,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6842',
-        id: 572101726,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-27T12:54:02+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 438337761,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input',
-                name: 'input',
-                nodeId: 'MDU6TGFiZWw0MzgzMzc3NjE=',
-                color: 'a950c4',
-                description: null,
-                default: false
-            },
-            {
-                id: 877031119,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input-group',
-                name: 'input-group',
-                nodeId: 'MDU6TGFiZWw4NzcwMzExMTk=',
-                color: 'f79bb1',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen inputs autofill by browser, the label doesn`t move upper than the inserted text.\r\n\r\n * igniteui-angular version: 9.0.1\r\n * browser: Google Chrome\r\n\r\n## Steps to reproduce  \r\n\r\n1. Add input group with the input field and label to the page\r\nE.g.:\r\n```\r\n<igx-input-group class="layout-box__el input-field">\r\n          <label igxLabel>Password</label>\r\n          <input igxInput type="password" name="password" required/>\r\n</igx-input-group>\r\n```\r\nSame issue with \'text\' input type\r\n2. Save this field in browser to use it with autofill\r\n3. Refresh page\r\n4. Use autofill from browser\r\n\r\n## Result  \r\n<img width="123" alt="image" src="https://user-images.githubusercontent.com/22504733/75446417-73162480-5978-11ea-9d8f-85396cfb22ae.png">\r\n\r\n\r\n## Expected result  \r\n<img width="119" alt="image" src="https://user-images.githubusercontent.com/22504733/75446451-80331380-5978-11ea-91a5-d5333fb85e3f.png">\r\n',
-        title: 'Autofill data insert incorrectly to input field',
-        number: 6839,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6839',
-        id: 572064556,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-26T08:53:20+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nIf we switch to next picker using keyboard tab, it is point to end of the field.\r\n\r\n * igniteui-angular version: 8.2.20\r\n * browser:  all browser\r\n\r\n## Steps to reproduce  \r\nhttps://xentryframeworkdiagnosis-int.corpinter.net/time-picker/\r\n\r\n1. open the link in browser, click on vin field and enter 17 character, then press keyboard tab cursor move to next field.\r\n2. again press tab then move to start time field, observe the issue, cursor pointing to end of --:-- directive \r\n\r\n## Result  \r\nCursor pointing to end of --:-- directive \r\n\r\n## Expected result  \r\nCursor should pointing to start of --:-- directive \r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n',
-        title: 'igx-time-picker in dropdown mode, if we switch to next picker using keyboard tab, point to end of the field.',
-        number: 6827,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6827',
-        id: 571167315,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-26T04:51:19+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1577002287,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/ivy',
-                name: 'ivy',
-                nodeId: 'MDU6TGFiZWwxNTc3MDAyMjg3',
-                color: 'beb8f2',
-                description: '',
-                default: false
-            },
-            {
-                id: 417513145,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/postponed',
-                name: 'postponed',
-                nodeId: 'MDU6TGFiZWw0MTc1MTMxNDU=',
-                color: 'f9d0c4',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Description  \r\nI have a pinned column which always is first column.\r\nAnd other columns are based on a array is loaded at runtime.\r\nEx: \r\n```\r\n columns = [\r\n  {header: "Second", field: "name", pinned: true},\r\n  {header: "Last", field: "age"}\r\n ]\r\n<igx-grid>\r\n   <igx-column header="First" field="\'id\'" [pinned]="true"></igx-column>\r\n   <igx-column *ngFor="let col of columns"  [header]="col .header" [field]="\'col .field\'" [pinned]="col.pinned"></igx-column>\r\n</igx-grid>\r\n```\r\n**Issue**: I get `columns` from api and first column is rendered before  `columns` shows up\r\n * igniteui-angular version: 8.2.20\r\n\r\n## Result \r\n![Capture](https://user-images.githubusercontent.com/22111947/75312542-cf037f00-588c-11ea-923e-fb8308cbc343.PNG)\r\n\r\n## Expected result  \r\n![75312542-cf037f00-588c-11ea-923e-fb8308cbc343](https://user-images.githubusercontent.com/22111947/75761521-ce2a8b80-5d6b-11ea-811c-9956f372fc25.png)\r\n',
-        title: 'Adding more than one pinned columns doesn\'t position them to the right of the already fixed column',
-        number: 6823,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6823',
-        id: 571067920,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-22T10:27:35+00:00',
-        assignee: {
-            id: 5990334,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/5990334?v=4',
-            login: 'wnvko',
-            email: null,
-            url: 'https://github.com/wnvko'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 868440495,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tabs',
-                name: 'tabs',
-                nodeId: 'MDU6TGFiZWw4Njg0NDA0OTU=',
-                color: 'efc377',
-                description: '',
-                default: false
-            },
-            {
-                id: 832237694,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/toast',
-                name: 'toast',
-                nodeId: 'MDU6TGFiZWw4MzIyMzc2OTQ=',
-                color: 'e00fd9',
-                description: null,
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nI have a component which shows `igxToast` messages. When I put this component in `igxTab`\'s tabs the toast message does not shows correctly in the first tab, and does not show at all in all other tabs. \r\n\r\n * igniteui-angular version: 9.0.1\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Start this [Stackblitz](https://stackblitz.com/edit/angular-okg5s9?file=src%2Fapp%2Ftabs-sample-1%2Ftabs-sample-1.component.html).\r\n2. Click on `Show notification` button.\r\n3. Click on second tab.\r\n4. Click on `Show notification` button.\r\n\r\n## Result  \r\nOn first tab notification is cut.\r\nOn all other tabs notification does not appear at all.\r\n\r\n## Expected result  \r\nNotification should be visible in all tabs',
-        title: 'Toast does not show correctly in tabs',
-        number: 6802,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6802',
-        id: 569315030,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-17T13:08:25+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 877031119,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input-group',
-                name: 'input-group',
-                nodeId: 'MDU6TGFiZWw4NzcwMzExMTk=',
-                color: 'f79bb1',
-                description: '',
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\n\r\nWhen <input-group> is used with a different theme a `type` input needs to be set to the corresponding theme to change the structure of the component in order to apply the theme correctly. It appears that there is no easy way to infer the `type` from the theme. In most cases the user can set the `type` himself on the component. Components however that use the <input-group> internally don’t have a way for the user to set the type, which means that there’s no way out of the box to style them according to the applied theme.\r\n\r\nSome such components:\r\n1)\tGrid Editors – the editors for edit functionality are by default input-groups/date-picker. Unless the user templates each cell editor and sets the `type` input the editors cannot be styled according to the theme.\r\n2)\tDate Picker – uses input-group for both default templates. Does not appear to be a way to set type. \r\n3)\tTime Picker – same as Date Picker.\r\n4)\tCombo – this one has its own `type` @Input that is then set to the main input, however there is also a search input in the drop-down (which is enabled when filterable)  that does not seem to be settable based on the theme.\r\n\r\n## Describe the solution you\'d like\r\nExpose some way to set the Input Group `type` globally so that components that use it internally inherit it from the parent or use the globally set one (maybe something similar to the DisplayDensity implementation or a global service that sets the type).\r\n\r\n## Describe alternatives you\'ve considered\r\n\r\n\r\n## Additional context\r\nRelated to: https://github.com/IgniteUI/igniteui-angular-samples/issues/1757\r\nOnce we have a way to set this globally we can apply it in the Samples Browser.\r\n\r\n',
-        title: 'Expose way to set the Input Group `type` globally since input components depend on it to apply themes correctly.',
-        number: 6751,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6751',
-        id: 566287914,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-17T12:40:21+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description\r\nWhen the `mode` option is changed to `dropdown` after control init, the picker applies a mask that\'s not a date (the `igxMask` default)\r\n\r\n * igniteui-angular version: 9.0.x\r\n * browser: N/A\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open https://stackblitz.com/edit/datepicker-mode-switch\r\n2. Change the mode from the select\r\n3. Focus the input\r\n\r\n\r\n## Result  \r\nThe editor displays the date correctly as "5/15/19", but when you focus there\'s no value and the placeholder shows the underlying mask as "CCCCCCC..":\r\n![image](https://user-images.githubusercontent.com/3198469/74653723-70098000-5191-11ea-8b50-29df2bac8e72.png)\r\n\r\nAlso if you clear the editor and focus again, the picker throws a parsing error:\r\n\r\n![image](https://user-images.githubusercontent.com/3198469/74652769-739c0780-518f-11ea-95b7-b8e6489c6918.png)\r\n\r\n\r\n## Expected result  \r\nThe editor should work the same as if `mode="dropdown"` has been assigned intially, formatting the date as "_5/15/2019" when focused and display an empty mask (`__/__/____`) for cleared.\r\n',
-        title: 'Date picker applies non-date mask when dropdown mode is set after init',
-        number: 6749,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6749',
-        id: 566273460,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-10T13:32:42+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 749009988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring',
-                name: 'refactoring',
-                nodeId: 'MDU6TGFiZWw3NDkwMDk5ODg=',
-                color: 'bcd8f4',
-                description: null,
-                default: false
-            },
-            {
-                id: 356193990,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tests',
-                name: 'tests',
-                nodeId: 'MDU6TGFiZWwzNTYxOTM5OTA=',
-                color: 'eeffc0',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'We need to refactor all the angular test.\r\nAll the, which are integration test with more than 5 user interaction should be refactor or excluded.\r\nHere is a dodument for writing test:\r\nhttps://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular',
-        title: 'Tests Refactoring: CSV Grid Exporter, CSV exporter and Excel Exporter',
-        number: 6651,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6651',
-        id: 562563169,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-10T08:20:37+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nI want to use a secondary navigation functionality that can reveal the user\'s location in a web application or simply to trace the path back to my original landing point.\r\n\r\n## Describe the solution you\'d like\r\nDefine three types of breadcrumbs\r\n- Location-based - used for navigation schemes with multiple levels of hierarchy\r\n[1st level](url) **>>** [2nd leve](url)l **>>** [3rd level](url) **>>** _Current location_\r\n\r\n- Attribute-based - display the full `crumb` items trail\r\n[Item 1](url) >> [Item 2](url) >> [Item 3 ](url)>> [Item 4](url) >> [Item 5](url) \r\n\r\n- Dynamicly-based - path based breadcrumbs showing the path that was taken to arrive at a particular page. Each breadcrumb is created dynamically.\r\n\r\n## Describe alternatives you\'ve considered\r\nWe can achieve a custom implementation with the help of the Navigation bar component\r\n\r\n## Additional context\r\nBreadcrumb-style navigation is commonly used as a primary menu, allowing visitors to quickly understand what they are currently viewing or establish where they are in the website.\r\n',
-        title: 'Breadcrumb component',
-        number: 6642,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6642',
-        id: 562396885,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-08T19:34:59+00:00',
-        assignee: {
-            id: 2778393,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2778393?v=4',
-            login: 'dafo',
-            email: null,
-            url: 'https://github.com/dafo'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description\r\nSetting this in `tsconfig.json`\r\n```json\r\n{\r\n  "angularCompilerOptions": {\r\n    "enableIvy": true,\r\n    "fullTemplateTypeCheck": true,\r\n    "preserveWhitespaces": false,\r\n    "strictInjectionParameters": true,\r\n    "strictTemplates": true\r\n  },\r\n .......\r\n}\r\n```\r\ncauses a build error for\r\n```html\r\n<igx-column [header]="\'Total\'" [field]="\'total\'" [filterable]="true" [dataType]="\'number\'"> </igx-column>\r\n```\r\nSetting `"strictTemplates": false` avoids the build failure described above.\r\n\r\n * igniteui-angular version: 9.0.0-rc.2\r\n * browser: build issue\r\n\r\n## Steps to reproduce  \r\n\r\n1. Try with `"strictTemplates": true`\r\n2. Experience the error\r\n3. Try with `"strictTemplates": false`\r\n4. The build does not stumble.\r\n\r\n## Result\r\nBuild failure\r\n```log\r\nsrc/app/pages/home/statistics/statistics-monthly.component.html:13:88 - error TS2322: Type \'"number"\' is not assignable to type \'DataType\'.\r\n\r\n13       <igx-column [header]="\'Total\'" [field]="\'total\'" [filterable]="true" [dataType]="\'number\'"> </igx-column>\r\n```\r\n\r\n## Expected result\r\nStrict template mode should be possible.\r\n',
-        title: 'Build fails in "strictTemplates" mode for <igx-column [dataType]="\'number\'">',
-        number: 6636,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6636',
-        id: 562067168,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-05T15:13:46+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 1221520389,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-style-filtering',
-                name: 'excel-style-filtering',
-                nodeId: 'MDU6TGFiZWwxMjIxNTIwMzg5',
-                color: 'fef2c0',
-                description: '',
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Description  \r\nWhen a user types a value in the search input of the Excel Style Filtering, items get filtered. Then, if a user unchecks all filtered items (except for Select All checkbox), the Select All checkbox goes indetermined, instead of unchecked. Select All affect all items, even if they are filtered by the value in the search input. There is no way to act on the filtered items all at once.\r\n\r\n## Steps to reproduce  \r\n\r\n1.  The goal is to filter all users by the name containing "ste"\r\n2. Trigger Excel Style Filtering\r\n3. Deselect all items by unchecking the "Select All" item in the list of unique values\r\n2. Type "ste" in the search input\r\n3. It is not possible to select just the filtered items as "Select All" would check all items in the grid, independent from the search term typed in\r\n\r\n## Result  \r\nFinally, Select All goes indetermined instead of unchecked. \r\n\r\n<img width="865" alt="Screen Shot 2020-02-05 at 3 26 51 PM" src="https://user-images.githubusercontent.com/41998471/73854106-a0205d00-483a-11ea-811e-b39c4c697286.png">\r\n\r\n## Expected result  \r\nI expect to be able to select/deselect all filtered items at once when a search criterion is specified. \r\n\r\n## Solution\r\n- When having a value in the search input, we will add not one but two items besides the unique ones\r\n- First will appear: "Select All items" - affecting all list items\r\n- Next will come: "Select Filtered Items" - affecting only the filtered list items',
-        title: 'Incorrect behavior of the Select All checkbox in Excel Style Filtering ',
-        number: 6617,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6617',
-        id: 560437524,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-04T11:43:29+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 799217988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/i18n',
-                name: 'i18n',
-                nodeId: 'MDU6TGFiZWw3OTkyMTc5ODg=',
-                color: 'fc6ce4',
-                description: null,
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Move [localization](https://github.com/IgniteUI/igniteui-angular-i18n) repository, inside the igniteui-angular project.\r\n',
-        title: 'Move localization repository inside the igniteui-angular project',
-        number: 6602,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6602',
-        id: 559664623,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-03T09:03:50+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 906940495,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-selection',
-                name: 'row-selection',
-                nodeId: 'MDU6TGFiZWw5MDY5NDA0OTU=',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nOpen the [row selection sample](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/row_selection.html)\r\nIt says "On cell click holding ctrl key, the row get selected and previous selection state is preserved." but this type of selection with the mouse is impossible to complete on a Mac.\r\n\r\n## Describe the solution you\'d like\r\nOn cell click holding command key, the row get selected and previous selection state is preserved.\r\n',
-        title: 'Grid with row selection to allow CMD+Click for multiple selection on Mac',
-        number: 6584,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6584',
-        id: 558940147,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-02-02T15:19:46+00:00',
-        assignee: {
-            id: 5990334,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/5990334?v=4',
-            login: 'wnvko',
-            email: null,
-            url: 'https://github.com/wnvko'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 963379072,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay',
-                name: 'overlay',
-                nodeId: 'MDU6TGFiZWw5NjMzNzkwNzI=',
-                color: 'a9fcf2',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nDialog window positions incorrectly on second open. \r\n\r\n * igniteui-angular version: 9.0.0-rc.0\r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Start dev demos\r\n2. Open dialog demo\r\n3. Click `Trigger alert` button to open Fluent dialog.\r\n4. Press `esc` key to close the dialog.\r\n5. Click `Trigger alert` button to open Fluent dialog.\r\n\r\n## Result  \r\nOn second opening the dialog window is positioned a little above the middle of the page.\r\n\r\n## Expected result  \r\nOn each opening dialog window should be positioned in the middle of the page.\r\n\r\n\r\n## Attachments  \r\n[Demo](https://stackblitz.com/edit/angular-itmdz1-aevnvu?file=src/app/app.component.ts) on Stackblitz. Note, you should click `Open in new window live`, as this does reproduce in `iframe`\r\n\r\n',
-        title: 'Dialog positions incorrectly on second open',
-        number: 6581,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6581',
-        id: 558711206,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-01-29T12:18:52+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nIt would be nice to enable the user to use the scroll wheel to scroll horizontally as well (for mouse with only 1 scroll wheel). \r\n\r\n## Describe the solution you\'d like\r\nWhen holding down for instance the shift key, the grid scrolls horizontally instead of vertically. \r\n\r\n',
-        title: 'Key + scroll for horizontal scroll in igx-grid',
-        number: 6566,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6566',
-        id: 556825877,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-01-27T08:39:51+00:00',
-        assignee: {
-            id: 21260963,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/21260963?v=4',
-            login: 'desig9stein',
-            email: null,
-            url: 'https://github.com/desig9stein'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 438337761,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input',
-                name: 'input',
-                nodeId: 'MDU6TGFiZWw0MzgzMzc3NjE=',
-                color: 'a950c4',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nI am trying to style a file input with `igxInput` directive, but the result is not satisfying.\r\n\r\n## Describe the solution you\'d like\r\nI would like `igxInput` to be able to style the file input including the button and text.\r\n',
-        title: 'IgxInput directive to style file type input',
-        number: 6544,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6544',
-        id: 555429663,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-01-21T08:14:33+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 970329408,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/cell-editing',
-                name: 'cell-editing',
-                nodeId: 'MDU6TGFiZWw5NzAzMjk0MDg=',
-                color: '70e5df',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1102774151,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-editing',
-                name: 'row-editing',
-                nodeId: 'MDU6TGFiZWwxMTAyNzc0MTUx',
-                color: '77d86a',
-                description: '',
-                default: false
-            },
-            {
-                id: 1628732209,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20L',
-                name: 'size: L',
-                nodeId: 'MDU6TGFiZWwxNjI4NzMyMjA5',
-                color: 'dd3989',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nAs a developer, I would like to be able to reuse some or all of my forms validation logic with the `igx-grid` editing.\r\n\r\n## Describe the solution you\'d like\r\nCurrently, if I want to validate the igx-grid row or cell editing and display different validation messages, stop user navigation, etc. I have to write an entirely custom validation logic. There\'s also no unified way to plug validation into the grid editing. I would like some mechanism, like the grid transaction service, which allows me to define validation logic and events it triggers on, similar to forms validation.\r\n\r\n## Describe alternatives you\'ve considered\r\nWrite an entirely custom validation logic.\r\n\r\n## Additional context\r\nThis affects maintainability of applications using igniteui-angular.\r\nConsider #4135 \r\n',
-        title: 'Validator service for igxGrid editing',
-        number: 6501,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6501',
-        id: 552690765,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-01-16T08:29:16+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 749009988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring',
-                name: 'refactoring',
-                nodeId: 'MDU6TGFiZWw3NDkwMDk5ODg=',
-                color: 'bcd8f4',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Dependant on #6271\r\n\r\nWith the new `IgxDateTimeEditorDirective` implemented, we should refactor the `IgxDatePicker` to use the new editor to handle mask parsing, spinning, date validation and any other action related to the date picker\'s input.\r\n\r\nAlso, refactor the tests.',
-        title: 'IgxDatePicker refactoring',
-        number: 6483,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6483',
-        id: 550651190,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-01-16T08:22:27+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 749009988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring',
-                name: 'refactoring',
-                nodeId: 'MDU6TGFiZWw3NDkwMDk5ODg=',
-                color: 'bcd8f4',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Dependant on #6271\r\n\r\nOnce the new `IgxDateTimeEditorDirective` is finished, we should refactor the `time picker` to use the new editor to handle mask parsing, spinning, date validation and any other action related to the `time picker`\'s input.\r\n\r\nAlso, refactor the tests.\r\n\r\nPlease consider setting the value to null on clear() as requested in issue #6585',
-        title: 'IgxTimePicker refactoring',
-        number: 6482,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6482',
-        id: 550648152,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-01-10T07:38:01+00:00',
-        assignee: {
-            id: 3768136,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/3768136?v=4',
-            login: 'skrustev',
-            email: null,
-            url: 'https://github.com/skrustev'
-        },
-        labels: [
-            {
-                id: 1511754776,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/Epic',
-                name: 'Epic',
-                nodeId: 'MDU6TGFiZWwxNTExNzU0Nzc2',
-                color: '3E4B9E',
-                description: null,
-                default: false
-            },
-            {
-                id: 749009988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring',
-                name: 'refactoring',
-                nodeId: 'MDU6TGFiZWw3NDkwMDk5ODg=',
-                color: 'bcd8f4',
-                description: null,
-                default: false
-            },
-            {
-                id: 1628732209,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20L',
-                name: 'size: L',
-                nodeId: 'MDU6TGFiZWwxNjI4NzMyMjA5',
-                color: 'dd3989',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            },
-            {
-                id: 356193990,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tests',
-                name: 'tests',
-                nodeId: 'MDU6TGFiZWwzNTYxOTM5OTA=',
-                color: 'eeffc0',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nTests Refactoring\r\n\r\nWe need to refactor all the angular test.\r\nAll the, which are integration test with more than 5 user interaction should be refactor or excluded.\r\nHere is a dodument for writing test:\r\nhttps://github.com/IgniteUI/igniteui-angular/wiki/Test-implementation-guidelines-for-Ignite-UI-for-Angular\r\n\r\nTests specs list:\r\n### Non grid components:\r\n\r\n- [ ] Avatar\r\n\r\n- [ ] Badge\r\n\r\n- [ ] igxBanner\r\n\r\n- [x] IgxButtonGroup and IgxButton - @igdmdimitrov (Deferred)\r\n\r\n- [x] IgxCalendar - @igdmdimitrov \r\n\r\n- [ ] Multi-View Calendar\r\n\r\n- [ ] Card\r\n\r\n- [ ] IgxMonthPicker\r\n\r\n- [ ] Carousel\r\n\r\n- [ ] IgxCheckbox\r\n\r\n- [x] IgxChip - @nrobakova \r\n\r\n- [x] IgxChipsArea - @skrustev \r\n\r\n- [x] igxCombo - @PlamenaMiteva \r\n\r\n- [ ] Utils\r\n\r\n- [ ] DataUtil\r\n\r\n- [ ] IgxDatePicker\r\n\r\n- [ ] Dialog\r\n\r\n- [ ] IgxAutocomplete\r\n\r\n- [ ] Divider\r\n\r\n- [ ] igxFocus\r\n\r\n- [ ] igxDrag/igxDrop\r\n\r\n- [x] IgxForOf directive - @skrustev \r\n\r\n- [ ] IgxInput and IgxInputGroup\r\n\r\n- [ ] IgxLayoutDirective\r\n\r\n- [ ] igxMask\r\n\r\n- [ ] IgxRadioGroupDirective\r\n\r\n- [x] Scroll Inertia Directive - @skrustev \r\n\r\n- [ ] IgxHighlight and IgxSelection\r\n\r\n- [ ] IgxToggle\r\n\r\n- [ ] IgxTooltip\r\n\r\n- [x] IgxDropDown - @PlamenaMiteva \r\n\r\n- [ ] igxExpansionPanel\r\n\r\n- [ ] Icon Service\r\n\r\n- [ ] List\r\n\r\n- [ ] IgxNavbar\r\n\r\n- [ ] IgxPaginator \r\n\r\n- [ ] IgCircularBar\r\n\r\n- [ ] IgLinearBar\r\n\r\n- [ ] IgxRadio\r\n\r\n- [ ] igxSelect\r\n\r\n- [ ] CSV Grid Exporter, CSV exporter and Excel Exporter - @igdmdimitrov \r\n\r\n- [ ] igxOverlay\r\n\r\n- [ ] IgxTransaction\r\n\r\n- [ ] IgxSlider\r\n\r\n- [ ] IgxSnackbar\r\n\r\n- [ ] IgxSwitch\r\n\r\n- [ ] IgxBottomNav\r\n\r\n- [ ] IgxTabs\r\n\r\n- [ ] IgxTimePicker\r\n\r\n- [ ] IgxToast\r\n\r\n### Grid tests:\r\n\r\n- [x] IgxGrid - Cell component - @nrobakova \r\n\r\n- [ ] IgxGrid - multi-column headers\r\n\r\n- [x] Column Hiding UI - @nrobakova\r\n\r\n- [ ] IgxGrid - Column Moving\r\n\r\n- [x] Column Pinning UI - @nrobakova \r\n\r\n- [x] IgxGrid - Deferred Column Resizing\r\n\r\n- [ ] IgxGrid - Column properties - TBC @nrobakova \r\n\r\n- [ ] IgxGrid - Cell Editing\r\n\r\n- [ ] IgxGrid - Cell selection\r\n\r\n- [x] IgxGrid - Clipboard\r\n\r\n- [x] IgxGrid - Filtering actions UI - @nrobakova \r\n\r\n- [x] IgxGrid - Filtering Row UI actions - @nrobakova \r\n\r\n- [x] IgxGrid - Advanced Filtering - @igdmdimitrov\r\n\r\n- [x] IgxGrid - Filtering actions - Excel style filtering - @nrobakova \r\n\r\n- [ ] IgxGrid - Filtering actions\r\n\r\n- [x] IgxGrid - Keyboard navigation - @nrobakova \r\n\r\n- [ ] IgxGrid Multi Row Layout\r\n\r\n- [ ] IgxGrid Component\r\n\r\n- [x] IgxGrid - Row Editing - @valadzhov\r\n\r\n- [x] IgxGrid - Row Selection - @nrobakova \r\n\r\n- [x] IgxGrid - Summaries - @nrobakova \r\n\r\n- [x] IgxGrid - Grid Toolbar - @igdmdimitrov \r\n\r\n- [ ] IgxGrid - CRUD operations - @valadzhov\r\n\r\n- [ ] IgxGrid - GroupBy - @ChronosSF\r\n\r\n- [ ] IgxGrid - Master Detail\r\n\r\n- [x] IgxGrid - multi-row-layout keyboard navigation - @skrustev \r\n\r\n- [ ] IgxGrid - multi-row-layout Integration\r\n\r\n- [ ] IgxGrid - multi-row-layout - TBD\r\n\r\n- [x] IgxGrid - Grid Paging - @HristoP96\r\n\r\n- [x]  IgxGrid - Column Pinning - @HristoP96\r\n\r\n- [x] IgxGrid - search API - @igdmdimitrov \r\n\r\n- [x] IgxGrid - Grid Sorting - @HristoP96 \r\n\r\n- [x] IgxGrid - Row Drag Tests - @PlamenaMiteva \r\n\r\n- [ ] IgxGridState\r\n\r\n### Tree Grid:\r\n\r\n- [ ] IgxTreeGrid - CRUD\r\n\r\n- [ ] IgxTreeGrid - Expanding / Collapsing\r\n\r\n- [ ] IgxTreeGrid - Filtering actions\r\n\r\n- [ ] IgxTreeGrid - Indentation\r\n\r\n- [ ] IgxTreeGrid - Integration\r\n\r\n- [x] IgxTreeGrid - Key Board Navigation\r\n\r\n- [ ]  IgxTreeGrid - Multi Cell selection\r\n\r\n- [ ] IgxTreeGrid - search API\r\n\r\n- [ ] IgxTreeGrid - Selection\r\n\r\n- [ ] IgxTreeGrid - Sorting\r\n\r\n- [ ] IgxTreeGrid - Summaries\r\n\r\n- [ ] IgxTreeGrid Component Tests\r\n\r\n### Hierarchical Grid:\r\n\r\n- [x] IgxHierarchicalGrid Integration - @ChronosSF\r\n\r\n- [x] IgxHierarchicalGrid Basic Navigation - @skrustev \r\n\r\n- [x] IgxHierarchicalGrid Complex Navigation - @ChronosSF\r\n\r\n- [x] IgxHierarchicalGrid Multi-layout Navigation - @ChronosSF \r\n\r\n- [x]  IgxHierarchicalGrid Smaller Child Navigation - @ChronosSF\r\n\r\n- [x] IgxHierarchicalGrid selection - @HristoP96\r\n\r\n- [ ] Basic IgxHierarchicalGrid\r\n\r\n- [ ] IgxHierarchicalGrid Row Islands\r\n\r\n- [ ] IgxHierarchicalGrid Children Sizing\r\n\r\n- [ ] IgxHierarchicalGrid Remote Scenarios\r\n\r\n- [ ] IgxHierarchicalGrid Template Changing Scenarios\r\n\r\n- [ ] IgxHierarchicalGrid Runtime Row Island change Scenarios\r\n\r\n- [ ] IgxHierarchicalGrid custom template\r\n\r\n- [ ] IgxHierarchicalGrid Virtualization\r\n\r\n- [ ] IgxHierarchicalGrid Virtualization Custom Scenarios\r\n\r\n\r\n\r\n',
-        title: 'Tests Refactoring',
-        number: 6438,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6438',
-        id: 547916595,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-01-09T14:38:51+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 438337761,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input',
-                name: 'input',
-                nodeId: 'MDU6TGFiZWw0MzgzMzc3NjE=',
-                color: 'a950c4',
-                description: null,
-                default: false
-            },
-            {
-                id: 877031119,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input-group',
-                name: 'input-group',
-                nodeId: 'MDU6TGFiZWw4NzcwMzExMTk=',
-                color: 'f79bb1',
-                description: '',
-                default: false
-            }
-        ],
-        body: '**Preface:** The visual validity of a control (as displayed to the user) is a combination of the status and usually either dirty or touched, per [Form Validation](https://angular.io/guide/form-validation).\r\n\r\n## Is your request related to a problem? Please describe.\r\nUpdating `FormControl` properties such as touched/dirty through API (like you might to [trigger manual form validation](https://loiane.com/2017/08/angular-reactive-forms-trigger-validation-on-submit/#validating-all-fields-on-submit)) won\'t reflect in the Input and Group state, despite causing other validation messages to be displayed. \r\n\r\nCurrently the validity of the `igxInput` (and thus the Input Group) is updated based on the [`AbstractControl.statusChanges`](https://angular.io/api/forms/AbstractControl#statusChanges). And `blur`. And `focus`.\r\nhttps://github.com/IgniteUI/igniteui-angular/blob/7e91e63f844fa27d45e665d64e46b47f464d4e58/projects/igniteui-angular/src/lib/directives/input/input.directive.ts#L211-L213\r\n\r\nHowever, this doesn\'t quite cover the condition for validity and there are no other events for changes in touched/dirty control state. \r\n\r\n## Describe alternatives you\'ve considered\r\nAn additional call to `updateValueAndValidity` to ensure the event is emitted and the Input updates: https://github.com/IgniteUI/igniteui-angular/issues/4756#issuecomment-571684611.\r\n\r\n## Describe the solution you\'d like\r\nWhile that\'s not a major issue, it\'d be better if we do away with the subscription and directly bind the input validity and group styling to the ngModel properties.\r\n\r\n## Additional context\r\nBecause the initial value bind already determined the status, the ngModel control starts out as pristine **and invalid** and so `igxInput.valid` is `IgxInputState.INITIAL`. \r\nAt this point calling [`markAsTouched()`](https://angular.io/api/forms/AbstractControl#markAsTouched) or `markAsDirty()` technically completes the requirement for a visual error (and error messages do appear), but there\'s no `statusChanges` so the input state and group styling remain initial.\r\n\r\n\r\n\r\n',
-        title: 'Bind Input [Group] validity directly to ngModel so it responds better to changes through API',
-        number: 6434,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6434',
-        id: 547518918,
-        pullRequest: null
-    },
-    {
-        createdAt: '2020-01-08T08:44:13+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 1775129274,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-time-editor',
-                name: 'date-time-editor',
-                nodeId: 'MDU6TGFiZWwxNzc1MTI5Mjc0',
-                color: '47a31a',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Description  \r\nWhen igxDatePicker is editable with mode=”editable” or “dropdown”, full-width characters can be entered into the editor. It throws script errors since they are invalid characters.\r\n\r\n * igniteui-angular version: 8.2.14\r\n * browser: IE, Chrome, Edge, FireFox\r\n\r\n### Steps to reproduce  \r\n\r\n1. Run the attached sample.\r\n2. Click into the editor part of igxDatePicker.\r\n3. Enter some full-width characters.\r\n4. Click outside of the editor to focus out.\r\n\r\n### Result  \r\nScript error is thrown:\r\nInvalidPipeArgument: \'Unable to convert "Invalid Date" into a date\' for pipe \'DatePipe\'\r\n\r\n### Expected result  \r\nFull-width characters should not be entered.\r\n[datePicker.zip](https://github.com/IgniteUI/igniteui-angular/files/4034240/datePicker.zip)\r\n\r\n\r\n\r\n\r\n \r\n',
-        title: 'igxDatePicker: Full-width characters can be entered when mode is set to ”editable” or “dropdown".',
-        number: 6427,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6427',
-        id: 546720284,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-19T15:21:15+00:00',
-        assignee: {
-            id: 14248932,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/14248932?v=4',
-            login: 'hanastasov',
-            email: null,
-            url: 'https://github.com/hanastasov'
-        },
-        labels: [
-            {
-                id: 674809506,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/calendar',
-                name: 'calendar',
-                nodeId: 'MDU6TGFiZWw2NzQ4MDk1MDY=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            }
-        ],
-        body: ' * igniteui-angular version: 9.1.0\r\n\r\n## Steps to reproduce  \r\n\r\n1. Go to https://stackblitz.com/edit/igniteui-angular-issue-6373\r\n2. Open the calendar from teh date picker.\r\n3. Select a value in the second visible month\r\n4. Reopen the calendar.\r\n\r\n## Result  \r\nThe month that was second in the view is now first in the view.\r\n\r\n## Expected result  \r\nKeep the order of the months.\r\n\r\n',
-        title: 'Keep calendar view state after reopening from DatePicker or in another way.',
-        number: 6373,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6373',
-        id: 540379430,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-16T11:56:00+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 795778302,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/a11y',
-                name: 'a11y',
-                nodeId: 'MDU6TGFiZWw3OTU3NzgzMDI=',
-                color: 'f0c7fc',
-                description: 'When the issue or PR is related to accessibility',
-                default: false
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nThere are currently no ARIA attributes applied to the date-picker(not in spec either).\r\n\r\n## Describe the solution you\'d like\r\nThe date-picker should implement ARIA attributes per spec (see [this](https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/datepicker-dialog)). Note that [the calendar will implement ARI](https://github.com/IgniteUI/igniteui-angular/issues/6272)A on its own.\r\n\r\n## Describe alternatives you\'ve considered\r\nN/A\r\n\r\n## Additional context\r\nN/A\r\n',
-        title: 'DatePicker ARIA',
-        number: 6346,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6346',
-        id: 538366415,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-12T18:50:57+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 795778302,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/a11y',
-                name: 'a11y',
-                nodeId: 'MDU6TGFiZWw3OTU3NzgzMDI=',
-                color: 'f0c7fc',
-                description: 'When the issue or PR is related to accessibility',
-                default: false
-            },
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nThe following accessibility bugs are present in the Grid\'s child controls.  I have been unable to override or find a workaround to them.\r\n\r\n * igniteui-angular version: 8.2.11\r\n * browser: Chrome\r\n\r\n1) igx-grid-toolbar\r\n\r\nTitle: WCAG 1.3.1: Certain ARIA roles must contain particular children (igx-grid-toolbar)\r\nTags: Accessibility, WCAG 1.3.1, aria-required-children\r\nIssue: Certain ARIA roles must contain particular children (aria-required-children - https://dequeuniversity.com/rules/axe/3.3/aria-required-children?application=msftAI)\r\n\r\nElement path: igx-grid-toolbar\r\nSnippet: <igx-grid-toolbar role="rowgroup" class="igx-grid-toolbar--compact ng-star-inserted" style="flex-basis: 851px;">\r\n\r\nHow to fix: \r\nFix any of the following:\r\n  Required ARIA child role not present: row\r\n\r\n2) igx-grid__tfoot\r\nTitle: WCAG 1.3.1: Certain ARIA roles must contain particular children (.igx-grid__tfoot)\r\nTags: Accessibility, WCAG 1.3.1, aria-required-children\r\nIssue: Certain ARIA roles must contain particular children (aria-required-children - https://dequeuniversity.com/rules/axe/3.3/aria-required-children?application=msftAI)\r\n\r\nElement path: .igx-grid__tfoot\r\nSnippet: <div class="igx-grid__tfoot" role="rowgroup" style="height: 0px;"><!----><div class="igx-grid__tfoot-thumb" style="width: 17px; height: 0px;"></div></div>\r\n\r\nHow to fix: \r\nFix any of the following:\r\n  Required ARIA child role not present: row\r\n\r\n3) classic grid filter\r\nTitle: WCAG 1.3.1,WCAG 3.3.2: Form elements must have labels (input[autocomplete="off"])\r\nTags: Accessibility, WCAG 1.3.1, WCAG 3.3.2, label\r\nIssue: Form elements must have labels (label - https://dequeuniversity.com/rules/axe/3.3/label?application=msftAI)\r\n\r\nElement path: input[autocomplete="off"]\r\nSnippet: <input autocomplete="off" igxinput="" tabindex="0" placeholder="Add filter value" type="text" class="igx-input-group__input">\r\n\r\nHow to fix: \r\nFix any of the following:\r\n  aria-label attribute does not exist or is empty\r\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\r\n  Form element does not have an implicit (wrapped) <label>\r\n  Form element does not have an explicit <label>\r\n  Element has no title attribute or the title attribute is empty\r\n\r\n4) igx-date-picker__input-date\r\nTitle: WCAG 1.3.1,WCAG 3.3.2: Form elements must have labels (.igx-date-picker__input-date)\r\nTags: Accessibility, WCAG 1.3.1, WCAG 3.3.2, label\r\nIssue: Form elements must have labels (label - https://dequeuniversity.com/rules/axe/3.3/label?application=msftAI)\r\n\r\nElement path: .igx-date-picker__input-date\r\nSnippet: <input _ngcontent-wvh-c12="" class="igx-date-picker__input-date igx-input-group__input" igxinput="" type="text" placeholder="M/d/yyyy">\r\n\r\nHow to fix: \r\nFix any of the following:\r\n  aria-label attribute does not exist or is empty\r\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\r\n  Form element does not have an implicit (wrapped) <label>\r\n  Form element does not have an explicit <label>\r\n  Element has no title attribute or the title attribute is empty\r\n\r\n5) igx-calendar-n\r\nTitle: WCAG 1.3.1: Certain ARIA roles must contain particular children (#igx-calendar-0)\r\nTags: Accessibility, WCAG 1.3.1, aria-required-children\r\nIssue: Certain ARIA roles must contain particular children (aria-required-children - https://dequeuniversity.com/rules/axe/3.3/aria-required-children?application=msftAI)\r\n\r\nElement path: #igx-calendar-n\r\nSnippet: <igx-calendar _ngcontent-wvh-c16="" class="ng-tns-c17-12 igx-calendar" tabindex="0" id="igx-calendar-0" role="grid" aria-labelledby="calendar">\r\n\r\nHow to fix: \r\nFix any of the following:\r\n  Required ARIA children role not present: rowgroup row\r\n\r\nTitle: WCAG 4.1.1,WCAG 4.1.2: ARIA attributes must conform to valid values (#igx-calendar-0)\r\nTags: Accessibility, WCAG 4.1.1, WCAG 4.1.2, aria-valid-attr-value\r\nIssue: ARIA attributes must conform to valid values (aria-valid-attr-value - https://dequeuniversity.com/rules/axe/3.3/aria-valid-attr-value?application=msftAI)\r\n\r\nElement path: #igx-calendar-n\r\nSnippet: <igx-calendar _ngcontent-wvh-c16="" class="ng-tns-c17-12 igx-calendar" tabindex="0" id="igx-calendar-0" role="grid" aria-labelledby="calendar">\r\n\r\nHow to fix: \r\nFix all of the following:\r\n  Invalid ARIA attribute value: aria-labelledby="calendar"\r\n\r\nTitle: WCAG 1.4.3: Elements must have sufficient color contrast (.igx-calendar__label:nth-child(1))\r\nTags: Accessibility, WCAG 1.4.3, color-contrast\r\nIssue: Elements must have sufficient color contrast (color-contrast - https://dequeuniversity.com/rules/axe/3.3/color-contrast?application=msftAI)\r\n\r\nElement path: .igx-calendar__label:nth-child(1)\r\nSnippet: <span class="igx-calendar__label ng-star-inserted"> Sun </span>\r\n\r\nHow to fix: \r\nFix any of the following:\r\n  Element has insufficient color contrast of 1.88 (foreground color: #bdbdbd, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1\r\n\r\n6) #igx-checkbox-n-label\r\nTitle: WCAG 1.3.1,WCAG 4.1.1,WCAG 4.1.2: ARIA roles used must conform to valid values (#igx-checkbox-9-label)\r\nTags: Accessibility, WCAG 1.3.1, WCAG 4.1.1, WCAG 4.1.2, aria-roles\r\n\r\nIssue: ARIA roles used must conform to valid values (aria-roles - https://dequeuniversity.com/rules/axe/3.3/aria-roles?application=msftAI)\r\n\r\nElement path: #igx-checkbox-9-label\r\nSnippet: <span role="label" class="igx-checkbox__label" id="igx-checkbox-9-label"></span>\r\n\r\nHow to fix: \r\nFix all of the following:\r\n  Role must be one of the valid ARIA roles\r\n\r\n7) igx-checkbox-n-label\r\nTitle: WCAG 1.3.1,WCAG 4.1.1,WCAG 4.1.2: ARIA roles used must conform to valid values (#igx-checkbox-18-label)\r\nTags: Accessibility, WCAG 1.3.1, WCAG 4.1.1, WCAG 4.1.2, aria-roles\r\n\r\nIssue: ARIA roles used must conform to valid values (aria-roles - https://dequeuniversity.com/rules/axe/3.3/aria-roles?application=msftAI)\r\n\r\nElement path: #igx-checkbox-18-label\r\nSnippet: <span role="label" class="igx-checkbox__label" id="igx-checkbox-18-label"> Core Columns Only </span>\r\n\r\nHow to fix: \r\nFix all of the following:\r\n  Role must be one of the valid ARIA roles\r\n',
-        title: 'Grid Accessibility Issues',
-        number: 6341,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6341',
-        id: 537152575,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-11T19:07:29+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 962368007,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/column-moving',
-                name: 'column-moving',
-                nodeId: 'MDU6TGFiZWw5NjIzNjgwMDc=',
-                color: 'deef8f',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Ability to reorder columns using API\r\nCurrent grid allow columns reordering via standard drag/drop mouse or touch gestures. It does not allow us to reorder based on saved preferences (somewhere.. say localstorage). \r\n\r\nSupport must be added to set column position in a grid. \r\n1. `setColumnIndex(column: IgxColumnComponent, index: number)`: Set column position to index\r\n',
-        title: 'Column Moving using API',
-        number: 6334,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6334',
-        id: 536559582,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-09T13:55:21+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 354680490,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/nav-drawer',
-                name: 'nav-drawer',
-                nodeId: 'MDU6TGFiZWwzNTQ2ODA0OTA=',
-                color: '64c599',
-                description: null,
-                default: false
-            },
-            {
-                id: 602972382,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20resolved',
-                name: 'status: resolved',
-                nodeId: 'MDU6TGFiZWw2MDI5NzIzODI=',
-                color: '0e8a16',
-                description: '',
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1843355790,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x',
-                name: 'version: 9.1.x',
-                nodeId: 'MDU6TGFiZWwxODQzMzU1Nzkw',
-                color: '0be554',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nDescribe the issue.\r\n\r\n * igniteui-angular version: 8.1\r\n * browser: any\r\n\r\n## Steps to reproduce  \r\n\r\n1. Create a nav-drawer\r\n2. Set its width to 500px and its `isOpen` to false.\r\n\r\n## Result  \r\nThe width of the nav-drawer is not 500px.\r\n\r\n## Expected result  \r\nThe width should be as set.\r\n\r\n\r\n## Attachments  \r\nhttps://stackblitz.com/edit/angular-etncmg?embed=1&file=src/app/navdrawer/navdrawer.component.html \r\n',
-        title: 'Nav-drawer doesn\'t apply width if initial state is closed.',
-        number: 6321,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6321',
-        id: 534947589,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-04T09:46:27+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 1714726453,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/browser:%20Safari%20Mobile',
-                name: 'browser: Safari Mobile',
-                nodeId: 'MDU6TGFiZWwxNzE0NzI2NDUz',
-                color: '6cddc7',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nThe touch controls for the time picker on mobile devices are too sensitive. For every pixel you move your finger, the spinner does one step, which is way to fast.\r\n\r\n * igniteui-angular version: 8.2.x\r\n * browser: Safari Mobile\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open time picker dialog on mobile device\r\n2. Drag up or down with your finger\r\n\r\n## Result  \r\nWhen moving the distance of one entry, it does to many steps\r\n\r\n## Expected result  \r\nWhen moving the distance of one entry, it should do one step\r\n\r\n',
-        title: 'scroll speed for timepicker on mobile devices to high',
-        number: 6292,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6292',
-        id: 532565156,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-03T17:13:12+00:00',
-        assignee: {
-            id: 43128948,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-            login: 'DiyanDimitrov',
-            email: null,
-            url: 'https://github.com/DiyanDimitrov'
-        },
-        labels: [
-            {
-                id: 897946909,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-exporter',
-                name: 'excel-exporter',
-                nodeId: 'MDU6TGFiZWw4OTc5NDY5MDk=',
-                color: '49d156',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 977884245,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/multi-column-headers',
-                name: 'multi-column-headers',
-                nodeId: 'MDU6TGFiZWw5Nzc4ODQyNDU=',
-                color: '7c56dd',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## igx-grid Multi-Column Headers to exported excel.\r\nPlease let me know how to achieve this using igx-grid\r\n',
-        title: 'Grid Multi Column Headers to exported excel.',
-        number: 6288,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6288',
-        id: 532136834,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-03T16:29:46+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 835103025,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker',
-                name: 'time-picker',
-                nodeId: 'MDU6TGFiZWw4MzUxMDMwMjU=',
-                color: '97f4a2',
-                description: null,
-                default: false
-            },
-            {
-                id: 1576838227,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.0.x',
-                name: 'version: 9.0.x',
-                nodeId: 'MDU6TGFiZWwxNTc2ODM4MjI3',
-                color: '1263a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nIn my case i am using a grid in edit mode.\r\nI need to validate a cell based on value provided in some other cell in the same row.\r\nas there is no min and max properties in date component i cannot validate it efficiently.\r\n\r\n## Describe the solution you\'d like\r\nA clear and concise description of what you want to happen.\r\n\r\nIf min and max property is present i can just refer the rowData cell  value to the min and max properties and it can be validated using them if any values are entered in some other row cell which is needed for validation\r\n\r\n## Describe alternatives you\'ve considered\r\nA clear and concise description of any alternative solutions or features you\'ve considered.\r\n\r\n## Additional context\r\nAdd any other context or screenshots about the feature request here.\r\n',
-        title: ' min and max properties in the DatePicker component.',
-        number: 6286,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6286',
-        id: 532108177,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-03T13:33:31+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 795778302,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/a11y',
-                name: 'a11y',
-                nodeId: 'MDU6TGFiZWw3OTU3NzgzMDI=',
-                color: 'f0c7fc',
-                description: 'When the issue or PR is related to accessibility',
-                default: false
-            },
-            {
-                id: 674809506,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/calendar',
-                name: 'calendar',
-                nodeId: 'MDU6TGFiZWw2NzQ4MDk1MDY=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your ~feature~ request related to a problem? Please describe.\r\nRelated to #6272, after looking at the descriptions for calendar in the [datepicker example](https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/datepicker-dialog.html):\r\n"calendar that uses the [grid pattern](https://www.w3.org/TR/wai-aria-practices/#grid)"\r\n"as specified in the grid design pattern, only **one** button in the calendar grid is in the Tab sequence."\r\n\r\nIn other words, tab navigation through the calendar is supposed to allow you to jump through the prev/next buttons, the year/month pickers and the calendar grid itself. Right now the calendar handles the tab as it would cursor keys, which is super tedious.\r\n\r\n## Describe the solution you\'d like\r\nThe tab navigation of the calendar should allow you to jump through the separate groups and have a single tab stop for the actual calendar grid.\r\n\r\n## Additional context\r\nI realize this is a behavior change from the current implementation, but the way the spec describes the behavior seems very reasonable, so I\'m logging this as an enhancement.\r\n',
-        title: 'Calendar keyboard navigation accessibility',
-        number: 6275,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6275',
-        id: 531988009,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-12-03T10:34:33+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 795778302,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/a11y',
-                name: 'a11y',
-                nodeId: 'MDU6TGFiZWw3OTU3NzgzMDI=',
-                color: 'f0c7fc',
-                description: 'When the issue or PR is related to accessibility',
-                default: false
-            },
-            {
-                id: 674809506,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/calendar',
-                name: 'calendar',
-                nodeId: 'MDU6TGFiZWw2NzQ4MDk1MDY=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nThere\'s currently no ARIA attributes applied to the calendar (not in spec either). This makes screen readers announce partial information when navigating the calendar like "Clickable 27". \r\n\r\n## Describe the solution you\'d like\r\nThe calendar should implement ARIA attributes per spec (see below) so each date can be announced when navigating with a screen reader.\r\n\r\n## Describe alternatives you\'ve considered\r\nN/A\r\n\r\n## Additional context\r\nPer https://www.w3.org/TR/wai-aria-practices/examples/dialog-modal/datepicker-dialog.html the calendar should be using a grid pattern. Also some interesting abbreviation in the table headers.\r\nNote:  This example might be outdated as it behaves a bit odd.\r\n',
-        title: 'Calendar ARIA',
-        number: 6272,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6272',
-        id: 531885531,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-11-22T14:48:53+00:00',
-        assignee: {
-            id: 7037740,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/7037740?v=4',
-            login: 'Aleksandyr',
-            email: null,
-            url: 'https://github.com/Aleksandyr'
-        },
-        labels: [
-            {
-                id: 680707239,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/slider',
-                name: 'slider',
-                nodeId: 'MDU6TGFiZWw2ODA3MDcyMzk=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 356193990,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tests',
-                name: 'tests',
-                nodeId: 'MDU6TGFiZWwzNTYxOTM5OTA=',
-                color: 'eeffc0',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nAdd additional unit tests for Slider ticks feat',
-        title: 'Add additional unit tests for Slider ticks feat',
-        number: 6197,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6197',
-        id: 527239834,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-11-14T09:02:47+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nOur customers need to see the week number when they pick any date in our software. The current igx controls datepicker and calendar have no option for that.\r\n\r\n## Describe the solution you\'d like\r\nI\'d like to have an option for activating week numbers in the datepicker and calendar controls. Something like [showWeekNumber]="true"\r\n\r\n## Describe alternatives you\'ve considered\r\n-\r\n\r\n## Additional context\r\n-\r\n',
-        title: 'View week numbers in datepicker and calendar',
-        number: 6172,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6172',
-        id: 522715451,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-11-11T17:42:05+00:00',
-        assignee: {
-            id: 3198469,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/3198469?v=4',
-            login: 'damyanpetev',
-            email: null,
-            url: 'https://github.com/damyanpetev'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 324654935,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/question',
-                name: 'question',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzU=',
-                color: 'cc317c',
-                description: null,
-                default: true
-            },
-            {
-                id: 1040274972,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tree-grid',
-                name: 'tree-grid',
-                nodeId: 'MDU6TGFiZWwxMDQwMjc0OTcy',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Currently the Grid API for rows like [`getRowByKey`](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridcomponent.html#getrowbykey) (assuming `getRowByIndex` as well) operate with actual `IgxRowComponent` instances and won\'t return a result, unless the row is actually in the current virtualization chunk.\r\n\r\nThere a few issues with that:\r\n- Nowhere in the description does it say these will return undefined based on chunk\r\n- It\'s a public API, in fact the only API for getting rows, and it\'s only useful for a limited number of scenarios using interaction events (that probably provide row in the args anyway)\r\n- Since that\'s the only API, getting something like the data view index (need for `navigateTo`) can only be done by searching the `dataView`. That\'s fine, but again, should at least be documented\r\n\r\nIf I remember correctly, @rkaraivanov was in favor of using a row-like interface for API rather than the actual component instance exactly because those are not available all the time, so we might be in for a larger discussion here, which is why this is not quite marked as a documentation/bug/feature.',
-        title: 'Grid getRowBy<X> and rows not currently in the virtual container',
-        number: 6158,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6158',
-        id: 521097216,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-29T14:57:24+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'WinForm and WPF library has a very useful Formula Builder control that allows to edit custom column expression in the grid component. (https://www.infragistics.com/products/wpf/data-entry-and-display/formula-editor). However, there is no alternative among web components, which makes it hard to introduce custom column feature in web applications. \r\n',
-        title: 'Web-based Expression Editor',
-        number: 6090,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6090',
-        id: 513982997,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-25T13:43:13+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 963379072,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay',
-                name: 'overlay',
-                nodeId: 'MDU6TGFiZWw5NjMzNzkwNzI=',
-                color: 'a9fcf2',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nRight now `IgxOverlay` has `attach` method. This method resolves the passed component and generates unique ID. Later on developer can show the overlay with provided ID.\r\nHowever when developer calls `hide` method it resets the overlay for provided ID and this ID cannot be used anymore.\r\nThere should be `detach` method which should reset the overlay for provided ID. Hide method should only hide the overlay for provided ID without resetting the overlay.\r\n\r\n## Describe the solution you\'d like\r\nAdd `detach` method.\r\n\r\n## Describe alternatives you\'ve considered\r\nOne should call `attach` after each time `hide` was called. This forces overlay to resolve same component several times.\r\n',
-        title: 'Add detach method to IgxOverlay',
-        number: 6063,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6063',
-        id: 512524708,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-23T12:20:51+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nGrid toolbar buttons can\'t be used with keyboard navigation.\r\n\r\n## Describe the solution you\'d like\r\nFor better accessibility, the user should be able to work with the toolbar using only their keyboard.\r\n\r\n## Describe alternatives you\'ve considered\r\n---\r\n\r\n## Additional context\r\n---\r\n',
-        title: 'Grid toolbar keyboard navigation',
-        number: 6040,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6040',
-        id: 511285571,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-23T12:14:28+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nWe are writing apps in Angular 8 and looking for a Rich Text Editor to use within the app.   Have not found one.  We are considering Infragistics for other controls in our apps, and have noted that one if available within your JavaScript solution and hoped you could make it available directly in the angular tools.\r\n\r\n## Describe the solution you\'d like\r\nHave a component within the Ignite for Angular suite\r\n\r\n\r\n',
-        title: 'Rich Text Editor for Igniteui-angular',
-        number: 6039,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6039',
-        id: 511282248,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-16T07:17:48+00:00',
-        assignee: {
-            id: 43128948,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-            login: 'DiyanDimitrov',
-            email: null,
-            url: 'https://github.com/DiyanDimitrov'
-        },
-        labels: [
-            {
-                id: 1554029805,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/advanced-filtering',
-                name: 'advanced-filtering',
-                nodeId: 'MDU6TGFiZWwxNTU0MDI5ODA1',
-                color: 'e592b9',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 799217988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/i18n',
-                name: 'i18n',
-                nodeId: 'MDU6TGFiZWw3OTkyMTc5ODg=',
-                color: 'fc6ce4',
-                description: null,
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nSome labels on the Advanced Filtering dialog are not localized by igniteui-angular-i18n.\r\n\r\n## Describe the solution you\'d like\r\nThey are localized when igniteui-angular-i18n is loaded. My idea for localization into Japanese is as below image.\r\n![image](https://user-images.githubusercontent.com/7350918/66896364-9ecee880-f02f-11e9-9a34-509e7f60a8b6.png)\r\n\r\n## Describe alternatives you\'ve considered\r\nIf registered conditions (in blue rectangle in the above image) is quite difficult to localize perfectly, \r\n please localize labels other than registered conditions (in blue rect). People would understand the meaning of the conditions.\r\n\r\nTo localize registered conditions part perfectly, It would require to replace the label position of the condition (Equals / Contains) with Value label.\r\n\r\n## Additional context\r\nN/A\r\n',
-        title: 'Localize Advanced Filtering Dialog on igx-grid',
-        number: 5992,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5992',
-        id: 507663339,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-10T07:06:16+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 1511754776,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/Epic',
-                name: 'Epic',
-                nodeId: 'MDU6TGFiZWwxNTExNzU0Nzc2',
-                color: '3E4B9E',
-                description: null,
-                default: false
-            },
-            {
-                id: 1552412258,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/RTL%20Support',
-                name: 'RTL Support',
-                nodeId: 'MDU6TGFiZWwxNTUyNDEyMjU4',
-                color: '4141c1',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438875,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-development',
-                name: 'status: in-development',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg4NzU=',
-                color: '0052cc',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nRight-to-left language support is not working properly in most of the components\r\n\r\n## Describe the solution you\'d like\r\nThe components should provide right-to-left visual alignment and actions of its content and related elements.\r\n\r\nNote: Currently, the Grid provides a visual representation of the RTL alignment, although there is additional work that should be done in order to improve it.\r\n\r\n## Additional context\r\nIssue is succession of #5791\r\n',
-        title: 'RTL Support of Ignite UI',
-        number: 5958,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5958',
-        id: 505079313,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-09T07:13:42+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1605262456,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-adding',
-                name: 'row-adding',
-                nodeId: 'MDU6TGFiZWwxNjA1MjYyNDU2',
-                color: 'f9c5c0',
-                description: '',
-                default: false
-            },
-            {
-                id: 1628732209,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20L',
-                name: 'size: L',
-                nodeId: 'MDU6TGFiZWwxNjI4NzMyMjA5',
-                color: 'dd3989',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nIt would be nice to have native support for adding a new row. This can of course be accomplished today with the edit row functionality, but it is a bit cumbersome.\r\n\r\nFor instance in some cases a grid have read only columns, meaning that row edit for those columns are disabled. But when adding a new row, these columns may still need an input. In other cases, a grid might be fully read only, but still have the ability to add new rows, in which case we need to enable/disable row editing when row adding starts/ends.\r\n\r\n## Describe the solution you\'d like\r\nA distinction between add new row and edit exiting row\r\n',
-        title: 'Native add row',
-        number: 5946,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5946',
-        id: 504461476,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-07T09:53:52+00:00',
-        assignee: {
-            id: 43128948,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/43128948?v=4',
-            login: 'DiyanDimitrov',
-            email: null,
-            url: 'https://github.com/DiyanDimitrov'
-        },
-        labels: [
-            {
-                id: 1600222929,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/8.2.0',
-                name: '8.2.0',
-                nodeId: 'MDU6TGFiZWwxNjAwMjIyOTI5',
-                color: 'db84e0',
-                description: '',
-                default: false
-            },
-            {
-                id: 897946909,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-exporter',
-                name: 'excel-exporter',
-                nodeId: 'MDU6TGFiZWw4OTc5NDY5MDk=',
-                color: '49d156',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 882395236,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/groupby',
-                name: 'groupby',
-                nodeId: 'MDU6TGFiZWw4ODIzOTUyMzY=',
-                color: 'e580c8',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nThe current Excel Export does not support the Group By feature.\r\nCurrently, exporting the below grid to excel format does not keep the groups column.\r\n\r\n![groupby](https://user-images.githubusercontent.com/25774342/66302146-ae945180-e8f8-11e9-8eda-7c7d175dd83e.png)\r\n\r\n\r\n## Describe the solution you\'d like\r\nBeing able to Excel export an Igx grid ordered by Group By.\r\n',
-        title: '[igx-grid] Export Excel current igx-grid ordered by Group By',
-        number: 5927,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5927',
-        id: 503346485,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-02T13:56:45+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 1552412258,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/RTL%20Support',
-                name: 'RTL Support',
-                nodeId: 'MDU6TGFiZWwxNTUyNDEyMjU4',
-                color: '4141c1',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1040274972,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tree-grid',
-                name: 'tree-grid',
-                nodeId: 'MDU6TGFiZWwxMDQwMjc0OTcy',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nThe grid component doesn\'t have right-to-left support.\r\n\r\n## Describe the solution you\'d like\r\nI would like to have right-to-left support.\r\n',
-        title: 'Grid component does not support RTL',
-        number: 5905,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5905',
-        id: 501506441,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-10-02T13:55:12+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 1552412258,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/RTL%20Support',
-                name: 'RTL Support',
-                nodeId: 'MDU6TGFiZWwxNTUyNDEyMjU4',
-                color: '4141c1',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 868440495,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tabs',
-                name: 'tabs',
-                nodeId: 'MDU6TGFiZWw4Njg0NDA0OTU=',
-                color: 'efc377',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nThe tabs component doesn\'t have right-to-left support.\r\n\r\n## Describe the solution you\'d like\r\nI would like to have right-to-left support.',
-        title: 'Tabs component does not support RTL',
-        number: 5904,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5904',
-        id: 501505464,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-25T16:04:36+00:00',
-        assignee: {
-            id: 14248932,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/14248932?v=4',
-            login: 'hanastasov',
-            email: null,
-            url: 'https://github.com/hanastasov'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 674809506,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/calendar',
-                name: 'calendar',
-                nodeId: 'MDU6TGFiZWw2NzQ4MDk1MDY=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nCan’t clear selected date in calendar with range selection when a click on it or press Enter.\r\n\r\n * igniteui-angular version: 8.1.4\r\n\r\n## Steps to reproduce\r\n1. Go to https://stackblitz.com/edit/igniteui-angular-issue-5869\r\n1. Click on any date, for example 11 September.\r\n2. Click on **later date** to apply range selection, for example 5 November.\r\n2. Click on a date between the first two dates, for example 22 September\r\n3. Click again on 22 September\r\n\r\n## Result  \r\nthe date is selected\r\n\r\n## Expected result  \r\nthe date should be deselected',
-        title: 'Can’t clear selected date in calendar when clicking on it or pressing Enter.',
-        number: 5869,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5869',
-        id: 498382413,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-25T12:06:49+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 963379072,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay',
-                name: 'overlay',
-                nodeId: 'MDU6TGFiZWw5NjMzNzkwNzI=',
-                color: 'a9fcf2',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1574770080,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.1.7',
-                name: 'version: 8.1.7',
-                nodeId: 'MDU6TGFiZWwxNTc0NzcwMDgw',
-                color: 'beb7ff',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nClicking outside of the overlay content does not close the overlay on iOS device.\r\n\r\n * igniteui-angular version: 8.1.7\r\n * browser: Safary\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open this [Stackblitz](https://stackblitz.com/edit/angular-xf2njr?file=src/app/interactions/overlay/overlay-main-2/overlay-main-sample-2.component.ts) is Safari on iOS device\r\n2. Click on the button.\r\n3. Click outside the card and not on the button\r\n\r\n## Result  \r\nOverlay does not close\r\n\r\n## Expected result  \r\nOverlay should close\r\n\r\n## Additional info\r\nIf you set `modal` to `true` issue does not reproduce',
-        title: 'IgxOverlay does not close on outside click on iOS',
-        number: 5853,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5853',
-        id: 498242515,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-24T14:35:04+00:00',
-        assignee: {
-            id: 1472513,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/1472513?v=4',
-            login: 'kdinev',
-            email: null,
-            url: 'https://github.com/kdinev'
-        },
-        labels: [
-            {
-                id: 897946909,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-exporter',
-                name: 'excel-exporter',
-                nodeId: 'MDU6TGFiZWw4OTc5NDY5MDk=',
-                color: '49d156',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nThe igxHierarchicalGrid cannot be exported to Excel\r\n\r\n## Describe the solution you\'d like\r\nExport hierarchical grid in Angular to Excel, as by hierarchical grid in jQuery.\r\n\r\n## Describe alternatives you\'ve considered\r\n### The Excel Exporter is not  generic enough\r\nThe Excel Exporter is not generic, i.e it\'s so much dependent on the type of the grid, the data originates from. That may cause trouble and is not flexible.\r\n### There are not enough exposed properties in the Exporter Service API\r\nIf the user wants to export data, which looks somehow different from the already implemented logics, one may not succeed, because of lack of enough handlers.\r\n\r\n## Reference\r\n[Exporter Service API](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxexcelexporterservice.html)',
-        title: 'Export Hierarchical Grid to Excel',
-        number: 5848,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5848',
-        id: 497729839,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-19T08:32:28+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nWhen using the igxDatePicker with editable input (dropdown mode), on input focus or date select the caret is placed at the end of the input.\r\n\r\n## Describe the solution you\'d like\r\nI want to select only the day part of the input content.\r\n\r\n![1](https://user-images.githubusercontent.com/11193764/63162157-855af180-c02a-11e9-8e9e-cbeb836194f4.gif)\r\n\r\n## Workaround:\r\nCurrently, in order to achieve the above functionalities, I am using `getEditElement().select` and `setSelectionRange`. \r\n\r\n```typescript\r\n      selection($event) {\r\n        requestAnimationFrame(() => { \r\n          this.datePicker.getEditElement().setSelectionRange(0, 2);\r\n          this.datePicker.getEditElement().select();\r\n        });\r\n      }\r\n```\r\nhttps://stackblitz.com/edit/angular-mask-and-datepicker-example\r\n\r\nRelated #5658\r\n',
-        title: 'Select only the day part of the input content on date selection/focus input',
-        number: 5826,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5826',
-        id: 495651909,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-17T07:13:45+00:00',
-        assignee: {
-            id: 1472513,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/1472513?v=4',
-            login: 'kdinev',
-            email: null,
-            url: 'https://github.com/kdinev'
-        },
-        labels: [
-            {
-                id: 1221520389,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-style-filtering',
-                name: 'excel-style-filtering',
-                nodeId: 'MDU6TGFiZWwxMjIxNTIwMzg5',
-                color: 'fef2c0',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 2043077405,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive',
-                name: 'status: inactive',
-                nodeId: 'MDU6TGFiZWwyMDQzMDc3NDA1',
-                color: 'bdc442',
-                description: 'Used to stale issues and pull requests',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nIn a Excel Style Filter I can "Search" as in Excel. However the behavior is different. I first need to uncheck "Select All" and then to recheck the items I want to see in the grid.\r\nIt would be great to create a shortcut for that.\r\n\r\n## Describe the solution you\'d like\r\nIt would be nice to have it implemented as in Excel.\r\n1. Type in your Search-Text\r\n2. Hit "Enter" or click "Apply"\r\n3. Only the rows that match your Search-Text are displayed\r\n',
-        title: 'IgxGrid: Excel Style Filter "Search" as in Excel',
-        number: 5813,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5813',
-        id: 494445013,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-17T07:03:45+00:00',
-        assignee: {
-            id: 1472513,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/1472513?v=4',
-            login: 'kdinev',
-            email: null,
-            url: 'https://github.com/kdinev'
-        },
-        labels: [
-            {
-                id: 1221520389,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-style-filtering',
-                name: 'excel-style-filtering',
-                nodeId: 'MDU6TGFiZWwxMjIxNTIwMzg5',
-                color: 'fef2c0',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 2043077405,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive',
-                name: 'status: inactive',
-                nodeId: 'MDU6TGFiZWwyMDQzMDc3NDA1',
-                color: 'bdc442',
-                description: 'Used to stale issues and pull requests',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nWhen I open the Excel Style Filter on a column I would like to just search and hit the "Enter"-key to apply the changes.\r\n\r\n## Describe the solution you\'d like\r\nWhen Excel Style Filter is open and the user hits "Enter" the selection should be applied\r\n\r\n',
-        title: 'IgxGrid: Excel Style Filter "Apply" on "Enter"',
-        number: 5812,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5812',
-        id: 494440841,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-13T07:52:33+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 926278753,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/combo',
-                name: 'combo',
-                nodeId: 'MDU6TGFiZWw5MjYyNzg3NTM=',
-                color: '152872',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1416416614,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.1.x',
-                name: 'version: 8.1.x',
-                nodeId: 'MDU6TGFiZWwxNDE2NDE2NjE0',
-                color: 'ea8388',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nDropdown list is not displayed properly if a data source is updated after the list is scrolled.\r\n\r\n * igniteui-angular version: 8.1.7\r\n * browser: Chrome\r\n\r\n## Steps to reproduce  \r\n\r\n1.Run the sample.\r\n2.Click the drop down icon.\r\n3.Scroll down the list.\r\n4.Click outside the list to close it.\r\n5.Click "Change Data" button.\r\n6.Click the drop down icon.\r\n\r\n## Result  \r\nThe first two items are blank in the drop down list.\r\n\r\n## Expected result  \r\nThe dropdown list should be populated properly.\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n[comboApp.zip](https://github.com/IgniteUI/igniteui-angular/files/3608942/comboApp.zip)\r\n\r\n\r\n',
-        title: 'igxCombo: Drop down list is not displayed properly if a data source is updated after the list is scrolled.',
-        number: 5793,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5793',
-        id: 493185607,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-10T08:01:31+00:00',
-        assignee: {
-            id: 52001020,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/52001020?v=4',
-            login: 'radomirchev',
-            email: null,
-            url: 'https://github.com/radomirchev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 909237881,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/resizing',
-                name: 'resizing',
-                nodeId: 'MDU6TGFiZWw5MDkyMzc4ODE=',
-                color: '2e2ef7',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Describe the solution you\'d like\r\nIt would be nice to have the ability to flag one or more columns as always visible. You have the auto size method, but this shrinks the column to the size it requires. On the other hand, you have the ability to set a minimum width, but this is done in px or %. Having a special "contentSize" property for min column width, or similar could be a solution?\r\n\r\n## Describe alternatives you\'ve considered\r\nAn alternative would be to handle this ourselves. In that case, method which returns the required width of the content would be useful\r\n',
-        title: 'IgxGrid: content size as minimum size',
-        number: 5755,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5755',
-        id: 491513446,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-09-02T14:02:39+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 967825069,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/migrations',
-                name: 'migrations',
-                nodeId: 'MDU6TGFiZWw5Njc4MjUwNjk=',
-                color: '99e50d',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nWhen there are multiple classes/interfaces that should be migrated to a single class/interface and are inside a single import, this results in that same single class/interface being imported multiple times.\r\n\r\n## Describe the solution you\'d like\r\nWhen replacing import statements of classes/interfaces it should also be taken into consideration if the result contains multiple imports of the same class/interface.\r\n\r\n## Describe alternatives you\'ve considered\r\nAny duplicate imports can still be removed manually.\r\n\r\n## Additional context\r\nSince the current migrations for classes/interfaces directly replace their names this would still cause issues even after migrating\r\n\r\nPS: This can be observed in the migrations done for the IgxDrag/IgxDrop interfaces in #5726.',
-        title: 'If there are multiple classes/interfaces that migrate to a single class/interface inside an import results in duplicates.',
-        number: 5727,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5727',
-        id: 488206126,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-08-29T11:38:27+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1232982153,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/multi-cell-selection',
-                name: 'multi-cell-selection',
-                nodeId: 'MDU6TGFiZWwxMjMyOTgyMTUz',
-                color: '77dd9d',
-                description: '',
-                default: false
-            },
-            {
-                id: 906940495,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-selection',
-                name: 'row-selection',
-                nodeId: 'MDU6TGFiZWw5MDY5NDA0OTU=',
-                color: 'd4c5f9',
-                description: '',
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nNow that Grid selection is finalized, we should review again the multi-cell selection in the HierarchicalGrid. The current behavior is unchanged, although we found possible enhancements that we may consider.\r\n\r\n- [ ] Selection to be available per grid. Example: Select X cells from the parent grid and select X cells from child grid, persisting the parent selection.\r\n- [ ] `Shift + mouse click` functionality to work only on the same Grid. Cross grid selection with `Shift + mouse click` will not be available.\r\n- [ ] Keyboard navigation to be per grid, applies for arrow keys. Only achievable with Keyboard navigation functionality.\r\n- [ ] Tab and Shift + tab to be used for per grid-level navigation. Navigate from parent to child grid (if the child grid is expanded).\r\n- [ ] Expose `getSelectedData` (only for hGrid)- to return only the selected data with gridID and rowIndex.\r\n- [ ] Create PoC for the scenarios above\r\n\r\n.\r\n.\r\n.\r\n.\r\n\r\nNote: - We\'ve discussed adding of `skipChildren` option for skipping the children grids on continuous select (applies for both keyboard navigation and selection). Default value to be `false` - [igGrid option](https://www.igniteui.com/help/api/2016.2/ui.iggridselection_hg#options:skipChildren).\r\n\r\n\r\n',
-        title: 'Enhance hGrid multi-cell selection behavior',
-        number: 5714,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5714',
-        id: 486905698,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-08-28T06:31:28+00:00',
-        assignee: {
-            id: 1472513,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/1472513?v=4',
-            login: 'kdinev',
-            email: null,
-            url: 'https://github.com/kdinev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 2152996520,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20XL',
-                name: 'size: XL',
-                nodeId: 'MDU6TGFiZWwyMTUyOTk2NTIw',
-                color: 'dd4057',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nWe are missing Angular Pivot Grid. Data grid is best but there should be Pivot grid as well.  It will be great if you provide this soon. \r\n\r\n## Describe the solution you\'d like\r\nProvide Angular Pivot Grid component.\r\n\r\n## Describe alternatives you\'ve considered\r\nhttps://www.webdatarocks.com/demos/javascript-pivot-table-demo/#customize-pivot-table\r\nhttps://dzone.com/articles/4-best-free-web-pivot-tables-you-should-try-today\r\nhttps://github.com/nicolaskruchten/pivottable/blob/master/README.md\r\n\r\n\r\n',
-        title: 'Angular Pivot Grid',
-        number: 5700,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5700',
-        id: 486184907,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-08-27T04:48:39+00:00',
-        assignee: {
-            id: 1472513,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/1472513?v=4',
-            login: 'kdinev',
-            email: null,
-            url: 'https://github.com/kdinev'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'pdf export is very common requirement from client side. we like Angular grid but missing export to pdf is annoying customers. Please provide export to pdf fetaure along with Excel & csv.  \r\n\r\n**## Describe the solution you\'d like**\r\nPlease provide export to pdf fetaure along with Excel & csv on Angular Grid. \r\n\r\n',
-        title: 'pdf Export feature on Angular Grid',
-        number: 5696,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5696',
-        id: 485580657,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-08-15T15:36:20+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nI want the DatePicker to prevent invalid input typing. \r\n\r\n## Describe the solution you\'d like\r\nIf I try to type in value `14` in the month section, it should either fall-back to `12`- max value available for a month or accept `1`- min value available for a month,  and continue with the next section (based on the mask)\r\n\r\n## Describe alternatives you\'ve considered\r\nUse max or min value for day/month or accept the first valid value.\r\n\r\nOpen [the sample](https://stackblitz.com/edit/angular-mask-and-datepicker-example) and type in 55-55-5555, I expect the date picker to accept 05-05-5555, rather now the value is cleared because it is invalid.\r\n',
-        title: 'Correct invalid date input',
-        number: 5657,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5657',
-        id: 481209739,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-08-05T14:24:41+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 799217988,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/i18n',
-                name: 'i18n',
-                nodeId: 'MDU6TGFiZWw3OTkyMTc5ODg=',
-                color: 'fc6ce4',
-                description: null,
-                default: false
-            },
-            {
-                id: 324654935,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/question',
-                name: 'question',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzU=',
-                color: 'cc317c',
-                description: null,
-                default: true
-            }
-        ],
-        body: '## Question  \r\nI was reading https://www.infragistics.com/products/ignite-ui-angular/angular/components/localization.html and I\'d like to confirm, before taking this route, this is the way to do it.\r\nShould I really create a variable with all resources of the grid, manually translated, per language? Aren\'t there no default resources for "common" languages like German, French, Italian, etc? Only Japanese and Korean by downloading the i18n package?\r\n\r\nIs this correct or am I missing something?\r\n\r\n * igniteui-angular version: 8.1.0\r\n * browser: Firefox',
-        title: 'How to internationalize the grid?',
-        number: 5585,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5585',
-        id: 476889276,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-07-29T06:46:04+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 651042855,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-picker',
-                name: 'date-picker',
-                nodeId: 'MDU6TGFiZWw2NTEwNDI4NTU=',
-                color: 'afea6b',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1466411162,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.1.0',
-                name: 'version: 8.1.0',
-                nodeId: 'MDU6TGFiZWwxNDY2NDExMTYy',
-                color: 'abf99d',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nCalling `triggerTodaySelection` when date picker is collapsed throws TypeError:\r\nCannot set property \'viewDate\' of undefined\r\n\r\n * igniteui-angular version: 8.1.0\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Start this [StackBlitz](https://stackblitz.com/edit/angular-ivy-f12cge?file=src%2Fapp%2Fapp.component.html) sample.\r\n2. Click `Today` button.\r\n3. Observe the console\r\n\r\n## Result  \r\nERROR Error: Cannot set property \'viewDate\' of undefined\r\nis logged in the console.\r\n\r\n## Expected result  \r\nNo errors should be logged in the console.\r\n',
-        title: 'Calling triggerTodaySelection throws error',
-        number: 5525,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5525',
-        id: 473878331,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-07-15T21:16:49+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 1335040362,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-drag',
-                name: 'row-drag',
-                nodeId: 'MDU6TGFiZWwxMzM1MDQwMzYy',
-                color: '34d86a',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nFollowing the examples at [https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/row_drag.html#example-demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/row_drag.html#example-demo) I am able to get drag and drop working, specifically drag and drop re ordering.\r\n\r\nOne limitation however seems to be that if you have a grid with enough rows that requires a scroll bar and you are using virtual scrolling, if you drag a row to the top or the bottom of the grid, the grid will not scroll to reveal more rows, this means that you can only reorder rows within the current scrolled viewport\r\n\r\n## Describe the solution you\'d like\r\nIt would be nice if this was somehow automatic and the viewport scrolled when you dragged near the top / bottom of the grid.\r\n\r\n## Describe alternatives you\'ve considered\r\nSome sort of drag move output that is emitted constantly as the user drags a row around the grid, coupled with some api on the grid to scroll the viewport would allow us to detect when the viewport needs scrolling and then to action that on the grid ourselves\r\n\r\n',
-        title: 'Grid with virtual scrolling scrolls when row dragged to top/bottom of grid',
-        number: 5419,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5419',
-        id: 468339615,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-07-02T08:06:02+00:00',
-        assignee: {
-            id: 20106115,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/20106115?v=4',
-            login: 'rkaraivanov',
-            email: null,
-            url: 'https://github.com/rkaraivanov'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1168801769,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/hierarchical-grid',
-                name: 'hierarchical-grid',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAxNzY5',
-                color: 'fc92a5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1232982153,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/multi-cell-selection',
-                name: 'multi-cell-selection',
-                nodeId: 'MDU6TGFiZWwxMjMyOTgyMTUz',
-                color: '77dd9d',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441726,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20medium',
-                name: 'severity: medium',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE3MjY=',
-                color: 'fbca04',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1464592279,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.2.x',
-                name: 'version: 8.2.x',
-                nodeId: 'MDU6TGFiZWwxNDY0NTkyMjc5',
-                color: '48c984',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nnon-primary click clears selection in hierarchical grid\r\n\r\n * igniteui-angular version: 8.0\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open dev sample hierarchicalGridUpdating\r\n2. Select a range\r\n3. Right/middle click on any cell in the grid\r\n\r\n## Result  \r\nSelection is cleared\r\n\r\n## Expected result  \r\nSelection should not be cleared\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n',
-        title: 'non-primary click clears selection in hierarchical grid',
-        number: 5262,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5262',
-        id: 463082504,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-06-28T13:12:43+00:00',
-        assignee: {
-            id: 4296944,
-            avatarUrl: 'https://avatars1.githubusercontent.com/u/4296944?v=4',
-            login: 'IvayloG',
-            email: null,
-            url: 'https://github.com/IvayloG'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 1187937187,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/select',
-                name: 'select',
-                nodeId: 'MDU6TGFiZWwxMTg3OTM3MTg3',
-                color: 'bf1cce',
-                description: 'Select component',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nDescribe the issue.\r\n\r\n * igniteui-angular version: all\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Pull branch from here https://github.com/IgniteUI/igniteui-angular/pull/5116\r\n2. Set the `overlaySettings `in the `grid.component.html` `igx-select` ( the paginator template) to outlet in the grid. E.g \r\n\r\n` <igx-select [(ngModel)]="api.perPage" [displayDensity]="paginatorSelectDisplayDensity()" type="border" [overlaySettings]="{outlet: api.outlet}">`\r\n3. Open demos. Click on the select\r\n\r\n## Result  \r\nSelect dropdown is not positioned correctly.\r\n\r\n## Expected result  \r\nSelect dropdown should be positioned correctly.\r\n\r\n',
-        title: 'Igx-select dropdown doesn\'t render at correct position when outlet is igx-grid',
-        number: 5249,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5249',
-        id: 462028453,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-06-26T14:57:32+00:00',
-        assignee: {
-            id: 7037740,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/7037740?v=4',
-            login: 'Aleksandyr',
-            email: null,
-            url: 'https://github.com/Aleksandyr'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 680707239,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/slider',
-                name: 'slider',
-                nodeId: 'MDU6TGFiZWw2ODA3MDcyMzk=',
-                color: 'd4c5f9',
-                description: null,
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1360936619,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.0.x',
-                name: 'version: 8.0.x',
-                nodeId: 'MDU6TGFiZWwxMzYwOTM2NjE5',
-                color: '0d85db',
-                description: '',
-                default: false
-            },
-            {
-                id: 1416416614,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%208.1.x',
-                name: 'version: 8.1.x',
-                nodeId: 'MDU6TGFiZWwxNDE2NDE2NjE0',
-                color: 'ea8388',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nThe active thumb should always pop-up in-front the other when the type is range.\r\n\r\n * igniteui-angular version: All\r\n * browser: All\r\n\r\n## Steps to reproduce  \r\n\r\n1. Navigate to the dev demos\r\n2. Swipe the thumbs\r\n3. See that the right one always stays above the left one.\r\n\r\n## Result  \r\nThere is no visual prioritization determining that the active slider is the leading one.\r\n\r\n## Expected result  \r\nThe active/leading thumb should be always popping up in front of the other.\r\n\r\n\r\n## Attachments  \r\n![Capture](https://user-images.githubusercontent.com/7037740/60190738-d2e18c00-983b-11e9-883d-c1ebc18ee46d.PNG)\r\n',
-        title: '[Slider] The active thumb should always pop-up in front the other when the type is range.',
-        number: 5211,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5211',
-        id: 461022570,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-06-05T07:48:06+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 354679562,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/code-style',
-                name: 'code-style',
-                nodeId: 'MDU6TGFiZWwzNTQ2Nzk1NjI=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: 'Update lint config (and codelyzer rules) to comply with the updated [Naming and Coding guidelines.](https://github.com/IgniteUI/igniteui-angular/wiki/General-Naming-and-Coding--Guidelines-for-Ignite-UI-for-Angular)',
-        title: 'Update lint config to comply with the new coding guidelines',
-        number: 4984,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/4984',
-        id: 452359037,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-05-31T12:29:27+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1335040362,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-drag',
-                name: 'row-drag',
-                nodeId: 'MDU6TGFiZWwxMzM1MDQwMzYy',
-                color: '34d86a',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1285048935,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%207.3.x',
-                name: 'version: 7.3.x',
-                nodeId: 'MDU6TGFiZWwxMjg1MDQ4OTM1',
-                color: '8ed65e',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nI want to have default animation when a grid row is dropped over the grid header. \r\n\r\n## Describe the solution you\'d like\r\nIn such cases, I expect there is an animation showing the record returning to its original place in the grid.\r\n\r\n## Describe alternatives you\'ve considered\r\nIf this may not be applicable due to the grid header related features like grouping. etc, may be better to omit this feature request.\r\n\r\n## Additional context \r\nRelated to #4775\r\n\r\n',
-        title: 'Animate row-drag to origin grid place when dropped over grid header',
-        number: 4957,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/4957',
-        id: 450775303,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-05-27T12:04:15+00:00',
-        assignee: {
-            id: 16817847,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/16817847?v=4',
-            login: 'gedinakova',
-            email: null,
-            url: 'https://github.com/gedinakova'
-        },
-        labels: [
-            {
-                id: 881145265,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/exporters',
-                name: 'exporters',
-                nodeId: 'MDU6TGFiZWw4ODExNDUyNjU=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Currently it is hard coded that the csv export only supports UTF-8. Here it would be good, if different encodings are supported and you can pass them from the outside, e.g. ISO.\r\n\r\nhttps://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/services/csv/csv-exporter.ts#L60',
-        title: 'Change Encoding for CSV Export',
-        number: 4889,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/4889',
-        id: 448821562,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-03-04T02:41:15+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 977884245,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/multi-column-headers',
-                name: 'multi-column-headers',
-                nodeId: 'MDU6TGFiZWw5Nzc4ODQyNDU=',
-                color: '7c56dd',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nCannot set grouped column width in percentage.\r\n\r\n * igniteui-angular version: 7.1.9, 7.2.0-rc.1\r\n * browser: Chrome\r\n\r\n## Steps to reproduce  \r\nRun the attached sample.\r\n\r\n\r\n## Result  \r\nColumn width is not correct for col2 and col3.\r\n\r\n## Expected result  \r\nColumn width should reflect the values set in width property.\r\n\r\n\r\n## Attachments  \r\n\r\n[igxGrid.zip](https://github.com/IgniteUI/igniteui-angular/files/2924122/igxGrid.zip)\r\n\r\n\r\n',
-        title: 'igx-grid: Cannot set grouped column width in percentage.',
-        number: 4155,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/4155',
-        id: 416604915,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-03-01T12:07:00+00:00',
-        assignee: {
-            id: 11193764,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/11193764?v=4',
-            login: 'zdrawku',
-            email: null,
-            url: 'https://github.com/zdrawku'
-        },
-        labels: [
-            {
-                id: 970329408,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/cell-editing',
-                name: 'cell-editing',
-                nodeId: 'MDU6TGFiZWw5NzAzMjk0MDg=',
-                color: '70e5df',
-                description: '',
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1102774151,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/row-editing',
-                name: 'row-editing',
-                nodeId: 'MDU6TGFiZWwxMTAyNzc0MTUx',
-                color: '77d86a',
-                description: '',
-                default: false
-            },
-            {
-                id: 1629395829,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20M',
-                name: 'size: M',
-                nodeId: 'MDU6TGFiZWwxNjI5Mzk1ODI5',
-                color: 'abc9f2',
-                description: '',
-                default: false
-            },
-            {
-                id: 2081351451,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.0.x',
-                name: 'version: 10.0.x',
-                nodeId: 'MDU6TGFiZWwyMDgxMzUxNDUx',
-                color: 'ffdbcc',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Is your feature request related to a problem? Please describe.\r\nThe user should be able to perform validation over the edited cell/row and to escape or keep cell/row in edit mode. #4096\r\n\r\n## Describe the solution you\'d like\r\nShould provide a way for the user to determine when the cell to stays in edit mode and when to escape, based on the edited value. Also it is good to consider the same behavior and for row editing. \r\nCurrently we expose a number of events: onCellEditEnter, onCellEdit, onCellEditCancel; onRowEditEnter, onRowEdit, onRowEditCancel; which are cancel-able, so may be it is good to reconsider how this events interact with each other and to define the grid state after each performed action.\r\n',
-        title: 'Optionally exit cell/row edit mode',
-        number: 4135,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/4135',
-        id: 416074000,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-02-22T08:43:43+00:00',
-        assignee: {
-            id: 2621802,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/2621802?v=4',
-            login: 'Lipata',
-            email: null,
-            url: 'https://github.com/Lipata'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 963379072,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay',
-                name: 'overlay',
-                nodeId: 'MDU6TGFiZWw5NjMzNzkwNzI=',
-                color: 'a9fcf2',
-                description: '',
-                default: false
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 1629395829,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20M',
-                name: 'size: M',
-                nodeId: 'MDU6TGFiZWwxNjI5Mzk1ODI5',
-                color: 'abc9f2',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1168802420,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%207.2.x',
-                name: 'version: 7.2.x',
-                nodeId: 'MDU6TGFiZWwxMTY4ODAyNDIw',
-                color: 'b1dd1f',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nThe default animations for opening/closing the overlay are scaleInVerTop/scaleOutVerTop, which is not the most appropriate experience, when AutoPositionStrategy is used and overlay is shown above the target.',
-        title: 'Change animation when using AutoPositionStrategy and overlay is shown above the target',
-        number: 3979,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/3979',
-        id: 413298901,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-02-07T20:25:50+00:00',
-        assignee: {
-            id: 7037740,
-            avatarUrl: 'https://avatars0.githubusercontent.com/u/7037740?v=4',
-            login: 'Aleksandyr',
-            email: null,
-            url: 'https://github.com/Aleksandyr'
-        },
-        labels: [
-            {
-                id: 324654930,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bug',
-                name: 'bug',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzA=',
-                color: 'fc2929',
-                description: 'Any issue that describes a bug',
-                default: true
-            },
-            {
-                id: 386927479,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/documentation',
-                name: 'documentation',
-                nodeId: 'MDU6TGFiZWwzODY5Mjc0Nzk=',
-                color: 'e99695',
-                description: null,
-                default: true
-            },
-            {
-                id: 531441584,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/severity:%20low',
-                name: 'severity: low',
-                nodeId: 'MDU6TGFiZWw1MzE0NDE1ODQ=',
-                color: 'c2e0c6',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            },
-            {
-                id: 1141709911,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%207.1.x',
-                name: 'version: 7.1.x',
-                nodeId: 'MDU6TGFiZWwxMTQxNzA5OTEx',
-                color: 'ed8e74',
-                description: '',
-                default: false
-            }
-        ],
-        body: '## Description  \r\nDescribe the issue.\r\n\r\n * igniteui-angular version: 7.1.5\r\n * browser: *\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/classes/igxtreegridcomponent.html#autogenerate\r\n2. Observe the code snippet\r\n\r\n## Result  \r\nThe code snippet is for igxGrid\r\n\r\n## Expected result  \r\nThe code snippet should be for the igxTreeGrid\r\n\r\n\r\n',
-        title: 'API docs for igxTreeGrid/igxHierarchicalGrid contain code snippets that are for igxGrid',
-        number: 3863,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/3863',
-        id: 407882581,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-02-01T09:26:48+00:00',
-        assignee: {
-            id: 16817847,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/16817847?v=4',
-            login: 'gedinakova',
-            email: null,
-            url: 'https://github.com/gedinakova'
-        },
-        labels: [
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 908461037,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/keyboard-navigation',
-                name: 'keyboard-navigation',
-                nodeId: 'MDU6TGFiZWw5MDg0NjEwMzc=',
-                color: 'af86f4',
-                description: '',
-                default: false
-            },
-            {
-                id: 354680432,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/list',
-                name: 'list',
-                nodeId: 'MDU6TGFiZWwzNTQ2ODA0MzI=',
-                color: '1d76db',
-                description: null,
-                default: false
-            }
-        ],
-        body: 'Implement keyboard navigation in IgxListComponent by using a new directive.',
-        title: 'Implement keyboard navigation in IgxListComponent',
-        number: 3800,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/3800',
-        id: 405618215,
-        pullRequest: null
-    },
-    {
-        createdAt: '2019-01-03T12:31:04+00:00',
-        assignee: {
-            id: 2188411,
-            avatarUrl: 'https://avatars3.githubusercontent.com/u/2188411?v=4',
-            login: 'ChronosSF',
-            email: null,
-            url: 'https://github.com/ChronosSF'
-        },
-        labels: [
-            {
-                id: 356188034,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature',
-                name: 'feature',
-                nodeId: 'MDU6TGFiZWwzNTYxODgwMzQ=',
-                color: 'bfd4f2',
-                description: null,
-                default: false
-            },
-            {
-                id: 823505669,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/feature-request',
-                name: 'feature-request',
-                nodeId: 'MDU6TGFiZWw4MjM1MDU2Njk=',
-                color: 'dd449e',
-                description: null,
-                default: false
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 1628732209,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20L',
-                name: 'size: L',
-                nodeId: 'MDU6TGFiZWwxNjI4NzMyMjA5',
-                color: 'dd3989',
-                description: '',
-                default: false
-            }
-        ],
-        body: '### Description  \r\n\r\nThere is a request from a customer to implement a Cell Merging similar to the igGrid one: https://www.igniteui.com/help/iggrid-cellmerging-overview\r\n\r\n * igniteui-angular version: 7.x\r\n * browser: *\r\n\r\n\r\n',
-        title: 'Grid Cell Merging',
-        number: 3514,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/3514',
-        id: 395556832,
-        pullRequest: null
-    },
-    {
-        createdAt: '2018-08-06T14:05:27+00:00',
-        assignee: {
-            id: 1702064,
-            avatarUrl: 'https://avatars2.githubusercontent.com/u/1702064?v=4',
-            login: 'StefanIvanov',
-            email: null,
-            url: 'https://github.com/StefanIvanov'
-        },
-        labels: [
-            {
-                id: 324654932,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement',
-                name: 'enhancement',
-                nodeId: 'MDU6TGFiZWwzMjQ2NTQ5MzI=',
-                color: '84b6eb',
-                description: null,
-                default: true
-            },
-            {
-                id: 625766429,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid',
-                name: 'grid',
-                nodeId: 'MDU6TGFiZWw2MjU3NjY0Mjk=',
-                color: '5319e7',
-                description: null,
-                default: false
-            },
-            {
-                id: 882395236,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/groupby',
-                name: 'groupby',
-                nodeId: 'MDU6TGFiZWw4ODIzOTUyMzY=',
-                color: 'e580c8',
-                description: '',
-                default: false
-            },
-            {
-                id: 987998812,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/selection',
-                name: 'selection',
-                nodeId: 'MDU6TGFiZWw5ODc5OTg4MTI=',
-                color: '2f52bc',
-                description: '',
-                default: false
-            },
-            {
-                id: 531438748,
-                url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20in-review',
-                name: 'status: in-review',
-                nodeId: 'MDU6TGFiZWw1MzE0Mzg3NDg=',
-                color: 'c5def5',
-                description: '',
-                default: false
-            }
-        ],
-        body: '### Description  \r\nWhen the select all checkbox in the grid becomes checked, if a grid is grouped by and all groups are collapsed, implicitly expand them to show the user that the selection occurred as an immediate visual indication for his action.\r\n\r\n### Steps to reproduce  \r\n\r\n1. open https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid_groupby.html\r\n2. collapse all groups\r\n3. click on the select all checkbox in the header\r\n\r\n### Result  \r\nAll items within the groups are selected but there is no immediate indication for it. One has to expand a group in order to confirm that items are actually selected.\r\n\r\n### Expected result  \r\nUpon selection, when all the groups are collapsed, they all should be automatically expanded to confirm to the user that selection took place. He can easily collapse them back from the button in the header, where his mouse cursor already is anyways.\r\n\r\n\r\n### Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n',
-        title: 'Select all when grid has group by applied',
-        number: 2326,
-        url: 'https://api.github.com/repos/IgniteUI/igniteui-angular/issues/2326',
-        id: 347938246,
-        pullRequest: null
-    }
+	{
+		createdAt: "2023-01-27T11:18:53Z",
+		assignee: {
+			id: 17785923,
+			avatarUrl: "https://avatars.githubusercontent.com/u/17785923?v=4",
+			login: "mddifilippo89",
+			email: null,
+			url: "https://api.github.com/users/mddifilippo89"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nDescribe the issue.\r\nIgx Financial Charts gives only time on X-axis where it should be date.\r\nFor some browsers, it occurs and for some, it doesn't.\r\n\r\n * \"@infragistics/igniteui-angular\": \"13.2.4\",\r\n *  \"igniteui-angular-charts\": \"^13.0.0\",\r\n *  \"igniteui-angular-core\": \"^13.0.0\",\r\n * browser: Chrome\r\n\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\nThe below image is from our clients computer\r\n![image](https://user-images.githubusercontent.com/79090369/215073954-2f25a342-0ec4-4a85-bf82-78dea6dbe9ec.png)\r\n\r\n\r\n\r\nBelow video is from MAC\r\nhttps://user-images.githubusercontent.com/79090369/215072842-33b55dba-fe8e-4b83-994f-05012a93f076.mp4\r\n\r\n",
+		title: "Igx Financial Chart X-Axis issue",
+		number: 12595,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12595",
+		id: 1559585462,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-27T08:38:53Z",
+		assignee: {
+			id: 4118303,
+			avatarUrl: "https://avatars.githubusercontent.com/u/4118303?v=4",
+			login: "simeonoff",
+			email: null,
+			url: "https://api.github.com/users/simeonoff"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 531441726,
+			nodeId: "MDU6TGFiZWw1MzE0NDE3MjY=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:firecracker:%20severity:%20medium",
+			name: ":firecracker: severity: medium",
+			color: "fbca04",
+			default: false,
+			description: ""
+		}, {
+			id: 858962961,
+			nodeId: "MDU6TGFiZWw4NTg5NjI5NjE=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:chart_with_downwards_trend:%20regression",
+			name: ":chart_with_downwards_trend: regression",
+			color: "041791",
+			default: false,
+			description: ""
+		}, {
+			id: 1149902181,
+			nodeId: "MDU6TGFiZWwxMTQ5OTAyMTgx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/banner",
+			name: "banner",
+			color: "75a5e5",
+			default: false,
+			description: "Banner component"
+		}, {
+			id: 2236014987,
+			nodeId: "MDU6TGFiZWwyMjM2MDE0OTg3",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:sparkles:%20themes",
+			name: ":sparkles: themes",
+			color: "ceef86",
+			default: false,
+			description: ""
+		}, {
+			id: 4540898149,
+			nodeId: "LA_kwDOAxIT488AAAABDqibZQ",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.0.x",
+			name: "version: 15.0.x",
+			color: "FA5965",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\n`igx-banner-actions` used to have `align-items: center` but this is no longer the case in igniteui-angular 15.x.\r\n\r\n * igniteui-angular version: 15.0.x\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Create a banner component\r\n2. Add anchor and button in the banner actions\r\n\r\n```html\r\n<igx-banner #cookiesBanner>\r\n  <igx-icon>settings</igx-icon>\r\n  <span i18n>This site uses cookies.</span>\r\n  <igx-banner-actions>\r\n    <a href=\"https://www.cookiesandyou.com/\" target=\"_blank\" rel=\"noopener\" i18n>Cookies and You</a>\r\n    <button igxButton igxRipple (click)=\"acceptCookies()\" i18n>I Understand</button>\r\n  </igx-banner-actions>\r\n</igx-banner>\r\n```\r\n\r\n## Result  \r\n![image](https://user-images.githubusercontent.com/1472513/215043215-a60897a2-82d7-47ad-94d2-4c726f597eff.png)\r\n\r\n## Expected result  \r\n![image](https://user-images.githubusercontent.com/1472513/215043345-5b16cdd9-9886-45b4-8eb5-f9e561b71fda.png)\r\n\r\n\r\n\r\n",
+		title: "igx-banner-actions no longer align vertically",
+		number: 12594,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12594",
+		id: 1559371382,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-26T14:07:00Z",
+		assignee: {
+			id: 4118303,
+			avatarUrl: "https://avatars.githubusercontent.com/u/4118303?v=4",
+			login: "simeonoff",
+			email: null,
+			url: "https://api.github.com/users/simeonoff"
+		},
+		labels: [{
+			id: 324654935,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:question:%20question",
+			name: ":question: question",
+			color: "cc317c",
+			default: false,
+			description: ""
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nHi, I've got some issues with the ignite package when trying to upgrade out package from 14 to 15. Not sure if this is a bug or something related to my configuration, but I belive ive done the updates as per the documentation, and I'm not really sure whats wrong.\r\n\r\nI've run ng update igniteui-angular without any issues. \r\nIn my theme file, I've replaced our previous import:\r\n![image](https://user-images.githubusercontent.com/12936286/214850731-64cdf55c-b015-4f1a-9e71-7d3ae8c24087.png)\r\n\r\nand replaced it with use mentioned in the upgrade guide and theming guide:\r\n![image](https://user-images.githubusercontent.com/12936286/214850895-d3911288-ac95-4b77-8f2c-91fab35cedee.png)\r\n\r\nStill I'm getting the errors below. Oddly enough, the old import seems to work on the dev server, but when building the application for production, this fails as well. \r\n\r\n * igniteui-angular version: 15.0.8\r\n * browser: Chrome\r\n\r\n\r\n## Result  \r\n![image](https://user-images.githubusercontent.com/12936286/214850081-e8ad9fcc-7710-4192-a9d9-ac175bcc27e0.png)\r\n\r\n\r\n\r\n\r\n",
+		title: "Theme issues in igx 15 upgrade",
+		number: 12590,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12590",
+		id: 1558195166,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-26T08:42:48Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 438360283,
+			nodeId: "MDU6TGFiZWw0MzgzNjAyODM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/checkbox",
+			name: "checkbox",
+			color: "fef200",
+			default: false,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nIf inputs are invalid they get a red border.\r\nIf checkboxes are invalid they get no special styling.\r\n\r\n * igniteui-angular version: 15.0.8\r\n\r\n## Expected result  \r\nCheckboxes should have an invalid styling so you can see that they are invalid.\r\n",
+		title: "Checkbox: missing validation styling",
+		number: 12585,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12585",
+		id: 1557789089,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-26T07:33:26Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 1284891436,
+			nodeId: "MDU6TGFiZWwxMjg0ODkxNDM2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20multi-row-layout",
+			name: "grid: multi-row-layout",
+			color: "7fefd3",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nCurrently the columns are initialized async are not aware of setting the filteringMode option on ContentInit hook.\r\n\r\n * igniteui-angular version: 15.0.x\r\n * browser: N/A\r\n\r\n## Steps to reproduce  \r\n\r\n1. [Go to following sample](https://www.infragistics.com/products/ignite-ui-blazor/blazor/components/grids/grid/multi-row-layout) \r\n\r\n## Result  \r\nHeader of the grid is misaligned.\r\nNote: The simple filtering mode is not supported for MRL scenarios.\r\n\r\n## Expected result  \r\nMRL headers should render normally and excelStyle filtering should be applied in this cases\r\n\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/1182001/214780607-5678553c-1ae9-457f-bbc0-4250617110dd.png)\r\n\r\n",
+		title: "Grid should infer excelStyle filtering for MRL in different way",
+		number: 12584,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12584",
+		id: 1557728793,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-25T14:23:38Z",
+		assignee: {
+			id: 49060557,
+			avatarUrl: "https://avatars.githubusercontent.com/u/49060557?v=4",
+			login: "igdmdimitrov",
+			email: null,
+			url: "https://api.github.com/users/igdmdimitrov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 897946909,
+			nodeId: "MDU6TGFiZWw4OTc5NDY5MDk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/excel-exporter",
+			name: "excel-exporter",
+			color: "49d156",
+			default: false,
+			description: ""
+		}, {
+			id: 3982407566,
+			nodeId: "MDU6TGFiZWwzOTgyNDA3NTY2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid",
+			name: "grid",
+			color: "95f9d5",
+			default: false,
+			description: null
+		}],
+		body: "## Description  \r\n`Time` and `DateTime` columns are exported in excel as `m/d/yy`. Excel exporter should export `Time` and `DateTime` columns in the corresponding formats `h:mm:ss` and `m/d/yy h:mm:ss`\r\n\r\n * igniteui-angular version: \r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Open [Stackblitz sample](https://stackblitz.com/edit/angular-xwwb75-u1abib?file=src%2Fapp%2Fservices%2Fexcel-export-sample-1%2Fexcel-export-sample-1.component.ts)\r\n2. Click `Export`\r\n\r\n## Result  \r\n![image](https://user-images.githubusercontent.com/49060557/214588025-1e3ea89a-ed47-4525-855e-7fffde7d87d9.png)\r\n\r\n## Expected result  \r\n![image](https://user-images.githubusercontent.com/49060557/214586809-81fbb875-820f-4f84-8104-ea7796cc4eee.png)\r\n\r\n\r\n",
+		title: "Export Time and DateTime columns in the corresponding formats",
+		number: 12581,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12581",
+		id: 1556743911,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-25T07:54:29Z",
+		assignee: {
+			id: 52001020,
+			avatarUrl: "https://avatars.githubusercontent.com/u/52001020?v=4",
+			login: "radomirchev",
+			email: null,
+			url: "https://api.github.com/users/radomirchev"
+		},
+		labels: [{
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nAs discussed in https://github.com/IgniteUI/igniteui-angular/discussions/12500 it would be a nice feature be able to easily choose which field to focus when row adding or row editing starts. Our use case was that we have a column at index 0 determining if the entity is considered active or not. The column at index 1 is the name of this entity. In 99% of cases, when adding a new entity, the user would want that entity to be active, hence it makes a lot more sense to just start the edit at the name column.\r\n\r\n## Describe the solution you'd like\r\nAn input providing the field of the column in which to focus when adding or editing starts. I'm unsure if there is a use case for differentiating (having two inputs) between add and edit, but my guess is that its not.\r\n\r\n## Describe alternatives you've considered\r\nAn alternative is outlined in the linked discussion, and does work, but locking and unlocking edit of a column feels a bit \"hackish\" to me.\r\n",
+		title: "Choose column to focus when starting add/edit of row in igx grids.",
+		number: 12579,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12579",
+		id: 1556204633,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-24T00:59:29Z",
+		assignee: {
+			id: 49060557,
+			avatarUrl: "https://avatars.githubusercontent.com/u/49060557?v=4",
+			login: "igdmdimitrov",
+			email: null,
+			url: "https://api.github.com/users/igdmdimitrov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nChanging condition by clicking condition border, it doesn't work.\r\n\r\n * igniteui-angular version: 15.0.0\r\n * browser: Chrome\r\n\r\n## Steps to reproduce  \r\n\r\nThere are the steps that can be reproduced.\r\nIt can be reproduced in this sample.\r\nhttps://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/advanced-filtering\r\n\r\n1) Open the Advanced Filtering dialog and set some \"AND\" condition logic, then apply.\r\n2) Open the dialog again, then change condition to \"OR\" by clicking blue border, then apply.\r\n3) Changed logic does not reflected, if I open the dialog, it shows as \"AND\" condition\r\n\r\n## Attachments  \r\n![f7042176ea49a2b2823087af3a8fd6d8](https://user-images.githubusercontent.com/5829221/214191061-f07ff7e8-92ca-49ea-b118-a38c81366449.gif)\r\n",
+		title: "IgxGrid - Condition Changing doesn't work in Advanced Filtering Dialog",
+		number: 12570,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12570",
+		id: 1554086182,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-23T22:21:17Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nEditing the primary key in a pinned row unpins the row\r\n\r\n## Steps to reproduce  \r\nin the following sample edit the ID column in one of the pinned rows\r\nhttps://stackblitz.com/edit/angular-ujej8f?file=src/app/grid/grid-row-pinning/grid-row-pinning.component.html\r\n\r\n\r\n## Result  \r\nAfter the edit is complete the row is no longer pinned\r\n\r\n## Expected result  \r\nThe row remains pinned after editing the primary key\r\n\r\n\r\n",
+		title: "Grid - Editing the primary key in a pinned row unpins the row",
+		number: 12569,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12569",
+		id: 1553925367,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-23T14:40:59Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531441843,
+			nodeId: "MDU6TGFiZWw1MzE0NDE4NDM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:fire:%20severity:%20high",
+			name: ":fire: severity: high",
+			color: "d93f0b",
+			default: false,
+			description: ""
+		}, {
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 651042855,
+			nodeId: "MDU6TGFiZWw2NTEwNDI4NTU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:date:%20date-picker",
+			name: ":date: date-picker",
+			color: "afea6b",
+			default: false,
+			description: ""
+		}, {
+			id: 858962961,
+			nodeId: "MDU6TGFiZWw4NTg5NjI5NjE=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:chart_with_downwards_trend:%20regression",
+			name: ":chart_with_downwards_trend: regression",
+			color: "041791",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nWhen the IgxDatePicker is clicked or tab over, that is, when the focus event fires, the IgxDatePicker is not selected. For example the\r\nIgxTimePicker is selected as expected.\r\n\r\n * igniteui-angular version: 14.2.x 15.0.x\r\n\r\n## Steps to reproduce  \r\n\r\nOpen [this sample](https://stackblitz.com/edit/angular-agmzk2?file=src/app/datepicker-sample/datepicker-sample.component.html).\r\n\r\n1. Click or tab navigate to the igx-date-picker.\r\n\r\n## Result  \r\nIgxDatePicker is not selected on focus.\r\n\r\n## Expected result  \r\nIgxDatePicker should be selected on focus.\r\n\r\n## Attachments  \r\n![issue](https://user-images.githubusercontent.com/48180072/214029250-b7c27a65-2ffb-4bf5-88cc-c325432fbe78.gif)\r\n\r\n",
+		title: "IgxDatePicker is not selected on focus",
+		number: 12566,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12566",
+		id: 1553217761,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-20T18:53:26Z",
+		assignee: {
+			id: 4118303,
+			avatarUrl: "https://avatars.githubusercontent.com/u/4118303?v=4",
+			login: "simeonoff",
+			email: null,
+			url: "https://api.github.com/users/simeonoff"
+		},
+		labels: [{
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nIn the current version, the height of the card is determined by its content. This by itself is fine, but also creates a problem when multiple cards are added to a flex container (`flex-direction: row`) and bound to data. You end up with cards with different heights and no way to give them the same height. Moreover, setting `align-items:stretch` will have no effect.\r\n\r\n<img width=\"1478\" alt=\"image\" src=\"https://user-images.githubusercontent.com/41584300/213780263-07e5d859-6a27-4590-adf3-3b05f7028f98.png\">\r\n\r\nEven if we manually add a height via CSS, the card content area does not look right.\r\n<img width=\"1020\" alt=\"image\" src=\"https://user-images.githubusercontent.com/41584300/213781606-98a6c405-4c1e-40bf-adcc-258571dc3aef.png\">\r\n\r\n## Describe the solution you'd like\r\nCard should support height, and when resizing, position content as expected. That is, card-actions remain anchored to the bottom, and the rest stay put. \r\n\r\n## Describe alternatives you've considered\r\nMy solution may not be accurate as I'm not that experienced with web-layouts. So any alternate suggestions are welcome.\r\n\r\n## Additional context\r\nAdd any other context or screenshots about the feature request here.\r\n",
+		title: "Support height for card component",
+		number: 12555,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12555",
+		id: 1551304578,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-19T16:14:06Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 3535663847,
+			nodeId: "LA_kwDOAxIT487SvfLn",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/simple-combo",
+			name: "simple-combo",
+			color: "D5F8FB",
+			default: false,
+			description: ""
+		}],
+		body: "## Describe the solution you'd like\r\nI would like to be able to jump to the next item in the list after it has been filtered instead of going over the first active item.\r\n\r\nThis is the solution I'm looking for:\r\n\r\n\r\nhttps://user-images.githubusercontent.com/4118303/213494468-d45c3ebd-2cce-469e-a38b-d1e7d1c49118.mov\r\n\r\n",
+		title: "[Simple Combo] - Improve item navigation using keyboard after filtering",
+		number: 12547,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12547",
+		id: 1549480931,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-19T16:06:19Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 3535663847,
+			nodeId: "LA_kwDOAxIT487SvfLn",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/simple-combo",
+			name: "simple-combo",
+			color: "D5F8FB",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nI would like to have the simple combo's dropdown menu stay open even after the filtering input is focused using keyboard navigation, similar to how it works in the standard `igx-combo` component.\r\n\r\nTo be specific, this is the behavior I'm looking for:\r\n\r\nhttps://user-images.githubusercontent.com/4118303/213492493-ad66191e-23b2-4b61-bda6-ecafeef1572a.mov\r\n\r\n",
+		title: "[Simple Combo] - Consistent keyboard navigation",
+		number: 12546,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12546",
+		id: 1549465665,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-19T15:52:35Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}, {
+			id: 3535663847,
+			nodeId: "LA_kwDOAxIT487SvfLn",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/simple-combo",
+			name: "simple-combo",
+			color: "D5F8FB",
+			default: false,
+			description: ""
+		}],
+		body: "## Describe the solution you'd like\r\nI would like to have the simple combo dropdown open when I click the input so that I can quickly scan the available options before I start typing.\r\n\r\n\r\nhttps://user-images.githubusercontent.com/4118303/213488652-f08c9820-98a6-48ef-831f-b9def3158ffc.mov\r\n\r\n",
+		title: "[Simple Combo] - Open dropdown on input click",
+		number: 12544,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12544",
+		id: 1549439170,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-19T12:29:32Z",
+		assignee: {
+			id: 59446295,
+			avatarUrl: "https://avatars.githubusercontent.com/u/59446295?v=4",
+			login: "SisIvanova",
+			email: null,
+			url: "https://api.github.com/users/SisIvanova"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 438338013,
+			nodeId: "MDU6TGFiZWw0MzgzMzgwMTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/radio-button",
+			name: "radio-button",
+			color: "0052cc",
+			default: false,
+			description: null
+		}, {
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}],
+		body: "## Description  \r\n\r\nUse the attachment as a reference for the missing error state.\r\n\r\n## Attachments  \r\n\r\n\r\n![Reference](https://user-images.githubusercontent.com/91875400/214243404-c56acf55-871b-4244-b853-f1b768bd9eeb.png)\r\n\r\n",
+		title: "Fluent Radio Button missing error state",
+		number: 12543,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12543",
+		id: 1549062181,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-19T09:16:06Z",
+		assignee: {
+			id: 59446295,
+			avatarUrl: "https://avatars.githubusercontent.com/u/59446295?v=4",
+			login: "SisIvanova",
+			email: null,
+			url: "https://api.github.com/users/SisIvanova"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 438338013,
+			nodeId: "MDU6TGFiZWw0MzgzMzgwMTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/radio-button",
+			name: "radio-button",
+			color: "0052cc",
+			default: false,
+			description: null
+		}, {
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}, {
+			id: 1290006335,
+			nodeId: "MDU6TGFiZWwxMjkwMDA2MzM1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/radio-group",
+			name: "radio-group",
+			color: "e87971",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThe space between the Radio Button and the label should be 2px. and the space between each Radio Button should be 16px for horizontal orientation and 0px for vertical orientation\r\n\r\n-The hover state background should be grays.600 with 6% opacity for the light theme and 12% opacity for the dark one.\r\n-The focus state background should be grays.600 with 12% opacity for the light theme and 24% opacity for the dark one.\r\n\r\n**Missing error state:**\r\n\r\n-The hover state background should be error.500 with 6% opacity for the light theme and 12% opacity for the dark one.\r\n-The focus state background should be error.500 with 12% opacity for the light theme and 24% opacity for the dark one. \r\n-Labels are error.500 color always\r\n\r\n## Attachments  \r\n<img width=\"794\" alt=\"212893146-65c5b648-c9cd-41ea-89f8-1b268a946b7a\" src=\"https://user-images.githubusercontent.com/91875400/213400962-72746b0d-7087-4744-b027-ef8f632fd9ff.png\">\r\n\r\n\r\n",
+		title: "Design amendments in Radio Button / Radio Button Group for Material Design",
+		number: 12541,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12541",
+		id: 1548774972,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-18T14:47:42Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}],
+		body: "## Description  \r\n\r\nAdd a custom cell template.\r\n\r\nTry to use anything from \"cell\" context:\r\n![image](https://user-images.githubusercontent.com/12942794/213201992-25d32e7b-66e7-4008-be4e-3335e25d1f79.png)\r\n\r\n * igniteui-angular version: 15.0.6\r\n * browser: N/A\r\n\r\n## Steps to reproduce  \r\n\r\n1. Add a grid with custom cell template:\r\n   ```html\r\n   <igx-grid #grid [data]=\"data\">\r\n    <igx-column dataType=\"string\" field=\"Name\">\r\n        <ng-template igxCell let-cell=\"cell\">\r\n            <!-- Implement row deleting inside the cell template itself -->\r\n            <span tabindex=\"0\" (keydown.delete)=\"grid.deleteRow(cell.row.index)\">{{ cell.value | titlecase }}</span>\r\n        </ng-template>\r\n    </igx-column>\r\n    <igx-column dataType=\"boolean\" field=\"Subscribtion\">\r\n        <ng-template igxCell let-cell=\"cell\">\r\n            <input type=\"checkbox\" [ngModel]=\"cell.value\" (ngModelChange)=\"cell.update($event)\" />\r\n        </ng-template>\r\n    </igx-column>\r\n   <igx-grid>\r\n   ```\r\n2. Try to use anything from `let-cell`\r\n\r\n## Result  \r\n\r\n> Object is possibly 'undefined'.ngtsc(2532)\r\n![image](https://user-images.githubusercontent.com/12942794/213201971-dfa24aaa-5fe1-4070-b181-a84014e095c2.png)\r\n\r\n## Expected result  \r\nSince this is a cell template, my understanding is that \"cell\" should always be defined.\r\n",
+		title: "igxCell template directive exposes \"cell\" as possibly undefined",
+		number: 12538,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12538",
+		id: 1538126308,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-18T09:24:54Z",
+		assignee: {
+			id: 48180072,
+			avatarUrl: "https://avatars.githubusercontent.com/u/48180072?v=4",
+			login: "georgianastasov",
+			email: null,
+			url: "https://api.github.com/users/georgianastasov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}],
+		body: "## Description  \r\nWhenever a dialog is already opened, the close behavior cannot be changed anymore.\r\n\"closeOnEscape\" and \"closeOnOutsideSelect\" are ignoring new incoming values.\r\n\r\n * igniteui-angular version: \"@infragistics/igniteui-angular\": \"14.1.1\",\r\n * browser: Version 109.0.5414.74 (64-Bit)\r\n\r\n## Steps to reproduce  \r\n\r\n1. Click the button to open the dialog\r\n2. In the dialog, click the button to disable the close behavior\r\n3. Press ESC-Key or click besides the dialog\r\n\r\n## Result  \r\nThe dialog closes\r\n\r\n## Expected result  \r\nThe dialog shouldn't close\r\n\r\n\r\n## Attachments  \r\nCode sample of the template part (html)\r\n```\r\n<button (click)=\"myDialog.open()\">open dialog</button>\r\n\r\n<igx-dialog #myDialog [closeOnEscape]=\"!disableActions\"\r\n            [closeOnOutsideSelect]=\"!disableActions\" message=\"test message\">\r\n   <div class=\"dialog-footer\" igxDialogActions>\r\n       <button (click)=\"disableActions = !disableActions\">Escape key and outside shouldn't work anymore</button>\r\n  </div>\r\n</igx-dialog>\r\n```\r\n\r\nin the .ts part you just need to declare the var\r\n```\r\n...\r\nexport class MyComponent {\r\n   disableActions: boolean = false;\r\n   ...\r\n}\r\n```\r\n\r\n",
+		title: "Dialog: Change close configuration after opening is not working",
+		number: 12537,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12537",
+		id: 1537666495,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-18T07:53:04Z",
+		assignee: {
+			id: 54146583,
+			avatarUrl: "https://avatars.githubusercontent.com/u/54146583?v=4",
+			login: "randriova",
+			email: null,
+			url: "https://api.github.com/users/randriova"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 531439920,
+			nodeId: "MDU6TGFiZWw1MzE0Mzk5MjA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20pending-localization",
+			name: "status: pending-localization",
+			color: "fbca44",
+			default: false,
+			description: null
+		}],
+		body: "## Description  \r\nIn a support case it was suggested by a native French speaker that the `igx_grid_filter_row_close` string is not correctly translated in French as \"Fermer\" and could be replaced by \"Éteindre\".\r\nThis is the current French translation of the `igx_grid_filter_row_reset` string, though, which means it also has to be reconsidered.\r\nWe currently do not have a suggestion from them on this, however it could probably be \"Réinitialiser\"\r\n\r\n * igniteui-angular version: any\r\n * browser: -\r\n\r\n## Steps to reproduce  \r\n\r\n1. [Sample](https://stackblitz.com/edit/igx-grid-filter-fr?file=src/app/grid/grid-filtering-sample/grid-filtering-sample.component.ts) with French i18n\r\n\r\n## Result  \r\n\r\n\r\n## Expected result  \r\n\r\n\r\n\r\n## Attachments  \r\n![1](https://user-images.githubusercontent.com/35433937/213114102-c28c06cd-cd2e-48d4-90f9-95dd364aa57c.png)\r\n\r\n\r\n",
+		title: "i18n: Filter row strings in French reported as incorrect",
+		number: 12536,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12536",
+		id: 1537549029,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-13T09:50:04Z",
+		assignee: {
+			id: 59446295,
+			avatarUrl: "https://avatars.githubusercontent.com/u/59446295?v=4",
+			login: "SisIvanova",
+			email: null,
+			url: "https://api.github.com/users/SisIvanova"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 1040274972,
+			nodeId: "MDU6TGFiZWwxMDQwMjc0OTcy",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20tree-grid",
+			name: "grid: tree-grid",
+			color: "d4c5f9",
+			default: false,
+			description: ""
+		}, {
+			id: 1221520389,
+			nodeId: "MDU6TGFiZWwxMjIxNTIwMzg5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20excel-style-filtering",
+			name: "grid: excel-style-filtering",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nA redundant scrollbar is displayed when you expand a tree node inside the filtering dialog\r\n\r\n * igniteui-angular version: 15\r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Create a project with the attached files or run the samples browser and navigate to `samples/tree-grid/treegrid-excel-style-filtering-sample-1`\r\n2. Open the filtering dialog for column `Product Name`\r\n3. Expand the `Food` node\r\n\r\n## Result  \r\nTwo scrollbars are visible\r\n![screenshot](https://user-images.githubusercontent.com/2778393/212288296-51d06bed-5982-4f8a-a5e1-fecd0a51a489.png)\r\n\r\n## Expected result  \r\nNo second scrollbar should be visible\r\n\r\n\r\n## Attachments  \r\n[tree-grid-excel-style-filtering-sample-1.zip](https://github.com/IgniteUI/igniteui-angular/files/10410285/tree-grid-excel-style-filtering-sample-1.zip)\r\n\r\n",
+		title: "Redundant scrollbar is displayed in filtering dialog",
+		number: 12526,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12526",
+		id: 1532014276,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-12T22:03:21Z",
+		assignee: {
+			id: 47036441,
+			avatarUrl: "https://avatars.githubusercontent.com/u/47036441?v=4",
+			login: "MonikaKirkova",
+			email: null,
+			url: "https://api.github.com/users/MonikaKirkova"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nAfter selecting a bunch of cells in the grid there is no easy way to deselect one cell while leaving the other cells selected\r\n\r\n## Describe the solution you'd like\r\nAfter selecting multiple cells using CNTL / click should be able to deselect an individual cell using CNTL / click\r\n\r\n\r\n",
+		title: "IgxGrid: after selecting multiple cells using CNTL /  click should be able to deselect an individual cell using CNTL / click",
+		number: 12522,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12522",
+		id: 1531425768,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-12T09:27:48Z",
+		assignee: {
+			id: 49060557,
+			avatarUrl: "https://avatars.githubusercontent.com/u/49060557?v=4",
+			login: "igdmdimitrov",
+			email: null,
+			url: "https://api.github.com/users/igdmdimitrov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nWhen you filter a date column by selecting a date and then change the filter to a unary filter like today then the filter disappears.\r\n\r\n * igniteui-angular version: 15.0.6\r\n\r\n## Steps to reproduce  \r\nhttps://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/filtering\r\n1. filter the date column with equals some date\r\n2. change the filter to today\r\n\r\n## Result  \r\nThe filter disappears.\r\n\r\n## Expected result  \r\nThe today filter should be set.\r\n\r\n## Attachments  \r\n![2023-01-12_10h24_30](https://user-images.githubusercontent.com/46870283/212028750-cb122c54-6394-42f8-ad5e-b3688b90b52c.gif)\r\n",
+		title: "IgxGid: date filter disappears when changing to unary filter",
+		number: 12519,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12519",
+		id: 1530383145,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-11T16:06:11Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nThe IgxDatePicker converts the selected date in a javascript `Date` object.\r\nWhen you serialize this for a http request the time and timezone is included and converted to UTC.\r\nFor example if you are in the timezone UTC+1 and you select the date 2023-01-01 it gets serialized to '2022-12-31T23:00:00.000Z'.\r\nThis is a problem when the backend only expects a iso date string (YYYY-MM-DD).\r\n\r\n## Describe the solution you'd like\r\nIt would be nice if there was a input like `[useIsoString]=\"true\"` so that the date picker uses an iso date string (YYYY-MM-DD) as model instead of a `Date` object.\r\n",
+		title: "IgxDatePicker: ability to use an iso date string as model",
+		number: 12512,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12512",
+		id: 1529306486,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-10T15:31:45Z",
+		assignee: {
+			id: 49060557,
+			avatarUrl: "https://avatars.githubusercontent.com/u/49060557?v=4",
+			login: "igdmdimitrov",
+			email: null,
+			url: "https://api.github.com/users/igdmdimitrov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nWhen using special character (ie &) as header text the excel export will produce an invalid file. The user will then be prompted by a warning if the excel content should be recovered.\r\n\r\n * igniteui-angular version: v15\r\n * browser: Chrome 108\r\n\r\n## Steps to reproduce \r\n1. See Stackblitz Example https://stackblitz.com/edit/angular-qvznmb\r\n2. Export grid data to excel\r\n3. Open exported file\r\n\r\n## Result  \r\nExcel will prompt a warning regarding issue with the content. A deep dive will narrow it down to the special character & in the column header\r\n![image](https://user-images.githubusercontent.com/264579/211591444-974afba6-45db-402b-8b77-f8d7ce52dc00.png)\r\n\r\nWhen removing the char & from the grid column header the warning will disappear.\r\n\r\n## Expected result  \r\nThe exported content should produce a valid file.\r\n\r\n",
+		title: "Grid excel export produce invalid content when using special char",
+		number: 12510,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12510",
+		id: 1527596364,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-09T12:33:21Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}, {
+			id: 970329408,
+			nodeId: "MDU6TGFiZWw5NzAzMjk0MDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20cell-editing",
+			name: "grid: cell-editing",
+			color: "70e5df",
+			default: false,
+			description: ""
+		}, {
+			id: 1102774151,
+			nodeId: "MDU6TGFiZWwxMTAyNzc0MTUx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-editing",
+			name: "grid: row-editing",
+			color: "77d86a",
+			default: false,
+			description: ""
+		}, {
+			id: 1105153503,
+			nodeId: "MDU6TGFiZWwxMTA1MTUzNTAz",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/batch-editing",
+			name: "batch-editing",
+			color: "73eea4",
+			default: false,
+			description: ""
+		}, {
+			id: 3982407566,
+			nodeId: "MDU6TGFiZWwzOTgyNDA3NTY2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid",
+			name: "grid",
+			color: "95f9d5",
+			default: false,
+			description: null
+		}],
+		body: "## Description  \r\nRow transactions and grid validation service are not sync when using transaction clear method to clear multiple invalid cells\r\n\r\n * igniteui-angular version: \r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Open editing dev sample\r\n2. In the second sample add additional action button at the end\r\n```\r\n        <button (click)=\"clear('gridRowEditTransaction')\">Clear</button>\r\n```\r\n3. Create the handler\r\n\r\n```\r\n public clear(gridID) {\r\n        const currentGrid: IgxGridComponent = this.getGridById(gridID);\r\n        currentGrid.transactions.clear();\r\n    }\r\n```\r\n4. Make multiple rows to be invalid (ProductName column is required)\r\n5. Clear all transactions\r\n6. Observe\r\n\r\n## Result  \r\nThe values in the cells are cleared as the last value but the cell is still invalid.\r\n\r\n## Expected result  \r\nThey should be synced correctly.\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n",
+		title: "Row transactions and grid validation service are not sync when using transaction clear method to clear multiple invalid cells",
+		number: 12505,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12505",
+		id: 1525513722,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-08T18:42:40Z",
+		assignee: {
+			id: 34240583,
+			avatarUrl: "https://avatars.githubusercontent.com/u/34240583?v=4",
+			login: "ddincheva",
+			email: null,
+			url: "https://api.github.com/users/ddincheva"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}, {
+			id: 531441843,
+			nodeId: "MDU6TGFiZWw1MzE0NDE4NDM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:fire:%20severity:%20high",
+			name: ":fire: severity: high",
+			color: "d93f0b",
+			default: false,
+			description: ""
+		}, {
+			id: 906940495,
+			nodeId: "MDU6TGFiZWw5MDY5NDA0OTU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-selection",
+			name: "grid: row-selection",
+			color: "d4c5f9",
+			default: false,
+			description: ""
+		}, {
+			id: 987998812,
+			nodeId: "MDU6TGFiZWw5ODc5OTg4MTI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20selection",
+			name: "grid: selection",
+			color: "2f52bc",
+			default: false,
+			description: ""
+		}, {
+			id: 4540898149,
+			nodeId: "LA_kwDOAxIT488AAAABDqibZQ",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.0.x",
+			name: "version: 15.0.x",
+			color: "FA5965",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nWhen handling grid's `rowSelectionChanging` event the owner of the event arguments is always undefined.\r\n\r\n * igniteui-angular version: 15.0.0\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\nIn [this](https://stackblitz.com/edit/angular-5qggu6?file=package.json) demo I am logging the owner in `rowSelectionChanging` like this:\r\n``` typescript\r\n  public handleRowSelection(event: IRowSelectionEventArgs) {\r\n    console.log(event.owner);\r\n    this.selectedRowsCount = event.newSelection.length;\r\n    this.selectedRowIndex = event.newSelection[0];\r\n    this.snackbarRowCount.open();\r\n    this.snackbar.close();\r\n  }\r\n```\r\nOpen the demo, change the selection of any row, and observe the console. It is always logs `undefinde`.\r\n\r\n## Result  \r\n`owner` is `undefined`.\r\n\r\n## Expected result  \r\n`owner` should point to the grid component.\r\n",
+		title: "owner of rowSelectionChanging is always undefined",
+		number: 12502,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12502",
+		id: 1524629810,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-03T11:12:29Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 963379072,
+			nodeId: "MDU6TGFiZWw5NjMzNzkwNzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay",
+			name: "overlay",
+			color: "a9fcf2",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nIn the IgxOverlayService there are -ing and -ed events for open and close actions, but for contentAppend is currently provided only an -ed event. Please expose contentAppend -ing event, which should be emitted before the content is moved to the overlay. \r\nFor example: In this way, it will allow us to make some modifications to the element which will be transferred to the overlay, and apply some additional classes and attributes based on its current position in the DOM, for example, its parent element and so on.\r\n\r\n\r\n\r\n",
+		title: "Introduce contentAppending event in the IgxOverlayService",
+		number: 12480,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12480",
+		id: 1517245039,
+		pullRequest: null
+	}, {
+		createdAt: "2023-01-03T10:57:57Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 3113485838,
+			nodeId: "MDU6TGFiZWwzMTEzNDg1ODM4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20pivot",
+			name: "grid: pivot",
+			color: "177099",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThe issue is related to this https://github.com/IgniteUI/igniteui-angular/issues/12413 but only reproducible when zoomed in or zoomed out.\r\n\r\n * igniteui-angular version: all supported\r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Use the sample from the above mentioned issue\r\n2. Zoom in or Zoom out the page to 90% or 110%\r\n3. Observe\r\n\r\n## Result  \r\nObserve that when zoomed out to 90% the grid columns keep growing.\r\nObserve that when zoomed in to 110% the grid columns keep shrinking.\r\n\r\n## Expected result  \r\nThe grid should not resize even when the zoomed percentage is changed.\r\n\r\n\r\n## Attachments  \r\nAttach a sample if available, and screenshots, if applicable.  \r\n\r\n",
+		title: "Pivot grid columns keep resizing themselves when zoomed in or zoomed out",
+		number: 12479,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12479",
+		id: 1517228531,
+		pullRequest: null
+	}, {
+		createdAt: "2022-12-20T14:24:05Z",
+		assignee: {
+			id: 35433937,
+			avatarUrl: "https://avatars.githubusercontent.com/u/35433937?v=4",
+			login: "ddaribo",
+			email: null,
+			url: "https://api.github.com/users/ddaribo"
+		},
+		labels: [{
+			id: 858884153,
+			nodeId: "MDU6TGFiZWw4NTg4ODQxNTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20not-a-bug",
+			name: "status: not-a-bug",
+			color: "ea85ce",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nFor some reason, the excel style filter doesn't seem to use the regular igx-overlay, and this causes issues when we render two grids next to each other, as the filter will render below the other grid:\r\n![image](https://user-images.githubusercontent.com/12936286/208688553-1ad828e6-3512-4c73-ae07-7eaae76a492e.png)\r\n\r\n\r\n * igniteui-angular version: 14\r\n * browser: Chrome\r\n\r\n## Steps to reproduce  \r\n\r\n1. Go to https://stackblitz.com/edit/angular-gp1fk2?file=src%2Fapp%2Fgrid%2Fgrid-excel-style-filtering-sample-1%2Fgrid-excel-style-filtering-sample-1.component.html\r\n2. Open the excel style filter on the left grid\r\n## Result  \r\nThe filter is partially rendered below the right grid.\r\n\r\n## Expected result  \r\nThe filter should not be blocked by the right grid.\r\n\r\n\r\n",
+		title: "Excel filter rendering below neighboring grid",
+		number: 12473,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12473",
+		id: 1504644715,
+		pullRequest: null
+	}, {
+		createdAt: "2022-12-15T15:38:37Z",
+		assignee: {
+			id: 4118303,
+			avatarUrl: "https://avatars.githubusercontent.com/u/4118303?v=4",
+			login: "simeonoff",
+			email: null,
+			url: "https://api.github.com/users/simeonoff"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 877031119,
+			nodeId: "MDU6TGFiZWw4NzcwMzExMTk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input-group",
+			name: "input-group",
+			color: "f79bb1",
+			default: false,
+			description: ""
+		}, {
+			id: 1411516510,
+			nodeId: "MDU6TGFiZWwxNDExNTE2NTEw",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:runner:%20priority:%20high",
+			name: ":runner: priority: high",
+			color: "ce2f51",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThe input group does not inherit the correct density class from its parent, for example, when the grid is set to compact the input stays comfortable. This is happening only if the input-group is inside another form component, for example, date-picker or select.\r\n\r\nThere is [an old issue in the sample repo](https://github.com/IgniteUI/igniteui-angular-samples/issues/3006)\r\n\r\n * igniteui-angular version: \r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n1. Open this [gridCellEditing](http://localhost:4200/gridCellEditing) sample in dev demos\r\n2. Select compact density\r\n3.  Edit any of the date-picker inputs and compare with one that is pure input-group\r\n\r\n## Result\r\nThe input-group does not inherit the correct density\r\n\r\n## Expected result\r\nThe input-group should inherit the correct density\r\n\r\n",
+		title: "Input group not inheriting the correct density",
+		number: 12467,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12467",
+		id: 1498654777,
+		pullRequest: null
+	}, {
+		createdAt: "2022-12-14T11:05:58Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 1605262456,
+			nodeId: "MDU6TGFiZWwxNjA1MjYyNDU2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-adding",
+			name: "grid: row-adding",
+			color: "f9c5c0",
+			default: false,
+			description: ""
+		}, {
+			id: 3982407566,
+			nodeId: "MDU6TGFiZWwzOTgyNDA3NTY2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid",
+			name: "grid",
+			color: "95f9d5",
+			default: false,
+			description: null
+		}],
+		body: "## Description  \r\nWhen a new row is added from the action strip of the bottom pinned row in pinning position set to bottom in igxGrid, if we cancel the addition of the row by pressing the 'Cancel' button, the grid content is cut.\r\n\r\n * igniteui-angular version: 14.2 15.0\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\nOpen the following [sample](https://stackblitz.com/edit/angular-n9b1f1?file=src/app/grid/grid-add-row-sample/grid-add-row-sample.component.html)\r\n1. Pin just one row or pin multiple rows. \r\n2. Go to last bottom pinned row and click Add icon from the action strip.\r\n3. When the overlay for adding a row opens, press the 'Cancel' button to cancel the addition of the row.\r\n\r\n## Result  \r\nGrid content is cut off.\r\n\r\n## Expected result  \r\nCorrectly rerender the grid without cutting the content.\r\n\r\n\r\n## Attachments  \r\n![content cut off](https://user-images.githubusercontent.com/48180072/207577992-d2c8087d-8363-4f37-b247-0068f7ba1b5c.gif)\r\n\r\n\r\n",
+		title: "Grid content cut off",
+		number: 12454,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12454",
+		id: 1496363326,
+		pullRequest: null
+	}, {
+		createdAt: "2022-12-13T11:23:41Z",
+		assignee: {
+			id: 16020256,
+			avatarUrl: "https://avatars.githubusercontent.com/u/16020256?v=4",
+			login: "jackofdiamond5",
+			email: null,
+			url: "https://api.github.com/users/jackofdiamond5"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nIf you manually set errors on a form control that has no validators then the css class `igx-input-group--invalid` is not set and the input doesn't turn red.\r\n\r\n * igniteui-angular version: 15.0.2\r\n * browser: Chrome\r\n\r\n## Steps to reproduce  \r\nhttps://stackblitz.com/edit/angular-wqcpu7\r\n\r\n1. Open example\r\n2. Click on 'set invalid' button\r\n\r\n## Result  \r\nThe first input turns red because it has a validator.\r\nThe second input does not turn red because is has no validator.\r\n\r\n## Expected result  \r\nThe second input should turn red because it is invalid.\r\n\r\n",
+		title: "IgxInputGroup doesn't turn red when invalid",
+		number: 12452,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12452",
+		id: 1494033741,
+		pullRequest: null
+	}, {
+		createdAt: "2022-12-12T19:53:40Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 651042855,
+			nodeId: "MDU6TGFiZWw2NTEwNDI4NTU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:date:%20date-picker",
+			name: ":date: date-picker",
+			color: "afea6b",
+			default: false,
+			description: ""
+		}, {
+			id: 1221520389,
+			nodeId: "MDU6TGFiZWwxMjIxNTIwMzg5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20excel-style-filtering",
+			name: "grid: excel-style-filtering",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 1659256343,
+			nodeId: "MDU6TGFiZWwxNjU5MjU2MzQz",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker",
+			name: "date-range-picker",
+			color: "3ec9c4",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\n\r\nSome Ignite components use module injector instead of current injector to instantiate components, ignoring any custom providers that the developer might have set.\r\n\r\n * igniteui-angular version: 14.1.1\r\n * browser:  any\r\n\r\n## Steps to reproduce  \r\n\r\nProvide my custom overlay Service:\r\n`{ providers: IgxOverlayService, useClass: IgxOverlayService }`\r\n\r\nThen instantiate a grid with excel style filters\r\n```\r\n    <igx-grid [data]=\"[ { col: 'text' }, { col: 'text' } ]\" [autoGenerate]=\"true\" [allowFiltering]=\"true\" [filterMode]=\"'excelStyleFilter'\">\r\n    </igx-grid>\r\n```\r\n\r\nthen try to set a custom text filter:\r\n![image](https://user-images.githubusercontent.com/12942794/207116964-a710ba56-1cdf-4f55-801f-95c88c5469fe.png)\r\n\r\n## Result  \r\nThe custom text dialog doesn't open.\r\nSee line where Grid is using moduleRef injector over current one:\r\nhttps://github.com/IgniteUI/igniteui-angular/blob/9861f2c87bcfecbb3ede9e1ef9e49b44223d4176/projects/igniteui-angular/src/lib/grids/grid-base.directive.ts#L3833-L3838\r\n\r\n## Expected result  \r\nThe custom text dialog should open.\r\n\r\n## Attachments  \r\n[Stackblitz example](https://stackblitz.com/edit/angular-hws9fs?file=src%2Fapp%2Fgrid%2Fgrid-excel-style-filtering-sample-1%2Fgrid-excel-style-filtering-sample-1.component.ts)\r\n\r\n",
+		title: "Ignite favors module injector over current injector ",
+		number: 12450,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12450",
+		id: 1492637692,
+		pullRequest: null
+	}, {
+		createdAt: "2022-12-07T15:38:21Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}],
+		body: "## Description  \r\nAfter putting the date picker in edit mode the cursor is jumping to the end of the text when I perform a select all and then try to type a value.\r\n\r\n![datepicker-select-issue](https://user-images.githubusercontent.com/18489991/206222785-69bc7f58-bfd2-4f81-a0d4-402f0a14a4d1.gif)\r\n\r\n * igniteui-angular version: 15.0.2\r\n * browser: Chrome 108.0.5359.94\r\n\r\n## Steps to reproduce  \r\n\r\n1. Go to (https://www.infragistics.com/products/ignite-ui-angular/angular/components/date-picker#angular-datepicker-example)\r\n2. Click inside date picker to go into edit mode\r\n3. Press Ctrl + A keys to select all text\r\n4. Start typing a number\r\n\r\n## Result  \r\nThe typed number is placed at the start of the date and the cursor immediately moves to the end making it impossible to finish typing the date. The user has to manually position the cursor with the mouse or arrow keys in order to complete the date.\r\n\r\n## Expected result  \r\nThe cursor should remain next to the typed number so users can finish typing the date.\r\n\r\n\r\n",
+		title: "Date picker cursor jumps to end",
+		number: 12438,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12438",
+		id: 1482214403,
+		pullRequest: null
+	}, {
+		createdAt: "2022-12-05T14:45:54Z",
+		assignee: {
+			id: 21260963,
+			avatarUrl: "https://avatars.githubusercontent.com/u/21260963?v=4",
+			login: "desig9stein",
+			email: null,
+			url: "https://api.github.com/users/desig9stein"
+		},
+		labels: [{
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "The UI needs to be updated to reflect the latest design changes\r\n\r\n[Prototype](https://www.figma.com/proto/kJxlQPb78W2C4S2g0gDjbs/Combo-Design-Handoff?node-id=1%3A3251&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A3209&show-proto-sidebar=1)\r\n[Design handoff](https://www.figma.com/file/kJxlQPb78W2C4S2g0gDjbs/Combo-Design-Handoff?node-id=97%3A2157&t=zpAKFmnHJYXT9Fh7-0)\r\n",
+		title: "Refactor(Combo) Update the UI according to the new design.",
+		number: 12421,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12421",
+		id: 1476731382,
+		pullRequest: null
+	}, {
+		createdAt: "2022-12-05T12:12:01Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 749009988,
+			nodeId: "MDU6TGFiZWw3NDkwMDk5ODg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring",
+			name: "refactoring",
+			color: "bcd8f4",
+			default: false,
+			description: null
+		}, {
+			id: 3113485838,
+			nodeId: "MDU6TGFiZWwzMTEzNDg1ODM4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20pivot",
+			name: "grid: pivot",
+			color: "177099",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nCurrently the `IgxPivotDateDimension` has constructor parameters that are also exposed as public props:\r\nhttps://github.com/IgniteUI/igniteui-angular/blob/9861f2c87bcfecbb3ede9e1ef9e49b44223d4176/projects/igniteui-angular/src/lib/grids/pivot-grid/pivot-grid-dimensions.ts#L95\r\n\r\nThis might be a leftover of some sort, but it does make a suggestion such options are possible:\r\n```ts\r\nconst base = dateDimension.inBaseDimension;\r\ndateDimension.inBaseDimension = { ... };\r\ndateDimension.inOptions= { ... };\r\n```\r\nWhich might actually be of use to us, except those do not work as far as I can tell due to the way the dimension initializes. There's actually a adaptation made for this in the Elements branch https://github.com/IgniteUI/igniteui-angular/pull/12125/files#diff-f9012319362951afa13f4dc681a642a6957f2f08cf3a89250f2461315ffb9f45 that moved the initialize logic into a separate method so it can be called when setting those props.\r\n\r\n## Describe the solution you'd like\r\nAt the very least, drop the `in-` prefix, consider the approach linked above - if it makes sense to be adopted. Oh, and keep the old names as deprecated proxies to the new ones so there would be no breaking.\r\n\r\n",
+		title: "Pivot Date Dimension constructor args",
+		number: 12417,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12417",
+		id: 1476423588,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-30T08:17:39Z",
+		assignee: {
+			id: 59446295,
+			avatarUrl: "https://avatars.githubusercontent.com/u/59446295?v=4",
+			login: "SisIvanova",
+			email: null,
+			url: "https://api.github.com/users/SisIvanova"
+		},
+		labels: [{
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nIf inputs are invalid they get a red border.\r\nIf RadioButtons are invalid they get no special styling.\r\n\r\n * igniteui-angular version: 15.0.0\r\n\r\n## Expected result  \r\nRadioButtons should have an invalid styling so you can see that they are invalid.\r\n",
+		title: "RadioButtons: missing validation styling",
+		number: 12402,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12402",
+		id: 1469227217,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-25T12:10:24Z",
+		assignee: {
+			id: 14248932,
+			avatarUrl: "https://avatars.githubusercontent.com/u/14248932?v=4",
+			login: "hanastasov",
+			email: null,
+			url: "https://api.github.com/users/hanastasov"
+		},
+		labels: [{
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1102774151,
+			nodeId: "MDU6TGFiZWwxMTAyNzc0MTUx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-editing",
+			name: "grid: row-editing",
+			color: "77d86a",
+			default: false,
+			description: ""
+		}, {
+			id: 1411516510,
+			nodeId: "MDU6TGFiZWwxNDExNTE2NTEw",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:runner:%20priority:%20high",
+			name: ":runner: priority: high",
+			color: "ce2f51",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nRight now, `rowDeleted` emits `IRowDataEventArgs`. This argument has no information about the id of the deleted row.\r\n\r\n## Describe the solution you'd like\r\nExtend the `rowDeleted` event arguments to include at least the deleted row id.\r\n\r\n## Describe alternatives you've considered\r\nI can search through the grid's data and find the row id, but it is common scenario to send to the backend the id of the item you need to delete. This is why it should present in the event arguments.\r\n",
+		title: "Extend rowDeleted event arguments",
+		number: 12380,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12380",
+		id: 1464461374,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-24T13:18:33Z",
+		assignee: {
+			id: 4118303,
+			avatarUrl: "https://avatars.githubusercontent.com/u/4118303?v=4",
+			login: "simeonoff",
+			email: null,
+			url: "https://api.github.com/users/simeonoff"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 2236014987,
+			nodeId: "MDU6TGFiZWwyMjM2MDE0OTg3",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:sparkles:%20themes",
+			name: ":sparkles: themes",
+			color: "ceef86",
+			default: false,
+			description: ""
+		}, {
+			id: 4540898149,
+			nodeId: "LA_kwDOAxIT488AAAABDqibZQ",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.0.x",
+			name: "version: 15.0.x",
+			color: "FA5965",
+			default: false,
+			description: ""
+		}, {
+			id: 4861501935,
+			nodeId: "LA_kwDOAxIT488AAAABIcSh7w",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.1.x",
+			name: "version: 15.1.x",
+			color: "DC40EA",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nIt is the same as #12200 but there are still usages of px in components.\r\n\r\nFor example `@HostBinding('style.height.px')` , `[style.min-height.px]=\"cellHeight\"`",
+		title: "Use `rem` instead of `px`",
+		number: 12377,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12377",
+		id: 1463337840,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-23T13:19:26Z",
+		assignee: {
+			id: 14248932,
+			avatarUrl: "https://avatars.githubusercontent.com/u/14248932?v=4",
+			login: "hanastasov",
+			email: null,
+			url: "https://api.github.com/users/hanastasov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 531441949,
+			nodeId: "MDU6TGFiZWw1MzE0NDE5NDk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:boom:%20severity:%20critical",
+			name: ":boom: severity: critical",
+			color: "b60205",
+			default: false,
+			description: ""
+		}, {
+			id: 625766429,
+			nodeId: "MDU6TGFiZWw2MjU3NjY0Mjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20general",
+			name: "grid: general",
+			color: "5319e7",
+			default: false,
+			description: ""
+		}, {
+			id: 906940495,
+			nodeId: "MDU6TGFiZWw5MDY5NDA0OTU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-selection",
+			name: "grid: row-selection",
+			color: "d4c5f9",
+			default: false,
+			description: ""
+		}, {
+			id: 1040274972,
+			nodeId: "MDU6TGFiZWwxMDQwMjc0OTcy",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20tree-grid",
+			name: "grid: tree-grid",
+			color: "d4c5f9",
+			default: false,
+			description: ""
+		}, {
+			id: 1168801769,
+			nodeId: "MDU6TGFiZWwxMTY4ODAxNzY5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20hierarchical-grid",
+			name: "grid: hierarchical-grid",
+			color: "fc92a5",
+			default: false,
+			description: ""
+		}, {
+			id: 3113485838,
+			nodeId: "MDU6TGFiZWwzMTEzNDg1ODM4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20pivot",
+			name: "grid: pivot",
+			color: "177099",
+			default: false,
+			description: ""
+		}, {
+			id: 4479155364,
+			nodeId: "LA_kwDOAxIT488AAAABCvp8pA",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2014.2.x",
+			name: "version: 14.2.x",
+			color: "D32276",
+			default: false,
+			description: ""
+		}, {
+			id: 4540898149,
+			nodeId: "LA_kwDOAxIT488AAAABDqibZQ",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.0.x",
+			name: "version: 15.0.x",
+			color: "FA5965",
+			default: false,
+			description: ""
+		}, {
+			id: 4697147300,
+			nodeId: "LA_kwDOAxIT488AAAABF_jHpA",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:diamond_shape_with_a_dot_inside:%20grid:%20elements",
+			name: ":diamond_shape_with_a_dot_inside: grid: elements",
+			color: "C5297B",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nSelection API returns different types of data depending on whether `primaryKey` is set to `igx-grid`, `igx-tree-grid`, `igx-hierarchical-grid`, etc. In the case of `primaryKey` set, I get an array of primitive values. In the case of `primaryKey` not being set, I get an array of data objects behind the grid.\r\n\r\n * igniteui-angular version: 15.0.0\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Create an app with any grid\r\n2. Turn row selection on\r\n3. Log `args.newSelection` on selection changing\r\n4. Set a `primaryKey`\r\n5. Log `args.newSelection` on selection changing\r\n\r\n## Result  \r\nInconsistent results between `primaryKey` and no `primaryKey`.\r\n\r\n## Expected result  \r\nConsistent results. Data members should be provided in both cases.\r\n\r\n\r\n",
+		title: "Grid row selection is inconsistent with and without primaryKey",
+		number: 12371,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12371",
+		id: 1461753481,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-22T15:14:47Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3113485838,
+			nodeId: "MDU6TGFiZWwzMTEzNDg1ODM4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20pivot",
+			name: "grid: pivot",
+			color: "177099",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nType checking of the fields when autogenerated dimensions and values and a proper indication for the users in pivot data selector\r\n\r\n## Describe the solution you'd like\r\nIndicate if the values in a dimensions/value are strings, numbers, dates, etc. So the users can better understand what can be used as a value or as a dimension(row/column/filter)\r\n\r\n## Describe alternatives you've considered\r\nA clear and concise description of any alternative solutions or features you've considered.\r\n\r\n## Additional context\r\nAdd any other context or screenshots about the feature request here.\r\n\r\nrelated to #12366\r\n",
+		title: "type checking of the fields when autogenerated dimensions and values and a proper indication for the users in pivot data selector",
+		number: 12367,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12367",
+		id: 1460065181,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-22T15:10:51Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 3113485838,
+			nodeId: "MDU6TGFiZWwzMTEzNDg1ODM4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20pivot",
+			name: "grid: pivot",
+			color: "177099",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nPivot configuration can be difficult to be defined. Autogenerating simple non-hierarchical dimensions and values from  fields of the data when no pivot configuration is defined would be a great benefit for the users. \r\n\r\n## Describe the solution you'd like\r\nAdditional field or a place in the data selector where those fields can be populated along side with an empty pivot grid and allow the users to pivot with the data using those autogenerated dimensions/values.\r\n\r\n## Describe alternatives you've considered\r\nA clear and concise description of any alternative solutions or features you've considered.\r\n\r\n## Additional context\r\nAdd any other context or screenshots about the feature request here.\r\n",
+		title: "Autogenerate dimensions and values from the data when no pivot configuration is defined",
+		number: 12366,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12366",
+		id: 1460059081,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-21T08:46:49Z",
+		assignee: {
+			id: 21260963,
+			avatarUrl: "https://avatars.githubusercontent.com/u/21260963?v=4",
+			login: "desig9stein",
+			email: null,
+			url: "https://api.github.com/users/desig9stein"
+		},
+		labels: [{
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 2236014987,
+			nodeId: "MDU6TGFiZWwyMjM2MDE0OTg3",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:sparkles:%20themes",
+			name: ":sparkles: themes",
+			color: "ceef86",
+			default: false,
+			description: ""
+		}],
+		body: "Use the theming package when sizing components in place of the current approach.",
+		title: "[Themes] - Use the sizable mixins and functions to size components",
+		number: 12347,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12347",
+		id: 1457546036,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-18T16:30:12Z",
+		assignee: {
+			id: 2188411,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2188411?v=4",
+			login: "ChronosSF",
+			email: null,
+			url: "https://api.github.com/users/ChronosSF"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 625766429,
+			nodeId: "MDU6TGFiZWw2MjU3NjY0Mjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20general",
+			name: "grid: general",
+			color: "5319e7",
+			default: false,
+			description: ""
+		}, {
+			id: 749009988,
+			nodeId: "MDU6TGFiZWw3NDkwMDk5ODg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring",
+			name: "refactoring",
+			color: "bcd8f4",
+			default: false,
+			description: null
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3982407566,
+			nodeId: "MDU6TGFiZWwzOTgyNDA3NTY2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid",
+			name: "grid",
+			color: "95f9d5",
+			default: false,
+			description: null
+		}],
+		body: "Logging this as a starting point, might need to break down into separate tasks as we iron out details.\r\nAlso see https://github.com/IgniteUI/igniteui-angular/pull/12275#discussion_r1023700303\r\n\r\nAFAIK, the initial version of `GridType` was probably intended as an internal interface to allow dependent components/pipes/etc to reference grids without resulting in circular dependency issues. As such it probably contained some internal/internal props even from the get go.\r\nAt some point the interface became part of public API shared across grids, like the  `RowType` /`CellType` grid property, some base event arguments and so on. As such it also includes optional props for specific grid types. But then the interface is still not exposed proper. And the use for circular resolution is ongoing too.\r\n\r\nSo a quick brief of things I think are initially needed:\r\n\r\n- [ ] Cleanup the internal properties on the interface. This includes evaluating their use first - perhaps some are used in strategies that can be overridden and could make sense as official public props too. Remaining internal props we could move to an internal grid type, would need to consider if implementing it explicitly by the components pollutes the API docs though.\r\n- [ ] Consider if want to keep the separate grid-specific types. We can either drop them and maintain the current direction with `GridType` having optional props for all grids (Pivot _excluded_) or clean up the base type even further and expose the per-grid types. The only downside to that is to do with all the shared API from base (event/template args, common cell/row types, etc) will require casting.\r\nNo idea if the properties on the interface currently cover all critical paths even, so not sure how much of a loss that'd be. There's also _some_ chance we could throw some generics in the mix and have some of those self-describe better, but likely not all the bits external to the grid components. So some convenience cost.\r\n- [ ] properly export the `GridType` itself as public API. Might want to do some doc comments too\r\n- [ ] Adjust component interfaces accordingly",
+		title: "Grid public interface(s) review and cleanup",
+		number: 12342,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12342",
+		id: 1455428747,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-17T14:23:26Z",
+		assignee: {
+			id: 11231206,
+			avatarUrl: "https://avatars.githubusercontent.com/u/11231206?v=4",
+			login: "mtsvyatkova",
+			email: null,
+			url: "https://api.github.com/users/mtsvyatkova"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 967701619,
+			nodeId: "MDU6TGFiZWw5Njc3MDE2MTk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20global-filtering",
+			name: "grid: global-filtering",
+			color: "30db30",
+			default: false,
+			description: ""
+		}, {
+			id: 3982407566,
+			nodeId: "MDU6TGFiZWwzOTgyNDA3NTY2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid",
+			name: "grid",
+			color: "95f9d5",
+			default: false,
+			description: null
+		}],
+		body: "## Description  \r\nGlobal Filtering doesn't respect column's pipeArgs/formatter and filters by the underlying data source.\r\n\r\n * igniteui-angular version: 13.2.x, 14.2.x\r\n * browser: any\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open the following [sample](https://stackblitz.com/edit/angular-xf26na-jssnnx?file=src%2Fapp%2Fdata%2Fcustom.data.ts,src%2Fapp%2Fsample%2Figx-sample%2Figx-sample.component.html,src%2Fapp%2Fsample%2Figx-sample%2Figx-sample.component.ts)\r\n2. Within the Search field type Nov 9\r\n\r\n## Result  \r\nAll records are filtered out\r\n\r\n## Expected result  \r\nThe record with ProductID 1 should remain\r\n\r\n\r\n## Attachments  \r\n![global_filtering](https://user-images.githubusercontent.com/44684385/202471101-8f050dab-9e91-4a5d-ba70-8f87c3810639.gif)\r\n\r\n\r\n",
+		title: "Global Filtering doesn't respect column's pipeArgs/formatter",
+		number: 12329,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12329",
+		id: 1453439337,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-07T12:40:28Z",
+		assignee: {
+			id: 49126110,
+			avatarUrl: "https://avatars.githubusercontent.com/u/49126110?v=4",
+			login: "RivaIvanova",
+			email: null,
+			url: "https://api.github.com/users/RivaIvanova"
+		},
+		labels: [{
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "Hi,\r\nIf change the value of a cell in edit mode, the dropdown menu tells me i have 1 change like expected. If i then change the value back to the original value before i entered edit mode(still in the same edit mode, same row), it still tells me i have 1 change. \r\n\r\nIf possible it would be nice to have the cell remember the value in the cell from before entering edit mode so that it shows the changes from how it used to be before editing. \r\n\r\nRegards",
+		title: "Change detection cell value in cellEditor",
+		number: 12270,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12270",
+		id: 1438301158,
+		pullRequest: null
+	}, {
+		createdAt: "2022-11-03T06:18:06Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1659256343,
+			nodeId: "MDU6TGFiZWwxNjU5MjU2MzQz",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker",
+			name: "date-range-picker",
+			color: "3ec9c4",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nI am using `igx-date-picker` and `igx-date-range-picker`. I use `igxCalendarSubheader` directive for `igx-date-picker` to customize subheader like photo below:\r\n\r\n![image](https://user-images.githubusercontent.com/29648335/199660287-8f12025d-e713-4a3c-a9d0-2c6d2b97e167.png)\r\n\r\nBut `igx-date-range-picker` don't support. I can not use `igxCalendarSubheader` directive to customize the subheader of  this one.\r\n\r\n![image](https://user-images.githubusercontent.com/29648335/199660233-5cd0dce4-1749-45d5-a1f8-4f4fd3ddb8bb.png)\r\n\r\n\r\n## Describe the solution you'd like\r\nI want to use `igxCalendarSubheader` directive for `igx-date-range-picker` as well. Or can you suggest me other way to customize subheader of this one?\r\n",
+		title: "Customizing subheader for igx-date-range-picker",
+		number: 12265,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12265",
+		id: 1434167784,
+		pullRequest: null
+	}, {
+		createdAt: "2022-10-31T12:16:23Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 1168801769,
+			nodeId: "MDU6TGFiZWwxMTY4ODAxNzY5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20hierarchical-grid",
+			name: "grid: hierarchical-grid",
+			color: "fc92a5",
+			default: false,
+			description: ""
+		}, {
+			id: 2069855364,
+			nodeId: "MDU6TGFiZWwyMDY5ODU1MzY0",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/priority:%20low",
+			name: "priority: low",
+			color: "d7e25a",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nIf the top level H Grid is loaded with auto-generated columns and row layouts are added with delay, their possible columns trigger the columns list update handling, and since the root list is empty - the empty list gets assigned to the internal grid collection, essentially deleting the generated columns.\r\n\r\nThis is related to #12251 and to do with the same handling block. Still, quite a lot of stars to align for this one, thus the low prio.\r\n\r\n * igniteui-angular version: 15.0.x\r\n * browser: N/A\r\n\r\n## Steps to reproduce  \r\n\r\n1. Use the sample attached to #12251\r\n3. Set `autoGenerate` to true on the HGrid so the grid renders all columns initially\r\n4. Open the sample\r\n5. Hit the Toggle child layouts button\r\n\r\n## Result  \r\nAfter child layouts are enabled the grid ends up empty\r\n\r\n## Expected result  \r\nThe grid columns and layouts should render correctly\r\n\r\n",
+		title: "Hierarchical Grid dynamic row islands can remove auto-generated columns",
+		number: 12252,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12252",
+		id: 1429749890,
+		pullRequest: null
+	}, {
+		createdAt: "2022-10-28T13:27:50Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 1168801769,
+			nodeId: "MDU6TGFiZWwxMTY4ODAxNzY5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20hierarchical-grid",
+			name: "grid: hierarchical-grid",
+			color: "fc92a5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThere's a resizeNotifyHandler in the hierarchical grid that does not seem to be used. \r\nhttps://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/hierarchical-grid.component.ts#L1052\r\nCheck if it is needed and if not remove it.",
+		title: "Check the unused resizeNotifyHandler in the hierarchical grid.",
+		number: 12246,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12246",
+		id: 1427265793,
+		pullRequest: null
+	}, {
+		createdAt: "2022-10-24T07:21:49Z",
+		assignee: {
+			id: 21260963,
+			avatarUrl: "https://avatars.githubusercontent.com/u/21260963?v=4",
+			login: "desig9stein",
+			email: null,
+			url: "https://api.github.com/users/desig9stein"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 877031119,
+			nodeId: "MDU6TGFiZWw4NzcwMzExMTk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input-group",
+			name: "input-group",
+			color: "f79bb1",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nThe outlined material button doesn't support changing of the label value at runtime as the styles/markup are not well suited for such changes.\r\n\r\n## Describe the solution you'd like\r\nRefactor the markup and styles of the component to more closely match the Ignite UI for Web Components implementation.\r\n",
+		title: "Improve Material Outlined Input markup to allow for runtime label changes",
+		number: 12221,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12221",
+		id: 1420343776,
+		pullRequest: null
+	}, {
+		createdAt: "2022-10-20T06:05:02Z",
+		assignee: {
+			id: 4118303,
+			avatarUrl: "https://avatars.githubusercontent.com/u/4118303?v=4",
+			login: "simeonoff",
+			email: null,
+			url: "https://api.github.com/users/simeonoff"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531440033,
+			nodeId: "MDU6TGFiZWw1MzE0NDAwMzM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20third-party-issue",
+			name: "status: third-party-issue",
+			color: "f9d0c4",
+			default: false,
+			description: null
+		}],
+		body: "## Description  \r\nSlides do not transition properly by pan gesture.\r\n\r\n * igniteui-angular version: 14.2.2\r\n * browser: Safari, iOS 15.7\r\n\r\n## Steps to reproduce  \r\n\r\n1. Run the attached sample on iPhone.\r\n2. Scroll the slides left and right continuously by pan gesture.\r\n\r\n\r\n## Result  \r\nScrolling sometime stops in the middle of the slides transition.\r\n\r\n## Expected result  \r\nScrolling do not stop in the middle of the slides transition.\r\n\r\n\r\n## Attachments  \r\n[carousel.zip](https://github.com/IgniteUI/igniteui-angular/files/9826741/carousel.zip)\r\n\r\n\r\n",
+		title: "IgxCarousel - Slides do not transition properly by pan gesture.",
+		number: 12208,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12208",
+		id: 1416017152,
+		pullRequest: null
+	}, {
+		createdAt: "2022-10-13T14:54:41Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 1102774151,
+			nodeId: "MDU6TGFiZWwxMTAyNzc0MTUx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-editing",
+			name: "grid: row-editing",
+			color: "77d86a",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nWhen the `rowEdit` event is canceled, the row's new data is cleared, however the cells' edit values remain. This is not related to the validation feature and is visible in the [\"Event cancelation\"](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/editing#event-cancelation) demo in the docs:\r\n\r\n![rowEdit-cancel-clel-editValues-remain](https://user-images.githubusercontent.com/35433937/195616884-b4bb8b8e-5745-4e67-945b-f28cc4502d53.gif)\r\n\r\nIn a grid validation scenario, it is expected that canceling the `rowEdit` event prevents the user from adding/editing an invalid row.\r\nHowever, due to the above behavior, the grid accepts an invalid row.\r\n\r\nTo an extent related to #12127.\r\n\r\n * igniteui-angular version: latest (& any)\r\n * browser: any\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open [this sample](https://stackblitz.com/edit/igx-grid-validation-cancel-rowedit?file=src/app/sample/igx-sample/igx-sample.component.html)\r\n2. Observe that the `ProductName` and `CategoryName` fields are required\r\n3. Click the \"Add\" button on the action strip to add a new row\r\n4. Type something only in the `ProductName` field\r\n5. Click `Done` in attempt to finalize the row edit while the `CategoryName` field is left empty\r\n6. You will see the error message and the `ProductName` cell's value reset. (At this point, if you double click on `ProductName` you will see its edit value remains as before clicking `Done`)\r\n8. Fill a value in `CategoryName`\r\n9. Click `Done`\r\n\r\n## Result  \r\nThe row is added, however, with an invalid state, event though the `rowEdit` event is canceled with the intention not to add/edit an invalid row:\r\n```\r\npublic rowEdit(args: IGridEditEventArgs) {\r\n    if (!args.valid) {\r\n      args.cancel = true;\r\n    }\r\n  }\r\n```\r\n\r\n## Expected result  \r\nReset the cell edit values to the cells' previous values when row editing is canceled?\r\nProperly recalculate the row's validity state.\r\n\r\n## Attachments  ",
+		title: "rowEdit cancel not working as expected with row validation",
+		number: 12189,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12189",
+		id: 1407950910,
+		pullRequest: null
+	}, {
+		createdAt: "2022-10-11T22:26:50Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\n\r\nWhen using igxForOf my items are inferred as type any.\r\n\r\ne.g. `<div *igxFor=\"let item of [1,2,3]\"></div>`\r\n\r\n![image](https://user-images.githubusercontent.com/12942794/195209553-b730da14-fece-4a4b-99e6-713c7b5f1a11.png)\r\n\r\n## Describe the solution you'd like\r\nI'd like the directive to take advantage of generics to get proper types in my items.\r\n\r\n## Describe alternatives you've considered\r\nNone",
+		title: "[IgxForOfDirective] use generic types",
+		number: 12182,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12182",
+		id: 1405300143,
+		pullRequest: null
+	}, {
+		createdAt: "2022-10-06T20:12:59Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\n\r\nWe are encountering an exception from within the IgxGridForOfDirective._calcMaxChunkSize after loading a datagrid.\r\n\r\n * igniteui-angular version: 13.2.5\r\n * browser: Google Chrome 105.0.5195.127 (Official Build) (64-bit)\r\n\r\n## Steps to reproduce  \r\n\r\nWe created a component with an IGX datagrid and a resize observer that is set in the ngAfterViewInit.  The columns and data properties are initially set and then we make an asynchronous call to check if there is additional data, then we update the columns and data accordingly.\r\n\r\n## Result  \r\nIn IgxGridForOfDirective._calcMaxChunkSize the prevIndex variable on line 10333 (see screenshot) comes up as -1.  \r\nThis makes `const prevIndex = this.igxForOf[prevIndex];` come back as undefined.  \r\nThe prevItem[dimension] will throw an exception:\r\n\r\n```\r\ncore.mjs:6494 ERROR TypeError: Cannot read properties of undefined (reading 'calcPixelWidth')\r\n    at IgxGridForOfDirective._calcMaxChunkSize (igniteui-angular.mjs:10337:46)\r\n    at IgxGridForOfDirective._calcMaxChunkSize (igniteui-angular.mjs:10902:30)\r\n    at IgxGridForOfDirective._calculateChunkSize (igniteui-angular.mjs:10247:30)\r\n    at IgxGridForOfDirective.applyChunkSizeChange (igniteui-angular.mjs:10467:93)\r\n    at IgxGridForOfDirective._applyChanges (igniteui-angular.mjs:10892:14)\r\n    at IgxGridForOfDirective.ngDoCheck (igniteui-angular.mjs:10701:22)\r\n    at callHook (core.mjs:2561:1)\r\n    at callHooks (core.mjs:2520:1)\r\n    at executeCheckHooks (core.mjs:2452:1)\r\n    at selectIndexInternal (core.mjs:8410:1)\r\n```\r\n\r\n## Expected result  \r\nWe expect the code to handle `prevIndex = -1` and skip the code block below. \r\n\r\nE.g. see the `if (prevIndex > 0) {` below:\r\n```typescript\r\n          while (prevIndex >= 0 && sum <= availableSize) {\r\n              curItem = dimension === 'height' ? arr[0].value : arr[0];\r\n              prevIndex = this.igxForOf.indexOf(curItem) - 1;\r\n  \r\n              if (prevIndex > 0) {  // <== Adding something like this if statement could avoid the exception from occurring\r\n                const prevItem = this.igxForOf[prevIndex];\r\n                const prevSize = dimension === 'height' ?\r\n                    this.heightCache[prevIndex] :\r\n                    parseInt(prevItem[dimension], 10);\r\n                sum = arr.reduce(reducer, prevSize);\r\n                arr.unshift(prevItem);\r\n                length = arr.length;\r\n              }\r\n          }\r\n``` \r\nRefer to https://github.com/IgniteUI/igniteui-angular/blob/e05b38d13ab2bc530dbe81c9b688b9c5b1d123e7/projects/igniteui-angular/src/lib/directives/for-of/for_of.directive.ts#L1231-L1241\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/78883698/194409348-7f0d7cc9-e73d-4b01-8249-3d2840c035dc.png)\r\n\r\n\r\n",
+		title: "Undefined exception from IgxGridForOfDirective._calcMaxChunkSize",
+		number: 12164,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12164",
+		id: 1400244699,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-26T13:39:01Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 749010965,
+			nodeId: "MDU6TGFiZWw3NDkwMTA5NjU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/virtualization",
+			name: "virtualization",
+			color: "e85a19",
+			default: false,
+			description: null
+		}, {
+			id: 926278753,
+			nodeId: "MDU6TGFiZWw5MjYyNzg3NTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/combo",
+			name: "combo",
+			color: "152872",
+			default: false,
+			description: ""
+		}, {
+			id: 3518092453,
+			nodeId: "LA_kwDOAxIT487RsdSl",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2012.3.x",
+			name: "version: 12.3.x",
+			color: "BF8F0D",
+			default: false,
+			description: ""
+		}, {
+			id: 3535663847,
+			nodeId: "LA_kwDOAxIT487SvfLn",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/simple-combo",
+			name: "simple-combo",
+			color: "D5F8FB",
+			default: false,
+			description: ""
+		}, {
+			id: 3893988156,
+			nodeId: "LA_kwDOAxIT487oGYs8",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2013.2.x",
+			name: "version: 13.2.x",
+			color: "744395",
+			default: false,
+			description: ""
+		}, {
+			id: 4231882952,
+			nodeId: "LA_kwDOAxIT4878PWjI",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2014.1.x",
+			name: "version: 14.1.x",
+			color: "DB866C",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nWhen having an IgxCombo or IgxSimpleCombo with data set to a primitive data array, e.g. arr = [ 1, 2, undefined, 3, 4 ], only the first two items are displayed in the dropdown. If the data is as follows: arr = [ undefined, 1, 2, 3, 4 ], nothing will be displayed in the dropdown. \r\n\r\n * igniteui-angular version: 14.1.x, 13.2.x, 12.3.x\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open this [demo](https://stackblitz.com/edit/angular-l1sty4-bqrth9?file=src%2Fapp%2Fsample%2Figx-sample%2Figx-sample.component.ts).\r\n2. Open the combo and simple-combo dropdowns, only two items are displayed, but the data is arr = [ 1, 2, undefined, 3, 4 ].\r\n3. Uncomment `this.comboData = [undefined, 1, 2, 3, 4];` and open the combos again - nothing is displayed.\r\n\r\nThis is due to the `this.igxForOf[i] !== undefined` check in the for loop of IgxForOfDirective (line 413).\r\n\r\n![forOf](https://user-images.githubusercontent.com/49126110/192288690-8369c367-e561-4e88-be43-d431a5d02e0a.JPG)\r\n\r\n\r\n## Result  \r\nThe items are not shown in the dropdowns.\r\n\r\n## Expected result  \r\nAll items except 'undefined' should be shown in the dropdowns. \r\n\r\n",
+		title: "[IgxForOfDirective] having undefined in primitive data array removes other items in combo/simple-combo dropdown",
+		number: 12133,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12133",
+		id: 1386103737,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-26T11:53:15Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 438337761,
+			nodeId: "MDU6TGFiZWw0MzgzMzc3NjE=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input",
+			name: "input",
+			color: "a950c4",
+			default: false,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 877031119,
+			nodeId: "MDU6TGFiZWw4NzcwMzExMTk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/input-group",
+			name: "input-group",
+			color: "f79bb1",
+			default: false,
+			description: ""
+		}, {
+			id: 1775129274,
+			nodeId: "MDU6TGFiZWwxNzc1MTI5Mjc0",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-time-editor",
+			name: "date-time-editor",
+			color: "47a31a",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nIf we have a two-way binding used in an `IgxInputGroup` element and if the `igxInput` directive is placed before the `igxDateTimeEditor` directive, an error will pop-up stating that the event and property halves of the binding are bound to different targets. The reason is that the `igxInput` directive has a `value` property which is a `string` and because Angular resolves directives in the order of placement on the element, the `value` of the `igxInput` is taken into account. It seems to me like `Angular` only takes into account the first occurrence of a property and if a property with the same name is later encountered in the template, it is ignored. If you put the `igxDateTimeEditor` before the `igxInput` then the error does not occur for the same reason - Angular takes the `value` property of the date-time directive and later uses it to construct the two way binding. Now because in the second scenario the target for the property and the event is the same - the date-time directive, the error does not occur.\r\n\r\n## Describe the solution you'd like\r\nWe should be able to fix this by making the `IgxDateTimeEditorDirective` usable in the context of an `IgxInputGroup`, without the need of an `igxInput` directive.\r\n\r\n## Describe alternatives you've considered\r\nn/a\r\n\r\n## Additional context\r\n![image](https://user-images.githubusercontent.com/16020256/192269605-25890074-28d1-497a-8fdb-3bd2e844c63f.png)\r\n\r\n",
+		title: "Have igxDateTimeEditor be usable inside of an IgxInputGroup without the need of an igxInput directive",
+		number: 12132,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12132",
+		id: 1385944342,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-23T20:09:02Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 3113485838,
+			nodeId: "MDU6TGFiZWwzMTEzNDg1ODM4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20pivot",
+			name: "grid: pivot",
+			color: "177099",
+			default: false,
+			description: ""
+		}, {
+			id: 3982407566,
+			nodeId: "MDU6TGFiZWwzOTgyNDA3NTY2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid",
+			name: "grid",
+			color: "95f9d5",
+			default: false,
+			description: null
+		}],
+		body: "The problems are not from the samples but rather in the library :)\r\n\r\n1. If we go the to the samples **gridColumnActions**  click **Group by all** in Custom Group Action and error is thrown:\r\n\r\n![image](https://user-images.githubusercontent.com/41373491/192044287-674dec05-e064-4fc7-8ccb-295980aba4f1.png)\r\n\r\n2.  In samples **gridRowAPI** In the Add Filter value add some number then click the red button ADD ROW and you will get: \r\n\r\n![image](https://user-images.githubusercontent.com/41373491/192045800-c3e9c2a6-cde1-458a-adf1-b39eb06b9bf4.png)\r\n\r\n3. In **pivot** grid sample there are soo many bugs there if you just start clicking like crazy. 🤪 One is right when the sample loads, click **newConfig** button then **filterDim** button and you will get \r\n![image](https://user-images.githubusercontent.com/41373491/192047586-601b9e4e-a013-45a5-99a7-791944fd33c6.png)\r\n\r\nAnother one is if you unselect right checkboxes and select them again: \r\n![image](https://user-images.githubusercontent.com/41373491/192048138-489e1e0e-eee1-4c7c-ad0f-8f6f65eaa539.png)\r\n\r\n\r\nKeep the amazing work you are doing, thanks to your library many devs can code faster and more fluently 💙\r\n",
+		title: "Grid miscellaneous bugs 🐛",
+		number: 12128,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12128",
+		id: 1384253421,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-16T12:56:40Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 1605262456,
+			nodeId: "MDU6TGFiZWwxNjA1MjYyNDU2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-adding",
+			name: "grid: row-adding",
+			color: "f9c5c0",
+			default: false,
+			description: ""
+		}, {
+			id: 3518092453,
+			nodeId: "LA_kwDOAxIT487RsdSl",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2012.3.x",
+			name: "version: 12.3.x",
+			color: "BF8F0D",
+			default: false,
+			description: ""
+		}, {
+			id: 4540898149,
+			nodeId: "LA_kwDOAxIT488AAAABDqibZQ",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.0.x",
+			name: "version: 15.0.x",
+			color: "FA5965",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThe most obvious way to support changing the dummy PK is by handling the rowEditStart event (if you don't want for the end-user to see the dummy negative numbers). However, changing the rowData from the event args like this throws an error.\r\n\r\n * igniteui-angular version: 12.3.x +\r\n * browser: n/a\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open the sample\r\n2. Start adding a row\r\n3. Observe the console\r\n\r\n## Expected result  \r\nThe sample should either work or there should be a different mechanism to achieve this such as the generatePK event in jQuery.\r\n\r\n## Attachments  \r\n[stoxrz--run.zip](https://github.com/IgniteUI/igniteui-angular/files/9585396/stoxrz--run.zip)\r\n\r\n\r\n\r\n",
+		title: "During row add, the dummy PK cannot be changed to a user-specified one",
+		number: 12091,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12091",
+		id: 1375914130,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-16T12:50:47Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1605262456,
+			nodeId: "MDU6TGFiZWwxNjA1MjYyNDU2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-adding",
+			name: "grid: row-adding",
+			color: "f9c5c0",
+			default: false,
+			description: ""
+		}, {
+			id: 4540898149,
+			nodeId: "LA_kwDOAxIT488AAAABDqibZQ",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.0.x",
+			name: "version: 15.0.x",
+			color: "FA5965",
+			default: false,
+			description: ""
+		}],
+		body: "Currently the row adding snackbar has two issues:\r\n\r\n1. It cannot be disabled\r\n2. It shows even when the added row is in view (only its button is hidden)\r\n\r\nChange the current UX by adding an option to disable the snackbar and also make the whole snackbar not appear when the row is in view",
+		title: "Make the row adding snackbar optional. ",
+		number: 12090,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12090",
+		id: 1375906154,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-16T12:48:30Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 1605262456,
+			nodeId: "MDU6TGFiZWwxNjA1MjYyNDU2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-adding",
+			name: "grid: row-adding",
+			color: "f9c5c0",
+			default: false,
+			description: ""
+		}, {
+			id: 4540898149,
+			nodeId: "LA_kwDOAxIT488AAAABDqibZQ",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.0.x",
+			name: "version: 15.0.x",
+			color: "FA5965",
+			default: false,
+			description: ""
+		}],
+		body: "Currently row adding transactions include the dummy negative values. Actually attempting to create EF entities with the objects from these transactions throws errors server-side.\r\n\r\nThese dummy values should be omitted from the transactions for users' convenience.\r\n",
+		title: "Row adding transaction should not include the dummy PKs",
+		number: 12089,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12089",
+		id: 1375903530,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-16T12:45:26Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1605262456,
+			nodeId: "MDU6TGFiZWwxNjA1MjYyNDU2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20row-adding",
+			name: "grid: row-adding",
+			color: "f9c5c0",
+			default: false,
+			description: ""
+		}, {
+			id: 4540898149,
+			nodeId: "LA_kwDOAxIT488AAAABDqibZQ",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2015.0.x",
+			name: "version: 15.0.x",
+			color: "FA5965",
+			default: false,
+			description: ""
+		}],
+		body: "The event sequence for row adding should be reworked as to not include \"editing\" events which means enhancing the event arguments around adding events so that the same level of extensibility can be achieved.",
+		title: "Rework row-adding event sequence ",
+		number: 12088,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12088",
+		id: 1375900038,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-02T13:52:34Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nRelated to this: https://github.com/IgniteUI/igniteui-angular/pull/11923#discussion_r960460313\r\n\r\nMove tooltip close somewhere else since there it might cause issues in more complex templates.\r\n",
+		title: "Move logic out of focusOut handler on the cell.",
+		number: 12042,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12042",
+		id: 1360227455,
+		pullRequest: null
+	}, {
+		createdAt: "2022-09-01T21:05:52Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nBased on Accessibility Insights for Web, the following elements are not compliant.\r\n\r\nelement.\r\nigniteui-angular version: 13.2.9\r\nbrowser: any\r\n\r\n * igniteui-angular version: \r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Install the Accessibility Insights extension for chrome\r\n2. Create an example igx-grid table with columns, paginator and toolbar\r\n3. Run the FastPass check from the notification Launch Pad\r\n\r\n## Result  \r\nWhat is the actual result after following the steps to reproduce?\r\n![image](https://user-images.githubusercontent.com/112661337/188011688-2bae2602-0e4d-44ea-82ac-77ce89055d81.png)\r\n\r\n\r\n## Expected result  \r\nWhat is the expected result after following the steps to reproduce?\r\nThere should not be failed instances\r\n\r\n\r\n## Attachments  \r\nExample igx-grid\r\n![image](https://user-images.githubusercontent.com/112661337/188012868-1b9e73da-7597-4699-8c0d-f6fd3cce38bf.png)\r\n\r\n\r\n",
+		title: ".igx-grid__tbody-content: aria-activedescendant attribute not allowed for an element's role",
+		number: 12038,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12038",
+		id: 1359409063,
+		pullRequest: null
+	}, {
+		createdAt: "2022-08-19T20:37:07Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nI'm frustrated with UX of the Date Range Picker component, some issues with it are the following. They aren't much of an problem when seeing them as individual issues, they are frustrating when seeing as a whole:\r\n1. Extra clicks when I mistakenly clicked the wrong start date, as I have to select \"end\" and then start again\r\n2. Extra clicks when I want to modify only the end date, as I have to always select both dates, same goes for start date.\r\n3. I'm never sure if the first click I do is going to modify the \"start\" or \"end\" value, for some reason I intuitively always expect the wrong date to be modified.\r\n\r\n## Describe the solution you'd like\r\nPlease take a look to [this example component from Mui X](https://mui.com/x/react-date-pickers/date-range-picker/) built using fluent guidelines as a base. The issues I listed are addressed as follows:\r\n1. There's a rule that the \"end\" must always be greater than the \"start\". So, that means that if I click a smaller one is considered as a \"start\". This rule might be related to language, as english and spanish are read from left to right. So, selection is being done in that same order.\r\n2. There's separated fields for \"start\" and \"end\". So, the first modified date is the field I clicked\r\n3. There's a \"preview\" of the dates being selected before the click is done. \r\n\r\nAlso, a desired effect would be able to \"drag and drop\" the already selected dates as It would improve even more the UX of the second issue I mentioned.\r\n\r\n## Describe alternatives you've considered\r\nIn some cases I prefer to add two normal separated date pickers and add validations myself.\r\n\r\n**Edit**: I mistakenly thought fluent had already a definition for date-range components as I saw all fluent based date-range pickers always implemented the set rules I listed. Now I know they don't. [Is a work in progress though](https://github.com/microsoft/fluentui/pull/23313).\r\n\r\n",
+		title: "IgxDateRangePicker UX improvement",
+		number: 11994,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11994",
+		id: 1344875555,
+		pullRequest: null
+	}, {
+		createdAt: "2022-08-16T04:15:37Z",
+		assignee: {
+			id: 4264873,
+			avatarUrl: "https://avatars.githubusercontent.com/u/4264873?v=4",
+			login: "gmurray81",
+			email: null,
+			url: "https://api.github.com/users/gmurray81"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}],
+		body: "## Description  \r\nFinancial chart - Volumes pane disappears when an item is selected from indicators dropdown.\r\n\r\n * igniteui-angular version: 14.1.1\r\n * browser: Chrome、Edge\r\n\r\n## Steps to reproduce  \r\n\r\n1. Go to the sample: https://stackblitz.com/edit/angular-8jphuj-albr7f?file=src/app/stock-index-chart/financial-chart-stock-index-chart.component.html\r\n2. Click 'Indicators' dropdown and select any item other than ones under 'Volumes'.\r\n\r\n## Result  \r\nVolumes pane disappears.\r\n\r\n## Expected result  \r\nVolumes pane stays visible.\r\n\r\n\r\n",
+		title: "Financial chart - Volumes pane disappears when an item is selected from indicators dropdown.",
+		number: 11975,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11975",
+		id: 1339786487,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-16T00:03:17Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 354680432,
+			nodeId: "MDU6TGFiZWwzNTQ2ODA0MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/list",
+			name: "list",
+			color: "1d76db",
+			default: false,
+			description: null
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Lists, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n## Expected result  \r\n37. List item hover color should be a lighter transparency of white. 8% white is better, and it matches the dropdown item hover.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179325946-69c4c680-c3f5-4666-a354-af94ae0a4a2f.png)\r\n",
+		title: "List Theming Issues",
+		number: 11883,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11883",
+		id: 1306637501,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-16T00:00:41Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 868440495,
+			nodeId: "MDU6TGFiZWw4Njg0NDA0OTU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/tabs",
+			name: "tabs",
+			color: "efc377",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Tabs, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n\r\n## Expected result  \r\n35. Tab hover color should be a lighter transparency of white. 4% or 5% white can look better.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179325867-72839417-e22c-41bb-a4a3-98c4289cdd29.png)\r\n\r\n\r\n",
+		title: "Tabs Theming Issues",
+		number: 11882,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11882",
+		id: 1306636722,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T23:54:06Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 402717485,
+			nodeId: "MDU6TGFiZWw0MDI3MTc0ODU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/nav-bar",
+			name: "nav-bar",
+			color: "d93f0b",
+			default: false,
+			description: null
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing a NavBar with a Nav icon and action icons, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n## Expected result  \r\n34. Nav and action icons when pressed or focused should not be gray. That does not look good. Maybe they should have a similar style as the focused and pressed state of the raised button, with the primary color.\r\nThe hover state seems fine, but maybe it's rather dark. I would suggest different opacity for the hover (around 20% black), 38% black for pressed and 28% black for focused. I couldn't find a material ui reference, so this is my personal opinion.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179325512-8295babd-d096-479e-804c-16f3102d6d00.png)\r\n\r\n",
+		title: "NavBar Theming Issues",
+		number: 11881,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11881",
+		id: 1306634892,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T23:22:05Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 680707239,
+			nodeId: "MDU6TGFiZWw2ODA3MDcyMzk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/slider",
+			name: "slider",
+			color: "d4c5f9",
+			default: false,
+			description: null
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Sliders, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n## Expected result  \r\n32. Tickmarks & labels should match the same colors applied to the [chart component](https://github.com/IgniteUI/igniteui-angular/issues/11872) in dark mode. \r\n33. Disabled State: should look exactly like the default state but with 38% opacity applied to the entire component.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179323594-66284216-9af4-4c14-8e5e-cb30e70e9b7f.png)\r\n\r\n\r\n",
+		title: "Slider Theming Issues",
+		number: 11880,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11880",
+		id: 1306621582,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T22:47:33Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 354680490,
+			nodeId: "MDU6TGFiZWwzNTQ2ODA0OTA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/nav-drawer",
+			name: "nav-drawer",
+			color: "64c599",
+			default: false,
+			description: null
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 455636069,
+			nodeId: "MDU6TGFiZWw0NTU2MzYwNjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dialog",
+			name: "dialog",
+			color: "2078bc",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing a Nav Drawer in Overlay mode, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n## Expected result  \r\n29. Hover state background be a transparency of white. Around 2-3% white is what Material UI has for theirs.\r\n30. **ALL OVERLAYS** background colors should be a transparency of black. Material uses 32% black. But maybe 40% black would look better in our case. This applies to **DIALOG** too.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179321586-20f94e6d-04d1-4f8a-bc05-7d3c4ff442ae.png)\r\n\r\n\r\n",
+		title: "Nav Drawer Theming & Overlays Issues",
+		number: 11879,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11879",
+		id: 1306606025,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T21:38:40Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 438338013,
+			nodeId: "MDU6TGFiZWw0MzgzMzgwMTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/radio-button",
+			name: "radio-button",
+			color: "0052cc",
+			default: false,
+			description: null
+		}, {
+			id: 1290006335,
+			nodeId: "MDU6TGFiZWwxMjkwMDA2MzM1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/radio-group",
+			name: "radio-group",
+			color: "e87971",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing RadioButton Group, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n\r\n## Expected result  \r\n26. RadioButton CHECKED - Disabled: should look exactly like the default state (which uses the primary color) but with 38% opacity applied to the entire component.\r\n27. RadioButton UNCHECKED - Default / Hover: the outline should be 60% white.\r\n28. RadioButton UNCHECKED - Disabled: should look exactly like the default state (which uses the primary color) but with 38% opacity applied to the entire component.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179317320-f75ffec7-7a92-45b7-9035-15f447fee30b.png)\r\n\r\n",
+		title: "RadioButton & RadioButton Group Theming Issues",
+		number: 11878,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11878",
+		id: 1306556499,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T21:12:36Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 438360283,
+			nodeId: "MDU6TGFiZWw0MzgzNjAyODM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/checkbox",
+			name: "checkbox",
+			color: "fef200",
+			default: false,
+			description: null
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Checkboxes, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n## Expected result  \r\n42. Checkbox **CHECKED** - Disabled: should  look exactly like the default state (which uses the primary color) but with 38% opacity applied to the entire component.\r\n43. Checkbox **UNCHECKED** - Default / Hover: the outline should be 60% white.\r\n44. Checkbox **UNCHECKED** - Disabled: should look exactly like the default state but with 38% opacity applied to the entire component.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179311225-7b5e2cc2-5068-400b-960f-10e50d80d2bc.png)\r\n",
+		title: "Checkbox Theming Issues",
+		number: 11877,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11877",
+		id: 1306527975,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T20:51:48Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 821413899,
+			nodeId: "MDU6TGFiZWw4MjE0MTM4OTk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/toggle",
+			name: "toggle",
+			color: "0052cc",
+			default: false,
+			description: null
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Switches, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\nAll states are inconsistent with Material UI switches. \r\n\r\n## Expected result  \r\n38. Switch **ON** - Default / Hover: the track should be 38% primary color.\r\n39. Switch **ON** - disabled state: should look exactly like the default state but with 38% opacity applied to the entire component.\r\n40. Switch **OFF** - Default / Hover: the track should be 38% white.\r\n41. Switch **OFF** - disabled state: should  look exactly like the default state but with 38% opacity applied to the entire component.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179311183-1f01df2e-260b-4dfc-8e08-46f07c505a3a.png)\r\n\r\n\r\n",
+		title: "Switch Theming Issues",
+		number: 11876,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11876",
+		id: 1306490677,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T18:55:43Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 842555014,
+			nodeId: "MDU6TGFiZWw4NDI1NTUwMTQ=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/button-group",
+			name: "button-group",
+			color: "db579d",
+			default: false,
+			description: null
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing the Button Group component, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n## Expected result  \r\n25. Button group background color should be the same as the outlined button background. And the outline should be 12% white.\r\nAs an example i'm showing the expected result (which is missing the elevation).\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179292911-551b270e-20d4-4252-9997-da96f07088e7.png)\r\n\r\n\r\n",
+		title: "Button Group Theming Issues",
+		number: 11875,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11875",
+		id: 1306383840,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T18:42:45Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}, {
+			id: 3982407566,
+			nodeId: "MDU6TGFiZWwzOTgyNDA3NTY2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid",
+			name: "grid",
+			color: "95f9d5",
+			default: false,
+			description: null
+		}],
+		body: "\r\n## Description  \r\nThis is an AppBuilder app showing Grid, using a custom dark theme based on material dark, with custom surface background color (blue).\r\nThe grid component does not look good when used against a custom surface color, different from the default theme surface (#222).\r\n\r\n## Expected result  \r\n21. Grid **HEADER** background could look better with 12% white.\r\n22. Grid **CELLS** background color should be the same color as the cards and expansion panel's background color.\r\n23. Adv. Filtering **Dialog** (and similar ones): header could be like the grid header bg. color, and background like the cells bg. color.\r\n24. Should the **dialog** have inner padding so the buttons are not touching the edges?\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179288204-dcc90c5d-d322-4f9d-8566-de5b5c3535dd.png)\r\n\r\n\r\n",
+		title: "Grid Theming Issues",
+		number: 11874,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11874",
+		id: 1306372758,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T18:20:55Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Input Group, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n\r\n## Expected result  \r\n13. When label is missing, outline looks broken.\r\n14. Outline: same [recommendations I made for date picker](https://github.com/IgniteUI/igniteui-angular/issues/11865).\r\n15. All text labels: same recommendations I made for date picker.\r\n16. Inactive state (background): same recommendations I made for date picker.\r\n17. Disabled state (background): same recommendations I made for date picker.\r\n18. Dropdown items hover and focused background colors should be a 8% white. \r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179285490-ff67eac1-49d0-4cee-9878-2f54b18dd94e.png)\r\n\r\n",
+		title: "Input Group Theming Issues",
+		number: 11873,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11873",
+		id: 1306354290,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T18:06:39Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1437635681,
+			nodeId: "MDU6TGFiZWwxNDM3NjM1Njgx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/fluent-theme",
+			name: "fluent-theme",
+			color: "22e864",
+			default: false,
+			description: ""
+		}, {
+			id: 1738947086,
+			nodeId: "MDU6TGFiZWwxNzM4OTQ3MDg2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/bootstrap-theme",
+			name: "bootstrap-theme",
+			color: "a666e2",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Category Charts, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n## Expected result  \r\n9. Gridlines should be 8% white. Axis and tickmarks should be 38% white (compared to our light theme ui kit).\r\n10. Titles should be 87% white, and axis labels 60% white.\r\n11. Tooltip should not have white bg, maybe it could match surface and have 12% white stroke.\r\n12. CHARTS in all themes (Material, Fluent & Bootstrap) should support dark mode.\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179284506-24160115-acc1-4f4a-ab70-901d1222f248.png)\r\n",
+		title: "Dark Mode for Charts ",
+		number: 11872,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11872",
+		id: 1306343058,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-15T14:48:12Z",
+		assignee: {
+			id: 48180072,
+			avatarUrl: "https://avatars.githubusercontent.com/u/48180072?v=4",
+			login: "georgianastasov",
+			email: null,
+			url: "https://api.github.com/users/georgianastasov"
+		},
+		labels: [{
+			id: 602972382,
+			nodeId: "MDU6TGFiZWw2MDI5NzIzODI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:white_check_mark:%20status:%20resolved",
+			name: ":white_check_mark: status: resolved",
+			color: "0e8a16",
+			default: false,
+			description: "Applies to issues that have pending PRs resolving them, or PRs that have already merged."
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nWhen you clear a IgxSimpleCombo then the dropdown opens.\r\nWhen you clear a IgxCombo then the dropdown doesn't open.\r\n\r\n## Describe the solution you'd like\r\nIt should be possible to configure the IgxSimpleCombo to not open the dropdown on clear.",
+		title: "IgxSimpleCombo: possibility to not open dropdown on clear",
+		number: 11871,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11871",
+		id: 1306127607,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-14T22:18:15Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 941968977,
+			nodeId: "MDU6TGFiZWw5NDE5Njg5Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/card",
+			name: "card",
+			color: "5df4b0",
+			default: false,
+			description: ""
+		}, {
+			id: 1072582019,
+			nodeId: "MDU6TGFiZWwxMDcyNTgyMDE5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/expansion-panel",
+			name: "expansion-panel",
+			color: "d8720d",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Cards & expansion panel, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n## Expected result  \r\n7. Card Subtitle: color should be 60% white and font weight should be regular. \r\n8. Card Outline should be 12% white\r\n20. Expansion Panel Subtitle: color should be 60% white and font weight should be regular. \r\n\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179287319-f2b3d88b-5553-404c-9cea-7376fa5d4cdd.png)\r\n![image](https://user-images.githubusercontent.com/86068582/179097850-f54a3456-8a92-4233-bd67-afc828facb87.png)\r\n\r\n",
+		title: "Card Theming Issues",
+		number: 11866,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11866",
+		id: 1305343497,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-14T22:08:22Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is an AppBuilder app showing Date Pickers, using a custom dark theme based on material dark, with custom surface background color (blue).\r\n\r\n**ALL ISSUES** described here in Date Picker also apply to [Input Group](https://github.com/IgniteUI/igniteui-angular/issues/11873), Combo, Select components and Text Area.\r\nAll my recommendations are based on the colors used in the Material UI kit Dark Theme from Google.\r\n\r\n## Expected result  \r\n2. Label should be 60% white\r\n3. Outline should be 38% white\r\n4. Icon should be 87% white\r\n5. Inactive box input: background color should be 4% white \r\n6. Disabled box input: should have 4% white background and only the text and prefix / suffix icons look disabled. \r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179097142-55280aec-9339-4ae8-83d8-6926a7d8256e.png)\r\n![image](https://user-images.githubusercontent.com/86068582/179097179-d732395d-95d5-4b16-8f25-48829dab14cd.png)\r\n",
+		title: "Date Picker / Input Group / Combo / Select / Text Area: Theming Issues",
+		number: 11865,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11865",
+		id: 1305337422,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-14T22:06:26Z",
+		assignee: {
+			id: 15327632,
+			avatarUrl: "https://avatars.githubusercontent.com/u/15327632?v=4",
+			login: "sdimchevski",
+			email: null,
+			url: "https://api.github.com/users/sdimchevski"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 406864577,
+			nodeId: "MDU6TGFiZWw0MDY4NjQ1Nzc=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/material-theme",
+			name: "material-theme",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 674809506,
+			nodeId: "MDU6TGFiZWw2NzQ4MDk1MDY=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:calendar:%20calendar",
+			name: ":calendar: calendar",
+			color: "d4c5f9",
+			default: false,
+			description: ""
+		}, {
+			id: 1844773161,
+			nodeId: "MDU6TGFiZWwxODQ0NzczMTYx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dark-theme",
+			name: "dark-theme",
+			color: "0052cc",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThis is a calendar in AppBuilder, using a custom dark theme based on material dark, with custom surface background color (blue).\r\nThe hover state circle has incorrect background and size.\r\n\r\n## Expected result  \r\nThe hover circle size should be the same size as the selected state.\r\nThe hover background color should be a 8% white or 8% primary color. \r\n\r\n\r\n## Attachments  \r\n![image](https://user-images.githubusercontent.com/86068582/179096502-98e9e4a4-a499-428b-96dd-23813c9e4b3e.png)\r\n\r\n\r\n",
+		title: "Calendar Theming Issues - Material Dark",
+		number: 11864,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11864",
+		id: 1305336223,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-08T18:44:06Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\n\r\nWhen using an igx-combo or an input field, it's pretty common to want to use autocompletion. However, at least in my case, it's rare that I already have the data.  As they type it hits a remote server to pull the next 50ish entries or so that match the text.  That's very complicated to setup today.\r\n\r\n## Describe the solution you'd like\r\n\r\nSome type of `(onNeedAutocomplete)=\"remoteServerLookup($event)` ability where I then simply do something like:\r\n\r\n```typescript\r\nremoteServerLookup(event: AutocompleteEvent): Observable<Employee[]> {\r\n    return this.myService.filteredValues(event.text)\r\n}\r\n```\r\n\r\n## Describe alternatives you've considered\r\n\r\nI'm doing it today via a pipe that calls the service, but those pipes then become repetitive and it's confusing later when looking back as to why I need a pipe and how it's actually triggering the lookup. It also then adds complexity because now I'm having to mix reactive and template-based forms. The input/combo suddenly has to use an `ngModelChange` for validity and an `[(ngModel)]` to drive the pipe, and then tie that back to the reactive form.\r\n\r\nIt's all doable, it's just really messy.\r\n\r\n## Additional context\r\n\r\nWe have to tie an `ngModelChange` to something like this method.  When I look at it later I'm wondering what that pipeString is for. That's what triggers the pipe value.\r\n\r\n```typescript\r\n    onTextFieldChanged(event: string): void {\r\n        // If they type into the field, then they didn't pick from the drop-down, that means it's just not valid.\r\n        this.value = null\r\n        this.onChange?.(null)\r\n        this.onTouched?.()\r\n        this.pipeString = event\r\n    }\r\n```\r\n\r\nThen we end up doing some type of pipe, which might be getting a string back if it's data from the server, but if I had a selected thing already, then it's probably an actual object.\r\n\r\n```typescript\r\n    transform(_collection: Observable<Employee[]>, input: string | Employee | undefined): Observable<Employee[]> {\r\n        if (!input)\r\n            return of([])\r\n\r\n        if (typeof input !== 'string')\r\n            return of([input])\r\n\r\n        return of(input).pipe(\r\n            debounceTime(500),\r\n            distinctUntilChanged(),\r\n            switchMap(term => this.service.find(term)),\r\n            catchError((err: unknown) => {\r\n                console.error(err as HttpErrorResponse)\r\n                return of([])\r\n            })\r\n        )\r\n    }\r\n```",
+		title: "Support remote load on IgxAutocompleteModule",
+		number: 11842,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11842",
+		id: 1299338544,
+		pullRequest: null
+	}, {
+		createdAt: "2022-07-04T08:21:38Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 926278753,
+			nodeId: "MDU6TGFiZWw5MjYyNzg3NTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/combo",
+			name: "combo",
+			color: "152872",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nAt the moment, we do not have a mechanism for clearing the `IgxCombo`'s selection through the keyboard. This is because there are two inputs in the component, one of which allows filtering and is editable and the other is only a container for already selected values, it is not editable. By default, once the dropdown is closed with `ArrowUp`, the readonly input receives focus and at that point it is not possible to clear all of the values that have been selected. Attempting `TAB` navigation will move the focus to the next focusable element on the page, i.e. we cannot use that to target the clear icon and focus it as it is not focusable. As is if you're only using a keyboard, through the component, you can only deselect items while navigating the dropdown menu and manually deselecting each item.\r\n\r\n## Describe the solution you'd like\r\nA mechanism that allows for all items to be deselected simultaneously. This could include making the clear icon focusable or coming up with a keyboard combination that clears the combo, the latter should only work when the readonly input has the focus.\r\n\r\n## Describe alternatives you've considered\r\nA possible alternative for developers is to create a separate element on the page, such as a button and call the `combo.deselectAllItems` method in its click handler. This, however, is not ideal since it introduces a possibly redundant element on the page for a functionality that the combo should provide out of the box.\r\n",
+		title: "Consider clearing the selection of the IgxCombo using only the keyboard",
+		number: 11813,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11813",
+		id: 1292807649,
+		pullRequest: null
+	}, {
+		createdAt: "2022-06-22T14:36:15Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 3113485838,
+			nodeId: "MDU6TGFiZWwzMTEzNDg1ODM4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20pivot",
+			name: "grid: pivot",
+			color: "177099",
+			default: false,
+			description: ""
+		}, {
+			id: 3893988156,
+			nodeId: "LA_kwDOAxIT487oGYs8",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2013.2.x",
+			name: "version: 13.2.x",
+			color: "744395",
+			default: false,
+			description: ""
+		}, {
+			id: 4169772772,
+			nodeId: "LA_kwDOAxIT4874ia7k",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2014.0.x",
+			name: "version: 14.0.x",
+			color: "76BCC6",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nDescribe the issue.\r\n\r\n * igniteui-angular version: \r\n * browser: \r\n\r\n## Steps to reproduce  \r\n\r\n1. Open hierarchical dev pivot sample\r\n2. Resize `All products` to the right\r\n3. Observe\r\n\r\n## Result  \r\nThe column header row is misplaced\r\n\r\n## Expected result  \r\nThe column header row should not change\r\n\r\n\r\n## Attachments  \r\n\r\nhttps://user-images.githubusercontent.com/37667452/175056219-60fba4c8-bc62-4d6b-86a8-96cf8e0fd25d.mov\r\n\r\n\r\n",
+		title: "[Pivot] Resizing row dimensions causes column dimensions to break its layout",
+		number: 11764,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11764",
+		id: 1280258836,
+		pullRequest: null
+	}, {
+		createdAt: "2022-06-09T16:48:52Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Question  \r\nI am using the igx-grid component.\r\nI have set the cellSelection property as 'multiple'.\r\nI want to allow cell selection on specific columns.\r\n\r\nAlso, I want to be notified when a cell is selected. \r\nI tried to find an event emitter but couldn't.\r\n \r\n is there a way to achieve these in igx-grid.\r\n \r\n * igniteui-angular version: \r\n * browser: \r\n",
+		title: "Igx Grid allow cell selection on specific columns",
+		number: 11704,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11704",
+		id: 1266406564,
+		pullRequest: null
+	}, {
+		createdAt: "2022-06-03T22:21:54Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nI think there is a core element in Ignite, maybe the igxOverlayService, causing all these memory leaks I have been reporting lately.\r\n\r\nThe reason why I think the problem resides in a core element is because it is really easy to replicate serious memory leaks just by placing different ignite controls inside a component and then destroy such component.\r\nI started with tooltips, then combos, then overlays, even with Grids like this example below.\r\n\r\nThe grid component causes a memory leak when being consumed from child components that are later destroyed. See below to reproduce the issue:\r\n\r\n * igniteui-angular version: 13.1.18\r\n * browser: Tested in Microsoft Edge, but happens in Chrome as well\r\n\r\n## Steps to reproduce  \r\n\r\n1. Use Microsoft Edge as its DevTools contain the Detached Elements panel\r\n1. Open [this stackblitz](https://stackblitz.com/edit/angular-k7pshd-fmwjey?file=package.json)\r\n1. Click the **CREATE NESTED COMPONENT** button\r\n1. Click the grid's combo to select how many rows to see\r\n1. Click the **DESTROY NESTED COMPONENT** button\r\n1. Open the Detached Elements in DevTools\r\n1. You will realize that the <app-test> component cannot be garbage collected \r\n\r\n## Result  \r\nAny child components that contain grids, such as the **<app-test>** component in this example, are not properly disposed.\r\n\r\nThis memory leak only happens when user opens the grid's combo to select how many rows to see.\r\n\r\n## Expected result  \r\nChild components should be properly disposed, no Detached Elements should be left behind.\r\n\r\n\r\n## Attachments  \r\nTake a look at this gif that also demonstrates the issue\r\n![MemoryLeakGrid](https://user-images.githubusercontent.com/4580348/171961184-d1f2ace1-9b68-4d02-a298-e6576d7f0233.gif)\r\n\r\n",
+		title: "Memory Leak in igx-grid (please test with all controls)",
+		number: 11672,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11672",
+		id: 1260441441,
+		pullRequest: null
+	}, {
+		createdAt: "2022-06-03T12:32:31Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438875,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg4NzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:hammer_and_wrench:%20status:%20in-development",
+			name: ":hammer_and_wrench: status: in-development",
+			color: "0052cc",
+			default: false,
+			description: "Issues and PRs with active development on them"
+		}, {
+			id: 749009988,
+			nodeId: "MDU6TGFiZWw3NDkwMDk5ODg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/refactoring",
+			name: "refactoring",
+			color: "bcd8f4",
+			default: false,
+			description: null
+		}, {
+			id: 963379072,
+			nodeId: "MDU6TGFiZWw5NjMzNzkwNzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay",
+			name: "overlay",
+			color: "a9fcf2",
+			default: false,
+			description: ""
+		}, {
+			id: 4169772772,
+			nodeId: "LA_kwDOAxIT4874ia7k",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2014.0.x",
+			name: "version: 14.0.x",
+			color: "76BCC6",
+			default: false,
+			description: ""
+		}],
+		body: "Since the `ComponentFactory` is deprecated and the new way of creating dynamic components in Angular is done through the `viewContainerRef` I think we should update our Overlay's `attach` with an overload that accepts a viewContainerRef. The current overload:\r\nhttps://github.com/IgniteUI/igniteui-angular/blob/a7aebb080a8563ad32b0c09aa93ed538c5c65dfc/projects/igniteui-angular/src/lib/services/overlay/overlay.ts#L321-L322\r\nShould be deprecated - the sooner the better, so we can have a transition period before the old API is dropped.",
+		title: "Update overlay attach dynamic component overload ",
+		number: 11671,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11671",
+		id: 1259857586,
+		pullRequest: null
+	}, {
+		createdAt: "2022-05-31T08:41:48Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nWhen using the group by feature, you can set the sorting direction to alphabetical asc og desc, but you can sort by the number of occurrences in each group.\r\n\r\n## Describe the solution you'd like\r\nA new sort direction for count, or perhaps this could be default sorting if the sorting direction is set to None?\r\n![image](https://user-images.githubusercontent.com/12936286/171131552-52c9abcb-547b-44f8-9e3c-6221a5d1fbc3.png)\r\n\r\n\r\n",
+		title: "Order by count in igx-grid group by",
+		number: 11642,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11642",
+		id: 1253535526,
+		pullRequest: null
+	}, {
+		createdAt: "2022-05-25T13:19:33Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 3982407566,
+			nodeId: "MDU6TGFiZWwzOTgyNDA3NTY2",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid",
+			name: "grid",
+			color: "95f9d5",
+			default: false,
+			description: null
+		}],
+		body: "### Description  \r\nDescribe the issue.\r\n\r\n### Steps to reproduce  \r\n\r\n1. Please go to https://staging.infragistics.com/products/ignite-ui-angular/angular/components/pivotGrid/pivot-grid\r\n2. Open dev tool and deselect all the checkbox on the left\r\n3. Now Select \"Country\" checkbox and observe\r\n\r\n### Result  \r\n![image](https://user-images.githubusercontent.com/41373491/170271556-cf34694e-c53e-4976-b43d-f8875ce7a6bc.png)\r\n\r\n",
+		title: "TypeError: Cannot read properties of undefined (reading 'headerGroupClasses') on Pivot Grid",
+		number: 12504,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12504",
+		id: 1525444496,
+		pullRequest: null
+	}, {
+		createdAt: "2022-05-20T13:33:38Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 926278753,
+			nodeId: "MDU6TGFiZWw5MjYyNzg3NTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/combo",
+			name: "combo",
+			color: "152872",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nCurrently I'm trying to set uppercase to the input value, but without success because of missing template for the input.\r\n\r\n## Describe the solution you'd like\r\nThere should be a template for rendering the input so it can be used to modify the value of the input.\r\n\r\nRight now if the values in the combo are with capital letters, it looks like  this:\r\n\r\n![image](https://user-images.githubusercontent.com/35975071/169539045-795cef50-599c-4c0b-ba3e-85ef2359531c.png)\r\n",
+		title: "IgxComboComponent missing input template",
+		number: 11601,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11601",
+		id: 1243157823,
+		pullRequest: null
+	}, {
+		createdAt: "2022-05-20T13:17:51Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 926278753,
+			nodeId: "MDU6TGFiZWw5MjYyNzg3NTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/combo",
+			name: "combo",
+			color: "152872",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nWhen the combo is used only to display items without the need to search in the list we can't set a readonly property to the input, because there isn't any property in order to set that without disabling the whole input.\r\n\r\n## Describe the solution you'd like\r\nI think we should be able to set a property to disable the search when it isn't needed.\r\n\r\n## Describe alternatives you've considered\r\nSo far the solution is to handle **keydown** event when it's emitted and to add prevent the event from triggering.\r\n\r\n",
+		title: "Add readonly option to the input in IgxComboComponent ",
+		number: 11600,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11600",
+		id: 1243138330,
+		pullRequest: null
+	}, {
+		createdAt: "2022-05-11T13:09:11Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 1157969302,
+			nodeId: "MDU6TGFiZWwxMTU3OTY5MzAy",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/transaction",
+			name: "transaction",
+			color: "006b75",
+			default: false,
+			description: "igxTransactionService"
+		}],
+		body: "### Description  \r\nIn the Hierarchical Grid Batch Editing and Transactions sample in the documentation demo ([here](https://www.infragistics.com/products/ignite-ui-angular/angular/components/hierarchicalgrid/batch-editing#angular-hierarchical-grid-batch-editing-and-transactions-example)), when editing both parent and a child grid rows, the child grid changes are not commited, even though the corresponding transactions are shown in the log - gif below.\r\n\r\nWhen editing only a row from the child grid, it seems that the changes are properly committed.\r\n\r\n### Steps to reproduce  \r\n\r\n1. Open the[ demo ](https://www.infragistics.com/products/ignite-ui-angular/angular/components/hierarchicalgrid/batch-editing#angular-hierarchical-grid-batch-editing-and-transactions-example)from the docs.\r\n2. Edit any row from the parent grid.\r\n3. Edit  any row from the corresponding child grid.\r\n4. Exit row editing mode the edited rows to add the transactions to the log.\r\n5. Click \"Commit\" button.\r\n6.  Observe the transactions log dialog.\r\n7. Confirm commit.\r\n\r\n### Result  \r\nWhile the parent grid's edits are reflected, the child grid's are not.\r\n\r\nAn approach that currently seems to solve the issue in the sample is wrapping the `grid.transactions.commit(grid.data);` in a requestAnimationFrame callback. Sample [here.](https://stackblitz.com/edit/igx-hierarchical-grid-batch-editing-commit-child-grid-2?file=src/app/hierarchical-grid/hierarchical-grid-batch-editing/hierarchical-grid-batch-editing.component.ts)\r\n\r\n### Expected result  \r\nAll edits to be committed.\r\n\r\n### Attachments  \r\n![hgrid-batch-edit-demo-issue](https://user-images.githubusercontent.com/35433937/167847690-a37d6ef1-7ffe-4df8-81d6-2de410764018.gif)\r\n\r\n",
+		title: "HGrid Batch Editing and Transactions sample - child grid transactions are not committed when parent grid also has transactions",
+		number: 12456,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/12456",
+		id: 1496593368,
+		pullRequest: null
+	}, {
+		createdAt: "2022-04-13T21:15:29Z",
+		assignee: {
+			id: 52001020,
+			avatarUrl: "https://avatars.githubusercontent.com/u/52001020?v=4",
+			login: "radomirchev",
+			email: null,
+			url: "https://api.github.com/users/radomirchev"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "I'm constantly finding the need to have single select drop-down, with autocomplete filtering, where I display a grid.  Essentially I want the igx-simple-combo that displays a grid.  For example, I'm picking some software from a list, but I have multiple versions.  So now I'm forced to concatenate the name and version string together to display, which is not ideal.  What I really want is something like so:\r\n\r\n```html\r\n<igx-grid-combo [data]=\"data\" primaryKey=\"id\" filterKey=\"name\" formControlName=\"software\">\r\n    <igx-column field=\"name\" header=\"Name\"></igx-column>\r\n    <igx-column field=\"version\" header=\"Version\"></igx-column>\r\n    <igx-column field=\"built\" header=\"Last Build Date\" dataType=\"date\"></igx-column>\r\n</igx-grid-combo>\r\n```\r\n\r\nNow I have a nice clean interface for my customers.  Some items I'd want:\r\n\r\n1. Should be triggered from an igx-input-group's input field. \r\n2. Should allow typing text into the input to filter the igx-grid-combo (by the filterKey property, for example)\r\n3. When leaving the input field, should clear out the contents if it's not a selection. Prevents them from thinking they have valid data when they didn't actually pick one of the items.\r\n4.  Should provide a way to specify a template for what is displayed in the input field after something is selected.  The selected \"value\" is the object, and that's what gets assigned to the form control, but in the input field I want something else displayed.\r\n5. Should allow an optional \"clear\" button icon on the input field if there's a value set. Would like it optional because if the field isn't editable at the moment, it really shouldn't show a clear button.",
+		title: "Single select grid dropdown",
+		number: 11396,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11396",
+		id: 1203798554,
+		pullRequest: null
+	}, {
+		createdAt: "2022-03-31T14:06:33Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nThe ignite Splitter is showing empty space when there's  a grid in the upper pane, happening in v13.1.0, the issue is not present in v12.2.3 though\r\n\r\n * igniteui-angular version: 13.1.0\r\n * browser: Microsoft Edge Version 99.0.1150.55 (Official build) (64-bit)\r\n\r\n## Steps to reproduce  \r\n1. Open [this stackblitz](https://stackblitz.com/edit/angular-k7pshd-6qsmdk)\r\n1. Since the initial load, you can see that the upper splitter pane is displaying the grid with empty space in the middle, just above the grid’s footer (in blue color)\r\n1. Manually change the size of the upper pane by dragging and dropping the pane’s edge, you will see that the empty blue space goes away\r\n1. The splitter bar that separates panes has 2 small arrows on the sides to immediately expand/collapse the panes, please click them in the following order: UP arrow, DOWN arrow, DOWN arrow, UP arrow. You will see that the blue space is displayed again in the upper pane\r\n\r\nThese steps are also recorded here:\r\n![Issue](https://user-images.githubusercontent.com/4580348/161072900-f444965f-20b8-47f8-b825-159a3a6761f9.gif)\r\n\r\nThis issue doesn’t happen in v12.2.3, you can follow the same steps in [this stackblitz](https://stackblitz.com/edit/github-hwzhn1-kpyka6)\r\n\r\n## Result  \r\nThe grid shows an empty space just above the grid's footer \r\n\r\n## Expected result  \r\nGrid's contents should not be cropped, in other words, there should not be empty space above the grid's footer\r\n\r\n",
+		title: "Splitter showing empty space for grid in upper pane",
+		number: 11323,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11323",
+		id: 1188140100,
+		pullRequest: null
+	}, {
+		createdAt: "2022-03-11T18:39:36Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nWhen I set the `[rowDraggable]` attribute on my igx-grid, the row widths are not correctly calculating unless ALL columns have the width attribute set. There is no way to have a column that \"fills\" the remaining space in the grid. Since I have the igx-grid within a css grid container, I cannot set the width of the grid statically.\r\n\r\n * igniteui-angular version: 13.0.11\r\n * browser: Chrome 99.0.4844.51\r\n\r\n## Steps to reproduce  \r\n\r\n1. Create a grid where only 2/3 columns have a width attribute set\r\n2. Verify that the column without the width attribute correctly resizes when the parent container resizes based on available space\r\n3. Add the `[rowDraggable]=\"true\"` attribute to the grid\r\n\r\n## Result  \r\nThe width of the grid rows is incorrectly calculated (almost as if it doesn't take into account the width of the row drag cell). No horizontal scrollbar is shown neither.\r\n\r\n## Expected result  \r\nThe grid row widths are correctly calculated and all rows can be seen. The column without the width attribute will correctly resize based on available space\r\n\r\n\r\n## Attachments \r\nBefore adding the `[rowDraggable]` attribute:\r\n![image](https://user-images.githubusercontent.com/18708788/157931308-815f61fe-9642-46fe-9957-19a5845fc55c.png)\r\n\r\nAfter adding the `[rowDraggable]` attribute (the delete column is not shown anymore):\r\n![image](https://user-images.githubusercontent.com/18708788/157931421-0c376e68-de23-4080-8b82-3ebad1948dcd.png)\r\n\r\n\r\n",
+		title: "igx-grid rowDraggable - Row widths not calculating properly",
+		number: 11227,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11227",
+		id: 1166738958,
+		pullRequest: null
+	}, {
+		createdAt: "2022-03-11T10:35:53Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nIgxCombo and IgxSimpleCombo are the only components I'm using which doesn't have a possibility to add a tabindex.\r\n\r\n## Describe the solution you'd like\r\nPlease add a tabIndex property to the components.\r\n",
+		title: "IgxCombo, IgxSimpleCombo: missing tabIndex property",
+		number: 11226,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11226",
+		id: 1166258645,
+		pullRequest: null
+	}, {
+		createdAt: "2022-03-11T10:28:16Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 651042855,
+			nodeId: "MDU6TGFiZWw2NTEwNDI4NTU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:date:%20date-picker",
+			name: ":date: date-picker",
+			color: "afea6b",
+			default: false,
+			description: ""
+		}, {
+			id: 835103025,
+			nodeId: "MDU6TGFiZWw4MzUxMDMwMjU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker",
+			name: "time-picker",
+			color: "97f4a2",
+			default: false,
+			description: null
+		}, {
+			id: 1659256343,
+			nodeId: "MDU6TGFiZWwxNjU5MjU2MzQz",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker",
+			name: "date-range-picker",
+			color: "3ec9c4",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nInput `tabIndex` doesn't work for IgxDatePicker, IgxTimePicker, IgxDateRangePicker\r\n\r\n * igniteui-angular version: 13.1.4\r\n * browser: Chrome\r\n\r\n## Steps to reproduce  \r\nhttps://stackblitz.com/edit/angular-x8zlxx\r\n\r\n1. Click in first input.\r\n2. Press tab.\r\n\r\n## Result  \r\nYou can tab through all components despite `[tabIndex]=\"-1\"`.\r\n\r\n## Expected result  \r\nYou shouldn't be able to tab through components with tabIndex = -1.",
+		title: "IgxDatePicker, IgxTimePicker, IgxDateRangePicker: tabIndex not working",
+		number: 11225,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11225",
+		id: 1166250938,
+		pullRequest: null
+	}, {
+		createdAt: "2022-03-01T23:33:29Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 3535663847,
+			nodeId: "LA_kwDOAxIT487SvfLn",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/simple-combo",
+			name: "simple-combo",
+			color: "D5F8FB",
+			default: false,
+			description: ""
+		}, {
+			id: 3893988156,
+			nodeId: "LA_kwDOAxIT487oGYs8",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2013.2.x",
+			name: "version: 13.2.x",
+			color: "744395",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nIf the user selects the currently selected item from the dropdown, the selection is cleared.\r\nI can reproduce this in the demo.\r\n\r\n * igniteui-angular version: 13.0.11 -> current\r\n * browser: Chrome\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open Ignite [Simple ComboBox demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/simple-combo#angular-simple-combobox-example)\r\n2. Open the control in the first example\r\n3. Select the 'CubicFit' item (or whatever is currently selected)\r\n\r\n## Result  \r\nSelection is cleared.\r\n\r\n## Expected result  \r\nSelection is not cleared.\r\n\r\n\r\n## Attachments  \r\n[Ignite demo](https://www.infragistics.com/products/ignite-ui-angular/angular/components/simple-combo#angular-simple-combobox-example) \r\n\r\n## Note\r\nThe `(selectionChanging)` event returns `undefined` for the newSelection.\r\n\r\n",
+		title: "<igx-simple-combo> selection cleared when selecting the currently selected item.",
+		number: 11141,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11141",
+		id: 1155949938,
+		pullRequest: null
+	}, {
+		createdAt: "2022-02-28T15:15:27Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 625766429,
+			nodeId: "MDU6TGFiZWw2MjU3NjY0Mjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20general",
+			name: "grid: general",
+			color: "5319e7",
+			default: false,
+			description: ""
+		}, {
+			id: 749010965,
+			nodeId: "MDU6TGFiZWw3NDkwMTA5NjU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/virtualization",
+			name: "virtualization",
+			color: "e85a19",
+			default: false,
+			description: null
+		}, {
+			id: 1665536927,
+			nodeId: "MDU6TGFiZWwxNjY1NTM2OTI3",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20collapsible-column-groups",
+			name: "grid: collapsible-column-groups",
+			color: "75cc47",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nDescribe the issue.\r\n\r\n * igniteui-angular version: 3.0.x\r\n * browser: any\r\n\r\n## Steps to reproduce  \r\n\r\n1. Open https://www.infragistics.com/angular-demos/grid/grid-collapsible-groups\r\n2. Resize window so there is horizontal scrollbar\r\n3. Scroll to the end\r\n4. Expand the last collapsible column group\r\n\r\n## Result  \r\nOnly 3 child header are visible after expanding for `Product Details`\r\n\r\n## Expected result  \r\nThere should be 4 child headers visible\r\n\r\n\r\n",
+		title: "Expanding a collapsible column group when scrolled to the end does not update scrollbar",
+		number: 11119,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11119",
+		id: 1154212973,
+		pullRequest: null
+	}, {
+		createdAt: "2022-02-12T14:55:49Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 749010965,
+			nodeId: "MDU6TGFiZWw3NDkwMTA5NjU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/virtualization",
+			name: "virtualization",
+			color: "e85a19",
+			default: false,
+			description: null
+		}, {
+			id: 2636303240,
+			nodeId: "MDU6TGFiZWwyNjM2MzAzMjQw",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20performance",
+			name: "grid: performance",
+			color: "296A82",
+			default: false,
+			description: ""
+		}],
+		body: "Hi! I would like to virtualize one billion records that are lazily created as the user scrolls their grid. Think, a vertical grid with one billion rows that each display their row number.\r\n\r\nHowever, I'm hitting some performance problems around the 2.5 million mark. \r\n\r\nI've pinpointed the bottlenecks to interactions with `heightCache` and `sizeCache` in methods like `initSizesCache`, `_updateSizeCache`, `_calcHeight`, and `recalcUpdateSizes`. All of my rows are the same fixed size (50px the default), and I was wondering if it were possible to optimize the grid implementation to perform well in this use case. Thanks!\r\n\r\n * igniteui-angular version: 12.3.11\r\n * browser: Chrome 94\r\n\r\nPS: As a proof-of-concept, I actually overrode the functions I listed above to calculate row heights with multiplication instead of looking the sizes up, and I was able to see an amazing performance improvement way up to 50 million. Beyond 50 million or so, I get `ERROR RangeError: Invalid array length` on `this.sizesCache.push(totalSize)` in `IgxGridForOfDirective.initSizesCache`, and I was wondering if you could allow me to opt out of per-row storage entirely for massive datasets like this. Thanks! ",
+		title: "Performance issues at massive scale",
+		number: 11002,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/11002",
+		id: 1134150212,
+		pullRequest: null
+	}, {
+		createdAt: "2022-02-08T09:41:13Z",
+		assignee: {
+			id: 14248932,
+			avatarUrl: "https://avatars.githubusercontent.com/u/14248932?v=4",
+			login: "hanastasov",
+			email: null,
+			url: "https://api.github.com/users/hanastasov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 762261742,
+			nodeId: "MDU6TGFiZWw3NjIyNjE3NDI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/circular-progress",
+			name: "circular-progress",
+			color: "f9b8c4",
+			default: false,
+			description: null
+		}, {
+			id: 771293723,
+			nodeId: "MDU6TGFiZWw3NzEyOTM3MjM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/progress-bar",
+			name: "progress-bar",
+			color: "4ed352",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1299108257,
+			nodeId: "MDU6TGFiZWwxMjk5MTA4MjU3",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/linear-progress",
+			name: "linear-progress",
+			color: "9fb3f2",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nAdd UI tests for progressbar animation\r\n",
+		title: "Add UI tests for progressbar animation",
+		number: 10965,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10965",
+		id: 1127011664,
+		pullRequest: null
+	}, {
+		createdAt: "2021-11-23T13:54:28Z",
+		assignee: {
+			id: 14248932,
+			avatarUrl: "https://avatars.githubusercontent.com/u/14248932?v=4",
+			login: "hanastasov",
+			email: null,
+			url: "https://api.github.com/users/hanastasov"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 625766429,
+			nodeId: "MDU6TGFiZWw2MjU3NjY0Mjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20general",
+			name: "grid: general",
+			color: "5319e7",
+			default: false,
+			description: ""
+		}, {
+			id: 3520634791,
+			nodeId: "LA_kwDOAxIT487R2J-n",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2013.1.x",
+			name: "version: 13.1.x",
+			color: "A2E656",
+			default: false,
+			description: ""
+		}],
+		body: "Following the removal of `rowID` and `rowData` properties from `IgxRowDirective` and all public classes implementing the `RowType` interface, considering the following:\r\n\r\nDeprecate the old `rowID` and `rowData` from any or all of the following:\r\n\r\n- [x] context object of [`rowSelectorTemplate`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/grid-row.component.html#L18)\r\n- [ ] [`IGridEditDoneEventArgs`](https://github.com/IgniteUI/igniteui-angular/blob/13d82c111d668dfdc8c0f4ec9e1498d0d3e32667/projects/igniteui-angular/src/lib/grids/common/events.ts#L20)\r\n- [ ] [`IRowToggleEventArgs`](https://github.com/IgniteUI/igniteui-angular/blob/13d82c111d668dfdc8c0f4ec9e1498d0d3e32667/projects/igniteui-angular/src/lib/grids/common/events.ts#L151)\r\n- [ ] [ `IPinRowEventArgs`](https://github.com/IgniteUI/igniteui-angular/blob/13d82c111d668dfdc8c0f4ec9e1498d0d3e32667/projects/igniteui-angular/src/lib/grids/common/events.ts#L165)\r\n- [ ] [`HierarchicalStateRecord`](https://github.com/IgniteUI/igniteui-angular/blob/13d82c111d668dfdc8c0f4ec9e1498d0d3e32667/projects/igniteui-angular/src/lib/grids/hierarchical-grid/hierarchical-grid.component.ts#L48)\r\n- [ ] [`IPathSegment`](https://github.com/IgniteUI/igniteui-angular/blob/13d82c111d668dfdc8c0f4ec9e1498d0d3e32667/projects/igniteui-angular/src/lib/grids/common/grid.interface.ts#L42)\r\n\r\nand introduce the new `key` and `rowData`\r\n",
+		title: "Deprecate rowID and rowData in interfaces",
+		number: 10617,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10617",
+		id: 1061315242,
+		pullRequest: null
+	}, {
+		createdAt: "2021-11-23T13:36:18Z",
+		assignee: {
+			id: 16020256,
+			avatarUrl: "https://avatars.githubusercontent.com/u/16020256?v=4",
+			login: "jackofdiamond5",
+			email: null,
+			url: "https://api.github.com/users/jackofdiamond5"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nAdd custom theme attribute for igx-date-picker theme.\r\n\r\n## Describe the solution you'd like\r\nigx-date-picker has a igx-input-group that allows to customize the theme with a attribute but it is not exposed by the date picker API.\r\n\r\n## Describe alternatives you've considered\r\nThe theme is inferred in runtime but it not cached [https://www.infragistics.com/products/ignite-ui-angular/angular/components/input-group#input-group-theme](https://www.infragistics.com/products/ignite-ui-angular/angular/components/input-group#input-group-theme)\r\n\r\n## Additional context\r\n[https://github.com/IgniteUI/igniteui-angular/blob/24f16983758056cea3b30c32bef836153adcff2c/projects/igniteui-angular/src/lib/input-group/input-group.component.ts#L453](https://github.com/IgniteUI/igniteui-angular/blob/24f16983758056cea3b30c32bef836153adcff2c/projects/igniteui-angular/src/lib/input-group/input-group.component.ts#L453)\r\n\r\n[https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/IgxInputGroupComponent.html#theme](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/IgxInputGroupComponent.html#theme)\r\n",
+		title: "igx-date-picker - Add custom theme attribute",
+		number: 10614,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10614",
+		id: 1061296512,
+		pullRequest: null
+	}, {
+		createdAt: "2021-11-22T13:16:41Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 967825069,
+			nodeId: "MDU6TGFiZWw5Njc4MjUwNjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/migrations",
+			name: "migrations",
+			color: "99e50d",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nAt the moment we do not support fully migrating union or intersection types. Methods or properties that return such types will not be resolved properly and any migration that attempts to modify such members will be ignored.\r\n\r\n## Describe the solution you'd like\r\nWe should consider extending our existing functionality to allow the migration of union and intersection types. These types can also be a part of a generic declaration, so we need to account for that as well.\r\n\r\n## Additional context\r\nSome variations may include:\r\n```typescript\r\nmethod1<A | B>(arg1: A, arg2: B, ...args): A | B\r\n\r\nmethod2<B extends A>(predicate: (value: A, ...args) => value is B): B | undefined\r\n\r\nmethod3<A & B>(...args): B | undefined\r\n\r\n\r\nprop1: A | B | undefined\r\n\r\nprop2: A & B\r\n```\r\n\r\nA common case is the `Array.find` method. One of its overloads is a generic union between `S` and `undefined`. At the moment any member `K` accessed from the type `S` returned by `Array.find` will not be migrated. \r\nFor example - `grid.rowList.toArray().find(r => r.rowID === someRowID).rowID` - `r.rowID` will be migrated successfully (providing everything is strictly typed) while `find(...).rowID` will not be migrated.\r\n",
+		title: "Allow migrating of union and intersection types",
+		number: 10597,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10597",
+		id: 1060145465,
+		pullRequest: null
+	}, {
+		createdAt: "2021-11-17T15:40:58Z",
+		assignee: {
+			id: 16817847,
+			avatarUrl: "https://avatars.githubusercontent.com/u/16817847?v=4",
+			login: "gedinakova",
+			email: null,
+			url: "https://api.github.com/users/gedinakova"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nI have a toolbar that I want to reuse in a bunch of different `IgxGrid` implementations, currently, I have to duplicate that code every time\r\n\r\n## Describe the solution you'd like\r\nI want to reuse the same `<igx-grid-toolbar>` code on different `IgxGrid` or `IgxTreeGrid`, so I don't have to duplicate code on all my implementations, seems to me that the most natural way would be to use Angular [content](https://angular.io/guide/content-projection) or inline [template](https://angular.io/api/core/ng-template). the following example would be ideal:\r\n```\r\n<ng-template #toolbarTemplate> \r\n        <igx-grid-toolbar *ngIf=\"showToolbar\" #toolbar>\r\n                <igx-grid-toolbar-title> ... </igx-grid-toolbar-title>\r\n                 ... custom elements\r\n                <igx-grid-toolbar-actions *ngIf=\"showToolbar\">\r\n                          <igx-grid-toolbar-advanced-filtering *ngIf=\"allowAdvancedFiltering\"> </igx-grid-toolbar-advanced-filtering>\r\n                          <igx-grid-toolbar-hiding  (opened)=\"onOpenToolbarConfigUi($event)\"></igx-grid-toolbar-hiding>\r\n                          <igx-grid-toolbar-pinning  (opened)=\"onOpenToolbarConfigUi($event)\"></igx-grid-toolbar-pinning>\r\n                          <my-custom-button-1></my-custom-button-1>\r\n                          <my-custom-button-2></my-custom-button-2>\r\n                          ... more custom elements \r\n                </igx-grid-toolbar-actions>\r\n        </igx-grid-toolbar>\r\n</ng-template>\r\n<igx-grid  #grid1 [toolbarTemplate]=\"toolbarTemplate\"> ... and more </igx-grid>\r\n<igx-grid  #grid2 [toolbarTemplate]=\"toolbarTemplate\"> ... and a lot more </igx-grid>\r\n```\r\n\r\n## Describe alternatives you've considered\r\nThe only alternative I currently have seems to duplicate my code, an alternative expected result for this FR could be to print the template directly and receive additional  parameters using a directive:\r\n```\r\n<ng-template #toolbarTemplate> \r\n        <igx-grid-toolbar *ngIf=\"showToolbar\" #toolbar>\r\n                <igx-grid-toolbar-title> ... </igx-grid-toolbar-title>\r\n                 ... custom elements\r\n                <igx-grid-toolbar-actions *ngIf=\"showToolbar\">\r\n                          <igx-grid-toolbar-advanced-filtering *ngIf=\"allowAdvancedFiltering\"> </igx-grid-toolbar-advanced-filtering>\r\n                          <igx-grid-toolbar-hiding  (opened)=\"onOpenToolbarConfigUi($event)\"></igx-grid-toolbar-hiding>\r\n                          <igx-grid-toolbar-pinning  (opened)=\"onOpenToolbarConfigUi($event)\"></igx-grid-toolbar-pinning>\r\n                          <my-custom-button-1></my-custom-button-1>\r\n                          <my-custom-button-2></my-custom-button-2>\r\n                          ... more custom elements \r\n                </igx-grid-toolbar-actions>\r\n        </igx-grid-toolbar>\r\n</ng-template>\r\n<igx-grid  #grid1 ...> \r\n        <ng-container igxToolbarGridTemplate [ngTemplateOutlet]=\"toolbarTemplate\"></ng-container>\r\n         ... and more\r\n</igx-grid>\r\n<igx-grid  #grid2 ...>\r\n        <ng-container igxToolbarGridTemplate [ngTemplateOutlet]=\"toolbarTemplate\"></ng-container>\r\n         ... and a lot more\r\n</igx-grid>\r\n```\r\n\r\n## Additional context\r\nBreaking changes or new features might need to be replicated in a lot of places, this FR might solve version upgrade issues. Also, this issue is related [to this discussion](https://github.com/IgniteUI/igniteui-angular/discussions/10455) where I explain a lot more my use case.\r\n",
+		title: "Add [toolbarTemplate] parameter to IgxGrid and IgxTreeGrid",
+		number: 10537,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10537",
+		id: 1056278477,
+		pullRequest: null
+	}, {
+		createdAt: "2021-10-01T05:29:47Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "\r\n## Is your feature request related to a problem? Please describe.\r\nCurrently we are using one option for show and hide the grid columns explicitly for that implementation we used Igx Column Actions  <igx-column-actions>.\r\nIgnite version: 12.1.5\r\n\r\nhttps://stackblitz.com/github/IgniteUI/igniteui-live-editing-samples/tree/master/angular-demos/grid/grid-column-hiding-sample?file=src%2Fapp%2Fgrid%2Fgrid-column-hiding-sample%2Fgrid-column-hiding-sample.component.html\r\n\r\n## Describe the solution you'd like\r\n Need the igx-colum-action column items dragable vertically to change the postion of the items and relatively change the column position of the igx-grid..\r\n\r\n\r\n",
+		title: "Drag and Drop columns in igx-column-action ",
+		number: 10221,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10221",
+		id: 1012915118,
+		pullRequest: null
+	}, {
+		createdAt: "2021-09-29T07:06:55Z",
+		assignee: {
+			id: 46093564,
+			avatarUrl: "https://avatars.githubusercontent.com/u/46093564?v=4",
+			login: "dobromirts",
+			email: null,
+			url: "https://api.github.com/users/dobromirts"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 625766429,
+			nodeId: "MDU6TGFiZWw2MjU3NjY0Mjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20general",
+			name: "grid: general",
+			color: "5319e7",
+			default: false,
+			description: ""
+		}, {
+			id: 3399979682,
+			nodeId: "LA_kwDOAxIT487Kp5Ki",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/source:%20appbuilder",
+			name: "source: appbuilder",
+			color: "8E48B0",
+			default: false,
+			description: ""
+		}],
+		body: " * igniteui-angular version: 12.2.0-alpha.3\r\n\r\n## Steps to reproduce  \r\n\r\nGrid alignment issues - add paging and group by. Do the following actions – gif below.\r\n\r\nhttps://www.screencast.com/t/bH2NBAmkk \r\n\r\nMake sure to watch the entire video.\r\n\r\n\r\n## Result  \r\n![4](https://user-images.githubusercontent.com/14248932/135219642-721d0453-8478-4e2b-8607-ccd8b9cb4b87.png)\r\n\r\n",
+		title: "Grid alignment issues ",
+		number: 10208,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10208",
+		id: 1010575213,
+		pullRequest: null
+	}, {
+		createdAt: "2021-09-23T14:21:54Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1105153503,
+			nodeId: "MDU6TGFiZWwxMTA1MTUzNTAz",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/batch-editing",
+			name: "batch-editing",
+			color: "73eea4",
+			default: false,
+			description: ""
+		}],
+		body: "## Question  \r\nHi -- the scenario I'm targeting is, a user makes a bunch of edits to multiple rows in a grid, clicks save, and realizes they made a mistake--so they want to click undo. Currently, my save button calls `TransactionService.commit()`, which seems to wipe the undo stack. Is it possible to keep the undos so my user can revert to the state before the save? Thanks!\r\n\r\n * igniteui-angular version: \r\n * browser: ",
+		title: "`TransactionService.commit()` but keep undos? ",
+		number: 10181,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10181",
+		id: 1005497498,
+		pullRequest: null
+	}, {
+		createdAt: "2021-08-20T15:35:58Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 749010965,
+			nodeId: "MDU6TGFiZWw3NDkwMTA5NjU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/virtualization",
+			name: "virtualization",
+			color: "e85a19",
+			default: false,
+			description: null
+		}],
+		body: "If the for-of container receives padding, the last item gets cut off with that amount - padding is not taken into account.\r\n\r\nReproducing samples - 2nd two from this:\r\n\r\n[github-kpsvt9-djhsue.zip](https://github.com/IgniteUI/igniteui-angular/files/7022641/github-kpsvt9-djhsue.zip)\r\n",
+		title: "Allow for padded containers with igxForOf (supported with ngFor)",
+		number: 10040,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/10040",
+		id: 975717758,
+		pullRequest: null
+	}, {
+		createdAt: "2021-08-12T09:46:20Z",
+		assignee: {
+			id: 14248932,
+			avatarUrl: "https://avatars.githubusercontent.com/u/14248932?v=4",
+			login: "hanastasov",
+			email: null,
+			url: "https://api.github.com/users/hanastasov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531441726,
+			nodeId: "MDU6TGFiZWw1MzE0NDE3MjY=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:firecracker:%20severity:%20medium",
+			name: ":firecracker: severity: medium",
+			color: "fbca04",
+			default: false,
+			description: ""
+		}, {
+			id: 983537039,
+			nodeId: "MDU6TGFiZWw5ODM1MzcwMzk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20paging",
+			name: "grid: paging",
+			color: "f96398",
+			default: false,
+			description: ""
+		}, {
+			id: 3048421571,
+			nodeId: "MDU6TGFiZWwzMDQ4NDIxNTcx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2012.1.x",
+			name: "version: 12.1.x",
+			color: "74F034",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nGrid provides incorrect slice of data on last page, when remote data with batch editing \r\n\r\n * igniteui-angular version: 12.1.x\r\n\r\n## Steps to reproduce  \r\n\r\n1. Go to https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/remote-data-operations#remote-paging-with-batch-editing\r\n2. Go to last page\r\n3. Click Add Row several times, until grid pages increment from 8 to 9\r\n4. Go to last 9th page\r\n\r\n## Result:\r\nGrid Shows records from page 8 as well\r\n\r\n## Expect:\r\nGrid to display only records for page 9\r\n",
+		title: "Grid provides incorrect slice of data on last page, when remote data with batch editing ",
+		number: 9990,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9990",
+		id: 968470941,
+		pullRequest: null
+	}, {
+		createdAt: "2021-07-23T10:10:26Z",
+		assignee: {
+			id: 9549439,
+			avatarUrl: "https://avatars.githubusercontent.com/u/9549439?v=4",
+			login: "valadzhov",
+			email: null,
+			url: "https://api.github.com/users/valadzhov"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 967825069,
+			nodeId: "MDU6TGFiZWw5Njc4MjUwNjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/migrations",
+			name: "migrations",
+			color: "99e50d",
+			default: false,
+			description: ""
+		}],
+		body: "Currently, it is not possible to run migration unit tests for .ts files. This leads to problems like this: https://github.com/IgniteUI/igniteui-angular/pull/9910\r\n",
+		title: "Execute migrations tests for .ts files",
+		number: 9912,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9912",
+		id: 951440516,
+		pullRequest: null
+	}, {
+		createdAt: "2021-06-14T07:00:24Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 926278753,
+			nodeId: "MDU6TGFiZWw5MjYyNzg3NTM=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/combo",
+			name: "combo",
+			color: "152872",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nI have an editable grid, where the data the user can select from is hierarchical. So esentially, I need something like this, only with support for hierarchical data:\r\n![image](https://user-images.githubusercontent.com/12936286/121851505-81fc2400-ccee-11eb-873b-3f4485b9fecd.png)\r\n\r\nI have looked briefly into other solutions, like for instance using the new tree component with a drop down.\r\n![image](https://user-images.githubusercontent.com/12936286/121851625-a3f5a680-ccee-11eb-8e1f-20ca25ecf8d8.png)\r\nBut while this works, there are some issues, like I would prefer that the trigger for the drop down looked like the combo:\r\n \r\n![image](https://user-images.githubusercontent.com/12936286/121851758-ca1b4680-ccee-11eb-9ed1-11f45d0e1f06.png)\r\n\r\nAlso, I would manually have to implement the filter already present in the combo.\r\n\r\n\r\n\r\n\r\n",
+		title: "Support for hierarchical data in igx-combo",
+		number: 9707,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9707",
+		id: 920087416,
+		pullRequest: null
+	}, {
+		createdAt: "2021-06-08T15:12:48Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 651042855,
+			nodeId: "MDU6TGFiZWw2NTEwNDI4NTU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:date:%20date-picker",
+			name: ":date: date-picker",
+			color: "afea6b",
+			default: false,
+			description: ""
+		}, {
+			id: 674809506,
+			nodeId: "MDU6TGFiZWw2NzQ4MDk1MDY=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:calendar:%20calendar",
+			name: ":calendar: calendar",
+			color: "d4c5f9",
+			default: false,
+			description: ""
+		}, {
+			id: 835103025,
+			nodeId: "MDU6TGFiZWw4MzUxMDMwMjU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/time-picker",
+			name: "time-picker",
+			color: "97f4a2",
+			default: false,
+			description: null
+		}, {
+			id: 1775129274,
+			nodeId: "MDU6TGFiZWwxNzc1MTI5Mjc0",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-time-editor",
+			name: "date-time-editor",
+			color: "47a31a",
+			default: false,
+			description: ""
+		}],
+		body: "Some examples of UI experience on desktop and mobile devices that I expected to behave differently. Just for the sake of discussing if this is the right way or another would be better.\r\n\r\n### Updating the calendar while editing the input\r\n![MicrosoftTeams-image (22)](https://user-images.githubusercontent.com/14248932/121205515-6624f800-c880-11eb-91f0-6ec44d0cb431.png)\r\n\r\n1) Open https://infragistics.com/angular-demos/scheduling/datepicker-sample-1\r\n2) Open the calendar to select a date\r\n3) Update the input value and press Enter\r\n\r\nExpectations:\r\nThe calendar to respect the value in the input\r\n\r\nResult\r\nCalendar view did not change accordingly\r\n\r\n### Clearing the input value using the `Delete` key on the mobile Chrome keyboard for IgxDatePicker and IgxTimePicker\r\n1) Open https://www.infragistics.com/angular-demos/data-entries/reactive-forms on mobile\r\n2) Select a date in the `Date` input\r\n3) After selecting the date, the value in the input is selected.\r\n4) Press `Delete`\r\n\r\nExpectations:\r\nvalue to be cleared\r\n\r\nResult:\r\nCursor was moved to first position\r\n\r\n### Writing in the date picker input\r\n1) Focus the IgxDatePicker input on Mobile in order to write in the input\r\n\r\nExpectation:\r\nA mobile keyboard to be brought to the user\r\n\r\nResult\r\nThe default keyboard is brought to the user.",
+		title: "IgxCalendar and IgxDatePicker UX experience on desktop and mobile",
+		number: 9685,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9685",
+		id: 915160557,
+		pullRequest: null
+	}, {
+		createdAt: "2021-05-06T14:44:30Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 963379072,
+			nodeId: "MDU6TGFiZWw5NjMzNzkwNzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay",
+			name: "overlay",
+			color: "a9fcf2",
+			default: false,
+			description: ""
+		}],
+		body: "Our designs need to change based on whether a panel has opened above or below the anchor point.\r\n\r\nHere is what we have:\r\n![image](https://user-images.githubusercontent.com/9682964/117309774-bc051b00-ae50-11eb-9fea-914666889d5a.png)\r\n\r\nWe need the top border and bottom border-radius to be swapped when the panel opens to the top like this.\r\n\r\nIdeally, there could be a class to indicate that the panel is flipping up.\r\n",
+		title: "Classes to indicate position of auto overlay",
+		number: 9481,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9481",
+		id: 877575652,
+		pullRequest: null
+	}, {
+		createdAt: "2021-04-29T08:35:31Z",
+		assignee: {
+			id: 14248932,
+			avatarUrl: "https://avatars.githubusercontent.com/u/14248932?v=4",
+			login: "hanastasov",
+			email: null,
+			url: "https://api.github.com/users/hanastasov"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 674809506,
+			nodeId: "MDU6TGFiZWw2NzQ4MDk1MDY=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:calendar:%20calendar",
+			name: ":calendar: calendar",
+			color: "d4c5f9",
+			default: false,
+			description: ""
+		}, {
+			id: 2518122248,
+			nodeId: "MDU6TGFiZWwyNTE4MTIyMjQ4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2011.1.x",
+			name: "version: 11.1.x",
+			color: "e99695",
+			default: false,
+			description: ""
+		}, {
+			id: 2685585222,
+			nodeId: "MDU6TGFiZWwyNjg1NTg1MjIy",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2012.0.x",
+			name: "version: 12.0.x",
+			color: "08F0E5",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nMulti-view calendar scrolls to next month even if that month is already in the view\r\n\r\n * igniteui-angular version: all\r\n * browser: all\r\n\r\n## Steps to reproduce  \r\n\r\n1. Run dev demos\r\n2. Open this [sample](http://localhost:4200/calendar) and scroll to the multi-view calendar\r\n3. Inside for example **April** pick **first** of **May**\r\n\r\n## Result  \r\nThe multi-view moves **April** outside of the view and sets **May** as a first calendar in the view.\r\n\r\n## Expected result  \r\nThe multi-view should not move **April**  outside of the view and set **May** as the first calendar since **May** is already in the view.",
+		title: "Multi-view calendar unnecessarily scrolls months",
+		number: 9473,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9473",
+		id: 870760593,
+		pullRequest: null
+	}, {
+		createdAt: "2021-03-31T18:38:57Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nWhen i want to drop a row inside collapsed row, right now there is no option to expand the row on hover after sometime.\r\n\r\n## Describe the solution you'd like\r\nMy solution would be introduce a property which will expand the drop row on hover by default if the property is set to true.\r\nset the default time to 2secs or 3secs.\r\n\r\n## Describe alternatives you've considered\r\ni tried some alternatives but it is not working as expected.\r\nsome other row is getting moved instead of drag row.\r\n\r\n## Additional context\r\nAbove Description is more than sufficient.\r\n",
+		title: "Expand Target row on hover after 2secs, if the target row is collapsed in Drag and Drop",
+		number: 9236,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9236",
+		id: 847116363,
+		pullRequest: null
+	}, {
+		createdAt: "2021-02-26T12:19:12Z",
+		assignee: {
+			id: 14248932,
+			avatarUrl: "https://avatars.githubusercontent.com/u/14248932?v=4",
+			login: "hanastasov",
+			email: null,
+			url: "https://api.github.com/users/hanastasov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nWhen selecting a cell or row, it doesn't seem to be a way deselect the cell or row again with the mouse. \r\n\r\n## Describe the solution you'd like\r\nIt would be nice to have a mode for the grid, where clicking the selection removed the selection again.\r\n",
+		title: "Deselect when clicking selection",
+		number: 9086,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9086",
+		id: 817311283,
+		pullRequest: null
+	}, {
+		createdAt: "2021-02-25T23:51:04Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\nThis is related to question [9064](https://github.com/IgniteUI/igniteui-angular/issues/9064), If I can't add recursive templates, it would be nice to at least reuse the same columns at each row island level.\r\n\r\n\r\n## Describe the solution you'd like\r\nI would like to implement something similar to this:\r\n  ```\r\n  <ng-template #columnsTemplate1>\r\n    <igx-column header=\"Column 1\" field=\"columnField1\"></igx-column>\r\n    <igx-column header=\"Column 2\" field=\"columnField2\"></igx-column>\r\n    <igx-column header=\"Column 3\" field=\"columnField3\"></igx-column>\r\n    <igx-column header=\"Column 4\" field=\"columnField4\"></igx-column>\r\n  </ng-template>\r\n  <ng-template #columnsTemplate2>\r\n    <igx-column header=\"Column 5\" field=\"columnField4\"></igx-column>\r\n    <igx-column header=\"Column 6\" field=\"columnField5\"></igx-column>\r\n    <igx-column header=\"Column 7\" field=\"columnField7\"></igx-column>\r\n    <igx-column header=\"Column 8\" field=\"columnField8\"></igx-column>\r\n  </ng-template>\r\n  <igx-hierarchical-grid [igxColumnTemplate]=\"columnsTemplate\" igxPreventDocumentScroll class=\"hierarchicalGrid\" primaryKey=\"levelId\" [data]=\"localdata\">\r\n    <igx-row-island key=\"childs\" [autoGenerate]=\"false\" [igxColumnTemplate]=\"columnsTemplate1\">\r\n        <igx-row-island key=\"childs\" [autoGenerate]=\"false\" [igxColumnTemplate]=\"columnsTemplate1\">\r\n            <igx-row-island key=\"childs\" [autoGenerate]=\"false\" [igxColumnTemplate]=\"columnsTemplate2\">\r\n            </igx-row-island>\r\n        </igx-row-island>\r\n    </igx-row-island>\r\n  </igx-hierarchical-grid>\r\n```\r\n\r\n## Describe alternatives you've considered\r\nCurrently I'm being forced to define every level even though they are all the same.\r\n\r\n## Additional context\r\nAny alternative to encapsulate columns definitions would be ok. \r\n",
+		title: "Add [igxColumnTemplate] to <igx-hierarchical-grid> and <igx-row-island>",
+		number: 9080,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/9080",
+		id: 816902086,
+		pullRequest: null
+	}, {
+		createdAt: "2021-01-12T14:27:07Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 324654932,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/enhancement",
+			name: "enhancement",
+			color: "84b6eb",
+			default: true,
+			description: null
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 963379072,
+			nodeId: "MDU6TGFiZWw5NjMzNzkwNzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay",
+			name: "overlay",
+			color: "a9fcf2",
+			default: false,
+			description: ""
+		}, {
+			id: 2069855364,
+			nodeId: "MDU6TGFiZWwyMDY5ODU1MzY0",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/priority:%20low",
+			name: "priority: low",
+			color: "d7e25a",
+			default: false,
+			description: ""
+		}, {
+			id: 2518122248,
+			nodeId: "MDU6TGFiZWwyNTE4MTIyMjQ4",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2011.1.x",
+			name: "version: 11.1.x",
+			color: "e99695",
+			default: false,
+			description: ""
+		}],
+		body: "`IgxOverlayService` is using now angular animations package to animate content shown in the overlay. However this package has some limitations, e.g. during animation you cannot take how much of the animation has elapsed, as well as some bugs like #6581 and #8450. Switching to native Web Animations will allow us to fix the issues we have and control better animation flow.\r\n\r\nStop using angular animation package in overlay service and animate content via [Web Animations](https://developer.mozilla.org/en-US/docs/Web/API/Animation)\r\n\r\nFor some of the issues we are using work arounds in our code and for other we are waiting for angular to fix their package. However this is not good as we are depending on third party while with Web Animations we can depend on ourselves.\r\n\r\n- [x] add animation service - #11628 \r\n- [ ] implement animation service with Web Animations",
+		title: "Switch overlay service from angular animations to native Web Animations",
+		number: 8780,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/8780",
+		id: 784285210,
+		pullRequest: null
+	}, {
+		createdAt: "2020-11-16T15:15:50Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 963379072,
+			nodeId: "MDU6TGFiZWw5NjMzNzkwNzI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/overlay",
+			name: "overlay",
+			color: "a9fcf2",
+			default: false,
+			description: ""
+		}, {
+			id: 2273176771,
+			nodeId: "MDU6TGFiZWwyMjczMTc2Nzcx",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%2010.2.x",
+			name: "version: 10.2.x",
+			color: "b631e2",
+			default: false,
+			description: ""
+		}],
+		body: "### Description  \r\nDescribe the issue.\r\n\r\n * igniteui-angular version: 10.2.x\r\n * browser:  any\r\n\r\n### Steps to reproduce  \r\n\r\n1. The viewport fit calculation is based on the document instead of the provided outlet thus resulting in strange behavior sometimes:\r\n\r\n![image](https://user-images.githubusercontent.com/47364572/99269747-196bc800-282f-11eb-87d2-b076a72f7181.png)\r\n\r\ncan be useful in cases like this one:\r\n\r\n![image](https://user-images.githubusercontent.com/47364572/99270255-3b654a80-282f-11eb-92db-085423a4da4e.png)\r\n\r\nProvide a way to choose whether to make the calculations based on the outlet or the document.\r\n\r\n\r\n",
+		title: "Overlay doesn't calculate its position fit based on the outlet but based on the document",
+		number: 8595,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/8595",
+		id: 743919089,
+		pullRequest: null
+	}, {
+		createdAt: "2020-10-27T06:34:46Z",
+		assignee: {
+			id: 16817847,
+			avatarUrl: "https://avatars.githubusercontent.com/u/16817847?v=4",
+			login: "gedinakova",
+			email: null,
+			url: "https://api.github.com/users/gedinakova"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 850290880,
+			nodeId: "MDU6TGFiZWw4NTAyOTA4ODA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20filter-ui",
+			name: "grid: filter-ui",
+			color: "f484f1",
+			default: false,
+			description: ""
+		}, {
+			id: 1221520389,
+			nodeId: "MDU6TGFiZWwxMjIxNTIwMzg5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20excel-style-filtering",
+			name: "grid: excel-style-filtering",
+			color: "fef2c0",
+			default: false,
+			description: ""
+		}, {
+			id: 2043077405,
+			nodeId: "MDU6TGFiZWwyMDQzMDc3NDA1",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/status:%20inactive",
+			name: "status: inactive",
+			color: "bdc442",
+			default: false,
+			description: "Used to stale issues and pull requests"
+		}],
+		body: "ESF does not respect custom column filters\r\n\r\n * igniteui-angular version: 9.1.x\r\n\r\n## Steps to reproduce  \r\n\r\n1. Set an `IgxStringFilteringOperand` custom filter to a column of `number` data type.\r\n```typescript\r\npublic unitFilters = IgxStringFilteringOperand.instance();,\r\n```\r\n```html\r\n<igx-column field=\"UnitsInStock\" [dataType]=\"'number'\" [filters]=\"unitFilters\">\r\n</igx-column>\r\n```\r\n2. Open ESF dialog\r\n\r\nNote that if quick filtering is used, instead of ESF, custom column filters are respected.\r\n\r\n## Result  \r\nDefault numeric filters are rendered in the UI, instead of the custom ones\r\n\r\n## Expected result  \r\nCustom filters to be rendered in the UI\r\n\r\nNote:\r\nOnly the list item that expands the filters is not changed:\r\n![Untitled](https://user-images.githubusercontent.com/14248932/97999097-950f5300-1df3-11eb-91c6-c20a08c1ce28.png)\r\n\r\n\r\n",
+		title: "ESF does not respect custom column filters",
+		number: 8462,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/8462",
+		id: 730157145,
+		pullRequest: null
+	}, {
+		createdAt: "2020-08-05T13:35:49Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 455636069,
+			nodeId: "MDU6TGFiZWw0NTU2MzYwNjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/dialog",
+			name: "dialog",
+			color: "2078bc",
+			default: false,
+			description: ""
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 674809506,
+			nodeId: "MDU6TGFiZWw2NzQ4MDk1MDY=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:calendar:%20calendar",
+			name: ":calendar: calendar",
+			color: "d4c5f9",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1659256343,
+			nodeId: "MDU6TGFiZWwxNjU5MjU2MzQz",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker",
+			name: "date-range-picker",
+			color: "3ec9c4",
+			default: false,
+			description: ""
+		}],
+		body: "I would like to be able to template the range picker's dialog container of the calendar, in order to provide additional actions/elements.\r\n\r\nCurrently the dialog container has only one action button, which applies the range and it will be nice if the user could add more actions (e.g. Undo, Redo, Selected Dates count, etc).\r\n\r\n",
+		title: "Support for templating date range picker's calendar dialog container ",
+		number: 7939,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7939",
+		id: 673545914,
+		pullRequest: null
+	}, {
+		createdAt: "2020-04-29T08:13:27Z",
+		assignee: {
+			id: 2621802,
+			avatarUrl: "https://avatars.githubusercontent.com/u/2621802?v=4",
+			login: "Lipata",
+			email: null,
+			url: "https://api.github.com/users/Lipata"
+		},
+		labels: [{
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1659256343,
+			nodeId: "MDU6TGFiZWwxNjU5MjU2MzQz",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/date-range-picker",
+			name: "date-range-picker",
+			color: "3ec9c4",
+			default: false,
+			description: ""
+		}, {
+			id: 1843355790,
+			nodeId: "MDU6TGFiZWwxODQzMzU1Nzkw",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x",
+			name: "version: 9.1.x",
+			color: "0be554",
+			default: false,
+			description: ""
+		}],
+		body: "## Is your feature request related to a problem? Please describe.\r\n`IgxDatePicker` allows developer to set `vertical` mode. `IgxDateRangePicker` should has same option\r\n\r\n## Describe the solution you'd like\r\nAdd `vertical` mode to `IgxDateRangePicker`.\r\n\r\n## Describe alternatives you've considered\r\nThere is no way to achieve this in `IgxDateRangePicker` now.\r\n",
+		title: "IgxDateRangePicker should allow vertical mode",
+		number: 7231,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7231",
+		id: 608863706,
+		pullRequest: null
+	}, {
+		createdAt: "2020-04-09T09:18:49Z",
+		assignee: {
+			id: 20106115,
+			avatarUrl: "https://avatars.githubusercontent.com/u/20106115?v=4",
+			login: "rkaraivanov",
+			email: null,
+			url: "https://api.github.com/users/rkaraivanov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 839132075,
+			nodeId: "MDU6TGFiZWw4MzkxMzIwNzU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/mask-editor",
+			name: "mask-editor",
+			color: "d13bd3",
+			default: false,
+			description: null
+		}, {
+			id: 1628732209,
+			nodeId: "MDU6TGFiZWwxNjI4NzMyMjA5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20L",
+			name: "size: L",
+			color: "dd3989",
+			default: false,
+			description: ""
+		}, {
+			id: 1843355790,
+			nodeId: "MDU6TGFiZWwxODQzMzU1Nzkw",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%209.1.x",
+			name: "version: 9.1.x",
+			color: "0be554",
+			default: false,
+			description: ""
+		}],
+		body: "## Description  \r\nIf the mask is set to \"'(966) #### ####'\" when you enter into edit mode the symbol '9' is always treated as a fillable spot.\r\n\r\n * igniteui-angular version: 9.0.1 \r\n\r\n## Steps to reproduce  \r\n\r\n1. Run the sample\r\n2. Click on the input\r\n\r\n## Result  \r\nThe digit 9 is replaced as fillable spot.\r\n\r\n## Expected result  \r\nTo be able to set some indication in case you want the symbol '9' to be treated as a digit, not special symbol and after the input is clicked to looks like (966) _ _ _ _  _ _ _ _.\r\n\r\n\r\n## Attachments  \r\nhttps://stackblitz.com/edit/angular-9kocto\r\n\r\n",
+		title: "igxMask always set the symbol '9' as a fillable spot ",
+		number: 7089,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/7089",
+		id: 597143445,
+		pullRequest: null
+	}, {
+		createdAt: "2019-12-03T14:20:19Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1714752892,
+			nodeId: "MDU6TGFiZWwxNzE0NzUyODky",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/resizable",
+			name: "resizable",
+			color: "b7f99f",
+			default: false,
+			description: ""
+		}],
+		body: "## Question  \r\nIs there a plan to add a resizing functionality to [IgxDrag]?\r\n\r\nThank you.",
+		title: "Resizing [IgxDrag]",
+		number: 6283,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/6283",
+		id: 532019100,
+		pullRequest: null
+	}, {
+		createdAt: "2019-08-27T04:48:39Z",
+		assignee: {
+			id: 1472513,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1472513?v=4",
+			login: "kdinev",
+			email: null,
+			url: "https://api.github.com/users/kdinev"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 881145265,
+			nodeId: "MDU6TGFiZWw4ODExNDUyNjU=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/exporters",
+			name: "exporters",
+			color: "c2e0c6",
+			default: false,
+			description: ""
+		}, {
+			id: 2993683250,
+			nodeId: "MDU6TGFiZWwyOTkzNjgzMjUw",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/pdf-exporter",
+			name: "pdf-exporter",
+			color: "351F48",
+			default: false,
+			description: ""
+		}],
+		body: "pdf export is very common requirement from client side. we like Angular grid but missing export to pdf is annoying customers. Please provide export to pdf fetaure along with Excel & csv.  \r\n\r\n**## Describe the solution you'd like**\r\nPlease provide export to pdf fetaure along with Excel & csv on Angular Grid. \r\n\r\n",
+		title: "pdf Export feature on Angular Grid",
+		number: 5696,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/5696",
+		id: 485580657,
+		pullRequest: null
+	}, {
+		createdAt: "2019-01-03T12:31:04Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 625766429,
+			nodeId: "MDU6TGFiZWw2MjU3NjY0Mjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20general",
+			name: "grid: general",
+			color: "5319e7",
+			default: false,
+			description: ""
+		}, {
+			id: 823505669,
+			nodeId: "MDU6TGFiZWw4MjM1MDU2Njk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:toolbox:%20feature-request",
+			name: ":toolbox: feature-request",
+			color: "dd449e",
+			default: false,
+			description: ""
+		}, {
+			id: 1628732209,
+			nodeId: "MDU6TGFiZWwxNjI4NzMyMjA5",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/size:%20L",
+			name: "size: L",
+			color: "dd3989",
+			default: false,
+			description: ""
+		}],
+		body: "### Description  \r\n\r\nThere is a request from a customer to implement a Cell Merging similar to the igGrid one: https://www.igniteui.com/help/iggrid-cellmerging-overview\r\n\r\n * igniteui-angular version: 7.x\r\n * browser: *\r\n\r\n\r\n",
+		title: "Grid Cell Merging",
+		number: 3514,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/3514",
+		id: 395556832,
+		pullRequest: null
+	}, {
+		createdAt: "2018-04-19T11:18:05Z",
+		assignee: {
+			id: 1182001,
+			avatarUrl: "https://avatars.githubusercontent.com/u/1182001?v=4",
+			login: "dkamburov",
+			email: null,
+			url: "https://api.github.com/users/dkamburov"
+		},
+		labels: [{
+			id: 324654930,
+			nodeId: "MDU6TGFiZWwzMjQ2NTQ5MzA=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:bug:%20bug",
+			name: ":bug: bug",
+			color: "fc2929",
+			default: false,
+			description: "Any issue that describes a bug"
+		}, {
+			id: 531438748,
+			nodeId: "MDU6TGFiZWw1MzE0Mzg3NDg=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:eyes:%20status:%20in-review",
+			name: ":eyes: status: in-review",
+			color: "c5def5",
+			default: false,
+			description: ""
+		}, {
+			id: 531441726,
+			nodeId: "MDU6TGFiZWw1MzE0NDE3MjY=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/:firecracker:%20severity:%20medium",
+			name: ":firecracker: severity: medium",
+			color: "fbca04",
+			default: false,
+			description: ""
+		}, {
+			id: 625766429,
+			nodeId: "MDU6TGFiZWw2MjU3NjY0Mjk=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20general",
+			name: "grid: general",
+			color: "5319e7",
+			default: false,
+			description: ""
+		}, {
+			id: 857640642,
+			nodeId: "MDU6TGFiZWw4NTc2NDA2NDI=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/version:%205.3.x",
+			name: "version: 5.3.x",
+			color: "77b3d6",
+			default: false,
+			description: ""
+		}, {
+			id: 909237881,
+			nodeId: "MDU6TGFiZWw5MDkyMzc4ODE=",
+			url: "https://api.github.com/repos/IgniteUI/igniteui-angular/labels/grid:%20resizing",
+			name: "grid: resizing",
+			color: "2e2ef7",
+			default: false,
+			description: ""
+		}],
+		body: "### Description  \r\nResizing a column to the rightmost of the igxGrid hides all the columns that are on right of the resized column.\r\n\r\n**NOTES:**\r\n- Performing an operation like **pinning/unpinning** fixes the issue and the columns become visible again.\r\n- The issue is **not** reproduced when resizing analogically to the left.\r\n\r\n### Steps to reproduce  \r\n\r\n1. Run the \"Grid Column Resizing\" demo app.\r\n2. Scroll horizontally to the rightmost of the grid.\r\n3. Resize the \"Region\" column to the rightmost of the grid.\r\n\r\n### Result  \r\nThe columns that were next to the \"Region\" column on the right are now **not** visible.\r\n\r\n### Expected result  \r\nThe columns that were next to the \"Region\" column on the right are still visible.\r\n\r\n\r\n### Attachments  \r\n\r\n![columnresize](https://user-images.githubusercontent.com/12784974/38988554-43bb7ee6-43dc-11e8-9225-b9769aea314a.gif)\r\n\r\n",
+		title: "Resizing a column to the rightmost of the igxGrid hides all the columns that are on right of the resized column",
+		number: 1069,
+		url: "https://api.github.com/repos/IgniteUI/igniteui-angular/issues/1069",
+		id: 315833423,
+		pullRequest: null
+	}
 ];
 // tslint:enable:max-line-length

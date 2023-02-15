@@ -10,7 +10,6 @@ import { TaskPlannerComponent } from './taskplanner/taskplanner.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { BacklogComponent } from './backlog/backlog.component';
-import { GridWithTransactionsComponent } from './transaction-component/transaction-grid.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StatusLabelPipe, PriorityLabelPipe, PlaceholderPipe, DeadlinePipe, ProgressPipe,
   LoginLabelPipe, MilestonePipe, FilterTasksPipe } from './pipes/taskplanner.pipes';
@@ -27,8 +26,7 @@ import { StatusLabelPipe, PriorityLabelPipe, PlaceholderPipe, DeadlinePipe, Prog
     MilestonePipe,
     LoginLabelPipe,
     FilterTasksPipe,
-    BacklogComponent,
-    GridWithTransactionsComponent
+    BacklogComponent
   ],
   imports: [
     BrowserModule,

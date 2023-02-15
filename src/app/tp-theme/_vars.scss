@@ -1,4 +1,5 @@
-@import 'igniteui-angular/lib/core/styles/base/index';
+@use '@infragistics/igniteui-angular/theming' as *;
+@forward '@infragistics/igniteui-angular/theming';
 @import "tp-palettes";
 $backlog-card-header-height: rem(57px);
 $backlog-tab-header-height: rem(58px);
@@ -17,7 +18,7 @@ $state-late: #bc9e60;
 $state-critical: #ea4d4f;
 $state-high: #dc9621;
 $state-delayed: #b1d2c5;
-$tp-grays-gradient: igx-color($tp-palette, 'surface');
+$tp-grays-gradient: color($tp-palette, 'surface');
 $tp-grays-gradient-btn: linear-gradient(90deg, #343745 0%, rgba(65, 70, 92, 1) 35%, #343745 100%);
 $row-background: #343745;
 $row-col-background: #2e313c;

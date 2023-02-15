@@ -5,9 +5,9 @@
         <app-backlog class="tp-app__backlog" (listItemAction)="onBacklogItemAction($event)" [data]="unassignedTasks"></app-backlog>
 
         <!-- Tasks Planner Grid  -->
-        <app-grid-transactions class="tp-app__grid">
             <igx-grid #tasksGrid id="tasksGrid" igxDrop [isLoading]="gridIsLoading"
                 [height]="'100%'"
+                [batchEditing]="true"
                 [data]="tasks"
                 [autoGenerate]="false"
                 [primaryKey]="'id'"
@@ -20,7 +20,12 @@
                 (cellEdit)="onCellEdit($event)"
                 (dropped)="onItemDropped($event)"
                 (enter)="onDropContainerEnterLeave($event)"
-                (leave)="onDropContainerEnterLeave($event)">
+                (leave)="onDropContainerEnterLeave($event)"
+                [moving]="true"
+                [sortingOptions]="sortingOptions"
+                [sortHeaderIconTemplate]="sortIcon"
+                [sortAscendingHeaderIconTemplate]="sortAscIcon"
+                [sortDescendingHeaderIconTemplate]="sortDescIcon">
 <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage" [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity" ></igx-paginator>
 
                 <igx-grid-toolbar>
@@ -104,8 +109,9 @@
                 <igx-column *ngFor="let c of columns"
                     [width]="c.width"
                     [sortable]="c.sortable"
+                    [required]="c.required"
                     [resizable]="c.resizable"
-                    [movable]="c.movable"
+                    [minlength]="c.minlength"
                     [editable]="c.editable && isEditingEnabled"
                     [hasSummary]="c.hasSummary"
                     [filterable]="c.filterable"
@@ -117,7 +123,8 @@
                     [header]="c.header"
                     [dataType]="c.dataType"
                     [pinned]="c.pinned"
-                    [hidden]="c.hidden">
+                    [hidden]="c.hidden"
+                    [hasSummary]="c.hasSummary">
 
                     <!-- Status Column -->
                     <ng-template *ngIf="c.field === 'labels'" igxCell let-cell="cell" let-value>
@@ -172,6 +179,14 @@
                         </igx-select>
                     </ng-template>
 
+                    <!-- Created -->
+                    <ng-template *ngIf="c.field === 'createdAt'" igxSummary let-summaryResults>
+                      <div class="summary-temp">
+                          <span><strong>{{ summaryResults[0].label }}</strong><span>{{ summaryResults[0].summaryResult }}</span></span>
+                          <span><strong>{{ summaryResults[1].label }}</strong><span>{{ summaryResults[1].summaryResult | date: 'mediumDate' }}</span></span>
+                      </div>
+                    </ng-template>
+
                     <!-- Deadline -->
                     <ng-template *ngIf="c.field === 'deadline'" igxCell let-cell="cell" let-value>
                         {{ value | placeholder }}
@@ -207,9 +222,23 @@
                         </ng-container>
                         </ng-template>
                 </igx-column>
+
+
           </igx-grid>
-        </app-grid-transactions>
     </div>
+
+    <!-- Sorting Indicators Templates -->
+    <ng-template #sortIcon>
+      <igx-icon>unfold_more_double</igx-icon>
+    </ng-template>
+
+    <ng-template #sortAscIcon>
+      <igx-icon>keyboard_double_arrow_up</igx-icon>
+    </ng-template>
+
+    <ng-template #sortDescIcon>
+      <igx-icon>keyboard_double_arrow_down</igx-icon>
+    </ng-template>
 
     <!-- Toast to show validation errors  -->
     <igx-toast></igx-toast>
@@ -403,7 +432,6 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                         [width]="c.width"
                         [sortable]="c.sortable"
                         [resizable]="c.resizable"
-                        [movable]="c.movable"
                         [editable]="c.editable && isEditingEnabled"
                         [hasSummary]="c.hasSummary"
                         [filterable]="c.filterable"

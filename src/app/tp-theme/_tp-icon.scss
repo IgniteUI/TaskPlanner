@@ -1,8 +1,8 @@
-$tp-icon: igx-icon-theme(
+$tp-icon: icon-theme(
 	$schema: $dark-schema,
-	$color: igx-color($tp-palette, 'secondary')
+	$color: color($tp-palette, 'secondary')
 );
 
-$tp-light-icon: igx-icon-theme(
-	$color: igx-color($tp-light-palette, 'secondary')
+$tp-light-icon: icon-theme(
+	$color: color($tp-light-palette, 'secondary')
 );
