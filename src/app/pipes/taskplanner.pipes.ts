@@ -3,7 +3,10 @@ import { ITask } from '../interfaces';
 import { CellType } from 'igniteui-angular';
 import { DatePipe } from '@angular/common';
 
-@Pipe({name: 'statusLabel'})
+@Pipe({
+    name: 'statusLabel',
+    standalone: true
+})
 export class StatusLabelPipe implements PipeTransform {
     transform(value: any): string {
         if (!value) {return;}
@@ -19,7 +22,10 @@ export class StatusLabelPipe implements PipeTransform {
     }
 }
 
-@Pipe({name: 'loginLabel'})
+@Pipe({
+    name: 'loginLabel',
+    standalone: true
+})
 export class LoginLabelPipe implements PipeTransform {
     transform(value: any): string {
         if (typeof value === 'string') {
@@ -29,7 +35,10 @@ export class LoginLabelPipe implements PipeTransform {
     }
 }
 
-@Pipe({name: 'priorityLabel'})
+@Pipe({
+    name: 'priorityLabel',
+    standalone: true
+})
 export class PriorityLabelPipe implements PipeTransform {
     transform(cell: any): string {
         if (cell.value) {
@@ -52,7 +61,10 @@ export class PriorityLabelPipe implements PipeTransform {
     }
 }
 
-@Pipe({name: 'placeholder'})
+@Pipe({
+    name: 'placeholder',
+    standalone: true
+})
 export class PlaceholderPipe implements PipeTransform {
     transform(value: any): string {
         if (value) {
@@ -63,7 +75,10 @@ export class PlaceholderPipe implements PipeTransform {
     }
 }
 
-@Pipe({name: 'progress'})
+@Pipe({
+    name: 'progress',
+    standalone: true
+})
 export class ProgressPipe implements PipeTransform {
     transform(value: any): string {
       if (value) {
@@ -74,7 +89,10 @@ export class ProgressPipe implements PipeTransform {
     }
 }
 
-@Pipe({name: 'deadline'})
+@Pipe({
+    name: 'deadline',
+    standalone: true
+})
 export class DeadlinePipe implements PipeTransform {
     transform(value: ITask, cell?: CellType): string {
         const pipe = new DatePipe(cell?.grid.locale);
@@ -85,7 +103,10 @@ export class DeadlinePipe implements PipeTransform {
     }
 }
 
-@Pipe({name: 'milestone'})
+@Pipe({
+    name: 'milestone',
+    standalone: true
+})
 export class MilestonePipe implements PipeTransform {
     transform(value: ITask): string {
         const deadline = new Date(value.createdAt);
@@ -96,7 +117,10 @@ export class MilestonePipe implements PipeTransform {
     }
 }
 
-@Pipe({name: 'filterTasks'})
+@Pipe({
+    name: 'filterTasks',
+    standalone: true
+})
 export class FilterTasksPipe implements PipeTransform {
     transform(data: ITask[], groupRowValue: string): ITask[] {
         const groupedData = data.filter(rec => rec.milestone === groupRowValue);

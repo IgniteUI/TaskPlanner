@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, HostBinding } from '@angular/core';
-import { ControlContainer, NgForm } from '@angular/forms';
+import { ControlContainer, NgForm, FormsModule } from '@angular/forms';
 import {
     DefaultSortingStrategy,
     IGridEditEventArgs,
@@ -26,8 +26,10 @@ import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
 import { ITask, ITeamMember } from '../interfaces';
-import { StatusLabelPipe, PriorityLabelPipe, MilestonePipe } from '../pipes/taskplanner.pipes';
-import { DatePipe } from '@angular/common';
+import { StatusLabelPipe, PriorityLabelPipe, MilestonePipe, PlaceholderPipe, DeadlinePipe, FilterTasksPipe } from '../pipes/taskplanner.pipes';
+import { DatePipe, NgFor, NgIf, PercentPipe } from '@angular/common';
+import { IgxGridComponent as IgxGridComponent_1, IgxDropDirective, IgxPaginatorComponent, IgxGridToolbarComponent, IgxGridToolbarTitleComponent, IgxGridToolbarActionsComponent, IgxGridToolbarHidingComponent, IgxGridToolbarPinningComponent, IgxGridToolbarExporterComponent, IgxButtonDirective, IgxIconComponent, IgxToggleActionDirective, IgxDropDownItemNavigationDirective, IgxDropDownComponent as IgxDropDownComponent_1, IgxDropDownItemComponent, IgxGridDetailTemplateDirective, IgxInputGroupComponent, IgxInputDirective, IgxCheckboxComponent, IgxGroupByRowTemplateDirective, IgxBadgeComponent, IgxColumnComponent as IgxColumnComponent_1, IgxColumnRequiredValidatorDirective, IgxColumnMinLengthValidatorDirective, IgxCellTemplateDirective, IgxCellEditorTemplateDirective, IgxSelectComponent, IgxSelectItemComponent, IgxAvatarComponent, IgxLinearProgressBarComponent, IgxSummaryTemplateDirective, IgxToastComponent as IgxToastComponent_1, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxDialogComponent as IgxDialogComponent_1, IgxLabelDirective, IgxMaskDirective, IgxDatePickerComponent, IgxPrefixDirective } from '@infragistics/igniteui-angular';
+import { HeaderComponent } from '../header/header.component';
 
 export enum editMode {
     cellEditing = 0,
@@ -42,6 +44,59 @@ export enum editMode {
     selector: 'app-taskplanner',
     templateUrl: './taskplanner.component.html',
     styleUrls: ['./taskplanner.component.scss'],
+    standalone: true,
+    imports: [
+        HeaderComponent,
+        BacklogComponent,
+        IgxGridComponent_1,
+        IgxDropDirective,
+        IgxPaginatorComponent,
+        IgxGridToolbarComponent,
+        IgxGridToolbarTitleComponent,
+        IgxGridToolbarActionsComponent,
+        IgxGridToolbarHidingComponent,
+        IgxGridToolbarPinningComponent,
+        IgxGridToolbarExporterComponent,
+        IgxButtonDirective,
+        IgxIconComponent,
+        IgxToggleActionDirective,
+        IgxDropDownItemNavigationDirective,
+        IgxDropDownComponent_1,
+        NgFor,
+        IgxDropDownItemComponent,
+        IgxGridDetailTemplateDirective,
+        IgxInputGroupComponent,
+        FormsModule,
+        IgxInputDirective,
+        IgxCheckboxComponent,
+        IgxGroupByRowTemplateDirective,
+        IgxBadgeComponent,
+        IgxColumnComponent_1,
+        IgxColumnRequiredValidatorDirective,
+        IgxColumnMinLengthValidatorDirective,
+        NgIf,
+        IgxCellTemplateDirective,
+        IgxCellEditorTemplateDirective,
+        IgxSelectComponent,
+        IgxSelectItemComponent,
+        IgxAvatarComponent,
+        IgxLinearProgressBarComponent,
+        IgxSummaryTemplateDirective,
+        IgxToastComponent_1,
+        IgxOverlayOutletDirective_1,
+        IgxDialogComponent_1,
+        IgxLabelDirective,
+        IgxMaskDirective,
+        IgxDatePickerComponent,
+        IgxPrefixDirective,
+        PercentPipe,
+        DatePipe,
+        StatusLabelPipe,
+        PriorityLabelPipe,
+        PlaceholderPipe,
+        DeadlinePipe,
+        FilterTasksPipe,
+    ],
 })
 export class TaskPlannerComponent implements OnInit {
     @HostBinding('class.tp-app')
