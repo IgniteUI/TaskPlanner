@@ -4,7 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxDialogModule, IgxButtonModule, IgxGridModule, IgxAvatarModule, IgxIconModule,
   IgxNavbarModule, IgxDividerModule, IgxTabsModule, IgxToastModule, IgxMaskModule,
-  IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule, IgxFilterModule, IgxActionStripModule } from '@infragistics/igniteui-angular';
+  IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule, IgxFilterModule, IgxActionStripModule, 
+  IgxSelectModule,  IgxDatePickerModule, IgxCheckboxModule, IgxDropDownModule, IgxDragDropModule, IgxOverlayOutletDirective, IgxToggleModule, IgxBadgeModule, IgxProgressBarModule} from '@infragistics/igniteui-angular';
 import { TasksDataService } from './services/tasks.service';
 import { TaskPlannerComponent } from './taskplanner/taskplanner.component';
 import { FormsModule } from '@angular/forms';
@@ -52,10 +53,20 @@ import { StatusLabelPipe, PriorityLabelPipe, PlaceholderPipe, DeadlinePipe, Prog
     IgxSwitchModule,
     IgxCardModule,
     IgxListModule,
-    HammerModule
+    HammerModule,
+    IgxSelectModule,
+    IgxDatePickerModule,
+    IgxDragDropModule,
+    IgxOverlayOutletDirective,
+    IgxCheckboxModule,
+    IgxDropDownModule,
+    IgxToggleModule,
+    IgxBadgeModule,
+    IgxProgressBarModule
   ],
   providers: [TasksDataService],
-  bootstrap: [TaskPlannerComponent]
+  bootstrap: [TaskPlannerComponent],
+  
 })
 export class AppModule {
 }
