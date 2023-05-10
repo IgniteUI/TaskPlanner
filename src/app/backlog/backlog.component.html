@@ -5,7 +5,7 @@
     <igx-divider></igx-divider>
     <igx-card-content>
                 <igx-input-group type="search" class="tp-app__task-search">
-                    <input #taskSearch igxInput placeholder="Search" [(ngModel)]="taskSearchString"/>
+                    <input ngDefaultControl #taskSearch name="search" igxInput placeholder="Search" [(ngModel)]="taskSearchString"/>
                     <igx-prefix>
                         <igx-icon>search</igx-icon>
                     </igx-prefix>

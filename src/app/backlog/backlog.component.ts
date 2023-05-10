@@ -1,6 +1,9 @@
 import { Component, ViewChild, EventEmitter, Output, OnInit, Input } from '@angular/core';
 import { IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions } from 'igniteui-angular';
 import { ITask } from '../interfaces';
+import { NgIf, NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IgxCardComponent, IgxCardHeaderComponent, IgxCardHeaderTitleDirective, IgxDividerDirective, IgxCardContentDirective, IgxInputGroupComponent, IgxInputDirective, IgxPrefixDirective, IgxIconComponent, IgxSuffixDirective, IgxListComponent as IgxListComponent_1, IgxListItemComponent, IgxDragDirective, IgxDragHandleDirective, IgxListLineTitleDirective, IgxListLineSubTitleDirective, IgxButtonDirective, IgxDataLoadingTemplateDirective, IgxEmptyListTemplateDirective, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxFilterPipe } from '@infragistics/igniteui-angular';
 
 export interface IListItemAction {
     action: string;
@@ -11,6 +14,33 @@ export interface IListItemAction {
     selector: 'app-backlog',
     templateUrl: './backlog.component.html',
     styleUrls: ['./backlog.component.scss'],
+    standalone: true,
+    imports: [
+        IgxCardComponent,
+        IgxCardHeaderComponent,
+        IgxCardHeaderTitleDirective,
+        IgxDividerDirective,
+        IgxCardContentDirective,
+        IgxInputGroupComponent,
+        FormsModule,
+        IgxInputDirective,
+        IgxPrefixDirective,
+        IgxIconComponent,
+        NgIf,
+        IgxSuffixDirective,
+        IgxListComponent_1,
+        NgFor,
+        IgxListItemComponent,
+        IgxDragDirective,
+        IgxDragHandleDirective,
+        IgxListLineTitleDirective,
+        IgxListLineSubTitleDirective,
+        IgxButtonDirective,
+        IgxDataLoadingTemplateDirective,
+        IgxEmptyListTemplateDirective,
+        IgxOverlayOutletDirective_1,
+        IgxFilterPipe,
+    ],
 })
 export class BacklogComponent implements OnInit  {
     public tasks: ITask[];

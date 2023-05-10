@@ -146,7 +146,6 @@
             }
         }
     },
-    "defaultProject": "taskplanner",
     "cli": {
       "analytics": "4de0cfdb-0644-4d05-980f-3e1a8d9fb31c"
     }

@@ -79,7 +79,7 @@
                                 <div class="tp-app__row-details-col-item">
                                     <span class="tp-app__row-details-title tp-app__row-details-title--comments">Task Comments</span>
                                     <igx-input-group [type]="inputType">
-                                        <textarea readonly name="description" igxInput rows="8" cols="50" [(ngModel)]="dataItem.body" placeholder="Enter any details here."></textarea>
+                                        <textarea readonly name="description" ngDefaultControl igxInput rows="8" cols="50" [(ngModel)]="dataItem.body" placeholder="Enter any details here."></textarea>
                                     </igx-input-group>
                                 </div>
                               </div>
@@ -131,7 +131,7 @@
                         {{ value | statusLabel }}
                     </ng-template>
                     <ng-template *ngIf="c.field === 'labels'" igxCellEditor let-cell="cell" let-value>
-                        <igx-select [placeholder]="value | statusLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                        <igx-select ngDefaultControl [placeholder]="value | statusLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                             <igx-select-item *ngFor="let s of statuses" [value]="s.value">{{ s.value }}</igx-select-item>
                         </igx-select>
                     </ng-template>
@@ -174,7 +174,7 @@
                         {{ cell | priorityLabel }}
                     </ng-template>
                     <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
-                        <igx-select [placeholder]="cell | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                        <igx-select ngDefaultControl [placeholder]="cell | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                             <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                         </igx-select>
                     </ng-template>
@@ -256,10 +256,10 @@
             <div class="tp-app__dialog-content">
                 <igx-input-group [type]="inputType" type="border" #MyInputGroup>
                     <label igxLabel for="issue">Issue Title</label>
-                    <input igxInput id="issue" type="text" [(ngModel)]="addTaskForm.title" required/>
+                    <input ngDefaultControl igxInput id="issue" type="text" [(ngModel)]="addTaskForm.title" required/>
                 </igx-input-group>
 
-                <igx-select type="border" placeholder="Owner" [(ngModel)]="addTaskForm.assignee" [overlaySettings]="overlaySettings">
+                <igx-select type="border" ngDefaultControl placeholder="Owner" [(ngModel)]="addTaskForm.assignee" [overlaySettings]="overlaySettings">
                     <igx-select-item *ngFor="let m of teamMembers" [value]="m.login">
                         <div class="item">
                           <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" shape="circle" size="small"></igx-avatar>
@@ -272,19 +272,19 @@
 
                 <igx-input-group [type]="inputType" type="border">
                     <label igxLabel for="description">Description</label>
-                    <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="addTaskForm.body"></textarea>
+                    <textarea rows="4" cols="50" igxInput ngDefaultControl name="desc" [(ngModel)]="addTaskForm.body"></textarea>
                 </igx-input-group>
 
-                <igx-select type="border" placeholder="Priority" [(ngModel)]="addTaskForm.priority" [overlaySettings]="overlaySettings">
+                <igx-select type="border" ngDefaultControl placeholder="Priority" [(ngModel)]="addTaskForm.priority" [overlaySettings]="overlaySettings">
                     <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                 </igx-select>
 
                 <igx-input-group [type]="inputType" type="border">
                     <label igxLabel for="milestone">Milestone</label>
-                    <input igxInput id="milestone" type="text" [(ngModel)]="addTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
+                    <input igxInput ngDefaultControl id="milestone" type="text" [(ngModel)]="addTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
                 </igx-input-group>
 
-                <igx-date-picker name="deadline" [(ngModel)]="addTaskForm.deadline" [outlet]="outlet"
+                <igx-date-picker name="deadline" ngDefaultControl [(ngModel)]="addTaskForm.deadline" [outlet]="outlet"
                     [formatter]="formatDate" aria-required="required" required
                     [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, addTaskForm)" mode="dialog">
 
@@ -323,10 +323,10 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
             <div class="tp-app__dialog-content">
               <igx-input-group [type]="inputType" type="border" #MyInputGroup>
                   <label igxLabel for="newIssue">Issue Title</label>
-                  <input igxInput id="newIssue" type="text" [(ngModel)]="editTaskForm.title" required/>
+                  <input igxInput id="newIssue" ngDefaultControl type="text" [(ngModel)]="editTaskForm.title" required/>
               </igx-input-group>
 
-              <igx-select type="border" placeholder="Owner" [(ngModel)]="editTaskForm.assignee" [overlaySettings]="overlaySettings" required>
+              <igx-select type="border" ngDefaultControl placeholder="Owner" [(ngModel)]="editTaskForm.assignee" [overlaySettings]="overlaySettings" required>
                     <igx-select-item *ngFor="let m of teamMembers" [value]="m">
                     <div class="item">
                         <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" shape="circle" size="small"></igx-avatar>
@@ -339,19 +339,19 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
 
               <igx-input-group [type]="inputType" type="border">
                   <label igxLabel for="description">Description</label>
-                  <textarea rows="4" cols="50" igxInput name="desc" [(ngModel)]="editTaskForm.body"></textarea>
+                  <textarea rows="4" cols="50" ngDefaultControl igxInput name="desc" [(ngModel)]="editTaskForm.body"></textarea>
               </igx-input-group>
 
-              <igx-select type="border" placeholder="Priority" [(ngModel)]="editTaskForm.priority" [overlaySettings]="overlaySettings">
+              <igx-select type="border" ngDefaultControl placeholder="Priority" [(ngModel)]="editTaskForm.priority" [overlaySettings]="overlaySettings">
                   <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
               </igx-select>
 
               <igx-input-group [type]="inputType" type="border">
                   <label igxLabel for="newMilestone">Milestone</label>
-                  <input igxInput id="newMilestone" type="text" [(ngModel)]="editTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
+                  <input igxInput id="newMilestone" ngDefaultControl type="text" [(ngModel)]="editTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
               </igx-input-group>
 
-              <igx-date-picker name="deadline" [(ngModel)]="editTaskForm.deadline" [outlet]="outlet"
+              <igx-date-picker name="deadline" ngDefaultControl [(ngModel)]="editTaskForm.deadline" [outlet]="outlet"
                     [formatter]="formatDate" aria-required="required" required
                     [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, editTaskForm)" mode="dialog">
 
