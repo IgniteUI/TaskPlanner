@@ -79,21 +79,21 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "taskplanner:build"
+                      "buildTarget": "taskplanner:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "taskplanner:build:production"
+                          "buildTarget": "taskplanner:build:production"
                         },
                         "es5": {
-                            "browserTarget": "taskplanner:build:es5"
+                          "buildTarget": "taskplanner:build:es5"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "taskplanner:build"
+                      "buildTarget": "taskplanner:build"
                     }
                 },
                 "test": {
