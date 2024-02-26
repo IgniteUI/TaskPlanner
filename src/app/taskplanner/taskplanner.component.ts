@@ -19,7 +19,8 @@ import {
     IFilteringExpression,
     CellType,
     SortingDirection,
-    ISortingOptions
+    ISortingOptions,
+    IgxIconButtonDirective
 } from 'igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
@@ -96,6 +97,7 @@ export enum editMode {
         PlaceholderPipe,
         DeadlinePipe,
         FilterTasksPipe,
+        IgxIconButtonDirective
     ],
 })
 export class TaskPlannerComponent implements OnInit {
