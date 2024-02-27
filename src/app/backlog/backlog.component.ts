@@ -1,5 +1,5 @@
 import { Component, ViewChild, EventEmitter, Output, OnInit, Input } from '@angular/core';
-import { IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions } from 'igniteui-angular';
+import { IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions, IgxIconButtonDirective } from 'igniteui-angular';
 import { ITask } from '../interfaces';
 import { NgIf, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -40,6 +40,7 @@ export interface IListItemAction {
         IgxEmptyListTemplateDirective,
         IgxOverlayOutletDirective_1,
         IgxFilterPipe,
+        IgxIconButtonDirective
     ],
 })
 export class BacklogComponent implements OnInit  {

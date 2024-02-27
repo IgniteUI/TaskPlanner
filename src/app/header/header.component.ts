@@ -1,12 +1,12 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { IgxNavbarComponent, IgxNavbarActionDirective, IgxButtonDirective, IgxIconComponent } from '@infragistics/igniteui-angular';
+import { IgxNavbarComponent, IgxNavbarActionDirective, IgxButtonDirective, IgxIconComponent, IgxIconButtonDirective } from '@infragistics/igniteui-angular';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     standalone: true,
-    imports: [IgxNavbarComponent, IgxNavbarActionDirective, IgxButtonDirective, IgxIconComponent]
+    imports: [IgxNavbarComponent, IgxNavbarActionDirective, IgxButtonDirective, IgxIconComponent, IgxIconButtonDirective]
 })
 export class HeaderComponent implements OnInit {
     @Output() themeChanged = new EventEmitter();

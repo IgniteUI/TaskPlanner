@@ -41,13 +41,13 @@
                       </div>
 
                       <div>
-                          <button igxButton="icon" class="button" [disabled]="!hasTransactions" (click)="openCommitDialog()">
+                          <button igxIconButton="flat" class="button" [disabled]="!hasTransactions" (click)="openCommitDialog()">
                               <igx-icon>check</igx-icon>
                           </button>
-                          <button igxButton="icon" class="button" [disabled]="!undoEnabled" (click)="undo()">
+                          <button igxIconButton="flat" class="button" [disabled]="!undoEnabled" (click)="undo()">
                               <igx-icon>undo</igx-icon>
                           </button>
-                          <button igxButton="icon" class="button" [disabled]="!redoEnabled" (click)="redo()">
+                          <button igxIconButton="flat" class="button" [disabled]="!redoEnabled" (click)="redo()">
                               <igx-icon>redo</igx-icon>
                           </button>
                       </div>
