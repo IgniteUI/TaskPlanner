@@ -6,6 +6,12 @@
 
 @use '@infragistics/igniteui-angular/theming' as *;
 @forward '@infragistics/igniteui-angular/theming';
+// Specifies large size for all components to match the previous defaults
+// This may not be needed for your project. Please consult https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/update-guide for more details.
+:root {
+    --ig-size: var(--ig-size-large);
+}
+
 
 html,
 body {
@@ -21,19 +27,19 @@ body {
 @include typography();
 
 .resolved {
-	@include badge($badge-resolved);
+	@include tokens($badge-resolved);
 }
 
 .inreview {
-	@include badge($badge-inreview);
+	@include tokens($badge-inreview);
 }
 
 .delayed {
-	@include badge($badge-delayed);
+	@include tokens($badge-delayed);
 }
 
 .indevelopment {
-	@include badge($badge-indevelopment);
+	@include tokens($badge-indevelopment);
 }
 
 .igx-button--raised {

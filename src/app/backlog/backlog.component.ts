@@ -1,9 +1,9 @@
 import { Component, ViewChild, EventEmitter, Output, OnInit, Input } from '@angular/core';
-import { IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions, IgxIconButtonDirective } from 'igniteui-angular';
+import { IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions, IgxIconButtonDirective } from '@infragistics/igniteui-angular';
 import { ITask } from '../interfaces';
 import { NgIf, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IgxCardComponent, IgxCardHeaderComponent, IgxCardHeaderTitleDirective, IgxDividerDirective, IgxCardContentDirective, IgxInputGroupComponent, IgxInputDirective, IgxPrefixDirective, IgxIconComponent, IgxSuffixDirective, IgxListComponent as IgxListComponent_1, IgxListItemComponent, IgxDragDirective, IgxDragHandleDirective, IgxListLineTitleDirective, IgxListLineSubTitleDirective, IgxButtonDirective, IgxDataLoadingTemplateDirective, IgxEmptyListTemplateDirective, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxFilterPipe } from '@infragistics/igniteui-angular';
+import { IgxCardComponent, IgxCardHeaderComponent, IgxCardHeaderTitleDirective, IgxDividerComponent, IgxCardContentDirective, IgxInputGroupComponent, IgxInputDirective, IgxPrefixDirective, IgxIconComponent, IgxSuffixDirective, IgxListComponent as IgxListComponent_1, IgxListItemComponent, IgxDragDirective, IgxDragHandleDirective, IgxListLineTitleDirective, IgxListLineSubTitleDirective, IgxDataLoadingTemplateDirective, IgxEmptyListTemplateDirective, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxFilterPipe } from '@infragistics/igniteui-angular';
 
 export interface IListItemAction {
     action: string;
@@ -19,7 +19,7 @@ export interface IListItemAction {
         IgxCardComponent,
         IgxCardHeaderComponent,
         IgxCardHeaderTitleDirective,
-        IgxDividerDirective,
+        IgxDividerComponent,
         IgxCardContentDirective,
         IgxInputGroupComponent,
         FormsModule,
@@ -35,7 +35,6 @@ export interface IListItemAction {
         IgxDragHandleDirective,
         IgxListLineTitleDirective,
         IgxListLineSubTitleDirective,
-        IgxButtonDirective,
         IgxDataLoadingTemplateDirective,
         IgxEmptyListTemplateDirective,
         IgxOverlayOutletDirective_1,

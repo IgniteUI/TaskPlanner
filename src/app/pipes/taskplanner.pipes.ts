@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { ITask } from '../interfaces';
-import { CellType } from 'igniteui-angular';
+import { CellType } from '@infragistics/igniteui-angular';
 import { DatePipe } from '@angular/common';
 
 @Pipe({
@@ -122,9 +122,9 @@ export class MilestonePipe implements PipeTransform {
     standalone: true
 })
 export class FilterTasksPipe implements PipeTransform {
-    transform(data: ITask[], groupRowValue: string): ITask[] {
+    transform(data: ITask[], groupRowValue: string): Array<{ name: string; items: number; cssClass: string }> {
         const groupedData = data.filter(rec => rec.milestone === groupRowValue);
-        return groupedData.reduce((acc, val) => {
+        return groupedData.reduce<Array<{ name: string; items: number; cssClass: string }>>((acc, val) => {
             // Return task status without whitespace in order to be used for class name
             const status = new StatusLabelPipe().transform(val.labels);
             const cssClass = status?.replace(/\s/g, '').toLowerCase();

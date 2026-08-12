@@ -11,7 +11,7 @@ import {
     Transaction,
     OverlaySettings,
     IgxOverlayOutletDirective,
-    IDropDroppedEventArgs,
+    IDropBaseEventArgs,
     DateRangeType,
     FilteringStrategy,
     IgxColumnComponent,
@@ -23,7 +23,7 @@ import {
     IgxIconButtonDirective,
     IgxSummaryOperand,
     IgxSummaryResult
-} from 'igniteui-angular';
+} from '@infragistics/igniteui-angular';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
@@ -129,7 +129,6 @@ export class TaskPlannerComponent implements OnInit {
     public editTaskForm = {} as ITask;
     public transactionsData: Transaction[] = [];
     public batchEditingData: ITask[];
-    public inputType = 'material';
     public selectOptions = [5, 15, 20, 50];
     public disabledDates = [{
         dateRange: [new Date()],
@@ -502,7 +501,6 @@ export class TaskPlannerComponent implements OnInit {
 
     public toggleTheme() {
         this.darkTheme = !this.darkTheme;
-        this.inputType = this.darkTheme ? 'material' : 'fluent';
     }
 
     public onBacklogItemAction(event: IListItemAction) {
@@ -523,7 +521,7 @@ export class TaskPlannerComponent implements OnInit {
         }
     }
 
-    public onDropContainerEnterLeave(event: IDropDroppedEventArgs) {
+    public onDropContainerEnterLeave(event: IDropBaseEventArgs) {
         this.toggleGroupRowHighlight();
     }
 

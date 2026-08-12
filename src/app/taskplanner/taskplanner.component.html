@@ -26,7 +26,7 @@
                 [sortHeaderIconTemplate]="sortIcon"
                 [sortAscendingHeaderIconTemplate]="sortAscIcon"
                 [sortDescendingHeaderIconTemplate]="sortDescIcon">
-<igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage" [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity" ></igx-paginator>
+<igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="grid.perPage" [selectOptions]="selectOptions" ></igx-paginator>
 
                 <igx-grid-toolbar>
 
@@ -78,7 +78,7 @@
                             <div class="tp-app__row-details-col">
                                 <div class="tp-app__row-details-col-item">
                                     <span class="tp-app__row-details-title tp-app__row-details-title--comments">Task Comments</span>
-                                    <igx-input-group [type]="inputType">
+                                    <igx-input-group type="border">
                                         <textarea readonly name="description" ngDefaultControl igxInput rows="8" cols="50" [(ngModel)]="dataItem.body" placeholder="Enter any details here."></textarea>
                                     </igx-input-group>
                                 </div>
@@ -132,7 +132,9 @@
                         {{ value | statusLabel }}
                     </ng-template>
                     <ng-template *ngIf="c.field === 'labels'" igxCellEditor let-cell="cell" let-value>
-                        <igx-select ngDefaultControl [placeholder]="value | statusLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                        <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="line" ngDefaultControl [placeholder]="value | statusLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                             <igx-select-item *ngFor="let s of statuses" [value]="s.value">{{ s.value }}</igx-select-item>
                         </igx-select>
                     </ng-template>
@@ -148,7 +150,9 @@
                     </ng-template>
 
                     <ng-template *ngIf="c.field === 'assignee.login'" igxCellEditor let-cell="cell" let-value>
-                        <igx-select [placeholder]="value" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                        <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="line" [placeholder]="value" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                             <igx-select-item *ngFor="let m of teamMembers" [value]="m.login">
                             <div class="item">
                                 <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" shape="circle" size="small"></igx-avatar>
@@ -175,7 +179,9 @@
                         {{ cell | priorityLabel }}
                     </ng-template>
                     <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
-                        <igx-select ngDefaultControl [placeholder]="cell | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                        <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="line" ngDefaultControl [placeholder]="cell | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                             <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                         </igx-select>
                     </ng-template>
@@ -263,12 +269,14 @@
             [closeOnOutsideSelect]="false">
 
             <div class="tp-app__dialog-content">
-                <igx-input-group [type]="inputType" type="border" #MyInputGroup>
+                <igx-input-group type="border" #MyInputGroup>
                     <label igxLabel for="issue">Issue Title</label>
                     <input ngDefaultControl igxInput id="issue" type="text" [(ngModel)]="addTaskForm.title" required/>
                 </igx-input-group>
 
-                <igx-select type="border" ngDefaultControl placeholder="Owner" [(ngModel)]="addTaskForm.assignee" [overlaySettings]="overlaySettings">
+                <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="border" ngDefaultControl placeholder="Owner" [(ngModel)]="addTaskForm.assignee" [overlaySettings]="overlaySettings">
                     <igx-select-item *ngFor="let m of teamMembers" [value]="m.login">
                         <div class="item">
                           <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" shape="circle" size="small"></igx-avatar>
@@ -279,21 +287,23 @@
                       </igx-select-item>
                 </igx-select>
 
-                <igx-input-group [type]="inputType" type="border">
+                <igx-input-group type="border">
                     <label igxLabel for="description">Description</label>
                     <textarea rows="4" cols="50" igxInput ngDefaultControl name="desc" [(ngModel)]="addTaskForm.body"></textarea>
                 </igx-input-group>
 
-                <igx-select type="border" ngDefaultControl placeholder="Priority" [(ngModel)]="addTaskForm.priority" [overlaySettings]="overlaySettings">
+                <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="border" ngDefaultControl placeholder="Priority" [(ngModel)]="addTaskForm.priority" [overlaySettings]="overlaySettings">
                     <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                 </igx-select>
 
-                <igx-input-group [type]="inputType" type="border">
+                <igx-input-group type="border">
                     <label igxLabel for="milestone">Milestone</label>
                     <input igxInput ngDefaultControl id="milestone" type="text" [(ngModel)]="addTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
                 </igx-input-group>
 
-                <igx-date-picker name="deadline" ngDefaultControl [(ngModel)]="addTaskForm.deadline" [outlet]="outlet"
+                <igx-date-picker type="line" name="deadline" ngDefaultControl [(ngModel)]="addTaskForm.deadline" [outlet]="outlet"
                     [formatter]="formatDate" aria-required="required" required
                     [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, addTaskForm)" mode="dialog">
 
@@ -309,7 +319,7 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
 Label, prefix, suffix and hint can now be projected directly.
 See https://www.infragistics.com/products/ignite-ui-angular/angular/components/date-picker -->
 <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
-                        <igx-input-group [type]="inputType" type="border" (click)="openDialog()">
+                        <igx-input-group type="border" (click)="openDialog()">
                             <label igxLabel>Deadline</label>
                             <input igxInput [value]="displayData" />
                             <igx-prefix>
@@ -330,12 +340,14 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
             [closeOnOutsideSelect]="false">
 
             <div class="tp-app__dialog-content">
-              <igx-input-group [type]="inputType" type="border" #MyInputGroup>
+              <igx-input-group type="border" #MyInputGroup>
                   <label igxLabel for="newIssue">Issue Title</label>
                   <input igxInput id="newIssue" ngDefaultControl type="text" [(ngModel)]="editTaskForm.title" required/>
               </igx-input-group>
 
-              <igx-select type="border" ngDefaultControl placeholder="Owner" [(ngModel)]="editTaskForm.assignee" [overlaySettings]="overlaySettings" required>
+              <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="border" ngDefaultControl placeholder="Owner" [(ngModel)]="editTaskForm.assignee" [overlaySettings]="overlaySettings" required>
                     <igx-select-item *ngFor="let m of teamMembers" [value]="m">
                     <div class="item">
                         <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" shape="circle" size="small"></igx-avatar>
@@ -346,21 +358,23 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                     </igx-select-item>
               </igx-select>
 
-              <igx-input-group [type]="inputType" type="border">
+              <igx-input-group type="border">
                   <label igxLabel for="description">Description</label>
                   <textarea rows="4" cols="50" ngDefaultControl igxInput name="desc" [(ngModel)]="editTaskForm.body"></textarea>
               </igx-input-group>
 
-              <igx-select type="border" ngDefaultControl placeholder="Priority" [(ngModel)]="editTaskForm.priority" [overlaySettings]="overlaySettings">
+              <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="border" ngDefaultControl placeholder="Priority" [(ngModel)]="editTaskForm.priority" [overlaySettings]="overlaySettings">
                   <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
               </igx-select>
 
-              <igx-input-group [type]="inputType" type="border">
+              <igx-input-group type="border">
                   <label igxLabel for="newMilestone">Milestone</label>
                   <input igxInput id="newMilestone" ngDefaultControl type="text" [(ngModel)]="editTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
               </igx-input-group>
 
-              <igx-date-picker name="deadline" ngDefaultControl [(ngModel)]="editTaskForm.deadline" [outlet]="outlet"
+              <igx-date-picker type="line" name="deadline" ngDefaultControl [(ngModel)]="editTaskForm.deadline" [outlet]="outlet"
                     [formatter]="formatDate" aria-required="required" required
                     [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, editTaskForm)" mode="dialog">
 
@@ -376,7 +390,7 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
 Label, prefix, suffix and hint can now be projected directly.
 See https://www.infragistics.com/products/ignite-ui-angular/angular/components/date-picker -->
 <ng-template igxDatePickerTemplate let-openDialog="openDialog" let-value="value" let-displayData="displayData">
-                        <igx-input-group [type]="inputType" type="border" (click)="openDialog()">
+                        <igx-input-group type="border" (click)="openDialog()">
                             <label igxLabel>Deadline</label>
                             <input igxInput [value]="displayData" />
                             <igx-prefix>
@@ -459,7 +473,9 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                           {{ value | statusLabel }}
                         </ng-template>
                         <ng-template *ngIf="c.field === 'labels'" igxCellEditor let-cell="cell" let-value>
-                            <igx-select [placeholder]="value | statusLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                            <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="line" [placeholder]="value | statusLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                                 <igx-select-item *ngFor="let s of statuses" [value]="s.value">{{ s.value }}</igx-select-item>
                             </igx-select>
                         </ng-template>
@@ -475,7 +491,9 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                         </ng-template>
 
                         <ng-template *ngIf="c.field === 'assignee'" igxCellEditor let-cell="cell" let-value>
-                            <igx-select [placeholder]="value.login" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                            <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="line" [placeholder]="value.login" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                                 <igx-select-item *ngFor="let m of teamMembers" [value]="m.login">
                                 <div class="item">
                                     <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" shape="circle" size="small"></igx-avatar>
@@ -502,7 +520,9 @@ See https://www.infragistics.com/products/ignite-ui-angular/angular/components/d
                             {{ cell | priorityLabel }}
                         </ng-template>
                         <ng-template *ngIf="c.field === 'priority'" igxCellEditor let-cell="cell" let-value>
-                            <igx-select [placeholder]="cell | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
+                            <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
+     To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
+<igx-select type="line" [placeholder]="cell | priorityLabel" [(ngModel)]="cell.editValue" [overlaySettings]="overlaySettings">
                                 <igx-select-item *ngFor="let p of priority" [value]="p.value">{{ p.value }}</igx-select-item>
                             </igx-select>
                         </ng-template>

@@ -9,7 +9,7 @@ import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http'
 import { IgxDialogModule, IgxButtonModule, IgxGridModule, IgxMaskModule, IgxToastModule, IgxAvatarModule, IgxIconModule, IgxFilterModule, IgxNavbarModule, IgxDividerModule, IgxTabsModule, IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule, IgxSelectModule, IgxDatePickerModule, IgxDragDropModule, IgxOverlayOutletDirective, IgxCheckboxModule, IgxDropDownModule, IgxToggleModule, IgxBadgeModule, IgxProgressBarModule } from '@infragistics/igniteui-angular';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app/app-routing.module';
-import { BrowserModule, HammerModule, bootstrapApplication } from '@angular/platform-browser';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { TasksDataService } from './app/services/tasks.service';
 
 if (environment.production) {
@@ -18,7 +18,7 @@ if (environment.production) {
 
 bootstrapApplication(TaskPlannerComponent, {
     providers: [
-        importProvidersFrom(BrowserModule, AppRoutingModule, IgxDialogModule, IgxButtonModule, IgxGridModule, IgxMaskModule, IgxToastModule, IgxAvatarModule, IgxIconModule, IgxFilterModule, IgxNavbarModule, IgxDividerModule, IgxTabsModule, IgxToastModule, FormsModule, IgxMaskModule, IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule, HammerModule, IgxSelectModule, IgxDatePickerModule, IgxDragDropModule, IgxOverlayOutletDirective, IgxCheckboxModule, IgxDropDownModule, IgxToggleModule, IgxBadgeModule, IgxProgressBarModule),
+        importProvidersFrom(BrowserModule, AppRoutingModule, IgxDialogModule, IgxButtonModule, IgxGridModule, IgxMaskModule, IgxToastModule, IgxAvatarModule, IgxIconModule, IgxFilterModule, IgxNavbarModule, IgxDividerModule, IgxTabsModule, IgxToastModule, FormsModule, IgxMaskModule, IgxInputGroupModule, IgxButtonGroupModule, IgxSwitchModule, IgxCardModule, IgxListModule, IgxSelectModule, IgxDatePickerModule, IgxDragDropModule, IgxOverlayOutletDirective, IgxCheckboxModule, IgxDropDownModule, IgxToggleModule, IgxBadgeModule, IgxProgressBarModule),
         TasksDataService,
         provideAnimations(),
         provideHttpClient(withInterceptorsFromDi()),
