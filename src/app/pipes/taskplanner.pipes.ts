@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { ITask } from '../interfaces';
-import { CellType } from 'igniteui-angular';
+import { CellType } from '@infragistics/igniteui-angular/grids/core';
 import { DatePipe } from '@angular/common';
 
 @Pipe({

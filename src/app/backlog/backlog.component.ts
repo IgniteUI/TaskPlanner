@@ -1,9 +1,16 @@
-import { Component, ViewChild, EventEmitter, Output, OnInit, Input } from '@angular/core';
-import { IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions, IgxIconButtonDirective } from 'igniteui-angular';
+import { Component, ViewChild, EventEmitter, Output, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { IgxListComponent } from '@infragistics/igniteui-angular/list';
+import { IgxOverlayOutletDirective, OverlaySettings } from '@infragistics/igniteui-angular/core';
+import { IgxFilterOptions, IgxIconButtonDirective } from '@infragistics/igniteui-angular/directives';
 import { ITask } from '../interfaces';
-import { NgIf, NgFor } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
-import { IgxCardComponent, IgxCardHeaderComponent, IgxCardHeaderTitleDirective, IgxDividerDirective, IgxCardContentDirective, IgxInputGroupComponent, IgxInputDirective, IgxPrefixDirective, IgxIconComponent, IgxSuffixDirective, IgxListComponent as IgxListComponent_1, IgxListItemComponent, IgxDragDirective, IgxDragHandleDirective, IgxListLineTitleDirective, IgxListLineSubTitleDirective, IgxButtonDirective, IgxDataLoadingTemplateDirective, IgxEmptyListTemplateDirective, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxFilterPipe } from '@infragistics/igniteui-angular';
+import { IgxCardComponent, IgxCardContentDirective, IgxCardHeaderComponent, IgxCardHeaderTitleDirective } from '@infragistics/igniteui-angular/card';
+import { IgxOverlayOutletDirective as IgxOverlayOutletDirective_1 } from '@infragistics/igniteui-angular/core';
+import { IgxInputDirective, IgxInputGroupComponent, IgxPrefixDirective, IgxSuffixDirective } from '@infragistics/igniteui-angular/input-group';
+import { IgxIconComponent } from '@infragistics/igniteui-angular/icon';
+import { IgxDataLoadingTemplateDirective, IgxEmptyListTemplateDirective, IgxListComponent as IgxListComponent_1, IgxListItemComponent, IgxListLineSubTitleDirective, IgxListLineTitleDirective } from '@infragistics/igniteui-angular/list';
+import { IgxButtonDirective, IgxDividerDirective, IgxDragDirective, IgxDragHandleDirective, IgxFilterPipe } from '@infragistics/igniteui-angular/directives';
 
 export interface IListItemAction {
     action: string;
@@ -14,34 +21,32 @@ export interface IListItemAction {
     selector: 'app-backlog',
     templateUrl: './backlog.component.html',
     styleUrls: ['./backlog.component.scss'],
-    standalone: true,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
-        IgxCardComponent,
-        IgxCardHeaderComponent,
-        IgxCardHeaderTitleDirective,
-        IgxDividerDirective,
-        IgxCardContentDirective,
-        IgxInputGroupComponent,
-        FormsModule,
-        IgxInputDirective,
-        IgxPrefixDirective,
-        IgxIconComponent,
-        NgIf,
-        IgxSuffixDirective,
-        IgxListComponent_1,
-        NgFor,
-        IgxListItemComponent,
-        IgxDragDirective,
-        IgxDragHandleDirective,
-        IgxListLineTitleDirective,
-        IgxListLineSubTitleDirective,
-        IgxButtonDirective,
-        IgxDataLoadingTemplateDirective,
-        IgxEmptyListTemplateDirective,
-        IgxOverlayOutletDirective_1,
-        IgxFilterPipe,
-        IgxIconButtonDirective
-    ],
+    IgxCardComponent,
+    IgxCardHeaderComponent,
+    IgxCardHeaderTitleDirective,
+    IgxDividerDirective,
+    IgxCardContentDirective,
+    IgxInputGroupComponent,
+    FormsModule,
+    IgxInputDirective,
+    IgxPrefixDirective,
+    IgxIconComponent,
+    IgxSuffixDirective,
+    IgxListComponent_1,
+    IgxListItemComponent,
+    IgxDragDirective,
+    IgxDragHandleDirective,
+    IgxListLineTitleDirective,
+    IgxListLineSubTitleDirective,
+    IgxButtonDirective,
+    IgxDataLoadingTemplateDirective,
+    IgxEmptyListTemplateDirective,
+    IgxOverlayOutletDirective_1,
+    IgxFilterPipe,
+    IgxIconButtonDirective
+]
 })
 export class BacklogComponent implements OnInit  {
     public tasks: ITask[];

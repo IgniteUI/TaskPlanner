@@ -6,6 +6,12 @@
 
 @use '@infragistics/igniteui-angular/theming' as *;
 @forward '@infragistics/igniteui-angular/theming';
+// Specifies large size for all components to match the previous defaults
+// This may not be needed for your project. Please consult https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/update-guide for more details.
+:root {
+    --ig-size: var(--ig-size-large);
+}
+
 
 html,
 body {
@@ -21,19 +27,19 @@ body {
 @include typography();
 
 .resolved {
-	@include badge($badge-resolved);
+	@include tokens($badge-resolved);
 }
 
 .inreview {
-	@include badge($badge-inreview);
+	@include tokens($badge-inreview);
 }
 
 .delayed {
-	@include badge($badge-delayed);
+	@include tokens($badge-delayed);
 }
 
 .indevelopment {
-	@include badge($badge-indevelopment);
+	@include tokens($badge-indevelopment);
 }
 
 .igx-button--raised {
@@ -107,13 +113,13 @@ body {
 
 .tp-app-light-theme {
 	@include fluent-light-theme($palette: $tp-light-palette);
-	@include css-vars($tp-light-icon);
-	@include css-vars($tp-light-card);
-	@include css-vars($tp-light-grid);
-	@include css-vars($tp-light-tabs);
+	@include tokens($tp-light-icon, $mode: 'scoped');
+	@include tokens($tp-light-card, $mode: 'scoped');
+	@include tokens($tp-light-grid, $mode: 'scoped');
+	@include tokens($tp-light-tabs, $mode: 'scoped');
 
 	igx-navbar {
-		@include css-vars($tp-light-header-button);
+		@include tokens($tp-light-header-button, $mode: 'scoped');
 	}
 
 	[type="search"] {
@@ -192,19 +198,19 @@ body {
 	background: $tp-grays-gradient;
 	color: #ccc;
 	@include theme($palette: $tp-palette);
-	@include css-vars($tp-grid);
-	@include css-vars($tp-toolbar);
-	@include css-vars($tp-paginator);
-	@include css-vars($tp-button);
-	@include css-vars($tp-card);
-	@include css-vars($tp-input-group);
-	@include css-vars($tp-list);
-	@include css-vars($tp-tabs);
-	@include css-vars($tp-icon);
-	@include css-vars($tp-checkbox);
-	@include css-vars($tp-navbar);
-	@include css-vars($tp-dialog);
-	@include css-vars($tp-drop-down);
+	@include tokens($tp-grid, $mode: 'scoped');
+	@include tokens($tp-toolbar, $mode: 'scoped');
+	@include tokens($tp-paginator, $mode: 'scoped');
+	@include tokens($tp-button, $mode: 'scoped');
+	@include tokens($tp-card, $mode: 'scoped');
+	@include tokens($tp-input-group, $mode: 'scoped');
+	@include tokens($tp-list, $mode: 'scoped');
+	@include tokens($tp-tabs, $mode: 'scoped');
+	@include tokens($tp-icon, $mode: 'scoped');
+	@include tokens($tp-checkbox, $mode: 'scoped');
+	@include tokens($tp-navbar, $mode: 'scoped');
+	@include tokens($tp-dialog, $mode: 'scoped');
+	@include tokens($tp-drop-down, $mode: 'scoped');
 
 	.tp-app__drop-area-entered {
 		opacity: 0.3;

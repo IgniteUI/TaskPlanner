@@ -1,37 +1,35 @@
-import { Component, OnInit, ViewChild, HostBinding } from '@angular/core';
+import { Component, OnInit, ViewChild, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 import { ControlContainer, NgForm, FormsModule } from '@angular/forms';
-import {
-    DefaultSortingStrategy,
-    IGridEditEventArgs,
-    IgxDialogComponent,
-    IgxDropDownComponent,
-    IgxGridComponent,
-    IgxToastComponent,
-    ISelectionEventArgs,
-    Transaction,
-    OverlaySettings,
-    IgxOverlayOutletDirective,
-    IDropDroppedEventArgs,
-    DateRangeType,
-    FilteringStrategy,
-    IgxColumnComponent,
-    IFilteringExpressionsTree,
-    IFilteringExpression,
-    CellType,
-    SortingDirection,
-    ISortingOptions,
-    IgxIconButtonDirective,
-    IgxSummaryOperand,
-    IgxSummaryResult
-} from 'igniteui-angular';
+import { DateRangeType, DefaultSortingStrategy, FilteringStrategy, IFilteringExpression, IFilteringExpressionsTree, ISortingOptions, IgxOverlayOutletDirective, IgxSummaryResult, OverlaySettings, SortingDirection, Transaction } from '@infragistics/igniteui-angular/core';
+import { CellType, IGridEditEventArgs, IgxColumnComponent, IgxSummaryOperand } from '@infragistics/igniteui-angular/grids/core';
+import { IgxDialogComponent } from '@infragistics/igniteui-angular/dialog';
+import { ISelectionEventArgs, IgxDropDownComponent } from '@infragistics/igniteui-angular/drop-down';
+import { IgxGridComponent } from '@infragistics/igniteui-angular/grids/grid';
+import { IgxToastComponent } from '@infragistics/igniteui-angular/toast';
+import { IDropDroppedEventArgs, IgxIconButtonDirective } from '@infragistics/igniteui-angular/directives';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
 import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
 import { ITask, ITeamMember } from '../interfaces';
 import { StatusLabelPipe, PriorityLabelPipe, MilestonePipe, PlaceholderPipe, DeadlinePipe, FilterTasksPipe } from '../pipes/taskplanner.pipes';
-import { DatePipe, NgFor, NgIf, PercentPipe } from '@angular/common';
-import { IgxGridComponent as IgxGridComponent_1, IgxDropDirective, IgxPaginatorComponent, IgxGridToolbarComponent, IgxGridToolbarTitleComponent, IgxGridToolbarActionsComponent, IgxGridToolbarHidingComponent, IgxGridToolbarPinningComponent, IgxGridToolbarExporterComponent, IgxButtonDirective, IgxIconComponent, IgxToggleActionDirective, IgxDropDownItemNavigationDirective, IgxDropDownComponent as IgxDropDownComponent_1, IgxDropDownItemComponent, IgxGridDetailTemplateDirective, IgxInputGroupComponent, IgxInputDirective, IgxCheckboxComponent, IgxGroupByRowTemplateDirective, IgxBadgeComponent, IgxColumnComponent as IgxColumnComponent_1, IgxColumnRequiredValidatorDirective, IgxColumnMinLengthValidatorDirective, IgxCellTemplateDirective, IgxCellEditorTemplateDirective, IgxSelectComponent, IgxSelectItemComponent, IgxAvatarComponent, IgxLinearProgressBarComponent, IgxSummaryTemplateDirective, IgxToastComponent as IgxToastComponent_1, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxDialogComponent as IgxDialogComponent_1, IgxLabelDirective, IgxMaskDirective, IgxDatePickerComponent, IgxPrefixDirective } from '@infragistics/igniteui-angular';
+import { DatePipe, PercentPipe } from '@angular/common';
+import { IgxGridComponent as IgxGridComponent_1 } from '@infragistics/igniteui-angular/grids/grid';
+import { IgxButtonDirective, IgxDropDirective, IgxMaskDirective, IgxToggleActionDirective } from '@infragistics/igniteui-angular/directives';
+import { IgxPaginatorComponent } from '@infragistics/igniteui-angular/paginator';
+import { IgxCellEditorTemplateDirective, IgxCellTemplateDirective, IgxColumnComponent as IgxColumnComponent_1, IgxColumnMinLengthValidatorDirective, IgxColumnRequiredValidatorDirective, IgxGridDetailTemplateDirective, IgxGridToolbarActionsComponent, IgxGridToolbarComponent, IgxGridToolbarExporterComponent, IgxGridToolbarHidingComponent, IgxGridToolbarPinningComponent, IgxGridToolbarTitleComponent, IgxGroupByRowTemplateDirective, IgxSummaryTemplateDirective } from '@infragistics/igniteui-angular/grids/core';
+import { IgxIconComponent } from '@infragistics/igniteui-angular/icon';
+import { IgxDropDownComponent as IgxDropDownComponent_1, IgxDropDownItemComponent, IgxDropDownItemNavigationDirective } from '@infragistics/igniteui-angular/drop-down';
+import { IgxInputDirective, IgxInputGroupComponent, IgxLabelDirective, IgxPrefixDirective } from '@infragistics/igniteui-angular/input-group';
+import { IgxCheckboxComponent } from '@infragistics/igniteui-angular/checkbox';
+import { IgxBadgeComponent } from '@infragistics/igniteui-angular/badge';
+import { IgxSelectComponent, IgxSelectItemComponent } from '@infragistics/igniteui-angular/select';
+import { IgxAvatarComponent } from '@infragistics/igniteui-angular/avatar';
+import { IgxLinearProgressBarComponent } from '@infragistics/igniteui-angular/progressbar';
+import { IgxToastComponent as IgxToastComponent_1 } from '@infragistics/igniteui-angular/toast';
+import { IgxOverlayOutletDirective as IgxOverlayOutletDirective_1 } from '@infragistics/igniteui-angular/core';
+import { IgxDialogComponent as IgxDialogComponent_1 } from '@infragistics/igniteui-angular/dialog';
+import { IgxDatePickerComponent } from '@infragistics/igniteui-angular/date-picker';
 import { HeaderComponent } from '../header/header.component';
 
 export enum editMode {
@@ -47,60 +45,58 @@ export enum editMode {
     selector: 'app-taskplanner',
     templateUrl: './taskplanner.component.html',
     styleUrls: ['./taskplanner.component.scss'],
-    standalone: true,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
-        HeaderComponent,
-        BacklogComponent,
-        IgxGridComponent_1,
-        IgxDropDirective,
-        IgxPaginatorComponent,
-        IgxGridToolbarComponent,
-        IgxGridToolbarTitleComponent,
-        IgxGridToolbarActionsComponent,
-        IgxGridToolbarHidingComponent,
-        IgxGridToolbarPinningComponent,
-        IgxGridToolbarExporterComponent,
-        IgxButtonDirective,
-        IgxIconComponent,
-        IgxToggleActionDirective,
-        IgxDropDownItemNavigationDirective,
-        IgxDropDownComponent_1,
-        NgFor,
-        IgxDropDownItemComponent,
-        IgxGridDetailTemplateDirective,
-        IgxInputGroupComponent,
-        FormsModule,
-        IgxInputDirective,
-        IgxCheckboxComponent,
-        IgxGroupByRowTemplateDirective,
-        IgxBadgeComponent,
-        IgxColumnComponent_1,
-        IgxColumnRequiredValidatorDirective,
-        IgxColumnMinLengthValidatorDirective,
-        NgIf,
-        IgxCellTemplateDirective,
-        IgxCellEditorTemplateDirective,
-        IgxSelectComponent,
-        IgxSelectItemComponent,
-        IgxAvatarComponent,
-        IgxLinearProgressBarComponent,
-        IgxSummaryTemplateDirective,
-        IgxToastComponent_1,
-        IgxOverlayOutletDirective_1,
-        IgxDialogComponent_1,
-        IgxLabelDirective,
-        IgxMaskDirective,
-        IgxDatePickerComponent,
-        IgxPrefixDirective,
-        PercentPipe,
-        DatePipe,
-        StatusLabelPipe,
-        PriorityLabelPipe,
-        PlaceholderPipe,
-        DeadlinePipe,
-        FilterTasksPipe,
-        IgxIconButtonDirective
-    ],
+    HeaderComponent,
+    BacklogComponent,
+    IgxGridComponent_1,
+    IgxDropDirective,
+    IgxPaginatorComponent,
+    IgxGridToolbarComponent,
+    IgxGridToolbarTitleComponent,
+    IgxGridToolbarActionsComponent,
+    IgxGridToolbarHidingComponent,
+    IgxGridToolbarPinningComponent,
+    IgxGridToolbarExporterComponent,
+    IgxButtonDirective,
+    IgxIconComponent,
+    IgxToggleActionDirective,
+    IgxDropDownItemNavigationDirective,
+    IgxDropDownComponent_1,
+    IgxDropDownItemComponent,
+    IgxGridDetailTemplateDirective,
+    IgxInputGroupComponent,
+    FormsModule,
+    IgxInputDirective,
+    IgxCheckboxComponent,
+    IgxGroupByRowTemplateDirective,
+    IgxBadgeComponent,
+    IgxColumnComponent_1,
+    IgxColumnRequiredValidatorDirective,
+    IgxColumnMinLengthValidatorDirective,
+    IgxCellTemplateDirective,
+    IgxCellEditorTemplateDirective,
+    IgxSelectComponent,
+    IgxSelectItemComponent,
+    IgxAvatarComponent,
+    IgxLinearProgressBarComponent,
+    IgxSummaryTemplateDirective,
+    IgxToastComponent_1,
+    IgxOverlayOutletDirective_1,
+    IgxDialogComponent_1,
+    IgxLabelDirective,
+    IgxMaskDirective,
+    IgxDatePickerComponent,
+    IgxPrefixDirective,
+    PercentPipe,
+    DatePipe,
+    StatusLabelPipe,
+    PriorityLabelPipe,
+    PlaceholderPipe,
+    DeadlinePipe,
+    FilterTasksPipe,
+    IgxIconButtonDirective
+]
 })
 export class TaskPlannerComponent implements OnInit {
     @HostBinding('class.tp-app')
@@ -403,7 +399,7 @@ export class TaskPlannerComponent implements OnInit {
             }
             case 'status': {
                 if (event.newValue === 'Completed') {
-                    this.grid.getRowByKey(event.rowID).data.isActive = false;
+                    this.grid.getRowByKey(event.rowKey).data.isActive = false;
                 }
             }
         }
