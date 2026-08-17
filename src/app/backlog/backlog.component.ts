@@ -10,7 +10,7 @@ import { IgxOverlayOutletDirective as IgxOverlayOutletDirective_1 } from '@infra
 import { IgxInputDirective, IgxInputGroupComponent, IgxPrefixDirective, IgxSuffixDirective } from '@infragistics/igniteui-angular/input-group';
 import { IgxIconComponent } from '@infragistics/igniteui-angular/icon';
 import { IgxDataLoadingTemplateDirective, IgxEmptyListTemplateDirective, IgxListComponent as IgxListComponent_1, IgxListItemComponent, IgxListLineSubTitleDirective, IgxListLineTitleDirective } from '@infragistics/igniteui-angular/list';
-import { IgxButtonDirective, IgxDividerDirective, IgxDragDirective, IgxDragHandleDirective, IgxFilterPipe } from '@infragistics/igniteui-angular/directives';
+import { IgxDividerDirective, IgxDragDirective, IgxDragHandleDirective, IgxFilterPipe, IgxRippleDirective } from '@infragistics/igniteui-angular/directives';
 
 export interface IListItemAction {
     action: string;
@@ -40,12 +40,12 @@ export interface IListItemAction {
     IgxDragHandleDirective,
     IgxListLineTitleDirective,
     IgxListLineSubTitleDirective,
-    IgxButtonDirective,
     IgxDataLoadingTemplateDirective,
     IgxEmptyListTemplateDirective,
     IgxOverlayOutletDirective_1,
     IgxFilterPipe,
-    IgxIconButtonDirective
+    IgxIconButtonDirective,
+    IgxRippleDirective
 ]
 })
 export class BacklogComponent implements OnInit  {

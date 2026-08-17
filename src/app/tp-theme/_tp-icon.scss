@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 $tp-icon: icon-theme(
 	$schema: $dark-schema,
 	$color: color($tp-palette, 'secondary')

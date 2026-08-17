@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 $tp-dialog: dialog-theme(
 	$schema: $dark-schema,
 	$border-radius: $tp-radius

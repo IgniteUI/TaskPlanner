@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 $tp-navbar: navbar-theme(
 	$schema: $dark-schema,
 	$background: color($tp-palette, 'surface')

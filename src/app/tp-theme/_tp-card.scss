@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 $tp-card: card-theme(
     $schema: $dark-schema,
     $border-radius: 16px

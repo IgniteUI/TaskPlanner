@@ -4,8 +4,9 @@
 @use "minireset.css/minireset" as *;
 @forward "minireset.css/minireset";
 
-@use '@infragistics/igniteui-angular/theming' as *;
-@forward '@infragistics/igniteui-angular/theming';
+// Forwards the Ignite UI theming library along with the app's custom themes
+@use "app/tp-theme" as *;
+@forward "app/tp-theme";
 // Specifies large size for all components to match the previous defaults
 // This may not be needed for your project. Please consult https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/update-guide for more details.
 :root {
@@ -20,8 +21,6 @@ body {
 }
 
 
-
-@import "app/tp-theme/index";
 
 @include core();
 @include typography();
@@ -118,8 +117,12 @@ body {
 	@include tokens($tp-light-grid, $mode: 'scoped');
 	@include tokens($tp-light-tabs, $mode: 'scoped');
 
+	// Global mode emits namespaced `--ig-*-button-*` tokens, which the buttons
+	// pick up through their fallback chain. Scoped mode would instead set the
+	// generic `--background` on igx-navbar itself and recolour the navbar.
 	igx-navbar {
-		@include tokens($tp-light-header-button, $mode: 'scoped');
+		@include tokens($tp-light-header-button);
+		@include tokens($tp-light-header-icon-button);
 	}
 
 	[type="search"] {
@@ -201,7 +204,10 @@ body {
 	@include tokens($tp-grid, $mode: 'scoped');
 	@include tokens($tp-toolbar, $mode: 'scoped');
 	@include tokens($tp-paginator, $mode: 'scoped');
-	@include tokens($tp-button, $mode: 'scoped');
+	@include tokens($tp-button-flat);
+	@include tokens($tp-button-contained);
+	@include tokens($tp-button-outlined);
+	@include tokens($tp-icon-button);
 	@include tokens($tp-card, $mode: 'scoped');
 	@include tokens($tp-input-group, $mode: 'scoped');
 	@include tokens($tp-list, $mode: 'scoped');
@@ -211,6 +217,13 @@ body {
 	@include tokens($tp-navbar, $mode: 'scoped');
 	@include tokens($tp-dialog, $mode: 'scoped');
 	@include tokens($tp-drop-down, $mode: 'scoped');
+
+	// The Material schema behind the dark theme packs the dialog actions into
+	// 0.5rem, which reads as cramped next to the Fluent light theme's 1.5rem.
+	// Dialog padding isn't exposed through `dialog-theme()`, so override it here.
+	.igx-dialog__window-actions {
+		padding: 0 1.5rem 1.5rem;
+	}
 
 	.tp-app__drop-area-entered {
 		opacity: 0.3;

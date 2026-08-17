@@ -1,4 +1,5 @@
-@import "../tp-theme/vars";
+@use "../tp-theme/vars" as *;
+
 ::ng-deep {
     .tp-app {
         height: 100%;

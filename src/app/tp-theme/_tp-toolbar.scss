@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 $tp-toolbar: grid-toolbar-theme(
     $schema: $dark-schema,
     $background: $tp-grays-gradient,

@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 import { IgxNavbarActionDirective, IgxNavbarComponent } from '@infragistics/igniteui-angular/navbar';
-import { IgxButtonDirective, IgxIconButtonDirective } from '@infragistics/igniteui-angular/directives';
+import { IgxButtonDirective, IgxIconButtonDirective, IgxRippleDirective } from '@infragistics/igniteui-angular/directives';
 import { IgxIconComponent } from '@infragistics/igniteui-angular/icon';
 
 @Component({
@@ -8,7 +8,7 @@ import { IgxIconComponent } from '@infragistics/igniteui-angular/icon';
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     changeDetection: ChangeDetectionStrategy.Eager,
-    imports: [IgxNavbarComponent, IgxNavbarActionDirective, IgxButtonDirective, IgxIconComponent, IgxIconButtonDirective]
+    imports: [IgxNavbarComponent, IgxNavbarActionDirective, IgxButtonDirective, IgxIconComponent, IgxIconButtonDirective, IgxRippleDirective]
 })
 export class HeaderComponent implements OnInit {
     @Output() themeChanged = new EventEmitter();

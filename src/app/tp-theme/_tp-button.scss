@@ -1,4 +1,11 @@
-$tp-button: button-theme(
+@use "vars" as *;
+
+// `button-theme()` is deprecated and produces a multi-variant map that the
+// `tokens()` mixin cannot emit, so each button variant needs its own theme.
+// `igxIconButton` (split off from `igxButton="icon"` in 17.1) has its own
+// theme functions as well and is no longer covered by the button themes.
+
+$tp-button-flat: flat-button-theme(
     $schema: $dark-schema,
     $border-radius: 20px,
     $foreground: #fff,
@@ -6,6 +13,34 @@ $tp-button: button-theme(
     $hover-foreground: color($tp-palette, 'secondary')
 );
 
-$tp-light-header-button: button-theme(
+$tp-button-contained: contained-button-theme(
+    $schema: $dark-schema,
+    $border-radius: 20px,
+    $foreground: #fff,
+    $background: transparent,
+    $hover-foreground: color($tp-palette, 'secondary')
+);
+
+$tp-button-outlined: outlined-button-theme(
+    $schema: $dark-schema,
+    $border-radius: 20px,
+    $foreground: #fff,
+    $background: transparent,
+    $hover-foreground: color($tp-palette, 'secondary')
+);
+
+$tp-icon-button: flat-icon-button-theme(
+    $schema: $dark-schema,
+    $foreground: #fff,
+    $background: transparent,
+    $hover-foreground: color($tp-palette, 'secondary')
+);
+
+$tp-light-header-button: contained-button-theme(
     $background: color($tp-light-palette, 'secondary')
+);
+
+$tp-light-header-icon-button: flat-icon-button-theme(
+    $foreground: color($tp-light-palette, 'secondary'),
+    $hover-foreground: color($tp-light-palette, 'secondary')
 );

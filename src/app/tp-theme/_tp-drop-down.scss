@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 $tp-drop-down: drop-down-theme(
 	$schema: $dark-schema,
 	$hover-item-background: $row-selected-background--hover,

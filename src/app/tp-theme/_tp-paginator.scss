@@ -1,3 +1,5 @@
+@use "vars" as *;
+
 $tp-paginator: paginator-theme(
     $schema: $dark-schema,
     $background: $tp-grays-gradient,
