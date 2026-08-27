@@ -1,11 +1,43 @@
-$tp-button: button-theme(
-    $schema: $dark-schema,
-    $border-radius: 20px,
-    $foreground: #fff,
-    $background: transparent,
-    $hover-foreground: color($tp-palette, 'secondary')
+@use '@infragistics/igniteui-angular/theming' as *;
+@use "vars" as *;
+
+// button-theme() is deprecated: it built all four variants from a single call.
+// The variant-specific functions each build one, so the same arguments are
+// fanned out to all four and emitted together (see styles.scss). Keys are
+// strings - that is what `$map...` keyword-spreading requires.
+$tp-button-args: (
+    "schema": $dark-schema,
+    "border-radius": 20px,
+    "foreground": #fff,
+    "background": transparent,
+    "hover-foreground": color($tp-palette, 'secondary')
 );
 
-$tp-light-header-button: button-theme(
-    $background: color($tp-light-palette, 'secondary')
+$tp-button-variants:
+    flat-button-theme($tp-button-args...),
+    contained-button-theme($tp-button-args...),
+    outlined-button-theme($tp-button-args...),
+    fab-button-theme($tp-button-args...);
+
+$tp-light-header-button-args: (
+    "background": color($tp-light-palette, 'secondary')
+);
+
+$tp-light-header-button-variants:
+    flat-button-theme($tp-light-header-button-args...),
+    contained-button-theme($tp-light-header-button-args...),
+    outlined-button-theme($tp-light-header-button-args...),
+    fab-button-theme($tp-light-header-button-args...);
+
+$tp-light-header-icon-button: flat-icon-button-theme(
+    $background: color($tp-light-palette, 'secondary'),
+    $foreground: contrast-color($tp-light-palette, 'secondary'),
+    $hover-background: color($tp-light-palette, 'secondary', 600),
+    $hover-foreground: contrast-color($tp-light-palette, 'secondary', 600),
+    $focus-background: color($tp-light-palette, 'secondary', 600),
+    $focus-foreground: contrast-color($tp-light-palette, 'secondary', 600),
+    $focus-hover-background: color($tp-light-palette, 'secondary', 700),
+    $focus-hover-foreground: contrast-color($tp-light-palette, 'secondary', 700),
+    $active-background: color($tp-light-palette, 'secondary', 700),
+    $active-foreground: contrast-color($tp-light-palette, 'secondary', 700)
 );

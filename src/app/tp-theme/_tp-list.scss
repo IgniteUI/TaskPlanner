@@ -1,3 +1,6 @@
+@use '@infragistics/igniteui-angular/theming' as *;
+@use "vars" as *;
+
 $tp-list: list-theme(
     $schema: $dark-schema,
     $item-background-hover: $row-background,

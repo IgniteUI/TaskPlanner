@@ -1,3 +1,7 @@
+@use 'sass:color';
+@use '@infragistics/igniteui-angular/theming' as *;
+@use "vars" as *;
+
 $tp-grid: grid-theme(
     $schema: $dark-schema,
     $header-background: $header-background,
@@ -24,19 +28,34 @@ $tp-grid: grid-theme(
     $cell-edited-value-color: color($tp-palette, 'secondary', 400),
 
     $drop-area-background: $row-background,
-    $drop-area-on-drop-background: lighten($row-background, 10%),
+    $drop-area-on-drop-background: color.adjust($row-background, $lightness: 10%),
 
     $grouparea-background: $tp-grays-gradient,
     $ghost-header-background: color($tp-palette, 'surface'),
     $filtering-header-background: color($tp-palette, 'surface'),
     $filtering-row-background: color($tp-palette, 'surface'),
-    $body-summaries-background: color($tp-palette, 'surface'),
-    $root-summaries-background: color($tp-palette, 'surface'),
     $row-ghost-background: #4A4F64,
 
-    $pinned-border-color: transparentize(color($tp-palette, 'secondary'), .95),
+    $pinned-border-color: color.adjust(color($tp-palette, 'secondary'), $alpha: -.95),
     $edited-row-indicator: color($tp-palette, 'secondary'),
 
+);
+
+// The secondary Excel-filter overlay can render outside the grid element, so
+// it cannot always inherit the grid-scoped foreground token. Theme the overlay
+// directly to keep its labels and actions readable on the dark surface.
+$tp-dark-excel-filtering: excel-filtering-theme(
+    $schema: $dark-schema,
+    $background: color($tp-palette, 'surface'),
+    $foreground: color($tp-palette, 'gray', 700),
+    $accent-color: color($tp-palette, 'secondary')
+);
+
+$tp-dark-excel-filtering-progress: progress-circular-theme(
+    $schema: $dark-schema,
+    $track-color: color($tp-palette, 'gray', 300),
+    $fill-color-default: color($tp-palette, 'secondary'),
+    $text-color: color($tp-palette, 'gray', 700)
 );
 
 $tp-light-grid: grid-theme(

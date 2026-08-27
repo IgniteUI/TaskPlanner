@@ -1,4 +1,4 @@
-@import "../tp-theme/vars";
+@use "../tp-theme/vars" as *;
 ::ng-deep {
     .tp-app {
         height: 100%;
@@ -173,7 +173,7 @@
 		align-items: center;
 		gap: 4px;
 		justify-content: space-between;
-		color: hsla(var(--igx-gray-900));
+		color: hsla(var(--ig-gray-900));
 
 		span {
 			user-select: all;
@@ -187,7 +187,7 @@
 			min-width: 70px;
 			justify-self: flex-start;
 			text-align: left;
-			color: hsla(var(--ig-secondary-600));
+			color: var(--ig-secondary-600);
 			user-select: none;
 		}
 	}
@@ -195,7 +195,7 @@
 	> * {
 		padding: 8px 0;
 		line-height: 18px;
-		border-bottom: 1px dashed hsla(var(--igx-gray-400));
+		border-bottom: 1px dashed hsla(var(--ig-gray-400));
 
 		&:last-child {
 			border-bottom: none;
