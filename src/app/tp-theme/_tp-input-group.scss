@@ -7,5 +7,13 @@ $tp-input-group: input-group-theme(
     $search-border-radius: 20px,
     $border-border-radius: 20px,
     $border-color: color($tp-palette, 'gray', 400),
-    $search-background: $row-background
+    $search-background: $row-background,
+
+    // Without these the disabled Milestone field is indistinguishable from
+    // the editable ones on this surface. Dark ramp: higher step = lighter,
+    // so 300/400 read as muted against the 900 used for live text.
+    $disabled-text-color: color($tp-palette, 'gray', 400),
+    $disabled-placeholder-color: color($tp-palette, 'gray', 300),
+    $disabled-border-color: color($tp-palette, 'gray', 300),
+    $border-disabled-background: $row-col-background
 );

@@ -19,8 +19,8 @@
       (cellEditEnter)="editStart($event)"
       (cellEdit)="onCellEdit($event)"
       (dropped)="onItemDropped()"
-      (enter)="onDropContainerEnterLeave()"
-      (leave)="onDropContainerEnterLeave()"
+      (enter)="onDropContainerEnter()"
+      (leave)="onDropContainerLeave()"
       [moving]="true"
       [sortingOptions]="sortingOptions"
       [sortHeaderIconTemplate]="sortIcon"
@@ -297,20 +297,24 @@
     <!-- Add task dialog -->
     <igx-dialog #addTaskDialog title="Create Issue"
       leftButtonLabel="Cancel"
-      (leftButtonSelect)="addTaskDialog.close()"
+      (leftButtonSelect)="cancelAddTask()"
       (rightButtonSelect)="addTask()"
       rightButtonLabel="Add task"
       [closeOnOutsideSelect]="false">
 
-      <div class="tp-app__dialog-content">
-        <igx-input-group [theme]="inputTheme()" type="border" #MyInputGroup>
+      <form class="tp-app__dialog-content" [formGroup]="addTaskForm" novalidate>
+        <igx-input-group [theme]="inputTheme()" type="border">
           <label igxLabel for="issue">Issue Title</label>
-          <input ngDefaultControl igxInput id="issue" type="text" [(ngModel)]="addTaskForm.title" required/>
+          <input igxInput id="issue" type="text" formControlName="title" />
+          @if (addTaskForm.controls.title.touched && addTaskForm.controls.title.hasError('required')) {
+            <igx-hint>Issue title is required</igx-hint>
+          }
+          @if (addTaskForm.controls.title.touched && addTaskForm.controls.title.hasError('minlength')) {
+            <igx-hint>Use at least 4 characters</igx-hint>
+          }
         </igx-input-group>
 
-        <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
-        To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
-        <igx-select type="border" ngDefaultControl placeholder="Owner" [(ngModel)]="addTaskForm.assignee" [overlaySettings]="overlaySettings">
+        <igx-select type="border" placeholder="Owner" formControlName="assignee" [overlaySettings]="overlaySettings">
           @for (m of teamMembers(); track m) {
             <igx-select-item [value]="m.login">
               <div class="item">
@@ -321,29 +325,34 @@
               </div>
             </igx-select-item>
           }
+          @if (addTaskForm.controls.assignee.touched && addTaskForm.controls.assignee.hasError('required')) {
+            <igx-hint>Pick an owner</igx-hint>
+          }
         </igx-select>
 
         <igx-input-group [theme]="inputTheme()" type="border">
           <label igxLabel for="description">Description</label>
-          <textarea rows="4" cols="50" igxInput ngDefaultControl name="desc" [(ngModel)]="addTaskForm.body"></textarea>
+          <textarea rows="4" cols="50" igxInput id="description" formControlName="body"></textarea>
         </igx-input-group>
 
-        <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
-        To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
-        <igx-select type="border" ngDefaultControl placeholder="Priority" [(ngModel)]="addTaskForm.priority" [overlaySettings]="overlaySettings">
+        <igx-select type="border" placeholder="Priority" formControlName="priority" [overlaySettings]="overlaySettings">
           @for (p of priority; track p) {
             <igx-select-item [value]="p.value">{{ p.value }}</igx-select-item>
+          }
+          @if (addTaskForm.controls.priority.touched && addTaskForm.controls.priority.hasError('required')) {
+            <igx-hint>Pick a priority</igx-hint>
           }
         </igx-select>
 
         <igx-input-group [theme]="inputTheme()" type="border">
           <label igxLabel for="milestone">Milestone</label>
-          <input igxInput ngDefaultControl id="milestone" type="text" [(ngModel)]="addTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
+          <input igxInput id="milestone" type="text" formControlName="milestone" [igxMask]="'L#?####'" />
+          <igx-hint>Derived from the deadline</igx-hint>
         </igx-input-group>
 
-        <igx-date-picker type="line" name="deadline" ngDefaultControl [(ngModel)]="addTaskForm.deadline" [outlet]="outlet"
-          [formatter]="formatDate" aria-required="required" required
-          [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, addTaskForm)" mode="dialog">
+        <igx-date-picker type="line" formControlName="deadline" [outlet]="outlet"
+          [formatter]="formatDate"
+          [disabledDates]="disabledDates" mode="dialog">
 
           <!-- igx-date-picker binds [attr.aria-labelledby] to this label id on its
                own input, so the control IS labelled; the rule cannot see across
@@ -353,29 +362,36 @@
           <igx-prefix>
             <igx-icon>today</igx-icon>
           </igx-prefix>
+          @if (addTaskForm.controls.deadline.touched && addTaskForm.controls.deadline.hasError('required')) {
+            <igx-hint>A deadline is required</igx-hint>
+          }
         </igx-date-picker>
-      </div>
+      </form>
     </igx-dialog>
 
     <!-- Edit Task dialog -->
     <igx-dialog #editTaskDialog title="Edit Issue"
       leftButtonLabel="Cancel"
-      (leftButtonSelect)="editTaskDialog.close()"
+      (leftButtonSelect)="cancelEditTask()"
       (rightButtonSelect)="editTask()"
       rightButtonLabel="Edit"
       [closeOnOutsideSelect]="false">
 
-      <div class="tp-app__dialog-content">
-        <igx-input-group [theme]="inputTheme()" type="border" #MyInputGroup>
+      <form class="tp-app__dialog-content" [formGroup]="editTaskForm" novalidate>
+        <igx-input-group [theme]="inputTheme()" type="border">
           <label igxLabel for="newIssue">Issue Title</label>
-          <input igxInput id="newIssue" ngDefaultControl type="text" [(ngModel)]="editTaskForm.title" required/>
+          <input igxInput id="newIssue" type="text" formControlName="title" />
+          @if (editTaskForm.controls.title.touched && editTaskForm.controls.title.hasError('required')) {
+            <igx-hint>Issue title is required</igx-hint>
+          }
+          @if (editTaskForm.controls.title.touched && editTaskForm.controls.title.hasError('minlength')) {
+            <igx-hint>Use at least 4 characters</igx-hint>
+          }
         </igx-input-group>
 
-        <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
-        To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
-        <igx-select type="border" ngDefaultControl placeholder="Owner" [(ngModel)]="editTaskForm.assignee" [overlaySettings]="overlaySettings" required>
+        <igx-select type="border" placeholder="Owner" formControlName="assignee" [overlaySettings]="overlaySettings">
           @for (m of teamMembers(); track m) {
-            <igx-select-item [value]="m">
+            <igx-select-item [value]="m.login">
               <div class="item">
                 <igx-avatar class="tp-app__owner-col-avatar" [src]="m.avatarUrl" shape="circle" size="small"></igx-avatar>
                 <span>
@@ -384,29 +400,34 @@
               </div>
             </igx-select-item>
           }
+          @if (editTaskForm.controls.assignee.touched && editTaskForm.controls.assignee.hasError('required')) {
+            <igx-hint>Pick an owner</igx-hint>
+          }
         </igx-select>
 
         <igx-input-group [theme]="inputTheme()" type="border">
-          <label igxLabel for="description">Description</label>
-          <textarea rows="4" cols="50" ngDefaultControl igxInput name="desc" [(ngModel)]="editTaskForm.body"></textarea>
+          <label igxLabel for="newDescription">Description</label>
+          <textarea rows="4" cols="50" igxInput id="newDescription" formControlName="body"></textarea>
         </igx-input-group>
 
-        <!-- IgxSelect: default positioning changed to AutoPositionStrategy (below/above input).
-        To preserve overlap behavior: this.select.overlaySettings = { positionStrategy: new IgxSelectOverlapPositionStrategy(this.select) }; -->
-        <igx-select type="border" ngDefaultControl placeholder="Priority" [(ngModel)]="editTaskForm.priority" [overlaySettings]="overlaySettings">
+        <igx-select type="border" placeholder="Priority" formControlName="priority" [overlaySettings]="overlaySettings">
           @for (p of priority; track p) {
             <igx-select-item [value]="p.value">{{ p.value }}</igx-select-item>
+          }
+          @if (editTaskForm.controls.priority.touched && editTaskForm.controls.priority.hasError('required')) {
+            <igx-hint>Pick a priority</igx-hint>
           }
         </igx-select>
 
         <igx-input-group [theme]="inputTheme()" type="border">
           <label igxLabel for="newMilestone">Milestone</label>
-          <input igxInput id="newMilestone" ngDefaultControl type="text" [(ngModel)]="editTaskForm.milestone" [igxMask]="'L#?####'" [disabled]="true"/>
+          <input igxInput id="newMilestone" type="text" formControlName="milestone" [igxMask]="'L#?####'" />
+          <igx-hint>Derived from the deadline</igx-hint>
         </igx-input-group>
 
-        <igx-date-picker type="line" name="deadline" ngDefaultControl [(ngModel)]="editTaskForm.deadline" [outlet]="outlet"
-          [formatter]="formatDate" aria-required="required" required
-          [disabledDates]="disabledDates" (valueChange)="deadlineChanged($event, editTaskForm)" mode="dialog">
+        <igx-date-picker type="line" formControlName="deadline" [outlet]="outlet"
+          [formatter]="formatDate"
+          [disabledDates]="disabledDates" mode="dialog">
 
           <!-- igx-date-picker binds [attr.aria-labelledby] to this label id on its
                own input, so the control IS labelled; the rule cannot see across
@@ -416,9 +437,11 @@
           <igx-prefix>
             <igx-icon>today</igx-icon>
           </igx-prefix>
+          @if (editTaskForm.controls.deadline.touched && editTaskForm.controls.deadline.hasError('required')) {
+            <igx-hint>A deadline is required</igx-hint>
+          }
         </igx-date-picker>
-      </div>
-
+      </form>
     </igx-dialog>
 
     <!-- Transactions dialog -->

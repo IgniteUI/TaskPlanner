@@ -2,7 +2,8 @@ import { ISortingStrategy } from '@infragistics/igniteui-angular/core';
 
 export interface ITask {
     createdAt?: Date | string;
-    assignee?: ITeamMember;
+    /** The source data carries the full member; the dialogs store just the login. */
+    assignee?: ITeamMember | string;
     labels?: ILabel[];
     body?: string;
     title?: string;
