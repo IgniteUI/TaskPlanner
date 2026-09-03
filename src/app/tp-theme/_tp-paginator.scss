@@ -1,5 +1,8 @@
+@use '@infragistics/igniteui-angular/theming' as *;
+@use "vars" as *;
+
 $tp-paginator: paginator-theme(
     $schema: $dark-schema,
-    $background-color: $tp-grays-gradient,
+    $background: $tp-grays-gradient,
     $border-color: $header-background,
 );

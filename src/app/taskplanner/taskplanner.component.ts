@@ -1,37 +1,34 @@
-import { Component, OnInit, ViewChild, HostBinding } from '@angular/core';
-import { ControlContainer, NgForm, FormsModule } from '@angular/forms';
-import {
-    DefaultSortingStrategy,
-    IGridEditEventArgs,
-    IgxDialogComponent,
-    IgxDropDownComponent,
-    IgxGridComponent,
-    IgxToastComponent,
-    ISelectionEventArgs,
-    Transaction,
-    OverlaySettings,
-    IgxOverlayOutletDirective,
-    IDropDroppedEventArgs,
-    DateRangeType,
-    FilteringStrategy,
-    IgxColumnComponent,
-    IFilteringExpressionsTree,
-    IFilteringExpression,
-    CellType,
-    SortingDirection,
-    ISortingOptions,
-    IgxIconButtonDirective,
-    IgxSummaryOperand,
-    IgxSummaryResult
-} from 'igniteui-angular';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, DestroyRef, OnInit, inject, signal, viewChild } from '@angular/core';
+import { FormsModule, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ColumnType, IgxTheme, IFilteringStrategy, DateRangeType, DefaultSortingStrategy, FilteringStrategy, IFilteringExpression, IFilteringExpressionsTree, ISortingOptions, IgxOverlayOutletDirective, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxSummaryOperand, IgxSummaryResult, OverlaySettings, SortingDirection, Transaction } from '@infragistics/igniteui-angular/core';
+import { CellType, IGridEditEventArgs } from '@infragistics/igniteui-angular/grids/core';
+import { IgxDialogComponent } from '@infragistics/igniteui-angular/dialog';
+import { ISelectionEventArgs } from '@infragistics/igniteui-angular/drop-down';
+import { IgxGridComponent } from '@infragistics/igniteui-angular/grids/grid';
+import { IgxToastComponent } from '@infragistics/igniteui-angular/toast';
+import { IgxIconButtonDirective } from '@infragistics/igniteui-angular/directives';
 import { TasksDataService } from '../services/tasks.service';
 import { MEMBERS, GITHUB_TASKS } from '../services/tasksData';
-import { IgxLegendComponent } from 'igniteui-angular-charts';
 import { BacklogComponent, IListItemAction } from '../backlog/backlog.component';
-import { ITask, ITeamMember } from '../interfaces';
+import { ILabel, ITask, ITaskColumn, ITeamMember } from '../interfaces';
 import { StatusLabelPipe, PriorityLabelPipe, MilestonePipe, PlaceholderPipe, DeadlinePipe, FilterTasksPipe } from '../pipes/taskplanner.pipes';
-import { DatePipe, NgFor, NgIf, PercentPipe } from '@angular/common';
-import { IgxGridComponent as IgxGridComponent_1, IgxDropDirective, IgxPaginatorComponent, IgxGridToolbarComponent, IgxGridToolbarTitleComponent, IgxGridToolbarActionsComponent, IgxGridToolbarHidingComponent, IgxGridToolbarPinningComponent, IgxGridToolbarExporterComponent, IgxButtonDirective, IgxIconComponent, IgxToggleActionDirective, IgxDropDownItemNavigationDirective, IgxDropDownComponent as IgxDropDownComponent_1, IgxDropDownItemComponent, IgxGridDetailTemplateDirective, IgxInputGroupComponent, IgxInputDirective, IgxCheckboxComponent, IgxGroupByRowTemplateDirective, IgxBadgeComponent, IgxColumnComponent as IgxColumnComponent_1, IgxColumnRequiredValidatorDirective, IgxColumnMinLengthValidatorDirective, IgxCellTemplateDirective, IgxCellEditorTemplateDirective, IgxSelectComponent, IgxSelectItemComponent, IgxAvatarComponent, IgxLinearProgressBarComponent, IgxSummaryTemplateDirective, IgxToastComponent as IgxToastComponent_1, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxDialogComponent as IgxDialogComponent_1, IgxLabelDirective, IgxMaskDirective, IgxDatePickerComponent, IgxPrefixDirective } from '@infragistics/igniteui-angular';
+import { DatePipe, PercentPipe } from '@angular/common';
+import { IgxGridComponent as IgxGridComponent_1 } from '@infragistics/igniteui-angular/grids/grid';
+import { IgxButtonDirective, IgxDropDirective, IgxMaskDirective, IgxToggleActionDirective } from '@infragistics/igniteui-angular/directives';
+import { IgxPaginatorComponent } from '@infragistics/igniteui-angular/paginator';
+import { IgxCellEditorTemplateDirective, IgxCellTemplateDirective, IgxColumnComponent as IgxColumnComponent_1, IgxColumnMinLengthValidatorDirective, IgxColumnRequiredValidatorDirective, IgxGridDetailTemplateDirective, IgxGridToolbarActionsComponent, IgxGridToolbarComponent, IgxGridToolbarExporterComponent, IgxGridToolbarHidingComponent, IgxGridToolbarPinningComponent, IgxGridToolbarTitleComponent, IgxGroupByRowTemplateDirective, IgxSummaryTemplateDirective } from '@infragistics/igniteui-angular/grids/core';
+import { IgxIconComponent } from '@infragistics/igniteui-angular/icon';
+import { IgxDropDownComponent as IgxDropDownComponent_1, IgxDropDownItemComponent, IgxDropDownItemNavigationDirective } from '@infragistics/igniteui-angular/drop-down';
+import { IgxHintDirective, IgxInputDirective, IgxInputGroupComponent, IgxLabelDirective, IgxPrefixDirective } from '@infragistics/igniteui-angular/input-group';
+import { IgxCheckboxComponent } from '@infragistics/igniteui-angular/checkbox';
+import { IgxBadgeComponent } from '@infragistics/igniteui-angular/badge';
+import { IgxSelectComponent, IgxSelectItemComponent } from '@infragistics/igniteui-angular/select';
+import { IgxAvatarComponent } from '@infragistics/igniteui-angular/avatar';
+import { IgxLinearProgressBarComponent } from '@infragistics/igniteui-angular/progressbar';
+import { IgxToastComponent as IgxToastComponent_1 } from '@infragistics/igniteui-angular/toast';
+import { IgxDialogComponent as IgxDialogComponent_1 } from '@infragistics/igniteui-angular/dialog';
+import { IgxDatePickerComponent } from '@infragistics/igniteui-angular/date-picker';
 import { HeaderComponent } from '../header/header.component';
 
 export enum editMode {
@@ -40,102 +37,126 @@ export enum editMode {
     none = 2
 }
 
-// tslint:disable:max-line-length
-// tslint:disable:member-ordering
+/** Shape shared by the Create Issue and Edit Issue dialogs. */
+type TaskForm = FormGroup<{
+    title: FormControl<string>;
+    assignee: FormControl<string | null>;
+    body: FormControl<string>;
+    priority: FormControl<string | null>;
+    milestone: FormControl<string>;
+    deadline: FormControl<Date | null>;
+}>;
+
+/** `Q3 2025` - the same rule the Milestone column is seeded with. */
+function toMilestone(date: Date): string {
+    return `Q${Math.ceil((date.getMonth() + 1) / 3)} ${date.getFullYear()}`;
+}
+
 @Component({
-    providers: [TasksDataService, DatePipe, { provide: ControlContainer, useExisting: NgForm }],
+    providers: [TasksDataService, DatePipe],
     selector: 'app-taskplanner',
     templateUrl: './taskplanner.component.html',
     styleUrls: ['./taskplanner.component.scss'],
-    standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { 'class': 'tp-app' },
     imports: [
-        HeaderComponent,
-        BacklogComponent,
-        IgxGridComponent_1,
-        IgxDropDirective,
-        IgxPaginatorComponent,
-        IgxGridToolbarComponent,
-        IgxGridToolbarTitleComponent,
-        IgxGridToolbarActionsComponent,
-        IgxGridToolbarHidingComponent,
-        IgxGridToolbarPinningComponent,
-        IgxGridToolbarExporterComponent,
-        IgxButtonDirective,
-        IgxIconComponent,
-        IgxToggleActionDirective,
-        IgxDropDownItemNavigationDirective,
-        IgxDropDownComponent_1,
-        NgFor,
-        IgxDropDownItemComponent,
-        IgxGridDetailTemplateDirective,
-        IgxInputGroupComponent,
-        FormsModule,
-        IgxInputDirective,
-        IgxCheckboxComponent,
-        IgxGroupByRowTemplateDirective,
-        IgxBadgeComponent,
-        IgxColumnComponent_1,
-        IgxColumnRequiredValidatorDirective,
-        IgxColumnMinLengthValidatorDirective,
-        NgIf,
-        IgxCellTemplateDirective,
-        IgxCellEditorTemplateDirective,
-        IgxSelectComponent,
-        IgxSelectItemComponent,
-        IgxAvatarComponent,
-        IgxLinearProgressBarComponent,
-        IgxSummaryTemplateDirective,
-        IgxToastComponent_1,
-        IgxOverlayOutletDirective_1,
-        IgxDialogComponent_1,
-        IgxLabelDirective,
-        IgxMaskDirective,
-        IgxDatePickerComponent,
-        IgxPrefixDirective,
-        PercentPipe,
-        DatePipe,
-        StatusLabelPipe,
-        PriorityLabelPipe,
-        PlaceholderPipe,
-        DeadlinePipe,
-        FilterTasksPipe,
-        IgxIconButtonDirective
-    ],
+    HeaderComponent,
+    BacklogComponent,
+    IgxGridComponent_1,
+    IgxDropDirective,
+    IgxPaginatorComponent,
+    IgxGridToolbarComponent,
+    IgxGridToolbarTitleComponent,
+    IgxGridToolbarActionsComponent,
+    IgxGridToolbarHidingComponent,
+    IgxGridToolbarPinningComponent,
+    IgxGridToolbarExporterComponent,
+    IgxButtonDirective,
+    IgxIconComponent,
+    IgxToggleActionDirective,
+    IgxDropDownItemNavigationDirective,
+    IgxDropDownComponent_1,
+    IgxDropDownItemComponent,
+    IgxGridDetailTemplateDirective,
+    IgxInputGroupComponent,
+    FormsModule,
+    ReactiveFormsModule,
+    IgxInputDirective,
+    IgxCheckboxComponent,
+    IgxGroupByRowTemplateDirective,
+    IgxBadgeComponent,
+    IgxColumnComponent_1,
+    IgxColumnRequiredValidatorDirective,
+    IgxColumnMinLengthValidatorDirective,
+    IgxCellTemplateDirective,
+    IgxCellEditorTemplateDirective,
+    IgxSelectComponent,
+    IgxSelectItemComponent,
+    IgxAvatarComponent,
+    IgxLinearProgressBarComponent,
+    IgxSummaryTemplateDirective,
+    IgxToastComponent_1,
+    IgxOverlayOutletDirective_1,
+    IgxDialogComponent_1,
+    IgxLabelDirective,
+    IgxHintDirective,
+    IgxMaskDirective,
+    IgxDatePickerComponent,
+    IgxPrefixDirective,
+    PercentPipe,
+    DatePipe,
+    StatusLabelPipe,
+    PriorityLabelPipe,
+    PlaceholderPipe,
+    DeadlinePipe,
+    FilterTasksPipe,
+    IgxIconButtonDirective
+]
 })
-export class TaskPlannerComponent implements OnInit {
-    @HostBinding('class.tp-app')
+export class TaskPlannerComponent implements OnInit, AfterViewInit {
+    private destroyRef = inject(DestroyRef);
+    private cdr = inject(ChangeDetectorRef);
+    private datePipe = inject(DatePipe);
 
-    @ViewChild('tasksGrid', { read: IgxGridComponent, static: true }) public grid: IgxGridComponent;
-    @ViewChild('editModeDropdown', { read: IgxDropDownComponent, static: true }) public editModeDropdown: IgxDropDownComponent;
-    @ViewChild('legend', { static: true }) public legend: IgxLegendComponent;
-    @ViewChild(IgxToastComponent, { read: IgxToastComponent, static: true }) public toast: IgxToastComponent;
-    @ViewChild('addTaskDialog', { static: true }) public addTaskDialog: IgxDialogComponent;
-    @ViewChild('editTaskDialog', { static: true }) public editTaskDialog: IgxDialogComponent;
-    @ViewChild('transactionsDialog', { static: true }) public transactionsDialog: IgxDialogComponent;
-    @ViewChild('transactionsGrid', { static: true }) public transactionsGrid: IgxGridComponent;
-    @ViewChild('batchEditingGrid', { static: true }) public batchEditingGrid: IgxGridComponent;
-    @ViewChild('batchEditDialog', { static: true }) public batchEditDialog: IgxDialogComponent;
+    // `editModeDropdown` and `legend` were declared but never read in TypeScript
+    // (the template drives the dropdown through its own #editModeDropdown ref),
+    // so they are deleted rather than converted.
+    public readonly grid = viewChild.required('tasksGrid', { read: IgxGridComponent });
+    public readonly toast = viewChild.required(IgxToastComponent, { read: IgxToastComponent });
+    public readonly addTaskDialog = viewChild.required<IgxDialogComponent>('addTaskDialog');
+    public readonly editTaskDialog = viewChild.required<IgxDialogComponent>('editTaskDialog');
+    public readonly transactionsDialog = viewChild.required<IgxDialogComponent>('transactionsDialog');
+    public readonly transactionsGrid = viewChild.required<IgxGridComponent>('transactionsGrid');
+    public readonly batchEditingGrid = viewChild.required<IgxGridComponent>('batchEditingGrid');
+    public readonly batchEditDialog = viewChild.required<IgxDialogComponent>('batchEditDialog');
 
-    @ViewChild(IgxOverlayOutletDirective, { static: true }) public outlet: IgxOverlayOutletDirective;
-    @ViewChild(BacklogComponent, { read: BacklogComponent, static: true }) public backlog: BacklogComponent;
+    public readonly outlet = viewChild.required(IgxOverlayOutletDirective);
+    public readonly backlog = viewChild.required(BacklogComponent, { read: BacklogComponent });
 
-    public darkTheme = true;
-    public tasks: ITask[];
-    public unassignedTasks: ITask[];
-    public teamMembers: ITeamMember[];
-    public editMode = 0;
+    public readonly darkTheme = signal(true);
+    public readonly tasks = signal<ITask[]>([]);
+    public readonly unassignedTasks = signal<ITask[]>([]);
+    public readonly teamMembers = signal<ITeamMember[]>([]);
+    public readonly editMode = signal(0);
     public editModes = ['Cell Editing', 'Row Editing', 'No Editing'];
-    public addTaskForm = {} as ITask;
-    public editTaskForm = {} as ITask;
-    public transactionsData: Transaction[] = [];
-    public batchEditingData: ITask[];
-    public inputType = 'material';
+    public readonly addTaskForm = this.buildTaskForm();
+    public readonly editTaskForm = this.buildTaskForm();
+
+    /** The task the Edit dialog is editing; written back only on Save. */
+    private editingTask: ITask | null = null;
+
+    /** The task being dragged out of the backlog - NOT the dialog model. */
+    private draggedTask: ITask | null = null;
+    public readonly transactionsData = signal<Transaction[]>([]);
+    public readonly batchEditingData = signal<ITask[]>([]);
+    /** IgxTheme, not IgxInputGroupType - see the [theme] bindings in the template. */
+    public readonly inputTheme = signal<IgxTheme>('material');
     public selectOptions = [5, 15, 20, 50];
     public disabledDates = [{
         dateRange: [new Date()],
         type: DateRangeType.Before
     }];
-    public gridIsLoading = true;
+    public readonly gridIsLoading = signal(true);
 
     public statuses = [
         {
@@ -178,36 +199,36 @@ export class TaskPlannerComponent implements OnInit {
     private monthFormatter = new Intl.DateTimeFormat('en', { month: 'long' });
 
     /** IgxGrid cellClasses / cellStyles. */
-    public isResolved = (rowData: ITask, columnKey: string): boolean => {
-        return this.getStatusLabel(rowData.labels) === 'resolved';
+    public isResolved = (rowData: ITask): boolean => {
+        return this.getStatusLabel(rowData.labels ?? []) === 'resolved';
     }
 
-    public isNew = (rowData: ITask, columnKey: string): boolean => {
-        return this.getStatusLabel(rowData.labels) === 'in-review';
+    public isNew = (rowData: ITask): boolean => {
+        return this.getStatusLabel(rowData.labels ?? []) === 'in-review';
     }
 
-    public isInDevelopment = (rowData: ITask, columnKey: string): boolean => {
-        return this.getStatusLabel(rowData.labels) === 'in-development';
+    public isInDevelopment = (rowData: ITask): boolean => {
+        return this.getStatusLabel(rowData.labels ?? []) === 'in-development';
     }
 
-    public notABug = (rowData: ITask, columnKey: string): boolean => {
-        return this.getStatusLabel(rowData.labels) === 'not-a-bug';
+    public notABug = (rowData: ITask): boolean => {
+        return this.getStatusLabel(rowData.labels ?? []) === 'not-a-bug';
     }
 
     public isCritical = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'critical';
+        return rowData[columnKey as keyof ITask] === 'critical';
     }
 
     public isLow = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'low';
+        return rowData[columnKey as keyof ITask] === 'low';
     }
 
     public isHigh = (rowData: ITask, columnKey: string): boolean => {
-        return rowData[columnKey] === 'high';
+        return rowData[columnKey as keyof ITask] === 'high';
     }
 
-    public isDelayed = (rowData: ITask, columnKey: string): boolean => {
-        return rowData.hours_spent > rowData.estimation;
+    public isDelayed = (rowData: ITask): boolean => {
+        return (rowData.hours_spent ?? 0) > (rowData.estimation ?? 0);
     }
 
     public statusClasses = {
@@ -233,7 +254,7 @@ export class TaskPlannerComponent implements OnInit {
     public statusSort = StatusSortingStrategy.instance();
     public defaultSort = DefaultSortingStrategy.instance();
 
-    public columns: any[] = [
+    public columns: ITaskColumn[] = [
         { field: 'pullRequest', header: 'Type', width: '120px', dataType: 'string', filterable: true, hidden: true, sortStrategy: this.defaultSort },
         { field: 'number', header: 'ID', width: '120px', dataType: 'number', formatter: this.formatID, sortable: false, sortStrategy: this.defaultSort },
         { field: 'title', header: 'Issue', width: '380px', dataType: 'string', filterable: true, editable: true, sortStrategy: this.defaultSort, required: true, minlength: 4 },
@@ -247,13 +268,47 @@ export class TaskPlannerComponent implements OnInit {
         { field: 'progress', header: 'Progress', width: '95px', dataType: 'number', sortable: true, sortStrategy: this.progressSort },
         { field: 'priority', header: 'Priority', width: '125px', dataType: 'string', sortable: true, filterable: true, editable: true, cellClasses: this.priorityClasses, sortStrategy: this.defaultSort }
     ];
-    private _filteringStrategy = new FilteringStrategy();
+    private _filteringStrategy: IFilteringStrategy = new FilteringStrategy();
 
-    constructor(private datePipe: DatePipe) { }
+    private buildTaskForm(): TaskForm {
+        const form: TaskForm = new FormGroup({
+            title: new FormControl('', {
+                nonNullable: true,
+                validators: [Validators.required, Validators.minLength(4)]
+            }),
+            assignee: new FormControl<string | null>(null, Validators.required),
+            body: new FormControl('', { nonNullable: true }),
+            priority: new FormControl<string | null>(null, Validators.required),
+            // Derived from the deadline, never typed by hand.
+            milestone: new FormControl({ value: '', disabled: true }, { nonNullable: true }),
+            deadline: new FormControl<Date | null>(null, Validators.required)
+        });
+
+        form.controls.deadline.valueChanges
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe(date => form.controls.milestone.setValue(date ? toMilestone(date) : ''));
+
+        return form;
+    }
+
+    /** Reveals every error at once when an incomplete form is submitted. */
+    private submitGuard(form: TaskForm): boolean {
+        if (form.valid) {
+            return true;
+        }
+        form.markAllAsTouched();
+        // markAllAsTouched() does not emit statusChanges - touched is not part
+        // of the status. igx-select and igx-date-picker set their inner
+        // IgxInputState from an ngControl.statusChanges subscription gated on
+        // touched/dirty, so nudging each control lights them up through the
+        // library own mechanism instead of app CSS.
+        Object.values(form.controls).forEach(c => c.updateValueAndValidity({ emitEvent: true }));
+        this.emptyFieldMessage();
+        this.cdr.markForCheck();
+        return false;
+    }
 
     public ngOnInit() {
-        this.overlaySettings.outlet = this.outlet;
-        this.dialogOverlaySettings.outlet = this.outlet;
         // this.dataService.getAllIssues().subscribe({
         //     next: (data: ITask[]) => {
         //         // cache data
@@ -275,14 +330,28 @@ export class TaskPlannerComponent implements OnInit {
             return rec;
         })
         this.populateDataComponents(data);
-        this.teamMembers = MEMBERS;
+        this.teamMembers.set(MEMBERS);
 
-        this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
-        this.grid.transactions.onStateUpdate.subscribe(() => {
-            this.transactionsData = this.grid.transactions.getAggregatedChanges(true);
+    }
+
+    /**
+     * Signal view queries resolve with this component's own view, i.e. after
+     * ngOnInit. Everything that reads grid() or outlet() lives here.
+     */
+    public ngAfterViewInit(): void {
+        this.overlaySettings.outlet = this.outlet();
+        this.dialogOverlaySettings.outlet = this.outlet();
+
+        const grid = this.grid();
+
+        this.transactionsData.set(grid.transactions.getAggregatedChanges(true));
+        grid.transactions.onStateUpdate?.subscribe(() => {
+            // Writing a signal notifies Angular; the previous plain-field
+            // assignment relied on a change-detection pass it never scheduled.
+            this.transactionsData.set(grid.transactions.getAggregatedChanges(true));
         });
 
-        this.grid.groupingExpressions = [{
+        grid.groupingExpressions = [{
             dir: SortingDirection.Desc,
             fieldName: 'milestone',
             ignoreCase: false,
@@ -292,7 +361,7 @@ export class TaskPlannerComponent implements OnInit {
         const today = new Date();
         const ms = Math.floor(today.getMonth() / 3) + 1;
         const currentMilestone = `Q${ms} ${today.getFullYear()}`;
-        this.grid.groupingExpansionState = [{
+        grid.groupingExpansionState = [{
             expanded: true,
             hierarchy: [{ fieldName: 'milestone', value: currentMilestone }]
         }];
@@ -307,11 +376,11 @@ export class TaskPlannerComponent implements OnInit {
         return '#' + value;
     }
 
-    public stateFormatter(value) {
+    public stateFormatter(value: unknown): string {
         return JSON.stringify(value);
     }
 
-    public typeFormatter(value) {
+    public typeFormatter(value: string): string {
         return value.toUpperCase();
     }
 
@@ -322,144 +391,189 @@ export class TaskPlannerComponent implements OnInit {
         return value ? value + 'h' : '';
     }
 
-    public formatPieLabel(args): string {
+    public formatPieLabel(args: { item: { Value: string; Label: string } }): string {
         return args.item.Value + ' ' + args.item.Label;
     }
 
-    public formatDateLabel(item): string {
+    public formatDateLabel(item: { date: Date }): string {
         return item.date.toLocaleDateString(undefined, { month: 'short' });
     }
 
     /** CRUD actions */
     public undo() {
-        this.grid.transactions.undo();
+        this.grid().transactions.undo();
     }
 
     public redo() {
-        this.grid.transactions.redo();
+        this.grid().transactions.redo();
     }
 
     public commit() {
-        this.grid.transactions.commit(this.tasks);
-        this.transactionsDialog.close();
+        this.grid().transactions.commit(this.tasks());
+        this.transactionsDialog().close();
     }
 
     public commitBatchEdits() {
-        const editedData = this.batchEditingGrid.data;
-        // transfer edited data to this.grid
-        for (let i = 0; i < editedData.length; i++) {
-            const id = editedData[i].id;
-            this.grid.updateRow(editedData[i], id);
+        const editedData = (this.batchEditingGrid().data ?? []) as ITask[];
+        // transfer edited data to this.grid()
+        for (const edited of editedData) {
+            this.grid().updateRow(edited, edited.id);
         }
-        this.batchEditDialog.close();
+        this.batchEditDialog().close();
     }
 
     public cancel() {
-        this.transactionsDialog.close();
+        this.transactionsDialog().close();
     }
 
     public discard() {
-        this.grid.transactions.clear();
-        this.transactionsDialog.close();
+        this.grid().transactions.clear();
+        this.transactionsDialog().close();
     }
 
     public onEditingModeChanged(event: ISelectionEventArgs) {
-        this.editMode = event.newSelection.index;
+        this.editMode.set(event.newSelection.index);
     }
 
     public isEditModeSelected(i: number): boolean {
-        return i === this.editMode;
+        return i === this.editMode();
     }
 
-    public editStart(event: IGridEditEventArgs) {
-        const field = this.grid.columnList.find(c => c.index === event.cellID.columnID).field;
+    public editStart(event: IGridEditEventArgs): void {
+        const field = this.grid().columnList.find(c => c.index === event.cellID?.columnID)?.field;
         if (field === 'started_on' && !!event.oldValue) {
             event.cancel = true;
         }
     }
 
-    public onCellEdit(event: IGridEditEventArgs) {
-        const field = this.grid.columnList.find(c => c.index === event.cellID.columnID).field;
+    public onCellEdit(event: IGridEditEventArgs): void {
+        const cellID = event.cellID;
+        if (!cellID) {
+            return;
+        }
+        const field = this.grid().columnList.find(c => c.index === cellID.columnID)?.field;
         switch (field) {
             case 'started_on': {
-                const deadlineDate = this.grid.getRowByIndex(event.cellID.rowIndex).data.deadline;
+                const deadlineDate = this.grid().getRowByIndex(cellID.rowIndex).data.deadline;
                 if (event.newValue > deadlineDate) {
                     event.cancel = true;
-                    this.toast.open('Started date cannot exceed Deadline date !');
+                    this.toast().open('Started date cannot exceed Deadline date !');
                 }
                 break;
             }
             case 'deadline': {
-                const startedDate = this.grid.getRowByIndex(event.cellID.rowIndex).data.createdAt;
+                const startedDate = this.grid().getRowByIndex(cellID.rowIndex).data.createdAt;
                 if (event.newValue < startedDate) {
                     event.cancel = true;
-                    this.toast.open('Deadline date cannot be earlier than started date !');
+                    this.toast().open('Deadline date cannot be earlier than started date !');
                 }
                 if (event.newValue < startedDate) {
                     event.cancel = true;
-                    this.toast.open('Deadline date cannot be earlier than started date !');
+                    this.toast().open('Deadline date cannot be earlier than started date !');
                 }
                 break;
             }
             case 'status': {
                 if (event.newValue === 'Completed') {
-                    this.grid.getRowByKey(event.rowID).data.isActive = false;
+                    this.grid().getRowByKey(event.rowID).data.isActive = false;
                 }
             }
         }
     }
 
-    public addTask(event) {
-        if (this.addTaskForm.title && this.addTaskForm.title !== undefined
-            && this.addTaskForm.deadline) {
-            this.addTaskForm.id = this.grid.data[this.grid.data.length - 1].id + 1;
-            this.addTaskForm.number = this.grid.data[this.grid.data.length - 1].id + 1;
-            this.addTaskForm.status = 'New';
-            this.addTaskForm.estimation = null;
-            this.addTaskForm.hours_spent = null;
-            this.addTaskForm.createdAt = new Date().toDateString();
-            this.grid.addRow(this.addTaskForm);
-            this.grid.transactions.commit(this.grid.data);
-            this.addTaskForm = {} as ITask;
-            this.addTaskDialog.close();
-        } else {
-            this.emptyFieldMessage();
-        }
-    }
-
-    public editTask(event) {
-        if (this.editTaskForm.title !== '' && this.editTaskForm.deadline) {
-            this.editTaskDialog.close();
-        } else {
-            this.emptyFieldMessage();
-        }
-
-    }
-
-    public deleteTask(rowID) {
-        this.grid.deleteRow(rowID);
-    }
-
-    public setAvatarUrl(assignee) {
-        let avatar;
-        if (!assignee) {
+    public addTask(): void {
+        if (!this.submitGuard(this.addTaskForm)) {
             return;
         }
-        if (assignee.login) {
-            avatar = MEMBERS.find(m => m.login === assignee.login).avatarUrl;
-        } else {
-            avatar = MEMBERS.find(m => m.login === assignee).avatarUrl;
-        }
 
-        return avatar;
+        const rows = (this.grid().data ?? []) as ITask[];
+        const nextId = (rows.length ? (rows[rows.length - 1].id ?? 0) : 0) + 1;
+        const value = this.addTaskForm.getRawValue();
+
+        this.grid().addRow({
+            id: nextId,
+            number: nextId,
+            status: 'New',
+            createdAt: new Date().toDateString(),
+            title: value.title,
+            assignee: value.assignee ?? undefined,
+            body: value.body,
+            priority: value.priority ?? undefined,
+            milestone: value.milestone,
+            deadline: value.deadline
+        });
+        this.grid().transactions.commit(rows);
+
+        this.addTaskForm.reset();
+        this.addTaskDialog().close();
     }
 
-    public getValue(value) {
+    public cancelAddTask(): void {
+        this.addTaskForm.reset();
+        this.addTaskDialog().close();
+    }
+
+    public openEditTaskDialog(task: ITask): void {
+        this.editingTask = task;
+        this.editTaskForm.reset();
+        this.editTaskForm.patchValue({
+            title: task.title ?? '',
+            assignee: typeof task.assignee === 'string' ? task.assignee : task.assignee?.login ?? null,
+            body: task.body ?? '',
+            priority: task.priority ?? null,
+            deadline: task.deadline ?? null
+        });
+        this.editTaskDialog().open(this.dialogOverlaySettings);
+    }
+
+    public editTask(): void {
+        if (!this.submitGuard(this.editTaskForm)) {
+            return;
+        }
+
+        const task = this.editingTask;
+        if (!task) {
+            return;
+        }
+
+        // Only Save writes back - the form held the edits, so Cancel discards.
+        const value = this.editTaskForm.getRawValue();
+        task.title = value.title;
+        task.assignee = value.assignee ?? undefined;
+        task.body = value.body;
+        task.priority = value.priority ?? undefined;
+        task.milestone = value.milestone;
+        task.deadline = value.deadline;
+
+        this.grid().updateRow(task, task.id);
+        this.editingTask = null;
+        this.editTaskDialog().close();
+    }
+
+    public cancelEditTask(): void {
+        this.editingTask = null;
+        this.editTaskForm.reset();
+        this.editTaskDialog().close();
+    }
+
+    public deleteTask(rowID: unknown): void {
+        this.grid().deleteRow(rowID);
+    }
+
+    public setAvatarUrl(assignee: ITeamMember | string | null | undefined): string {
+        if (!assignee) {
+            return '';
+        }
+        const login = typeof assignee === 'string' ? assignee : assignee.login;
+        return MEMBERS.find(m => m.login === login)?.avatarUrl ?? '';
+    }
+
+    public getValue(value: ITeamMember | string | null | undefined): string | undefined {
         let assigneeName;
         if (!value) {
             return;
         }
-        if (value.login) {
+        if (typeof value !== 'string') {
             assigneeName = value.login;
         } else {
             assigneeName = value;
@@ -469,19 +583,19 @@ export class TaskPlannerComponent implements OnInit {
 
     /** Open Dialogs */
     public openCommitDialog() {
-        this.transactionsDialog.open(this.dialogOverlaySettings);
-        this.transactionsGrid.reflow();
+        this.transactionsDialog().open(this.dialogOverlaySettings);
+        this.transactionsGrid().reflow();
     }
 
     public openAddTaskDialog() {
-        this.addTaskDialog.open(this.dialogOverlaySettings);
+        this.addTaskDialog().open(this.dialogOverlaySettings);
     }
 
     public openBatchEditDialog() {
-        const selectedRows = this.grid.selectedRows;
-        const selectedData = this.tasks.filter(rec => selectedRows.indexOf(rec.id) > -1);
-        this.batchEditingData = selectedData;
-        this.batchEditDialog.open(this.dialogOverlaySettings);
+        const selectedRows = this.grid().selectedRows;
+        const selectedData = this.tasks().filter(rec => selectedRows.indexOf(rec.id) > -1);
+        this.batchEditingData.set(selectedData);
+        this.batchEditDialog().open(this.dialogOverlaySettings);
     }
 
     /** Methods and event handlers */
@@ -491,87 +605,96 @@ export class TaskPlannerComponent implements OnInit {
      */
     public populateDataComponents(data: ITask[]) {
         const issues = data.filter(task => task.pullRequest === null).map(rec => this.parseDate(rec));
-        this.tasks = issues.filter(t => t.labels.filter(l => l.name.includes('status')).length > 0);
-        this.gridIsLoading = false;
-        this.unassignedTasks = issues.filter(t => t.labels.filter(l => l.name.includes('status')).length === 0);
+        this.tasks.set(issues.filter(t => (t.labels ?? []).filter(l => l.name.includes('status')).length > 0));
+        this.gridIsLoading.set(false);
+        this.unassignedTasks.set(issues.filter(t => (t.labels ?? []).filter(l => l.name.includes('status')).length === 0));
     }
 
     public emptyFieldMessage() {
-        this.toast.open('Please fill out all required fields (Issue and Deadline).');
+        this.toast().open('Please fill out all required fields (Issue and Deadline).');
     }
 
     public toggleTheme() {
-        this.darkTheme = !this.darkTheme;
-        this.inputType = this.darkTheme ? 'material' : 'fluent';
+        this.darkTheme.set(!this.darkTheme());
+        this.inputTheme.set(this.darkTheme() ? 'material' : 'fluent');
     }
 
     public onBacklogItemAction(event: IListItemAction) {
         switch (event.action) {
             case 'edit': {
-                this.editTaskForm = event.issue;
-                this.editTaskForm.deadline = null;
-                this.editTaskForm.milestone = null;
-                this.editTaskDialog.open(this.dialogOverlaySettings);
+                this.openEditTaskDialog(event.issue);
                 break;
             }
-            case 'drag':
+            case 'drag': {
+                this.draggedTask = event.issue;
+                this.setGridBodyHighlight(true);
+                break;
+            }
             case 'release': {
-                this.editTaskForm = event.issue;
-                this.toggleGridBodyHighlight();
+                this.draggedTask = null;
+                this.setGridBodyHighlight(false);
+                this.setGroupRowHighlight(false);
                 break;
             }
         }
     }
 
-    public onDropContainerEnterLeave(event: IDropDroppedEventArgs) {
-        this.toggleGroupRowHighlight();
+    public onDropContainerEnter(): void {
+        this.setGroupRowHighlight(true);
     }
 
-    public toggleGroupRowHighlight() {
-        const groupRows = this.grid.tbody.nativeElement.querySelectorAll('igx-grid-groupby-row');
+    public onDropContainerLeave(): void {
+        this.setGroupRowHighlight(false);
+    }
+
+    /**
+     * Highlights only the group row matching the dragged task's milestone, and
+     * clears every other row. Passing the desired state rather than toggling
+     * also fixes the case where the milestone changes mid-drag, which used to
+     * highlight one row and un-toggle a different one.
+     */
+    private setGroupRowHighlight(on: boolean): void {
+        const groupRows = this.grid().tbody.nativeElement.querySelectorAll('igx-grid-groupby-row');
         (groupRows as HTMLElement[]).forEach(element => {
-            const labelElement = element.querySelector('.igx-group-label').firstElementChild as HTMLElement;
-            if (labelElement.innerText === this.editTaskForm.milestone) {
-                element.classList.toggle('tp-app__groupby-row-highlight');
-            }
+            const labelElement = element.querySelector('.igx-group-label')?.firstElementChild as HTMLElement | null;
+            const matches = !!labelElement && labelElement.innerText === this.draggedTask?.milestone;
+            element.classList.toggle('tp-app__groupby-row-highlight', on && matches);
         });
     }
 
-    public toggleGridBodyHighlight() {
-        this.grid.tbody.nativeElement.classList.toggle('tp-app__drop-area-entered');
+    private setGridBodyHighlight(on: boolean): void {
+        this.grid().tbody.nativeElement.classList.toggle('tp-app__drop-area-entered', on);
     }
 
-    public onItemDropped(ev) {
-        if (Object.keys(this.editTaskForm).length) {
-            this.toggleGridBodyHighlight();
-            this.addBacklogItem(this.editTaskForm);
+    public onItemDropped(): void {
+        // Clear regardless of whether a row is actually added: the drag is over
+        // either way, and dragEnd fires after this.
+        this.setGridBodyHighlight(false);
+        this.setGroupRowHighlight(false);
+
+        // A real guard now: null unless a backlog drag is actually in flight.
+        if (this.draggedTask) {
+            this.addBacklogItem(this.draggedTask);
+            this.draggedTask = null;
+            this.cdr.markForCheck();
         }
     }
 
     public addBacklogItem(item: ITask) {
-        this.grid.addRow(item);
-        this.backlog.deleteItem(item);
+        this.grid().addRow(item);
+        this.backlog().deleteItem(item);
     }
 
-    public deadlineChanged(event: Date, form: ITask) {
-        const year = event.getFullYear();
-        const quarter = Math.ceil((event.getMonth() + 1) / 3);
-        const milestone = `Q${quarter} ${year}`;
-        form.milestone = milestone;
-    }
 
     public getDeadlineValue(cell: CellType): string {
         const pipeArgs = cell.column.pipeArgs;
         const deadline = new Date(cell.row.data);
         deadline.setMonth(deadline.getMonth() + 3);
-        const val = this.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale);
-        console.log(val);
-        return val;
+        return this.datePipe.transform(deadline, pipeArgs.format, pipeArgs.timezone, cell.grid.locale) ?? '';
     }
 
-    public getStatusLabel(labels: any[]) {
-        const label = new StatusLabelPipe().transform(labels);
-        return label;
+    public getStatusLabel(labels: ILabel[] | string | undefined): string {
+        return new StatusLabelPipe().transform(labels);
     }
 
     public getAssignee(user: ITeamMember) {
@@ -580,53 +703,55 @@ export class TaskPlannerComponent implements OnInit {
 
     /** Getters */
     public get undoEnabled(): boolean {
-        return this.grid.transactions.canUndo;
+        return this.grid().transactions.canUndo;
     }
 
     public get redoEnabled(): boolean {
-        return this.grid.transactions.canRedo;
+        return this.grid().transactions.canRedo;
     }
 
     public get hasTransactions(): boolean {
-        return this.grid.transactions.getAggregatedChanges(false).length > 0;
+        return this.grid().transactions.getAggregatedChanges(false).length > 0;
     }
 
     public get hasSelection(): boolean {
-        return this.grid.selectedRows.length > 0;
+        return this.grid().selectedRows.length > 0;
     }
 
     public get isRowEditingEnabled() {
-        return this.editMode === editMode.rowEditing;
+        return this.editMode() === editMode.rowEditing;
     }
 
     public get isEditingEnabled() {
-        return this.editMode !== editMode.none;
+        return this.editMode() !== editMode.none;
     }
 
     public get selectedEditMode() {
-        return this.editModes[this.editMode];
+        return this.editModes[this.editMode()];
     }
 
     /** Unique column values strategy for Excel Style Filtering */
-    public columnValuesStrategy = (column: IgxColumnComponent,
+    public columnValuesStrategy = (column: ColumnType,
         columnExprTree: IFilteringExpressionsTree,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any -- mirrors IgxGrid uniqueColumnValuesStrategy
         done: (uniqueValues: any[]) => void) => {
         // Get specific column data.
         this.getColumnData(column, columnExprTree, uniqueValues => done(uniqueValues));
     }
 
-    public getColumnData(column: IgxColumnComponent,
+    public getColumnData(column: ColumnType,
         columnExprTree: IFilteringExpressionsTree,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any -- mirrors IgxGrid uniqueColumnValuesStrategy
         done: (colVals: any[]) => void) {
         setTimeout(() => {
-            let columnValues = [];
+            let columnValues: unknown[];
             if (column.field === 'labels') {
                 columnValues = this.statuses.map(rec => rec.value);
                 done(columnValues);
                 return;
             }
             if (column.field === 'assignee.login') {
-                columnValues = this.teamMembers.map(rec => rec.login);
+                columnValues = this.teamMembers().map(rec => rec.login);
                 done(columnValues);
                 return;
             }
@@ -635,15 +760,15 @@ export class TaskPlannerComponent implements OnInit {
                 done(columnValues);
                 return;
             }
-            const filteredData = this._filteringStrategy.filter(this.tasks, columnExprTree, null, null);
-            columnValues = filteredData.map(record => record[column.field]);
+            const filteredData = this._filteringStrategy.filter(this.tasks(), columnExprTree);
+            columnValues = filteredData.map(record => (record as Record<string, unknown>)[column.field]);
             done(columnValues);
         }, 1000);
     }
 
     /** Help utils */
-    private parseDate(obj) {
-        obj.createdAt = obj.createdAt ? new Date(obj.createdAt) : null;
+    private parseDate(obj: ITask): ITask {
+        obj.createdAt = obj.createdAt ? new Date(obj.createdAt) : undefined;
         return obj;
     }
 
@@ -651,7 +776,7 @@ export class TaskPlannerComponent implements OnInit {
      * Returns workload for corresponding team member.
      */
     // public getAssigneeWorkload(ownerID: number) {
-    //     const workloadData = this.tasks.filter(rec => rec.owner.id === ownerID);
+    //     const workloadData = this.tasks().filter(rec => rec.owner.id === ownerID);
     //     const newTasks = workloadData.filter(rec => rec.status === 'New').length;
     //     const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
     //     const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
@@ -666,7 +791,7 @@ export class TaskPlannerComponent implements OnInit {
      * Returns workload for the corrssponding team.
      */
     // public getTeamWorkload(team: string) {
-    //     const workloadData = this.tasks.filter(rec => rec.owner.team === team);
+    //     const workloadData = this.tasks().filter(rec => rec.owner.team === team);
     //     const newTasks = workloadData.filter(rec => rec.status === 'New').length;
     //     const inprogressTasks = workloadData.filter(rec => rec.status === 'In Progress').length;
     //     const doneTasks = workloadData.filter(rec => rec.status === 'Done').length;
@@ -678,60 +803,63 @@ export class TaskPlannerComponent implements OnInit {
     // }
 }
 
+/**
+ * DefaultSortingStrategy.sort() switched to a Schwartzian transform in 20.1.0:
+ * it precomputes one sort key per row and compares the keys, so it no longer
+ * calls compareObjects(). Overriding compareObjects has no effect - the sort
+ * key is the extension point, so these strategies supply one per record.
+ */
+abstract class TaskSortingStrategy extends DefaultSortingStrategy {
+    protected abstract sortKey(task: ITask, key: string): string | number;
+
+    public override sort(
+        data: ITask[],
+        fieldName: string,
+        dir: SortingDirection
+    ): ITask[] {
+        const reverse = dir === SortingDirection.Desc ? -1 : 1;
+        return data
+            .map(original => ({ original, sortValue: this.sortKey(original, fieldName) }))
+            .sort((a, b) => reverse * this.compareValues(a.sortValue, b.sortValue))
+            .map(item => item.original);
+    }
+}
+
 /** Sorting strategy for year quarters. */
-export class MilestoneSortingStrategy extends DefaultSortingStrategy {
-    protected compareObjects(obj1: ITask,
-        obj2: ITask,
-        key: string,
-        reverse: number,
-        ignoreCase: boolean,
-        valueResolver: (obj: any, key: string) => string) {
-        const objA = obj1[key].split(' ');
-        const objB = obj2[key].split(' ');
-        const yearA = objA[1];
-        const yearB = objB[1];
-
-        const quarterA = objA[0].slice(-1);
-        const quarterB = objB[0].slice(-1);
-
-        const milestoneA = parseInt(yearA + quarterA, 10);
-        const milestoneB = parseInt(yearB + quarterB, 10);
-
-        return reverse * this.compareValues(milestoneA, milestoneB);
+export class MilestoneSortingStrategy extends TaskSortingStrategy {
+    /** "Q1 2024" -> 20241, so the year dominates and the quarter breaks ties. */
+    protected sortKey(task: ITask, key: string): number {
+        const parts = String(task[key as keyof ITask] ?? '').split(' ');
+        const year = parts[1] ?? '';
+        const quarter = (parts[0] ?? '').slice(-1);
+        return parseInt(year + quarter, 10);
     }
 }
 
 /** Sorting strategy for progress column. */
-export class ProgressSortingStrategy extends DefaultSortingStrategy {
-    protected compareObjects(obj1: ITask,
-        obj2: ITask,
-        key: string,
-        reverse: number) {
-        const progressA = calcProgress(obj1);
-        const progressB = calcProgress(obj2);
-
-        return reverse * this.compareValues(progressA, progressB);
+export class ProgressSortingStrategy extends TaskSortingStrategy {
+    /** `progress` is not a stored field - it is derived from hours vs estimation. */
+    protected sortKey(task: ITask): number {
+        return calcProgress(task);
     }
 }
 
 /** Sorting strategy for Status column. */
-export class StatusSortingStrategy extends DefaultSortingStrategy {
-    protected compareObjects(obj1: ITask,
-        obj2: ITask,
-        key: string,
-        reverse: number) {
-        const pipe = new StatusLabelPipe();
-        const statusA = pipe.transform(obj1.labels);
-        const statusB = pipe.transform(obj2.labels);
+export class StatusSortingStrategy extends TaskSortingStrategy {
+    private static readonly pipe = new StatusLabelPipe();
 
-        return reverse * this.compareValues(statusA, statusB);
+    protected sortKey(task: ITask): string {
+        return StatusSortingStrategy.pipe.transform(task.labels);
     }
 }
 
 /** Filtering strategy for Priority and Status columns. */
 export class LabelsFilteringStrategy extends FilteringStrategy {
-    public findMatchByExpression(rec: ITask, expr: IFilteringExpression): boolean {
+    public override findMatchByExpression(rec: ITask, expr: IFilteringExpression): boolean {
         const cond = expr.condition;
+        if (!cond) {
+            return false;
+        }
         let val = this.getFieldValue(rec, expr.fieldName);
         if (expr.fieldName === 'labels') {
             val = new StatusLabelPipe().transform(val);
@@ -739,7 +867,7 @@ export class LabelsFilteringStrategy extends FilteringStrategy {
         if (!val && expr.fieldName === 'priority') {
             val = new PriorityLabelPipe().transform(rec);
         }
-        return cond.logic(val, expr.searchVal, expr.ignoreCase);
+        return !!cond.logic?.(val, expr.searchVal, expr.ignoreCase);
     }
 }
 
@@ -749,7 +877,8 @@ export class StatusSummary extends IgxSummaryOperand {
         super();
     }
 
-    operate(data?: any[]): IgxSummaryResult[] {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- matches IgxSummaryOperand.operate
+    public override operate(data: any[] = []): IgxSummaryResult[] {
         const result = super.operate(data);
         const sl = new StatusLabelPipe();
         result.push({
@@ -774,5 +903,3 @@ export function calcProgress(task: ITask) {
     const progress = (hoursSpent / estimation) * 100;
     return progress;
 }
-// tslint:enable:max-line-length
-// tslint:enable:member-ordering

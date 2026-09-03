@@ -1,11 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
 // Standard CSS normalize, comment out if not required or using a different module
-@use "minireset.css/minireset" as *;
-@forward "minireset.css/minireset";
-
+@use 'sass:meta';
 @use '@infragistics/igniteui-angular/theming' as *;
 @forward '@infragistics/igniteui-angular/theming';
+@use "app/tp-theme/index" as *;
+
+// Wrapped in the `ig.reset` layer: since 22.1.0 all Ignite UI styles live in
+// @layer ig.*, and unlayered CSS outranks every layer regardless of
+// specificity. Unlayered, this reset would win against component styles.
+@layer ig.reset {
+    @include meta.load-css("minireset.css/minireset");
+}
+// Specifies large size for all components to match the previous defaults
+// This may not be needed for your project. Please consult https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/update-guide for more details.
+:root {
+    --ig-size: var(--ig-size-large);
+}
+
 
 html,
 body {
@@ -15,25 +27,24 @@ body {
 
 
 
-@import "app/tp-theme/index";
 
 @include core();
 @include typography();
 
 .resolved {
-	@include badge($badge-resolved);
+	@include tokens($badge-resolved);
 }
 
 .inreview {
-	@include badge($badge-inreview);
+	@include tokens($badge-inreview);
 }
 
 .delayed {
-	@include badge($badge-delayed);
+	@include tokens($badge-delayed);
 }
 
 .indevelopment {
-	@include badge($badge-indevelopment);
+	@include tokens($badge-indevelopment);
 }
 
 .igx-button--raised {
@@ -113,12 +124,25 @@ body {
 	@include css-vars($tp-light-tabs);
 
 	igx-navbar {
-		@include css-vars($tp-light-header-button);
+		@each $variant in $tp-light-header-button-variants {
+			@include css-vars($variant);
+		}
+		@include css-vars($tp-light-header-icon-button);
+
+		.tp-app__theme-toggle {
+			// The app-wide icon theme is pink; use the palette contrast token on
+			// the pink toggle background so the glyph stays clearly visible.
+			--ig-icon-color: var(--ig-secondary-500-contrast);
+		}
 	}
 
 	[type="search"] {
 		// TODO remove this code
 		margin: 0 !important;
+	}
+
+	.tp-app__task-search {
+		--ig-input-group-search-border-radius: 0;
 	}
 
 	background: $light-bg;
@@ -193,9 +217,15 @@ body {
 	color: #ccc;
 	@include theme($palette: $tp-palette);
 	@include css-vars($tp-grid);
+	@include css-vars($tp-dark-excel-filtering);
+	:where(igx-grid-excel-style-filtering, .igx-excel-filter__secondary) {
+		@include css-vars($tp-dark-excel-filtering-progress);
+	}
 	@include css-vars($tp-toolbar);
 	@include css-vars($tp-paginator);
-	@include css-vars($tp-button);
+	@each $variant in $tp-button-variants {
+		@include css-vars($variant);
+	}
 	@include css-vars($tp-card);
 	@include css-vars($tp-input-group);
 	@include css-vars($tp-list);

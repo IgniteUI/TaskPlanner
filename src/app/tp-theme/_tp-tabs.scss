@@ -1,6 +1,10 @@
+@use 'sass:color';
+@use '@infragistics/igniteui-angular/theming' as *;
+@use "vars" as *;
+
 $tp-tabs: tabs-theme(
     $schema: $dark-schema,
-    $item-background: darken(color($tp-palette, 'surface'), 1%),
+    $item-background: color.adjust(color($tp-palette, 'surface'), $lightness: -1%),
     $indicator-color: color($tp-palette, 'secondary'),
     $item-active-color: color($tp-palette, 'secondary'),
     $item-active-icon-color: color($tp-palette, 'secondary'),

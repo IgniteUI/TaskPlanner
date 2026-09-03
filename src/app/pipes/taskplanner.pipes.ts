@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ITask } from '../interfaces';
-import { CellType } from 'igniteui-angular';
+import { ILabel, ITask, ITaskStatusBadge } from '../interfaces';
+import { CellType } from '@infragistics/igniteui-angular/grids/core';
 import { DatePipe } from '@angular/common';
 
 @Pipe({
@@ -8,8 +8,8 @@ import { DatePipe } from '@angular/common';
     standalone: true
 })
 export class StatusLabelPipe implements PipeTransform {
-    transform(value: any): string {
-        if (!value) {return;}
+    transform(value: string | ILabel[] | undefined): string {
+        if (!value) { return ''; }
         if (typeof value === 'string') {
             return value;
         }
@@ -19,6 +19,7 @@ export class StatusLabelPipe implements PipeTransform {
             const indexOfStatus = labelName.indexOf('status:');
             return labelName.substring(indexOfStatus + 8);
         }
+        return '';
     }
 }
 
@@ -27,7 +28,7 @@ export class StatusLabelPipe implements PipeTransform {
     standalone: true
 })
 export class LoginLabelPipe implements PipeTransform {
-    transform(value: any): string {
+    transform(value: string | { login: string }): string {
         if (typeof value === 'string') {
             return value;
         }
@@ -40,24 +41,20 @@ export class LoginLabelPipe implements PipeTransform {
     standalone: true
 })
 export class PriorityLabelPipe implements PipeTransform {
-    transform(cell: any): string {
-        if (cell.value) {
-            return cell.value;
+    transform(cell: CellType | ITask): string {
+        const asCell = cell as Partial<CellType>;
+        if (typeof asCell.value === 'string' && asCell.value) {
+            return asCell.value;
         }
-        const rowData = cell.row.data ? cell.row.data : cell;
-        let label;
-        if (rowData.labels) {
-            if (typeof(rowData.labels.filter) === 'function'){
-                label = rowData.labels.filter(l => l.name.indexOf('severity:') === 0);
-            }
-        }
-        
-        
-        if (label && label.length > 0) {
-            if (label.length > 0){
+        const rowData = (asCell.row?.data ?? cell) as ITask;
+        const labels = rowData.labels;
+        if (Array.isArray(labels)) {
+            const label = labels.filter(l => l.name.indexOf('severity:') === 0);
+            if (label.length > 0) {
                 return label[0].name.substring(10);
             }
         }
+        return '';
     }
 }
 
@@ -66,7 +63,7 @@ export class PriorityLabelPipe implements PipeTransform {
     standalone: true
 })
 export class PlaceholderPipe implements PipeTransform {
-    transform(value: any): string {
+    transform(value: number | string | null | undefined): string {
         if (value) {
             return value + 'h';
         } else {
@@ -80,12 +77,12 @@ export class PlaceholderPipe implements PipeTransform {
     standalone: true
 })
 export class ProgressPipe implements PipeTransform {
-    transform(value: any): string {
-      if (value) {
-          return value;
-      } else {
-          return 'Automatically updated...';
-      }
+    transform(value: number | string | null | undefined): string {
+        if (value) {
+            return String(value);
+        } else {
+            return 'Automatically updated...';
+        }
     }
 }
 
@@ -95,11 +92,11 @@ export class ProgressPipe implements PipeTransform {
 })
 export class DeadlinePipe implements PipeTransform {
     transform(value: ITask, cell?: CellType): string {
-        const pipe = new DatePipe(cell?.grid.locale);
+        const pipe = new DatePipe(cell?.grid.locale ?? 'en-US');
         const pipeArgs = cell?.column.pipeArgs;
-        const deadline = new Date(value.createdAt);
+        const deadline = new Date(value.createdAt ?? Date.now());
         deadline.setMonth(deadline.getMonth() + 3);
-        return pipe.transform(deadline, pipeArgs?.format, pipeArgs?.timezone);
+        return pipe.transform(deadline, pipeArgs?.format, pipeArgs?.timezone) ?? '';
     }
 }
 
@@ -109,7 +106,7 @@ export class DeadlinePipe implements PipeTransform {
 })
 export class MilestonePipe implements PipeTransform {
     transform(value: ITask): string {
-        const deadline = new Date(value.createdAt);
+        const deadline = new Date(value.createdAt ?? Date.now());
         deadline.setMonth(deadline.getMonth() + 3);
         const year = deadline.getFullYear();
         const quarter = Math.floor(deadline.getMonth() / 3) + 1;
@@ -122,12 +119,12 @@ export class MilestonePipe implements PipeTransform {
     standalone: true
 })
 export class FilterTasksPipe implements PipeTransform {
-    transform(data: ITask[], groupRowValue: string): ITask[] {
+    transform(data: ITask[], groupRowValue: string): ITaskStatusBadge[] {
         const groupedData = data.filter(rec => rec.milestone === groupRowValue);
-        return groupedData.reduce((acc, val) => {
+        return groupedData.reduce<ITaskStatusBadge[]>((acc, val) => {
             // Return task status without whitespace in order to be used for class name
             const status = new StatusLabelPipe().transform(val.labels);
-            const cssClass = status?.replace(/\s/g, '').toLowerCase();
+            const cssClass = status.replace(/\s/g, '').toLowerCase();
             const itemIndex = acc.findIndex(item => item.name === status);
 
             if (itemIndex === -1) {

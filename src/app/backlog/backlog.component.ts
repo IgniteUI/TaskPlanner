@@ -1,9 +1,14 @@
-import { Component, ViewChild, EventEmitter, Output, OnInit, Input } from '@angular/core';
-import { IgxListComponent, IgxOverlayOutletDirective, OverlaySettings, IgxFilterOptions, IgxIconButtonDirective } from 'igniteui-angular';
+import { ChangeDetectionStrategy, Component, computed, input, linkedSignal, output, signal } from '@angular/core';
+import { IgxFilterOptions, IgxIconButtonDirective } from '@infragistics/igniteui-angular/directives';
 import { ITask } from '../interfaces';
-import { NgIf, NgFor } from '@angular/common';
+
 import { FormsModule } from '@angular/forms';
-import { IgxCardComponent, IgxCardHeaderComponent, IgxCardHeaderTitleDirective, IgxDividerDirective, IgxCardContentDirective, IgxInputGroupComponent, IgxInputDirective, IgxPrefixDirective, IgxIconComponent, IgxSuffixDirective, IgxListComponent as IgxListComponent_1, IgxListItemComponent, IgxDragDirective, IgxDragHandleDirective, IgxListLineTitleDirective, IgxListLineSubTitleDirective, IgxButtonDirective, IgxDataLoadingTemplateDirective, IgxEmptyListTemplateDirective, IgxOverlayOutletDirective as IgxOverlayOutletDirective_1, IgxFilterPipe } from '@infragistics/igniteui-angular';
+import { IgxCardComponent, IgxCardContentDirective, IgxCardHeaderComponent, IgxCardHeaderTitleDirective } from '@infragistics/igniteui-angular/card';
+import { IgxDividerComponent, IgxDragDirective, IgxDragHandleDirective, IgxFilterPipe } from '@infragistics/igniteui-angular/directives';
+import { IgxInputDirective, IgxInputGroupComponent, IgxPrefixDirective, IgxSuffixDirective } from '@infragistics/igniteui-angular/input-group';
+import { IgxIconComponent } from '@infragistics/igniteui-angular/icon';
+import { IgxDataLoadingTemplateDirective, IgxEmptyListTemplateDirective, IgxListComponent as IgxListComponent_1, IgxListItemComponent, IgxListLineSubTitleDirective, IgxListLineTitleDirective } from '@infragistics/igniteui-angular/list';
+import { IgxOverlayOutletDirective as IgxOverlayOutletDirective_1 } from '@infragistics/igniteui-angular/core';
 
 export interface IListItemAction {
     action: string;
@@ -14,83 +19,71 @@ export interface IListItemAction {
     selector: 'app-backlog',
     templateUrl: './backlog.component.html',
     styleUrls: ['./backlog.component.scss'],
-    standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [
-        IgxCardComponent,
-        IgxCardHeaderComponent,
-        IgxCardHeaderTitleDirective,
-        IgxDividerDirective,
-        IgxCardContentDirective,
-        IgxInputGroupComponent,
-        FormsModule,
-        IgxInputDirective,
-        IgxPrefixDirective,
-        IgxIconComponent,
-        NgIf,
-        IgxSuffixDirective,
-        IgxListComponent_1,
-        NgFor,
-        IgxListItemComponent,
-        IgxDragDirective,
-        IgxDragHandleDirective,
-        IgxListLineTitleDirective,
-        IgxListLineSubTitleDirective,
-        IgxButtonDirective,
-        IgxDataLoadingTemplateDirective,
-        IgxEmptyListTemplateDirective,
-        IgxOverlayOutletDirective_1,
-        IgxFilterPipe,
-        IgxIconButtonDirective
-    ],
+    IgxCardComponent,
+    IgxCardHeaderComponent,
+    IgxCardHeaderTitleDirective,
+    IgxDividerComponent,
+    IgxCardContentDirective,
+    IgxInputGroupComponent,
+    FormsModule,
+    IgxInputDirective,
+    IgxPrefixDirective,
+    IgxIconComponent,
+    IgxSuffixDirective,
+    IgxListComponent_1,
+    IgxListItemComponent,
+    IgxDragDirective,
+    IgxDragHandleDirective,
+    IgxListLineTitleDirective,
+    IgxListLineSubTitleDirective,
+    IgxDataLoadingTemplateDirective,
+    IgxEmptyListTemplateDirective,
+    IgxOverlayOutletDirective_1,
+    IgxFilterPipe,
+    IgxIconButtonDirective
+]
 })
-export class BacklogComponent implements OnInit  {
-    public tasks: ITask[];
-    public dropTileId: number;
-    public taskSearchString: string;
-    public overlaySettings: OverlaySettings = {
-        modal: false,
-        closeOnOutsideClick: true
-    };
+export class BacklogComponent {
+    public readonly data = input<ITask[]>([]);
 
-    @ViewChild(IgxListComponent, { read: IgxListComponent, static: true }) public tasksList: IgxListComponent;
-    @ViewChild(IgxOverlayOutletDirective, { static: true }) public outlet: IgxOverlayOutletDirective;
+    public readonly listItemAction = output<IListItemAction>();
 
-    @Output() listItemAction = new EventEmitter<IListItemAction>();
+    /**
+     * Local writable view of the incoming list. `deleteItem` used to `splice()`
+     * the parent's array in place; `igxFilter` is a pure pipe, so it memoised on
+     * the unchanged array reference and the removed task stayed on screen.
+     * Replacing the reference makes the pipe re-run and notifies Angular.
+     */
+    public readonly tasks = linkedSignal(() => this.data());
 
-    @Input()
-    public set data(data: ITask[]) {
-        this.tasks = data;
-    }
+    public readonly taskSearchString = signal('');
 
-    constructor() {}
-
-    public ngOnInit() {
-        this.overlaySettings.outlet = this.outlet;
-    }
-
-    public onActionTriggered(action: string, issue: ITask) {
-        const eventArgs: IListItemAction = { action, issue };
-        this.listItemAction.emit(eventArgs);
-    }
-
-    public deleteItem(issue: ITask, index?: number) {
-        index = index ? index : this.tasks.findIndex(rec => rec.id === issue.id);
-        this.tasks.splice(index, 1);
-    }
-
-    public get filterTasks() {
+    public readonly filterTasks = computed(() => {
         const fo = new IgxFilterOptions();
         fo.key = 'title';
-        fo.inputValue = this.taskSearchString;
+        fo.inputValue = this.taskSearchString();
         return fo;
+    });
+
+    public onActionTriggered(action: string, issue: ITask): void {
+        this.listItemAction.emit({ action, issue });
     }
 
-    public getPriority(value: ITask) {
-        const label = value.labels.filter(l => l.name.indexOf('severity:') === 0);
-        if (label.length) {
-            return label[0].name.substring(10).toLowerCase();
-        } else {
-            return 'low';
-        }
+    /** Called from this template and from TaskPlannerComponent on grid drop. */
+    public deleteItem(issue: ITask, index?: number): void {
+        this.tasks.update(tasks => {
+            const at = index ?? tasks.findIndex(rec => rec.id === issue.id);
+            if (at < 0) {
+                return tasks;
+            }
+            return [...tasks.slice(0, at), ...tasks.slice(at + 1)];
+        });
+    }
+
+    public getPriority(value: ITask): string {
+        const label = (value.labels ?? []).filter(l => l.name.indexOf('severity:') === 0);
+        return label.length ? label[0].name.substring(10).toLowerCase() : 'low';
     }
 }
