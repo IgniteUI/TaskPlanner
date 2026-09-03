@@ -29,9 +29,9 @@ jobs:
 
       - name: Configure private npm registry
         run: |
-          echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> ~/.npmrc
-          echo "//packages.infragistics.com/npm/js-licensed/:_auth=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-          echo "//packages.infragistics.com/npm/js-licensed/:always-auth=true" >> ~/.npmrc
+          echo "@infragistics:registry=https://packages.infragistics.com/npm/js-licensed/" >> .npmrc
+          echo "//packages.infragistics.com/npm/js-licensed/:username=${{ secrets.INFRAGISTICS_NPM_USER }}" >> .npmrc
+          echo "//packages.infragistics.com/npm/js-licensed/:_auth=${{ secrets.INFRAGISTICS_NPM_TOKEN }}" >> .npmrc
 
       - name: Install dependencies
         run: npm ci
